@@ -1,0 +1,142 @@
+#statisticsSection {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-inline: auto;
+  border-bottom: 1px solid black;
+}
+.dataContainer {
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  padding-block: 40px;
+}
+.parentContainer {
+  /* width: 100%; */
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-block: 40px 40px;
+  padding-inline: 40px;
+  border-bottom: 1px solid #000;
+}
+.parentContainer:last-child {
+  border-bottom: none;
+}
+.contentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.contentContainer .heading {
+  width: fit-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--fonts--desktop--sub-heading1);
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: black;
+}
+.heading span {
+  width: 100%;
+
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: #ff5100;
+}
+.contentContainer p {
+  font-size: var(--fonts--desktop--body1);
+  line-height: 100%;
+  color: #72777f;
+}
+.contentImage {
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 0 100% 0);
+}
+
+.contentImage img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.statisticsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid #000;
+}
+.statisticsContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.statisticsContent .text {
+  width: 272px;
+  font-size: 16px;
+
+  line-height: 115%;
+}
+.statisticsContent .numbers {
+  width: 40px;
+  font-size: 16px;
+
+  line-height: 115%;
+}
+.svgContainer {
+  width: 100%;
+}
+
+.svgContainer img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .parentContainer {
+    flex-direction: column;
+
+    .svgContainer {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .parentContainer {
+    padding: 0 1rem;
+    padding-block: 40px;
+    flex-direction: column;
+  }
+  .dataContainer {
+    padding-block: 20px;
+  }
+  .heading,
+  .heading span,
+  .contentContainer .heading {
+    font-size: var(--fonts--mobile--sub-heading2);
+    line-height: var(--line-height--115);
+  }
+  .contentContainer p {
+    line-height: var(--line-height--115);
+  }
+
+  .parentContainer .svgContainer svg {
+    height: 230px;
+  }
+}

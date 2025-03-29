@@ -1,0 +1,250 @@
+.milestoneContainer {
+  /* border-top: 1px solid black; */
+
+  padding: 0 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.milestones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.milestoneTitle {
+  margin-top: 80px;
+  width: 54%;
+  font-size: var(--fonts--desktop--heading2);
+  line-height: 90%;
+}
+
+.subtitle {
+  font-size: var(--fonts--desktop--sub-heading1);
+  line-height: 95%; /* not mentioned in style */
+  letter-spacing: -2%;
+}
+
+.pillars .subtitle {
+  width: max-content;
+  background: linear-gradient(to right, #ff7128, #7e01a2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.elements,
+.milestoneElements {
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4));
+  grid-template-rows: 1fr;
+}
+.box,
+.boxRev {
+  border: 1px solid var(--mid-grey-color);
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  background-color: var(--white-color);
+}
+.boxTitle {
+  font-size: var(--fonts--desktop--sub-heading2);
+  line-height: 115%;
+  letter-spacing: -2%;
+  width: 80%;
+}
+
+.box:nth-last-child(1) .boxTitle {
+  font-size: var(--fonts--desktop--sub-heading2);
+  line-height: 115%;
+  letter-spacing: -2%;
+  width: 75%;
+}
+.boxBody,
+.itemBody {
+  font-size: var(--fonts--desktop--body2);
+  line-height: var(--line-height--115);
+  color: var(--dark-grey-color);
+}
+.pillars,
+.milestone {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.milestoneElements .itemNumber {
+  color: var(--orange-color);
+  font-size: var(--fonts--desktop--sub-heading1);
+  line-height: 95%; /* not mentioned in style */
+}
+.item .itemBody {
+  /* width: 70%; */
+  padding-right: 20px;
+}
+
+.elements {
+  display: flex;
+}
+.elements .box {
+  width: 380px;
+  height: 400px;
+}
+
+.revolution {
+  position: relative;
+  z-index: 3;
+  width: 380px;
+  height: 400px;
+}
+.infrastructure {
+  z-index: 2;
+}
+.business {
+  z-index: 1;
+}
+.development {
+  z-index: 0;
+}
+svg.milestonePath {
+  stroke: red;
+}
+.infrastructure,
+.business,
+.development {
+  border-left: none;
+}
+.milestone {
+  position: relative;
+}
+.mileClipPath {
+  /* display: none; */
+  clip-path: inset(0 0 0 0);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 53%;
+  height: 30px;
+}
+.mileClipPath .track {
+  position: absolute;
+  width: 100%;
+}
+.line {
+  width: auto;
+  display: inline-block;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.line > picture > img {
+  width: 100%;
+}
+
+.line > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .milestoneTitle {
+    width: 100%;
+  }
+  .elements {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+  }
+  .elements .box {
+    width: 350px;
+    flex-shrink: 0;
+  }
+  .milestoneElements {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #milestone-container {
+    padding: 0rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .milestoneTitle {
+    margin-top: 3.75rem;
+    width: 100%;
+    font-size: var(--fonts--mobile--sub-heading1);
+    line-height: 90%;
+    padding-inline: 1rem;
+  }
+  #milestones {
+    gap: 2.5rem;
+  }
+
+  .pillars,
+  .milestone {
+    gap: 24px;
+  }
+  .pillars .subtitle,
+  .milestone .subtitle {
+    padding-inline: 1rem;
+  }
+  .elements {
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+    padding-inline: 1rem;
+  }
+
+  .boxTitle {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+  }
+  .boxBody {
+    font-size: var(--fonts--mobile--body2);
+    width: 70vw;
+  }
+  .elements .box {
+    height: auto;
+  }
+  .itemBody {
+    width: 70vw;
+  }
+  .box,
+  .boxRev {
+    gap: 5.375rem;
+  }
+
+  .box:nth-last-child(1) .boxTitle {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+    /* line-height: 115%; */
+    /* letter-spacing: -2%; */
+    width: 75%;
+  }
+  .subtitle {
+    font-size: var(--fonts--mobile--sub-heading2);
+    line-height: var(--line-height--115);
+  }
+
+  .milestoneElements .itemNumber {
+    font-size: var(--fonts--mobile--sub-heading2);
+    line-height: 95%;
+  }
+  .milestoneElements {
+    display: flex;
+    overflow: scroll;
+    scrollbar-color: transparent transparent;
+    padding-inline: 1rem;
+  }
+  .milestoneElements .item {
+    width: 100%;
+    gap: 36px;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* .milestone-elements .item {
+    width: 77%;
+  } */
+}

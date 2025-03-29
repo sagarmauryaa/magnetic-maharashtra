@@ -1,0 +1,130 @@
+.sustainabilityContainer {
+  width: 100%;
+  border-bottom: 1px solid black;
+  /* margin-top: 5rem; */
+}
+.hSustainability {
+  max-width: 1600px;
+  padding: 5rem 2.5rem;
+  margin: 0 auto;
+  /* margin-top: 5rem; */
+  position: relative;
+}
+
+.sustainImage {
+  clip-path: inset(0 0 100% 0);
+  width: 100%;
+  height: 420px;
+  aspect-ratio: 4/3;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.sustainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sustainTitles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.sustainTitles span {
+  color: #00b74b;
+}
+.sustainSubtitle {
+  width: 25%;
+  font-size: var(--fonts--desktop--body2);
+  line-height: 115%;
+}
+
+.sustainTitle {
+  font-size: 50px;
+  line-height: 90%;
+}
+.sustainSubtitle a {
+  display: block;
+  width: max-content;
+  user-select: none;
+}
+.sustainReadMore button {
+  background-color: transparent;
+  padding: 16px 24px;
+  border: 2px solid #d1d1d2;
+  color: var(--orange-color);
+  border-radius: 2px;
+  font-size: var(--fonts--mobile--body1);
+  display: block;
+  margin-top: 24px;
+  cursor: pointer;
+}
+.sustainReadMore a {
+  color: var(--orange-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .sustainTitles {
+    flex-direction: column;
+    gap: 24px;
+
+    .sustainSubtitle {
+      width: 100%;
+    }
+
+    .sustainImage {
+      clip-path: inset(0 0 100% 0);
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .h-sustainability {
+    padding: 3.75rem 1rem;
+  }
+
+  .sustainImage {
+    width: 100%;
+    height: 70vh;
+    aspect-ratio: 16/9;
+  }
+
+  .sustainImage img {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sustainTitles {
+    display: block;
+  }
+  .sustainTitle {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-size: var(--fonts--mobile--sub-heading2);
+    line-height: var(--line-height--115);
+    letter-spacing: -0.025rem;
+  }
+  .sustainSubtitle {
+    width: 100%;
+    margin-top: 8px;
+    font-size: var(--fonts--mobile--body1);
+    line-height: var(--line-height--115);
+  }
+  .sustainReadMore button {
+    padding: 12px 1rem;
+    font-size: var(--fonts--mobile--body2);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .sustainImage {
+    height: 560px;
+  }
+}

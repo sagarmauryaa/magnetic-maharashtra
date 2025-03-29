@@ -1,0 +1,278 @@
+/*
+.artsSection {
+    position: relative;
+    margin-top: 5rem;
+    padding: 40px;
+  }
+  .artContainer {
+    background-color: var(--orange-color);
+    background-image: url("assets/images/imgBg.png");
+    background-size: cover;
+    padding: 0px 5.5rem;
+    padding-bottom: 6rem;
+  }
+  .artTitle,
+  .cultureTitle {
+    font-family: var(--font-ppneumontreal-medium);
+    font-size: 15rem;
+    line-height: 60%;
+    font-kerning: -2%;
+    text-transform: uppercase;
+  }
+  .artTitle {
+    display: inline-block;
+  }
+  .cultureTitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .artCultureTitle {
+    padding-top: 4.75rem;
+    text-wrap: balance;
+    color: var(--white-color);
+    text-align: center;
+      /* display: flex; */
+/* flex-direction: column; */
+/* align-items: center; */
+/* }
+  .andTitle {
+    display: inline-block;
+    font-size: 5rem;
+    font-family: "EB Garamond";
+    font-style: italic;
+    transform: rotate(-14deg);
+  }
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .artImage {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 3rem;
+  }
+  .img1 {
+    position: relative;
+    transform: rotate(-5deg);
+    margin-top: -4rem;
+  }
+  .img2 {
+    transform: rotate(14deg);
+    margin-top: 3rem;
+  }
+  .img3 {
+    transform: rotate(-6deg);
+    margin-top: -3rem;
+  }
+  .img4 {
+    transform: rotate(-6deg);
+    margin-top: -2rem;
+  }
+  .img5 {
+    transform: rotate(10deg);
+    margin-top: -10rem;
+  }
+   */
+
+.arts {
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 0 2.5rem;
+  max-width: 1600px;
+}
+
+.artContainer {
+  background-image: url("/images/Art/imgBg.png");
+  padding: 5rem;
+}
+.artsCultureTitle {
+  text-align: center;
+  /* font-family: var(--font-ppneumontreal-medium); */
+  font-size: 15rem;
+  line-height: 60%;
+  font-kerning: -2%;
+  text-transform: uppercase;
+  color: white;
+}
+.artsTitle,
+.andTitle {
+  display: inline-block;
+}
+.andTitle {
+  /* display: inline-block; */
+  font-size: 5rem;
+  font-family: "EB Garamond";
+  font-style: italic;
+  transform: rotate(-14deg);
+}
+.cultureTitle {
+  display: block;
+}
+
+.imgContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
+}
+.artImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+/* .img1 {
+  transform: rotate(-5deg);
+  margin-top: -4rem;
+}
+.img2 {
+  transform: rotate(14deg);
+  margin-top: 3rem;
+}
+.img3 {
+  transform: rotate(-6deg);
+  margin-top: -3rem;
+}
+.img4 {
+  transform: rotate(-6deg);
+  margin-top: -2rem;
+}
+.img5 {
+  transform: rotate(10deg);
+  margin-top: -10rem;
+} */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .artContainer {
+    padding: 2.5rem;
+  }
+  .artsCultureTitle {
+    font-size: 8rem;
+  }
+  .andTitle {
+    font-size: 2.75rem;
+  }
+  /* .imgContainer .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5 {
+    transform: rotate(-5deg) scale(0.7);
+  } */
+
+  .img1 {
+    margin-left: 1rem;
+    transform: rotate(-5deg) scale(0.7);
+  }
+
+  .img2 {
+    transform: rotate(14deg) scale(0.7);
+    margin-left: -2rem;
+  }
+
+  .img3 {
+    transform: rotate(-6deg) scale(0.7);
+    margin-left: -3rem;
+  }
+
+  .img4 {
+    transform: rotate(-6deg) scale(0.7);
+  }
+
+  .img5 {
+    transform: rotate(10deg) scale(0.7);
+  }
+
+  .artImage {
+    padding-top: 0;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arts {
+    /* margin: 0 auto; */
+    margin-top: 0rem;
+    padding: 0 0rem;
+    /* max-width: 1600px; */
+  }
+  .artsCultureTitle {
+    font-size: 72px;
+    line-height: 90%;
+    font-kerning: auto;
+  }
+
+  .artContainer {
+    padding: 1rem;
+    padding-top: 3.75rem;
+  }
+  .andTitle {
+    font-size: var(--fonts--mobile--sub-heading2);
+  }
+  .imgContainer {
+    margin-left: 1rem;
+  }
+
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5 {
+    /* transform: scale(0.8); */
+    width: max-content;
+    /* display: inline-block; */
+    position: relative;
+  }
+  .artImage {
+    /* flex-direction: column; */
+    display: block;
+    padding-top: 0rem;
+    gap: 0rem;
+    width: 100%;
+    height: max-content;
+    margin-top: -3rem;
+  }
+
+  .artImage .img1,
+  .artImage .img3,
+  .artImage .img5 {
+    margin-left: -3.5rem;
+    transform: rotate(-6deg) scale(0.6);
+  }
+
+  .artImage .img2,
+  .artImage .img4 {
+    margin-top: -14.5rem;
+    padding-left: 7rem;
+    transform: rotate(6deg) scale(0.6);
+    z-index: 2;
+  }
+
+  .artImage .img4 {
+    margin-top: -10.5rem;
+    transform: rotate(12deg) scale(0.6);
+  }
+  .artImage .img3,
+  .artImage .img5 {
+    margin-top: -14.5rem;
+  }
+  .imgContainer,
+  .artContainer {
+    padding-bottom: 0rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .artImage {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .imgContainer {
+    margin-left: 0rem;
+  }
+}

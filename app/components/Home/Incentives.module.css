@@ -1,0 +1,352 @@
+.incentivesContainer {
+  border-bottom: 1px solid black;
+}
+.incentives {
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  /* margin-top: 5rem; */
+  /* background-color: whitesmoke; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.incentivesTitleTop {
+  font-size: 10rem;
+  line-height: 80%;
+  letter-spacing: -0.02em;
+  font-weight: 100;
+}
+
+.incentivesTitle span {
+  /* margin-top: -35rem; */
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 115%;
+  /* font-kerning: -2%; */
+  font-weight: 100;
+}
+
+.cap {
+  transform: scale(1.4);
+  position: absolute;
+  left: 10%;
+  top: 7.5rem;
+  display: flex;
+  width: 8.75rem;
+  height: 8.75rem;
+  padding: 1rem 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+  background: #215cff;
+  border-radius: 1rem;
+
+  & p {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    line-height: 115%;
+  }
+}
+
+.environmental {
+  transform: scale(1.4);
+  position: absolute;
+  left: 32%;
+  padding: 1rem 1rem;
+  top: 26%;
+  border-radius: 1rem;
+  background: #039c6d;
+  width: 8.75rem;
+  height: 8.75rem;
+
+  .environmentalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+
+    .environmentalContentImage {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+.environmentalContent p {
+  width: 2ch;
+  text-align: left;
+  font-size: 1em;
+  line-height: 115%;
+  text-wrap: balance;
+  color: var(--white-color);
+}
+
+.single {
+  transform: scale(1.4);
+  position: absolute;
+  left: 50%;
+  padding-left: 40px;
+  top: 7.25rem;
+  border-radius: 1rem;
+  background: #f2f2f2;
+  width: 8.75rem;
+  height: 8.75rem;
+  padding: 1rem 1rem;
+
+  .singleContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    & p {
+      width: 2ch;
+      text-align: left;
+      font-size: 0.875rem;
+      line-height: 115%;
+      text-wrap: balance;
+    }
+
+    .singleContentImage {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+  }
+}
+
+.landscape {
+  transform: scale(1.4);
+  position: absolute;
+  right: 10%;
+  top: 5.75rem;
+}
+.sew {
+  transform: scale(1.4);
+  position: absolute;
+  padding-left: 40px;
+  left: 0;
+  bottom: 16%;
+}
+
+.labor {
+  transform: scale(1.4);
+  position: absolute;
+  left: 35%;
+  bottom: 5.25rem;
+  display: flex;
+  width: 8.75rem;
+  height: 8.75rem;
+  padding: 1.1rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: #ff7600;
+
+  & p {
+    font-size: 0.875rem;
+    line-height: 115%;
+    text-wrap: balance;
+    color: var(--white-color);
+  }
+}
+
+.interest {
+  transform: scale(1.4);
+  position: absolute;
+  padding-left: 40px;
+  right: 37%;
+  bottom: 10rem;
+  display: flex;
+  width: 8.75rem;
+  height: 8.75rem;
+  padding: 1.1rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: #fdc800;
+
+  .interestContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding: 1rem;
+    background-color: var(--white-color);
+    border-radius: 6.25rem;
+
+    & p {
+      color: var(--black-color);
+    }
+  }
+}
+
+.tax {
+  transform: scale(1.4);
+  position: absolute;
+  right: 10%;
+  bottom: 15.5rem;
+  display: flex;
+  width: 8.75rem;
+  height: 8.75rem;
+  padding: 1rem 0.75rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: #88b2dd;
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+.taxContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  & p {
+    color: var(--white-color);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .cap {
+    position: absolute;
+    left: 0%;
+    top: 5%;
+    transform: scale(0.9);
+  }
+
+  .environmental {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    transform: scale(0.9);
+  }
+
+  .single {
+    position: absolute;
+    left: 44%;
+    top: 12%;
+    transform: scale(0.9);
+    z-index: 2;
+  }
+  .landscape {
+    top: 1.75rem;
+  }
+  .interest {
+    bottom: 16rem;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .cap,
+  .environmental,
+  .single,
+  .landscape,
+  .interest,
+  .tax,
+  .sew,
+  .labor {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #incentives {
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .incentives-title {
+    width: 100%;
+  }
+  .incentives-title-top {
+    font-size: var(--fonts--mobile--heading1);
+  }
+  .incentives-title span {
+    font-size: var(--fonts--mobile--sub-heading4);
+
+    margin-top: 1rem;
+  }
+
+  .cap {
+    position: absolute;
+    left: 0rem;
+    /* padding-left: 40px; */
+    top: 17%;
+    transform: scale(0.73);
+  }
+
+  .environmental {
+    position: absolute;
+    left: 11%;
+    top: 28%;
+    transform: scale(0.73);
+  }
+
+  .single {
+    position: absolute;
+    left: 44%;
+    top: 25%;
+    transform: scale(0.73);
+    z-index: 2;
+  }
+
+  .landscape {
+    position: absolute;
+    right: -3%;
+    top: 13%;
+    transform: scale(0.73);
+  }
+  .sew {
+    position: absolute;
+    /* padding-left: 40px; */
+    left: -7%;
+    bottom: 20%;
+    transform: scale(0.73);
+  }
+
+  .labor {
+    position: absolute;
+    /* padding-left: 40px; */
+    left: 10%;
+    bottom: 10%;
+    transform: scale(0.73);
+    gap: 4px;
+  }
+
+  .interest {
+    position: absolute;
+    /* padding-left: 40px; */
+    right: 27%;
+    bottom: 27%;
+    transform: scale(0.73);
+  }
+
+  .tax {
+    position: absolute;
+    right: 2%;
+    bottom: 20%;
+    transform: scale(0.73);
+  }
+}

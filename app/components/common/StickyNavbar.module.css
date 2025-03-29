@@ -1,0 +1,626 @@
+.StickyNavbar {
+  width: 100%;
+  height: 72px;
+  position: relative;
+  z-index: 10000; /* Lower than the book modal z-index (10001) */
+  border-bottom: 1px solid rgba(62, 62, 62, 0.242);
+  /* margin-top: 5rem; */
+}
+.navbar {
+  /* width: 100%; */
+  position: relative;
+  max-width: 1600px;
+  max-width: 1600px;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo,
+.navItems,
+.contact {
+  display: inline-block;
+  /* padding-top: 1rem; */
+  font-size: var(--fonts--desktop--navigation);
+}
+.logo a {
+  display: flex;
+  gap: 10px;
+  color: var(--orange-color);
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.logoText {
+  font-size: 1rem;
+  font-family: "Neue Montreal", sans-serif;
+}
+
+.navItems li a,
+.contact a {
+  color: var(--black-color);
+  display: inline-block;
+  font-family: "Neue Montreal", sans-serif;
+}
+
+.menuItem,
+.activeMenu {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navItems {
+  display: flex;
+  gap: 32px;
+}
+
+.onMobile {
+  display: none;
+}
+
+.navItems li a:hover {
+  color: #ff5100;
+}
+
+.navItems li a.active {
+  color: blue;
+}
+.contact:hover {
+  color: #ff5100;
+}
+
+.contact a:hover {
+  color: #ff5100;
+}
+
+.submenuSector {
+  display: none;
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-columns: repeat(3, auto);
+  position: absolute;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background: var(--orange-color);
+  margin-top: 30.5px;
+  padding: 20px;
+  border-radius: 4px;
+  column-gap: 20px;
+  row-gap: 24px;
+  font-size: 14px;
+  /* transform: translateY(-100%); */
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submenuLocation {
+  display: none;
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-columns: repeat(1, auto);
+  position: absolute;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background: var(--orange-color);
+  margin-top: 30.5px;
+  padding: 20px;
+  border-radius: 4px;
+  column-gap: 20px;
+  row-gap: 24px;
+  font-size: 14px;
+  /* transform: translateY(-100%); */
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+li:hover .submenuSector,
+li:hover .submenuLocation {
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+  /* transform: translateY(0%); */
+}
+.submenuSector li a:hover,
+.submenuSector li a,
+.submenuLocation li a,
+.submenuLocation li a:hover {
+  color: white;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .onDesktop {
+    display: none;
+  }
+  .onMobile {
+    display: block;
+  }
+  .navbar {
+    padding: 0 1rem;
+    height: 3rem;
+  }
+
+  .logo img {
+    width: 1.8rem;
+    height: auto;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .logo {
+    font-size: var(--fonts--mobile--navigation);
+    color: inherit;
+    line-height: var(--line-height--100);
+    transition: font-size 0.3s ease;
+  }
+
+  /* Styles for when at top of page */
+  .logo-at-top img {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .logo-at-top {
+    font-size: calc(var(--fonts--mobile--navigation) * 1.2);
+  }
+
+  .onMobile button {
+    background-color: #fff;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-nav-content.at-top button {
+    transform: scale(1.2);
+  }
+
+  .mobileNav {
+    width: 100%;
+  }
+  .mobileNavContent {
+    padding: 0 2.5rem;
+    padding-block: 12px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Styles for when at top of page */
+  .mobileNavContent.atTop {
+    height: 72px;
+    padding-block: 16px;
+  }
+
+  .mobileInnerMenu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--orange-color);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Lower than the book modal z-index (10001) */
+  }
+
+  .mobileInnerMenu .logo a {
+    color: white;
+  }
+  .mobileInnerMenu .mobileNavContent {
+    border-bottom: 1px solid white;
+  }
+  .mobileLinks {
+    height: calc(100% - 3rem);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobileLinks li {
+    margin-bottom: 2rem;
+  }
+  .mobileLinks li,
+  .mobileContact {
+    display: block;
+    font-size: var(--fonts--mobile--sub-heading2);
+  }
+  .mobileLinks li a,
+  .mobileContact a {
+    color: white;
+  }
+  .mobileInnerMenu button {
+    border: none;
+    background: transparent;
+  }
+
+  /* Ensure consistent styling for the inner menu when at top */
+  .mobileInnerMenu .mobileNavContent.atTop {
+    height: 72px;
+    padding-block: 16px;
+  }
+
+  .mobileInnerMenu .logoAtTop img {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .mobileInnerMenu .logoAtTop {
+    font-size: calc(var(--fonts--mobile--navigation) * 1.2);
+  }
+
+  /* Styles for when actively scrolling */
+  .mobileNavbar.isScrolling .mobileNavContent {
+    opacity: 0.9;
+    transition: opacity 0.3s ease, height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Add a nice fade-in effect when scrolling stops */
+  .mobileNavbar:not(.isScrolling) .mobileNavContent {
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Adjust size when scrolling at the top */
+  .mobileNavbar.isScrolling .mobileNavContent.atTop {
+    height: 60px; /* Slightly smaller when scrolling */
+    padding-block: 12px;
+  }
+
+  .mobileNavbar.isScrolling .logoAtTop img {
+    width: 2.2rem; /* Slightly smaller when scrolling */
+  }
+}
+@media screen and (max-width: 480px) {
+  .onDesktop {
+    display: none;
+  }
+  .onMobile {
+    display: block;
+  }
+  .navbar {
+    padding: 0 1rem;
+    height: 3rem;
+  }
+
+  .logo img {
+    width: 1.8rem;
+    height: auto;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .logo {
+    font-size: var(--fonts--mobile--navigation);
+    color: inherit;
+    line-height: var(--line-height--100);
+    transition: font-size 0.3s ease;
+  }
+
+  /* Styles for when at top of page */
+  .logoAtTop img {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .logoAtTop {
+    font-size: calc(var(--fonts--mobile--navigation) * 1.2);
+  }
+
+  .onMobile button {
+    background-color: #fff;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+
+  .mobileNavContent.atTop button {
+    transform: scale(1.2);
+  }
+
+  .mobileNav {
+    width: 100%;
+  }
+  .mobileNavContent {
+    padding: 0 1rem;
+    padding-block: 12px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Styles for when at top of page */
+  .mobileNavContent.atTop {
+    height: 72px;
+    padding-block: 16px;
+  }
+
+  .mobileInnerMenu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--orange-color);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Lower than the book modal z-index (10001) */
+  }
+
+  .mobileInnerMenu .logo a {
+    color: white;
+  }
+  .mobileInnerMenu .mobileNavContent {
+    border-bottom: 1px solid white;
+  }
+  .mobileLinks {
+    height: calc(100% - 3rem);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mobileLinks li {
+    margin-bottom: 2rem;
+  }
+  .mobileLinks li,
+  .mobileContact {
+    display: block;
+    font-size: var(--fonts--mobile--sub-heading2);
+  }
+  .mobileLinks li a,
+  .mobileContact a {
+    color: white;
+  }
+  .mobileInnerMenu button {
+    border: none;
+    background: transparent;
+  }
+
+  /* Ensure consistent styling for the inner menu when at top */
+  .mobileInnerMenu .mobileNavContent.atTop {
+    height: 72px;
+    padding-block: 16px;
+  }
+
+  .mobileInnerMenu .logoAtTop img {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .mobileInnerMenu .logoAtTop {
+    font-size: calc(var(--fonts--mobile--navigation) * 1.2);
+  }
+
+  /* Styles for when actively scrolling */
+  .mobileNavbar.isScrolling .mobileNavContent {
+    opacity: 0.9;
+    transition: opacity 0.3s ease, height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Add a nice fade-in effect when scrolling stops */
+  .mobileNavbar:not(.isScrolling) .mobileNavContent {
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* Adjust size when scrolling at the top */
+  .mobileNavbar.isScrolling .mobileNavContent.atTop {
+    height: 60px; /* Slightly smaller when scrolling */
+    padding-block: 12px;
+  }
+
+  .mobileNavbar.isScrolling .logoAtTop img {
+    width: 2.2rem; /* Slightly smaller when scrolling */
+  }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1919px) {
+  .sectorsMenu li a {
+    padding-left: calc(485px + 2.5rem);
+  }
+
+  .locationsMenu li a {
+    padding-left: calc(575px + 2.5rem);
+  }
+
+  .discoverMaharashtraMenu li a {
+    padding-left: calc(795px + 2.5rem);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .sectorsMenu li a {
+    padding-left: calc(485px + 2.5rem);
+  }
+
+  .locationsMenu li a {
+    padding-left: calc(575px + 2.5rem);
+  }
+
+  .discoverMaharashtraMenu li a {
+    padding-left: calc(795px + 2.5rem);
+  }
+}
+
+/* New desktop flyout menu styling */
+@media screen and (min-width: 1025px) {
+  .desktopFlyoutMenu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 72px; /* Match the height of the navbar */
+    width: 100%;
+    /* max-width: 1600px; */
+    margin-bottom: 80px;
+    margin-inline: auto;
+    background: white;
+    padding: 0;
+    padding-bottom: 5rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    z-index: 998; /* Lower than the book modal z-index (10001) and just below the navbar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .desktopFlyoutMenuInner {
+    /* max-width: 1600px; */
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .desktopFlyoutMenu ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktopFlyoutMenu li {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+
+  .desktopFlyoutMenu li:last-child {
+    border-bottom: none;
+  }
+
+  .desktopFlyoutMenu li a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black-color);
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    transition: color 0.3s ease;
+  }
+
+  /* .sectorsMenu li a {
+    padding-left: calc(370px + 2.5rem);
+  }
+
+  .locationsMenu li a {
+    padding-left: calc(470px + 2.5rem);
+  }
+
+  .discoverMaharashtraMenu li a {
+    padding-left: calc(700px + 2.5rem);
+  }
+
+  .newsAndEventsMenu li a {
+    padding-left: calc(780px + 2.5rem);
+  }
+
+  .incentivesMenu li a {
+    padding-left: calc(530px + 2.5rem);
+  } */
+
+  .desktopFlyoutMenu li a:hover {
+    color: var(--orange-color);
+  }
+
+  /* Fix hover behavior */
+  .navItems li {
+    position: relative;
+  }
+}
+
+/* Adjustments for different screen sizes */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* .sectors-menu li a {
+    padding-left: calc(320px + 2.5rem);
+  }
+
+  .locations-menu li a {
+    padding-left: calc(420px + 2.5rem);
+  }
+
+  .discover-maharashtra-menu li a {
+    padding-left: calc(570px + 2.5rem);
+  }
+
+  .news-and-events-menu li a {
+    padding-left: calc(730px + 2.5rem);
+  }
+
+  .incentives-menu li a {
+    padding-left: calc(480px + 2.5rem);
+  } */
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  /* .sectors-menu li a {
+    padding-left: calc(320px + 2.5rem);
+  }
+
+  .locations-menu li a {
+    padding-left: calc(420px + 2.5rem);
+  }
+
+  .discover-maharashtra-menu li a {
+    padding-left: calc(635px + 2.5rem);
+  }
+
+  .news-and-events-menu li a {
+    padding-left: calc(760px + 2.5rem);
+  }
+
+  .incentives-menu li a {
+    padding-left: calc(510px + 2.5rem);
+  } */
+}
+
+@media screen and (min-width: 1401px) {
+  /* .sectors-menu li a {
+    padding-left: calc(410px + 2.5rem);
+  }
+
+  .locations-menu li a {
+    padding-left: calc(500px + 2.5rem);
+  }
+
+  .discover-maharashtra-menu li a {
+    padding-left: calc(720px + 2.5rem);
+  }
+
+  .news-and-events-menu li a {
+    padding-left: calc(780px + 2.5rem);
+  }
+
+  .incentives-menu li a {
+    padding-left: calc(530px + 2.5rem);
+  } */
+}
+
+/* Specific adjustment for 1600px screens */
+@media screen and (width: 1600px) {
+  /* .sectors-menu li a {
+    padding-left: calc(485px + 2.5rem);
+  }
+
+  .locations-menu li a {
+    padding-left: calc(575px + 2.5rem);
+  }
+
+  .discover-maharashtra-menu li a {
+    padding-left: calc(795px + 2.5rem);
+  }
+
+  .news-and-events-menu li a {
+    padding-left: calc(810px + 2.5rem);
+  }
+
+  .incentives-menu li a {
+    padding-left: calc(560px + 2.5rem);
+  } */
+}
+
+/* Add transition for the navbar visibility */
+.mobileNavbar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
