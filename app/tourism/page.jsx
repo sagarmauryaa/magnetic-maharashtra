@@ -714,9 +714,10 @@ function Tourism() {
                   <p className={styles.gridText}>
                     Maharashtra&apos;s diverse landscape offers numerous rock
                     climbing and rappelling spots, particularly in the
-                    Sahyadris. Popular locations like Duke's Nose in Lonavala
-                    and Harishchandragad provide thrilling climbs and are
-                    perfect for adrenaline junkies looking to test their limits.
+                    Sahyadris. Popular locations like Duke&apos;s Nose in
+                    Lonavala and Harishchandragad provide thrilling climbs and
+                    are perfect for adrenaline junkies looking to test their
+                    limits.
                   </p>
                 </div>
                 <div className={styles.exploreGridItem}>
@@ -747,9 +748,9 @@ function Tourism() {
                   <h5 className={styles.gridHead}>Paragliding</h5>
                   <p className={styles.gridText}>
                     Soar high above the landscape and enjoy panoramic views of
-                    Maharashtra's stunning scenery. Destinations like Kamshet
-                    are renowned for paragliding, offering experiences that
-                    combine adventure with unforgettable views.
+                    Maharashtra&apos;s stunning scenery. Destinations like
+                    Kamshet are renowned for paragliding, offering experiences
+                    that combine adventure with unforgettable views.
                   </p>
                 </div>
                 <div className={styles.exploreGridItem}>
@@ -869,9 +870,9 @@ function Tourism() {
                   />
                   <h5 className={styles.gridHead}>Museums</h5>
                   <p className={styles.gridText}>
-                    Dive into Maharashtra's history at the Chhatrapati Shivaji
-                    Maharaj Vastu Sangrahalaya in Mumbai or explore the Raja
-                    Dinkar Kelkar Museum in Pune. These museums house rare
+                    Dive into Maharashtra&apos;s history at the Chhatrapati
+                    Shivaji Maharaj Vastu Sangrahalaya in Mumbai or explore the
+                    Raja Dinkar Kelkar Museum in Pune. These museums house rare
                     artifacts and exhibitions that tell the story of
                     Maharashtra&apos;s heritage and evolution.
                   </p>
