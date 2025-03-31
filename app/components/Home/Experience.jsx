@@ -14,22 +14,22 @@ export const Experience = () => {
   return (
     <>
       {/* Background leather plane - slightly larger than the book pages */}
-      <mesh position={[0, -0.1, -0.5]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
+      {/* <mesh position={[0, -0.1, -0.5]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
         <planeGeometry args={[LEATHER_WIDTH, LEATHER_HEIGHT]} />
         <meshStandardMaterial color="#472B1B" roughness={0.9} metalness={0.1} />
-      </mesh>
+      </mesh> */}
 
       {/* Add a subtle border to simulate book binding */}
-      <mesh position={[0, -0.1, -0.48]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
+      {/* <mesh position={[0, -0.1, -0.48]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
         <planeGeometry args={[LEATHER_WIDTH - 0.05, LEATHER_HEIGHT - 0.05]} />
         <meshStandardMaterial color="#2A1A10" roughness={1} metalness={0} />
-      </mesh>
+      </mesh> */}
 
       {/* Add decorative embossed border for the leather */}
-      <mesh position={[0, -0.1, -0.46]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
+      {/* <mesh position={[0, -0.1, -0.46]} rotation={[ROTATION_X, ROTATION_Y, 0]}>
         <planeGeometry args={[LEATHER_WIDTH - 0.3, LEATHER_HEIGHT - 0.3]} />
         <meshStandardMaterial color="#3A2213" roughness={0.8} metalness={0.2} />
-      </mesh>
+      </mesh> */}
 
       <Book />
 

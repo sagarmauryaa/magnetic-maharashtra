@@ -1,18 +1,12 @@
-import bollywood1 from "/images/Bollywood/bollywood1.webp";
-import bollywood2 from "/images/Bollywood/bollywood2.webp";
-import bollywood3 from "/images/Bollywood/bollywood3.webp";
-import bollywood4 from "/images/Bollywood/bollywood4.webp";
-import bollywood5 from "/images/Bollywood/bollywood5.webp";
-import bollywood6 from "/images/Bollywood/bollywood6.webp";
-import LEFTo from "/images/Bollywood/BO.svg";
-import RIGHTo from "/images/Bollywood/LYWood.svg";
-
-import "../Home/Bollywood.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Lottie from "lottie-react";
-import animationData from "../../assets/lottie/bollywood.json";
+import animationData from "../../../public/lottie/bollywood.json";
 import { useRef } from "react";
+import Image from "next/image";
+
+import styles from "./Bollywood.module.css";
+
 function Bollywood() {
   const bollyTabRef = useRef();
   const scrollSectionRef = useRef();
@@ -84,11 +78,17 @@ function Bollywood() {
   });
 
   return (
-    <section className="bollywood-container" ref={bollyTabRef}>
-      <div className="bollywood" ref={scrollTriggerRef}>
-        <div className="bolly-images" ref={scrollSectionRef}>
-          <div className="image">
-            <img loading="lazy" src={bollywood1} alt="" />
+    <section className={styles.bollywoodContainer} ref={bollyTabRef}>
+      <div className={styles.bollywood} ref={scrollTriggerRef}>
+        <div className={styles.bollywoodImages} ref={scrollSectionRef}>
+          <div className={styles.image}>
+            <Image
+              width={100}
+              height={460}
+              loading="lazy"
+              src="/images/Bollywood/bollywood1.webp"
+              alt=""
+            />
           </div>
           {/* <div className='inner-grid-wrapper'>
             <div className='image'>
@@ -98,16 +98,35 @@ function Bollywood() {
               <img src={bollywood3} alt='' />
             </div>
           </div> */}
-          <div className="inner-grid-wrapper">
-            <div className="image">
-              <img loading="lazy" src={bollywood2} alt="" />
+          <div className={styles.innerGridWrapper}>
+            <div className={styles.image}>
+              <Image
+                width={100}
+                height={230}
+                loading="lazy"
+                src="/images/Bollywood/bollywood2.webp"
+                alt=""
+              />
             </div>
-            <div className="image">
-              <img loading="lazy" src={bollywood3} alt="" />
+            <div className={styles.image}>
+              <Image
+                width={100}
+                height={230}
+                loading="lazy"
+                src="/images/Bollywood/bollywood3.webp"
+                alt=""
+              />
             </div>
           </div>
-          <div className="image bolly-subtitle ">
-            <img loading="lazy" src={bollywood4} alt="" />
+          <div className={styles.bollywoodSubtitle}>
+            <Image
+              width={320}
+              height={460}
+              loading="lazy"
+              src="/images/Bollywood/bollywood4.webp"
+              alt=""
+              objectFit="cover"
+            />
             <p>
               Bollywood makes Maharashtra the center of India’s film industry,
               boosting business in production, talent, and creative arts.
@@ -122,35 +141,83 @@ function Bollywood() {
               <img src={bollywood6} alt='' />
             </div>
           </div> */}
-          <div className="inner-grid-wrapper">
-            <div className="image">
-              <img src={bollywood5} alt="" />
+          <div className={styles.innerGridWrapper}>
+            <div className={styles.image}>
+              <Image
+                width={100}
+                height={230}
+                loading="lazy"
+                src="/images/Bollywood/bollywood5.webp"
+                alt=""
+              />
             </div>
-            <div className="image">
-              <img src={bollywood6} alt="" />
+            <div className={styles.image}>
+              <Image
+                width={100}
+                height={230}
+                loading="lazy"
+                src="/images/Bollywood/bollywood6.webp"
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="bolly-images-mobile">
-          <div className="image-mobile-conatiner">
-            <div className="inner-mobile-images">
-              <div className="image">
-                <img src={bollywood1} alt="" />
+        <div className={styles.bollywoodImagesMobile}>
+          <div className={styles.imageMobileConatiner}>
+            <div className={styles.innerMobileImages}>
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood1.webp"
+                  alt=""
+                />
               </div>
-              <div className="image">
-                <img src={bollywood2} alt="" />
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood2.webp"
+                  alt=""
+                />
               </div>
-              <div className="image">
-                <img src={bollywood3} alt="" />
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood3.webp"
+                  alt=""
+                />
               </div>
-              <div className="image">
-                <img src={bollywood4} alt="" />
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood4.webp"
+                  alt=""
+                />
               </div>
-              <div className="image">
-                <img src={bollywood5} alt="" />
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood5.webp"
+                  alt=""
+                />
               </div>
-              <div className="image">
-                <img src={bollywood6} alt="" />
+              <div className={styles.image}>
+                <Image
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src="/images/Bollywood/bollywood6.webp"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -159,12 +226,12 @@ function Bollywood() {
             boosting business in production, talent, and creative arts
           </p>
         </div>
-        <div className="bolly-text">
+        <div className={styles.bollywoodText}>
           <p>
-            <div className="leftB">
-              <img src={LEFTo} alt="" />
+            <div className={styles.leftB}>
+              <img src="/images/Bollywood/BO.svg" alt="" />
             </div>
-            <div className="bolly-camera">
+            <div className={styles.bollywoodCamera}>
               <div>
                 <Lottie
                   animationData={animationData}
@@ -174,8 +241,8 @@ function Bollywood() {
                 />
               </div>
             </div>
-            <div className="rightB">
-              <img src={RIGHTo} alt="" />
+            <div className={styles.rightB}>
+              <img src="/images/Bollywood/LYWood.svg" alt="" />
             </div>
           </p>
         </div>

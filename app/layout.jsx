@@ -1,6 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import StickyNavbar from "./components/common/StickyNavbar";
+import Footer from "./components/common/Footer";
+import SmoothScroll from "./components/common/SmoothScroll";
+
 const ppNeuMontrealRegular = localFont({
   src: "./fonts/PPNeueMontreal-Regular.woff2",
   variable: "--font-ppneumontreal-regular",
@@ -15,8 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <StickyNavbar />
-      <body className={`${ppNeuMontrealRegular.variable}`}>{children}</body>
+      <body className={`${ppNeuMontrealRegular.variable}`}>
+        <StickyNavbar />
+        <SmoothScroll>{children}</SmoothScroll>
+        <Footer />
+      </body>
     </html>
   );
 }

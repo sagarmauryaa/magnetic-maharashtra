@@ -9,37 +9,31 @@ gsap.registerPlugin(ScrollTrigger);
 function Milestones() {
   const milestoneContainerRef = useRef();
   const mileClipPathRef = useRef();
+  const revolutionRef = useRef();
+  const infrastructureRef = useRef();
+  const businessRef = useRef();
+  const developmentRef = useRef();
+  const milestonesRef = useRef();
 
   useGSAP(
     () => {
       // const master = gsap.timeline();
-      const initialStates = () => {
-        gsap.set(".infrastructure", {
-          xPercent: -130,
-          opacity: 0,
-        });
-        gsap.set(".business", {
-          xPercent: -200,
-          opacity: 0,
-        });
-        gsap.set(".development", {
-          xPercent: -300,
-          opacity: 0,
-        });
-      };
+
       const animateBoxes = () => {
         let tl = gsap.timeline({
           scrollTrigger: {
-            trigger: ".box",
+            trigger: milestonesRef.current,
             ease: "power2.inOut",
             start: "top 60%",
           },
         });
-        tl.to(".box", {
+
+        tl.to(".milestone-box:not(:first-child)", {
           xPercent: 0,
           stagger: 0.35,
           opacity: 1,
         });
+
         return tl;
       };
 
@@ -54,7 +48,7 @@ function Milestones() {
             markers: false,
           },
         });
-        gsap.from(".milestone-elements .item", {
+        gsap.from(".milestoneElements .item", {
           opacity: 0,
           stagger: 0.3,
           scrollTrigger: {
@@ -64,7 +58,7 @@ function Milestones() {
           },
         });
       };
-      initialStates();
+      // initialStates();
       animateBoxes();
       animateMilestone();
     },
@@ -72,14 +66,17 @@ function Milestones() {
   );
   return (
     <div ref={milestoneContainerRef} className={styles.milestoneContainer}>
-      <div className={styles.milestones}>
+      <div ref={milestonesRef} className={styles.milestones}>
         <div className={styles.milestoneTitle}>
           Maharashtra&apos;s Path to a $1 Trillion Economy
         </div>
         <div className={styles.pillars}>
           <div className={styles.subtitle}>The Pillars</div>
           <div className={styles.elements}>
-            <div className={styles.box + " " + styles.revolution}>
+            <div
+              ref={revolutionRef}
+              className={styles.box + " " + styles.revolution + "milestone-box"}
+            >
               <div className={styles.icon}>
                 <Image
                   src="/images/Milestones/buildings.svg"
@@ -95,7 +92,12 @@ function Milestones() {
               </div>
             </div>
 
-            <div className={styles.box + " " + styles.infrastructure}>
+            <div
+              ref={infrastructureRef}
+              className={
+                styles.box + " " + styles.infrastructure + "milestone-box"
+              }
+            >
               <div className={styles.icon}>
                 <Image
                   src="/images/Milestones/infrastructure.svg"
@@ -111,7 +113,10 @@ function Milestones() {
               </div>
             </div>
 
-            <div className={styles.box + " " + styles.business}>
+            <div
+              ref={businessRef}
+              className={styles.box + " " + styles.business + "milestone-box"}
+            >
               <div className={styles.icon}>
                 <Image
                   src="/images/Milestones/business.svg"
@@ -127,7 +132,12 @@ function Milestones() {
               </div>
             </div>
 
-            <div className={styles.box + " " + styles.development}>
+            <div
+              ref={developmentRef}
+              className={
+                styles.box + " " + styles.development + "milestone-box"
+              }
+            >
               <div className={styles.icon}>
                 <Image
                   src="/images/Milestones/development.svg"

@@ -12,6 +12,7 @@ const GlobalBusiness = () => {
   const globalBusinessRef = useRef();
   const scrollSectionRef = useRef();
   const scrollTriggerRef = useRef();
+  const cardRef = useRef([]);
   // const { selectedIndex, setSelectedIndex } = useContext(AppContext) || {};
   // const { setActive } = useContext(AppContext) || {};
 
@@ -108,8 +109,9 @@ const GlobalBusiness = () => {
       <h2>The Stories of Success</h2>
       <div ref={scrollTriggerRef}>
         <div ref={scrollSectionRef} className={styles.scrollSection}>
-          {globalBusinessData.map((business) => (
+          {globalBusinessData.map((business, index) => (
             <div
+              ref={(el) => (cardRef.current[index] = el)}
               className={`${
                 business.class === "largeCard"
                   ? styles.largeCard

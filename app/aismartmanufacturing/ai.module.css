@@ -1,0 +1,650 @@
+#aiHeroSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  /* padding: 0px 40px 80px 40px; */
+  padding-inline: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 72px;
+  margin-bottom: 80px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+.aiGradientGlow {
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 16%;
+  left: 83%;
+  border-radius: 60%;
+  filter: blur(450px);
+  z-index: -1;
+}
+.aiImage {
+  width: 100%;
+  height: 32.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aiImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aiHeroText {
+  width: 100%;
+  height: 100%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.aiHeroHeading {
+  font-size: 120px;
+
+  line-height: 90%;
+  letter-spacing: -2.4px;
+  color: black;
+}
+.aiHeroHeading span {
+  background: linear-gradient(108deg, #2599ff 16.03%, #02be7c 109.71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 120px;
+
+  line-height: 90%;
+  letter-spacing: -2.4px;
+  color: black;
+}
+.aiHeroSubheading {
+  font-size: 24px;
+
+  line-height: 115%;
+  letter-spacing: -0.48px;
+  color: black;
+  width: 277px;
+}
+
+.divider {
+  background-color: black;
+  width: 100%;
+  height: 0.5px;
+}
+
+#whyItMatters {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 1600px;
+  padding-inline: 40px;
+  padding-block: 80px;
+  margin-inline: auto;
+  padding-inline: 40px;
+  box-sizing: border-box;
+}
+.mattersHeader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.mattersHeading {
+  width: 100%;
+  height: 100%;
+}
+.mattersHeading h2 {
+  font-size: 50px;
+
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: black;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.mattersGrid {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 25rem;
+  grid-template-areas: "griditem1 griditem2 griditem3 griditem4";
+}
+.mattersGrid .gridItem:nth-child(1) {
+  grid-area: griditem1;
+}
+.mattersGrid .gridItem:nth-child(2) {
+  grid-area: griditem2;
+}
+.mattersGrid .gridItem:nth-child(3) {
+  grid-area: griditem3;
+}
+.mattersGrid .gridItem:nth-child(4) {
+  grid-area: griditem4;
+}
+.mattersItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  border: 1px solid #72777f;
+  border-right: none;
+  padding: 20px;
+  background-color: var(--white-color);
+}
+.mattersItem:last-child {
+  border-right: 1px solid #72777f;
+}
+.mattersItem p {
+  width: 75%;
+  font-size: var(--fonts--desktop--sub-heading2);
+  color: #2b2f34;
+  line-height: 115%;
+}
+
+.coreSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 1600px;
+  padding-inline: 40px;
+  padding-block: 80px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+.coreHeader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 30px;
+}
+.coreHeading {
+  width: 50%;
+  height: 100%;
+}
+.coreHeading h2 {
+  font-size: 80px;
+  line-height: 90%;
+  letter-spacing: -1.6px;
+  transform: translateY(0%);
+  background: linear-gradient(108deg, #2599ff 6.03%, #02be7c 75.71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.coreSubheading {
+  width: 50%;
+  height: 100%;
+}
+
+.coreSubheading h3 {
+  color: #2b2f34;
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  transform: translateY(0%);
+}
+
+.coreContainer {
+  position: relative;
+  display: flex;
+  margin-top: 56px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.imageBox {
+  width: 100%;
+  /* height: 34.5rem; */
+  aspect-ratio: 4/3;
+  position: relative;
+}
+.imageBox img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.imageBox img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.coreTitleContainer h3 {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0;
+  transition: color 0s ease;
+}
+
+.coreTitleContainer h3.clicked {
+  color: #2599ff;
+}
+.supportingText p {
+  font-size: 20px;
+
+  line-height: 115%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transform: translateY(0%);
+}
+
+.supportingText.hiddenText {
+  display: none;
+}
+
+.supportingText.visible {
+  display: block;
+  opacity: 1;
+}
+
+.innovationDividerTop {
+  background-color: #999999;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.innovationDivider {
+  background-color: #999999;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.coreTitleContainer {
+  margin-top: 0;
+  width: 50%;
+}
+.coreTitleContainer h3 {
+  color: #2b2f34;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+
+.coreImageContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 24px;
+}
+.coreImageContainer img {
+  position: absolute;
+  width: 36.563;
+  height: 27.375;
+  bottom: 0;
+}
+
+#sectorsOfImpact {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 1600px;
+  padding: 80px 40px 80px 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.sectionDivider {
+  background-color: #999999;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  transform-origin: center left;
+}
+.sectorsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-direction: row;
+}
+.sectorsHead {
+  width: 50%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+.sectorsHead h2 {
+  font-size: 50px;
+
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+.sectorsHead h3 {
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  color: black;
+}
+.sectorsContent {
+  gap: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-direction: row;
+}
+.sectorsText {
+  font-size: 20px;
+
+  line-height: 115%;
+  color: #999999;
+}
+
+.sectorsContent img {
+  width: 50%;
+  height: 100%;
+}
+.coreContainerMobile {
+  display: none;
+}
+
+.aiLastSection {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1600px;
+  padding-block: 80px;
+  margin-inline: auto;
+  position: relative;
+  overflow: clip;
+}
+
+.aiGradientGlow1 {
+  width: 290px;
+  height: 290px;
+  background-color: hsl(22, 100%, 50%);
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.aiGradientGlow2 {
+  width: 260px;
+  height: 260px;
+  background-color: hsl(212, 100%, 50%);
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -2;
+}
+
+.aiContactUs {
+  text-align: center;
+}
+
+.aiContactUs h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.contactUs {
+  width: fit-content;
+  height: 1.125rem;
+  display: flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 2px;
+  color: white;
+  background-color: #ff5100;
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 115%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .aiHeroText {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mattersGrid {
+    grid-template-columns: repeat(4, 19.125rem);
+    grid-auto-rows: 19.125rem;
+    overflow: scroll;
+    scrollbar-color: transparent transparent;
+  }
+}
+@media screen and (max-width: 480px) {
+  #aiHeroSection {
+    margin-top: 48px;
+    padding: 0;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+  .aiImage {
+    height: 35rem;
+  }
+  .aiHeroText {
+    padding: 0 1rem;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 16px;
+  }
+  .aiHeroHeading h2 {
+    margin-bottom: 20px;
+  }
+  .aiHeroHeading,
+  .aiHeroHeading span {
+    font-size: 48px;
+  }
+  #sectorsOfImpact .sectorsHead h2 {
+    font-size: var(--fonts--mobile--sub-heading2);
+  }
+
+  #whyItMatters {
+    padding-inline: 0rem;
+    padding-block: 0;
+    margin-block: 60px;
+  }
+  .mattersHeading h2 {
+    font-size: var(--fonts--desktop--sub-heading1);
+    margin-bottom: 24px;
+  }
+  .mattersHeader {
+    margin-bottom: 0;
+    padding-inline: 1rem;
+  }
+  .mattersGrid {
+    padding-inline: 1rem;
+    grid-template-columns: repeat(4, 15.125rem);
+    grid-auto-rows: 15.125rem;
+    overflow: scroll;
+    scrollbar-color: transparent transparent;
+  }
+
+  .mattersItem:last-child {
+    border-right: 1px solid #72777f;
+  }
+  .mattersItem p {
+    width: 100%;
+    font-size: var(--fonts--mobile--sub-heading4);
+  }
+  .coreSection {
+    padding-block: 60px;
+    padding-inline: 0rem;
+  }
+  .coreHeading {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  .coreHeading h2 {
+    font-size: var(--fonts--desktop--sub-heading1);
+    margin-bottom: 32px;
+  }
+
+  .coreContainer {
+    display: none;
+  }
+  .coreContainerMobile {
+    display: block;
+    width: 100%;
+  }
+
+  .coreTabsContainer {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--light-grey-color);
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  .coreTabsContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    margin-right: 16px;
+    text-align: center;
+    color: var(--body-grey-color);
+    position: relative;
+  }
+  .tab:last-child {
+    margin-right: 0;
+  }
+
+  .tab.coreActive {
+    color: #2599ff;
+    /* padding-bottom: 20px; */
+    /* border-bottom: 2px solid var(--green-color); */
+  }
+  .tab.coreActive::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #2599ff;
+    bottom: -100%;
+  }
+  .activeContent .content img {
+    width: 100%;
+    margin-block: 20px;
+  }
+  .content {
+    display: none;
+  }
+  .activeContent {
+    display: block;
+    width: 100%;
+  }
+  .coreEmpty {
+    /* width: 20px; */
+    height: 1rem;
+  }
+  .content.activeContent p {
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /*sectors of impact*/
+  #sectorsOfImpact {
+    padding-inline: 1rem;
+    padding-block: 60px;
+  }
+  .sectorsHead {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .sectorsHead h2 {
+    font-size: var(--fonts--mobile--sub-heading1);
+  }
+  .sectorsContainer {
+    flex-direction: column;
+    padding-block: 24px;
+  }
+  .sectorsContent {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .sectorsContent img {
+    width: 100%;
+    margin-block: 20px;
+  }
+  .sectorsContainer .sectorsHead h3 {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+  }
+  .sectorsText p {
+    font-size: var(--fonts--mobile--body1-capital);
+  }
+  .aiContactUs h2 {
+    font-size: var(--fonts--mobile--sub-heading2);
+  }
+  .aiGradientGlow1 {
+    width: 200px;
+    height: 200px;
+    top: 36%;
+  }
+  .aiGradientGlow2 {
+    width: 150px;
+    height: 150px;
+    top: 36%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .coreTabsContainer {
+    width: 324px;
+  }
+  .aiGradientGlow1,
+  .aiGradientGlow2 {
+    top: 41%;
+  }
+}

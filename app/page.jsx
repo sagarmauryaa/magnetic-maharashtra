@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import styles from "./page.module.css";
-import LocomotiveScroll from "locomotive-scroll";
 
 import Popup from "./components/Popup";
-import sectorsData from "./data";
-import Link from "next/link";
 import Playground from "./components/Home/Playground";
 import Brilliance from "./components/Home/Brilliance";
 import ProofofProgress from "./components/Home/ProofofProgress";
@@ -22,6 +18,8 @@ import Incentives from "./components/Home/Incentives";
 import Arts from "./components/Home/Arts";
 import BookExperience from "./components/Home/BookExperience";
 import ParallaxExperience from "./components/Home/ParallaxExperience";
+import Bollywood from "./components/Home/Bollywood";
+import Envelop from "./components/Home/Envelop";
 
 export default function Home() {
   const heroHeadingSectionRef = useRef();
@@ -39,18 +37,6 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
-      lenisOptions: {
-        lerp: 0.1,
-        wheelMultiplier: 0.7,
-        gestureOrientation: "vertical",
-        normalizeWheel: false,
-        smoothTouch: false,
-      },
-    });
-  });
 
   return (
     <>
@@ -105,6 +91,8 @@ export default function Home() {
       <Arts />
       <BookExperience />
       <ParallaxExperience />
+      <Bollywood />
+      <Envelop />
     </>
   );
 }

@@ -1,0 +1,368 @@
+.incentivesHero {
+  display: flex;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+  padding-inline: 2.5rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  position: static;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.incentivesHeroImage {
+  width: 100%;
+  height: 32.5rem;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
+}
+
+.incentivesHeroImage img {
+  height: 32.5rem;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+}
+.flexContainer {
+  width: 100%;
+  display: flex;
+  /* gap: 25rem; */
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  flex-direction: row;
+}
+.heroHeading {
+  /* flex: 1; */
+  /* width: 100%; */
+  font-size: 120px;
+  line-height: 90%;
+  letter-spacing: -2.4px;
+}
+.textBlock {
+  /* flex: 2; */
+  width: 19%;
+  display: block;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 105%;
+  letter-spacing: -0.64px;
+}
+
+.incentivesDivider {
+  height: 0.5px;
+  background-color: var(--black-color);
+}
+
+.dividerIncentive {
+  background-clip: border-box;
+  width: 100%;
+  max-width: none;
+  height: 0.7px;
+  margin: 1rem 0;
+  display: flex;
+  background-color: black;
+}
+
+.howToApply {
+  width: 100%;
+  background-color: #ffffff;
+  /* padding-left: 2.5rem; */
+  /* padding-right: 2.5rem; */
+  padding-inline: 2.5rem;
+  max-width: 1600px;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  margin-inline: auto;
+  text-align: left;
+}
+.howToApply h2 {
+  color: black;
+  font-size: 80px;
+  line-height: var(--line-height--115);
+  letter-spacing: -1.6px;
+}
+.howToApply section {
+  width: 80rem;
+  height: auto;
+  box-sizing: border-box;
+  max-width: 1600px;
+}
+.steps {
+  /* padding-inline: 2.5rem; */
+  max-width: 1600px;
+  margin-inline: auto;
+}
+.stepsContainer {
+  /* padding-top: 1.75rem; */
+  /* padding-bottom: 2rem; */
+  /* padding-inline: 2.5rem; */
+  width: 100%;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: row;
+
+  /* padding-left: 2.5rem; */
+}
+.stepsContent {
+  width: 100%;
+  display: flex;
+  margin-inline: 40px;
+  justify-content: space-between;
+  border-top: 1px solid #d1d1d2;
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+
+.left h2 {
+  font-size: 50px;
+
+  line-height: 100%;
+  letter-spacing: -1px;
+  color: #2b2f34;
+  margin-top: 0;
+  display: flex;
+  width: 50%;
+  height: auto;
+  gap: 1.875rem;
+  /* margin-left: 2.5rem; */
+}
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: start;
+  flex-direction: row;
+  /* margin-right: 2.5rem; */
+}
+.subheading h3 {
+  width: 17.375rem;
+  margin-top: 0;
+  color: #000;
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: 115%;
+}
+
+.paragraph {
+  width: 17.375rem;
+  color: #999;
+  font-size: 1rem;
+
+  line-height: 115%;
+}
+
+.paragraph section .para-incentives-divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: #d1d1d2;
+  margin-block: 1.5rem;
+}
+
+.p {
+  width: 17.375rem;
+  font-size: 1rem;
+}
+
+.sectionDivider {
+  background-clip: border-box;
+  width: 100%;
+  max-width: none;
+  height: 0.75px;
+  margin: 24px 0;
+  display: flex;
+  background-color: #d1d1d2;
+}
+
+.paragraph h5 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+
+  line-height: 115%;
+  color: black;
+}
+
+.contentDivider {
+  background-clip: border-box;
+  max-width: none;
+  height: 0.5px;
+  margin: 1rem 0;
+  display: flex;
+  max-width: 1600px;
+  background-color: #d1d1d2;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  padding: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .flexContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .textBlock {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .textBlock {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .textBlock {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .incentivesHero {
+    padding: 60px 0;
+    padding-top: 48px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .incentivesHero img {
+    width: 100%;
+  }
+
+  .flexContainer {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+    .textBlock br {
+      display: none;
+    }
+  }
+
+  .incentivesHero .heroHeading {
+    font-size: 48px;
+    text-align: start;
+    line-height: 100%;
+    padding: 0 16px;
+  }
+
+  .textBlock {
+    width: 70%;
+    font-size: 24px;
+    text-align: start;
+    line-height: 105%;
+    padding: 0 16px;
+  }
+
+  .howToApply {
+    padding: 16px;
+    padding: 0;
+    padding-inline: 1rem;
+    margin-block: 0;
+    margin-top: 60px;
+    margin-bottom: 32px;
+  }
+
+  .howToApply h2 {
+    font-size: 40px;
+    line-height: 100%;
+    text-align: start;
+  }
+
+  .howToApply section {
+    flex-direction: row;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .accordionContent.show {
+    max-height: 1800px;
+  }
+  .steps {
+    padding-inline: 0;
+  }
+  .stepsContainer {
+    flex-flow: row;
+    height: 100%;
+    margin-bottom: 0;
+    padding-inline: 1rem;
+    max-width: 1600px;
+    margin-inline: auto;
+  }
+  .stepsContent {
+    margin-inline: 0;
+    padding-block: 24px;
+  }
+  .left h2 {
+    font-size: 48px;
+    margin-left: 0;
+  }
+
+  .right {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .contentDivider {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .subheading h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .paragraph section .paraDivider {
+    width: 100%;
+    height: 0.5px;
+    background-color: #d1d1d2;
+    margin-block: 0.5rem;
+  }
+
+  .paragraph,
+  .body {
+    font-size: 14px;
+    width: 100%;
+  }
+  .sectionDivider {
+    height: 1px;
+    background-color: #d1d1d2;
+    margin: 16px 0;
+  }
+  .imageItem h4 {
+    font-size: 18px;
+  }
+  .imageItem p {
+    font-size: 14px;
+  }
+  .section1 img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+  }
+  .active .nav {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobileNavbarBtn .mobileNavIcon[name="close button"] {
+    display: block;
+  }
+  .active .mobileNavbarBtn .mobileNavIcon[name="menu button"] {
+    display: none;
+  }
+}

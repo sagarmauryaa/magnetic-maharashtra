@@ -1,0 +1,196 @@
+.accordionContainer {
+  /* max-width: 1600px; */
+  margin: 2.5rem auto;
+  margin-top: 0;
+  /* padding-inline: 2.5rem; */
+}
+
+.accordionItem {
+  padding-block: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+}
+
+.accordionHeader h2 {
+  margin: 0;
+  font-size: var(--fonts--desktop--sub-heading2);
+  color: var(--black-color);
+}
+
+.accordionHeader span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #636e72;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.75s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  will-change: max-height, opacity;
+  display: flex;
+  flex-wrap: wrap;
+  transform-origin: top;
+  /* padding-inline: 2.5rem; */
+}
+
+.accordionContent.show {
+  max-height: 1500px; /* Adjust based on content height */
+  opacity: 1;
+  height: auto;
+  /* overflow-y: visible; */
+}
+
+.cardsContainer {
+  flex: 1;
+  display: grid;
+  justify-content: end;
+  grid-template-columns: repeat(2, 25%);
+  gap: 2.5rem;
+  padding-top: 40px;
+  padding-inline: 40px;
+  margin-inline: auto;
+  max-width: 1600px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  overflow: visible;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 100%;
+  /* height: 80%; */
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding-top: 16px;
+  background: white;
+}
+
+.cardContent h3 {
+  margin: 0 0 8px;
+  color: var(--black-color);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -0.48px;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #999999;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  text-align: left;
+}
+
+.accordionDivider {
+  width: 100%;
+  height: 0.75px;
+  background: var(--black-color);
+  position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .stepsContainer {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  .subheading h3 {
+    font-size: 32px;
+  }
+  .right .subheading {
+    width: 90%;
+    padding-inline: 20px;
+  }
+  .stepsContainer .right,
+  .stepsContainer .paragraph {
+    width: 100%;
+  }
+  .stepsContainer .subheading h3 {
+    font-size: 32px;
+  }
+
+  .accordionHeader h2 {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+  }
+
+  .accordionContent {
+    /* padding-inline: 1rem; */
+  }
+  .card {
+    /* padding-inline: 24px; */
+  }
+  .cardContent {
+    padding-top: 20px;
+  }
+  .cardContent h3 {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .accordionContainer {
+    margin: 0 auto;
+    padding-inline: 0rem;
+  }
+
+  .accordionItem {
+    padding-block: 1rem;
+  }
+
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    padding-top: 9px;
+    padding-inline: 0;
+  }
+
+  .accordionHeader {
+    padding: 15px;
+  }
+
+  .accordionHeader h2 {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+  }
+  .accordionHeader img {
+    width: 3%;
+  }
+
+  .accordionContent {
+    padding-inline: 1rem;
+  }
+  .cardContent {
+    padding-top: 20px;
+  }
+  .cardContent h3 {
+    margin-bottom: 4px;
+    font-size: var(--fonts--mobile--sub-heading4);
+    letter-spacing: 0;
+  }
+  .cardContent p {
+    font-size: var(--fonts--mobile--body2);
+  }
+}

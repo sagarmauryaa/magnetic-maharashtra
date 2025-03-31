@@ -30,7 +30,7 @@ function RoadMap() {
       // Create the animation
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".road-elements",
+          trigger: ".roadElements",
           start: "top 60%",
         },
       });
@@ -45,13 +45,13 @@ function RoadMap() {
 
   useGSAP(() => {
     // Animation for road elements grid items
-    gsap.from(".road-elements-grid .road-elements-grid-item", {
+    gsap.from(".grid-item", {
       xPercent: -10,
       opacity: 0,
       duration: 1,
       stagger: 0.15,
       scrollTrigger: {
-        trigger: ".road-elements",
+        trigger: ".roadElements",
         start: "top 50%",
       },
     });
@@ -85,7 +85,7 @@ function RoadMap() {
             </p>
           </div>
         </div>
-        <div className={styles.roadElements}>
+        <div className={styles.roadElements + " roadElements"}>
           <div className={styles.elementTitle}>
             <div>
               The Road to Growth{" "}
@@ -115,7 +115,7 @@ function RoadMap() {
             </button>
           </div>
           <div className={styles.roadElementsGrid}>
-            <div className={styles.roadElementsGridItem}>
+            <div className={styles.roadElementsGridItem + " grid-item"}>
               <div className={styles.number}>1</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -126,7 +126,11 @@ function RoadMap() {
                 </div>
               </div>
             </div>
-            <div className={styles.roadElementsGridItem + " " + styles.arrow}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.arrow + " grid-item"
+              }
+            >
               <img
                 src="/images/RoadMap/rightArrow.svg"
                 width={"112px"}
@@ -134,7 +138,11 @@ function RoadMap() {
                 alt=""
               />
             </div>
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>2</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -145,7 +153,11 @@ function RoadMap() {
                 </div>
               </div>
             </div>
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>3</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -158,7 +170,11 @@ function RoadMap() {
                 </div>
               </div>
             </div>
-            <div className={styles.roadElementsGridItem + " " + styles.arrow}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.arrow + " grid-item"
+              }
+            >
               <img
                 src="/images/RoadMap/rightArrow.svg"
                 width={"112px"}
@@ -166,7 +182,11 @@ function RoadMap() {
                 alt=""
               />
             </div>
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>4</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -178,7 +198,11 @@ function RoadMap() {
               </div>
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>5</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -190,7 +214,11 @@ function RoadMap() {
               </div>
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.arrow}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.arrow + " grid-item"
+              }
+            >
               <img
                 src="/images/RoadMap/rightArrow.svg"
                 width={"112px"}
@@ -199,7 +227,11 @@ function RoadMap() {
               />
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>6</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -211,7 +243,11 @@ function RoadMap() {
               </div>
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.arrow}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.arrow + " grid-item"
+              }
+            >
               <img
                 src="/images/RoadMap/rightArrow.svg"
                 width={"112px"}
@@ -220,7 +256,11 @@ function RoadMap() {
               />
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>7</div>
               <hr />
               <div className={styles.roadElementContainer}>
@@ -232,7 +272,11 @@ function RoadMap() {
               </div>
             </div>
 
-            <div className={styles.roadElementsGridItem + " " + styles.item}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>8</div>
               <hr />
               <div className={styles.roadElementContainer}>

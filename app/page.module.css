@@ -119,7 +119,7 @@ main.heroVideoContainer {
 .sectorsInsightsContainer {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 1rem;
 }
 
 .layoutHFlex {
@@ -157,12 +157,15 @@ main.heroVideoContainer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   margin-inline: auto;
   transform-origin: top left;
+  transition: transform 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Spacer to prevent content jump */
-.sectorInsights-spacer {
+.sectorsInsightsSpacer {
   width: 100%;
   margin-bottom: 1rem;
+  transition: height 0.3s ease;
 }
 
 /* Responsive styles for sticky sector-insights */
@@ -646,7 +649,7 @@ main.heroVideoContainer {
 /* Book Modal Styles */
 .bookModalOverlay {
   position: fixed;
-  top: 72px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -687,13 +690,13 @@ main.heroVideoContainer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   transition: background-color 0.2s ease;
 }
 
 .closeButton:hover {
   transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 @keyframes fadeIn {
@@ -1183,11 +1186,11 @@ main.heroVideoContainer {
     left: 30.5%;
   }
 
-  .everything-text-content {
+  .everythingTextContent {
     padding-block-start: 140px;
   }
 
-  .everything-image-content {
+  .everythingImageContent {
     padding-block-start: 100px;
   }
 }
@@ -1240,25 +1243,25 @@ main.heroVideoContainer {
   }
 
   /* everything just connects */
-  .everything-content-section {
+  .everythingContentSection {
     align-items: flex-start;
     height: 1000px;
     flex-direction: column;
     /* padding-right: 0; */
   }
-  .everything-text-content {
+  .everythingTextContent {
     padding-top: 80px;
     width: 100%;
   }
-  .everything-image-content {
+  .everythingImageContent {
     margin-top: -5rem;
     margin-inline-start: 40px;
     width: 100vw;
     height: 80%;
   }
-  .everything-heading,
-  .everything-animated-heading,
-  .everything-marquee .word {
+  .everythingHeading,
+  .everythingAnimatedHeading,
+  .everythingMarquee .word {
     font-size: 60px;
   }
 
@@ -1405,7 +1408,7 @@ main.heroVideoContainer {
 
   /* playground */
 
-  .playground-content {
+  .playgroundContent {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -1465,14 +1468,14 @@ main.heroVideoContainer {
     display: inline;
     font-size: var(--fonts--mobile--sub-heading2);
   }
-  .heading-title {
-    .sub-title {
+  .headingTitle {
+    .subTitle {
       font-size: var(--fonts--mobile--sub--body1);
       width: 100%;
     }
   }
 
-  .sector-insights {
+  .sectorInsights {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1505,7 +1508,7 @@ main.heroVideoContainer {
     }
   }
 
-  .sector-insights.sticky {
+  .sectorInsights.sticky {
     left: 0; /* Match the mobile padding in media query */
     right: 0;
     width: 100%;
@@ -1869,7 +1872,7 @@ main.heroVideoContainer {
 
 /* --------- Styles for max-width: 390px --------- */
 @media screen and (max-width: 390px) {
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     height: 100px;
   }
 
@@ -1908,7 +1911,7 @@ main.heroVideoContainer {
     height: 100%;
   }
 
-  .everything-image-content {
+  .everythingImageContent {
     height: fit-content;
     max-width: 100%;
     position: relative;
@@ -1939,7 +1942,7 @@ main.heroVideoContainer {
     margin-bottom: 40px;
   }
 
-  .everything-marquee {
+  .everythingMarquee {
     width: 100%;
     min-width: fit-content;
     display: flex;
@@ -1954,12 +1957,12 @@ main.heroVideoContainer {
     -webkit-text-fill-color: transparent;
   }
 
-  .everything-marquee .word {
+  .everythingMarquee .word {
     letter-spacing: -1.64px;
     line-height: 100%;
   }
 
-  .everything-image-content {
+  .everythingImageContent {
     width: 100%;
     height: 322px;
     max-width: 100%;
@@ -1967,19 +1970,19 @@ main.heroVideoContainer {
     overflow: hidden;
   }
 
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     padding-top: 9.5px;
     height: 100px;
   }
 
-  .everything-marqueen {
+  .everythingMarquee {
     background: linear-gradient(86deg, #ff7128 9.38%, #7e01a2 105.22%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .card-container {
+  .cardContainer {
     width: 100%;
     height: 100%;
     position: relative;
@@ -2018,12 +2021,12 @@ main.heroVideoContainer {
     border-radius: 2.689px;
   }
 
-  .everything-animated-heading {
+  .everythingAnimatedHeading {
     margin-left: 0;
     font-size: 1.6rem;
   }
 
-  .everything-heading {
+  .everythingHeading {
     font-size: 1.6rem;
   }
 
@@ -2033,18 +2036,18 @@ main.heroVideoContainer {
 }
 
 @media (max-width: 768px) {
-  .everything-content-section {
+  .everythingContentSection {
     flex-direction: column;
     padding-inline: 1rem;
     gap: 20px;
     height: auto;
   }
 
-  .everything-text-content {
+  .everythingTextContent {
     width: 100%;
     text-align: start;
   }
-  .everything-image-content {
+  .everythingImageContent {
     width: 100%;
     text-align: start;
     display: flex;
@@ -2052,15 +2055,15 @@ main.heroVideoContainer {
     height: 100%;
   }
 
-  .everything-heading,
-  .everything-animated-heading {
+  .everythingHeading,
+  .everythingAnimatedHeading {
     text-align: start;
   }
-  .everything-wrapper {
+  .everythingWrapper {
     height: 100vh;
   }
 
-  .everything-description {
+  .everythingDescription {
     justify-content: end;
     text-align: left;
     margin-top: 0.75rem;
@@ -2070,7 +2073,7 @@ main.heroVideoContainer {
     flex-direction: column;
     align-items: center;
   }
-  .everything-description p {
+  .everythingDescription p {
     width: 9.75rem;
   }
 
@@ -2084,16 +2087,16 @@ main.heroVideoContainer {
   .roadImg img {
     object-position: 120% 100%;
   }
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     padding-top: 0;
   }
-  .everything-description {
+  .everythingDescription {
     margin-top: 1rem;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .everything-content-section {
+  .everythingContentSection {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -2101,7 +2104,7 @@ main.heroVideoContainer {
     margin-bottom: 40px;
   }
 
-  .everything-marquee {
+  .everythingMarquee {
     width: 100%;
     min-width: fit-content;
     display: flex;
@@ -2116,33 +2119,33 @@ main.heroVideoContainer {
     -webkit-text-fill-color: transparent;
   }
 
-  .everything-marquee .word {
+  .everythingMarquee .word {
     letter-spacing: -1.64px;
   }
 
-  .everything-image-content {
+  .everythingImageContent {
     width: 100%;
     height: 322px;
     max-width: 100%;
     position: relative;
     overflow: hidden;
   }
-  .everything-wrapper {
+  .everythingWrapper {
     height: 100vh;
   }
 
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     padding-top: 9.5px;
   }
 
-  .everything-marqueen {
+  .everythingMarquee {
     background: linear-gradient(86deg, #ff7128 9.38%, #7e01a2 105.22%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .card-container {
+  .cardContainer {
     width: 100%;
     height: 100%;
     position: relative;
@@ -2181,29 +2184,29 @@ main.heroVideoContainer {
     border-radius: 2.689px;
   }
 
-  .everything-animated-heading {
+  .everythingAnimatedHeading {
     margin-left: 0;
     font-size: 1.6rem;
   }
 
-  .everything-heading {
+  .everythingHeading {
     font-size: 1.6rem;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 359px) {
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     font-size: 1.6rem;
   }
 
-  .everything-animated-heading {
+  .everythingAnimatedHeading {
     font-size: 1.6rem;
   }
 
-  .everything-heading {
+  .everythingHeading {
     font-size: 1.6rem;
   }
-  .everything-wrapper {
+  .everythingWrapper {
     height: 100vh;
   }
 
@@ -2215,33 +2218,33 @@ main.heroVideoContainer {
 }
 
 @media (max-width: 480px) {
-  .everything-content-section {
+  .everythingContentSection {
     padding-inline: 1rem;
     height: 100%;
   }
 
-  .everything-text-content {
+  .everythingTextContent {
     width: 100%;
     text-align: start;
   }
 
-  .everything-image-content {
+  .everythingImageContent {
     width: 100%;
     text-align: start;
     display: flex;
     justify-content: start;
     height: -webkit-fill-available;
   }
-  .everything-wrapper {
+  .everythingWrapper {
     height: 120vh;
   }
 
-  .everything-heading,
-  .everything-animated-heading {
+  .everythingHeading,
+  .everythingAnimatedHeading {
     font-size: 2.5rem;
   }
 
-  .everything-description {
+  .everythingDescription {
     font-size: 1rem;
     justify-content: end;
     text-align: left;
@@ -2253,7 +2256,7 @@ main.heroVideoContainer {
     align-items: center;
   }
 
-  .everything-description p {
+  .everythingDescription p {
     width: 9.75rem;
   }
 
@@ -2268,18 +2271,18 @@ main.heroVideoContainer {
     height: 50vh;
   }
 
-  .everything-marquee-wrapper {
+  .everythingMarqueeWrapper {
     padding-top: 0;
     height: 100px;
     overflow: hidden;
   }
 
-  .everything-marquee {
+  .everythingMarquee {
     width: 100%;
     height: 50px;
   }
 
-  .everything-description {
+  .everythingDescription {
     margin-top: 1rem;
   }
 }

@@ -1,0 +1,923 @@
+#tourismHeroSection {
+  display: flex;
+  padding-inline: 40px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  position: static;
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin-top: 72px;
+  padding-bottom: 80px;
+}
+#tourismHeroSection img {
+  height: 600px;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.tFlexContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-direction: row;
+}
+#tourismHeroSection .heroHeading {
+  width: 70%;
+  display: block;
+  font-size: 120px;
+  color: black;
+  line-height: 90%;
+  letter-spacing: -2.4px;
+}
+.tTextBlock {
+  width: 25%;
+  display: block;
+  color: black;
+  font-size: 32px;
+  line-height: var(--line-height--115);
+  letter-spacing: -0.64px;
+  text-align: left;
+}
+.hiddenImage {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hiddenImage.visible {
+  opacity: 1;
+}
+
+.divider {
+  background-color: black;
+  width: 100%;
+  height: 0.5px;
+}
+.sectionDivider {
+  background-color: #d1d1d2;
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#tourismExperiences {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  max-width: 1600px;
+  padding-block: 80px;
+  padding-inline: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: auto;
+  box-sizing: border-box;
+}
+.tContentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  gap: 48px;
+}
+.sectionHeading h4 {
+  font-size: 80px;
+  line-height: 90%;
+  letter-spacing: -1.6px;
+}
+.tourismExperienceContainer {
+  position: relative;
+  display: flex;
+  /* margin-top: 48px; */
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+}
+.tourismImageBox {
+  width: 100%;
+  height: 34.5rem;
+  position: relative;
+}
+.tourismImageBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.65);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.tourismImageBox img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tourismTitleContainer {
+  margin-top: 0;
+  width: 50%;
+}
+
+.tourismTitleContainer h3 {
+  cursor: pointer;
+  font-size: 24px;
+
+  margin: 0;
+  padding: 10px 0;
+  transition: color 0s ease;
+  color: var(--light-grey-color);
+}
+
+.tourismTitleContainer h5:hover {
+  cursor: pointer;
+}
+
+.tourismTitleContainer h5.clicked {
+  color: #000;
+}
+.supporingText p {
+  font-size: 20px;
+
+  line-height: 115%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transform: translateY(0%);
+}
+
+.experienceDivider {
+  background-color: #999999;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.tourismTitleContainer {
+  margin-top: 0;
+  width: 50%;
+}
+.tourismTitleContainer h5 {
+  color: var(--light-grey-color);
+  font-size: 32px;
+
+  font-weight: 300;
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+
+.circularImageContainer {
+  width: 50%;
+  height: auto;
+  /* display: flex;
+    justify-content: center;
+    align-items: start; */
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
+}
+.circularImageContainer img {
+  position: absolute;
+  width: 36.563;
+  height: 27.375;
+}
+
+.circularImageContainer img.img0 {
+  top: 0px;
+}
+.circularImageContainer img.img1 {
+  top: 60px;
+}
+.circularImageContainer img.img2 {
+  top: 120px;
+}
+.circularImageContainer img.img3 {
+  top: 190px;
+}
+.circularImageContainer img.img4 {
+  top: 210px;
+}
+.circularImageContainer img.img5 {
+  top: 200px;
+}
+.circularImageContainer img.img6 {
+  top: 200px;
+}
+.circularImageContainer img.img7 {
+  top: 200px;
+}
+.circularImageContainer img.img8 {
+  top: 200px;
+}
+.circularImageContainer img.img9 {
+  top: 200px;
+}
+.circularImageContainer img.img10 {
+  top: 240px;
+}
+.circularImageContainer img.img11 {
+  top: 240px;
+}
+
+#exploreByInterest {
+  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  padding-inline: 40px;
+  padding-block: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+.exploreContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+.exploreContainer h2 {
+  font-size: 80px;
+
+  line-height: 90%;
+  letter-spacing: -1.6px;
+}
+.exploreContainer p {
+  font-size: 16px;
+
+  line-height: 115%;
+  color: #2b2f34;
+}
+.exploreInnerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.exploreTabContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.75rem;
+  /* border-bottom: 1.5px solid var(--light-grey-color); */
+}
+.exploreDataContainer {
+  margin-top: 32px;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.exploreInnerContainer .seasonsTabDivider {
+  margin-bottom: 0;
+}
+
+/* .TabContent {
+      display: none;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .TabContent.active {
+      display: block;
+      opacity: 1;
+    } */
+
+.tab1 {
+  cursor: pointer;
+  width: fit-content;
+  height: 100%;
+  padding: 16px 0;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.tab2 {
+  cursor: pointer;
+  width: fit-content;
+  height: 100%;
+  padding: 16px 0;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+.tab3 {
+  cursor: pointer;
+  width: fit-content;
+  height: 100%;
+  padding: 16px 0;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.tab4 {
+  cursor: pointer;
+  width: fit-content;
+  height: 100%;
+  padding: 16px 0;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.tab5 {
+  cursor: pointer;
+  width: fit-content;
+  height: 100%;
+  padding: 16px 0;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.exploreTabContainer > div.active {
+  color: #ff5100;
+  border-bottom: 2px solid #ff5100;
+}
+
+/* .tab_1.active,
+  .tab_2.active,
+  .tab_3.active {
+    color: var(--orange-color);
+    border-bottom: 2px solid var(--orange-color);
+    /* outline: 1px solid var(--orange-color); */
+/* box-shadow: 0 3px 0 0 #000; */
+/* transition: color 0.3s ease, border-bottom 0.3s ease; */
+/* transition: color 0.3s ease; 
+  } */
+
+/* .tabDataContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 36.563rem);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      align-items: stretch;
+    } */
+.Tab1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.Tab2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.Tab3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.exploreGridItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 8px;
+}
+.exploreGridItem img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.exploreGridItem .gridHead {
+  font-size: 24px;
+
+  line-height: 115%;
+  letter-spacing: -0.48px;
+  margin: 8px 0;
+}
+.exploreGridItem .gridText {
+  font-size: 16px;
+
+  line-height: 115%;
+  color: #999;
+  flex-grow: 1;
+}
+
+#seasons {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  padding-block: 80px;
+  padding-inline: 40px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.headingContainer {
+  width: 100%;
+  height: 100%;
+}
+.headingContainer h3 {
+  font-size: 80px;
+
+  line-height: 90%;
+  letter-spacing: -1.6px;
+}
+
+.seasonContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  gap: 3.75rem;
+}
+.seasonContainer > div {
+  cursor: pointer;
+  font-family: "Neue Montreal", sans-serif;
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  color: #72777f;
+  padding: 16px 0;
+  border-bottom: none;
+  /* transition: color 0.3s ease, border-bottom 0.3s ease; */
+  /* transition: color 0.3s ease; */
+}
+.seasonContainer > div.active {
+  color: #ff5100;
+  border-bottom: 2px solid #ff5100;
+}
+.seasonDetails .seasonD {
+  font-size: 32px;
+  line-height: 115%;
+  color: #ff5100;
+  text-transform: uppercase;
+}
+/* .summer_container,
+  .monsoon_container,
+  .winter_container {
+    display: none;
+  } */
+
+.summerContainer.active,
+.monsoonContainer.active,
+.winterContainer.active {
+  display: block;
+}
+
+.season1 {
+  cursor: pointer;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.season2 {
+  cursor: pointer;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.season3 {
+  cursor: pointer;
+  color: #72777f;
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.seasonsTab {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  margin-top: 48px;
+}
+.seasonDetails {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 50%;
+  flex-direction: column;
+}
+.seasonD {
+  color: var(--Orange, #ff5100);
+
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+.summerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.monsoonContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.winterContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.seasonsInnerSummer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+}
+.seasonsTitle {
+  width: 25%;
+  height: 100%;
+}
+.seasonsTitle h3 {
+  font-size: 32px;
+
+  line-height: 115%;
+  letter-spacing: -0.64px;
+}
+.seasonsGrid {
+  width: 75%;
+  height: 100%;
+}
+.seasonsGrid {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 16.25rem; */
+  gap: 1.875rem;
+}
+.emptyDiv {
+  width: 17.25rem;
+  height: 100%;
+}
+.seasonsItem img {
+  width: 17.375rem;
+  height: 13rem;
+  object-fit: cover;
+}
+.seasonsTabDivider {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 0.75px;
+  background-color: #d1d1d2;
+}
+.adventureDivider {
+  background-color: black;
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+  box-sizing: border-box;
+}
+.adventureDivider:first-child {
+  display: none;
+}
+
+.seasonsItem {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.seasonsItem h5 {
+  font-size: 20px;
+
+  line-height: 115%;
+  color: #2b2f34;
+}
+/* .summer_container,
+  .monsoon_container,
+  .winter_container {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  } */
+
+.summerContainer.active,
+.monsoonContainer.active,
+.winterContainer.active {
+  display: grid;
+  opacity: 1;
+}
+
+.seasonDetails .seasonD.active {
+  opacity: 1;
+}
+.tourismExperienceContainerMobile {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .tFlexContainer {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .tTextBlock {
+    width: 100%;
+  }
+  .tTextBlock br {
+    display: none;
+  }
+  .seasonsTab {
+    flex-direction: column;
+    gap: 20px;
+
+    .seasonDetails {
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+
+  .seasonsInnerSummer {
+    flex-direction: column;
+
+    .seasonsTitle {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .seasonsGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seasonsItem img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  #tourismHeroSection {
+    margin-top: 48px;
+    padding: 0rem;
+    /* padding-bottom: 60px; */
+  }
+  .tFlexContainer {
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 0 1rem;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  #tourismHeroSection .heroHeading {
+    font-size: 48px;
+  }
+  .tTextBlock {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+    width: 100%;
+  }
+  /* .divider {
+      margin-top: 60px;
+    } */
+  #tourismExperiences {
+    padding: 60px 1rem;
+    /* padding-bottom: 0; */
+    .tContentContainer {
+      .sectionHeading {
+        width: 100%;
+      }
+      .tContentContainer {
+        .sectionHeading br {
+          display: none;
+        }
+      }
+    }
+  }
+  .sectionHeading h4 {
+    font-size: var(--fonts--mobile--sub-heading1);
+  }
+  .tContentContainer {
+    display: block;
+  }
+  .tourismExperienceContainer {
+    display: none;
+  }
+  .tourismExperienceContainerMobile {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(9.75rem, 1fr));
+    gap: 1rem;
+  }
+  .tourismExperienceContainerMobileItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--fonts--mobile--sub-heading4);
+    line-height: var(--line-height--100);
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--light-grey-color);
+    margin-top: 32px;
+  }
+
+  #exploreByInterest {
+    padding: 60px 0rem;
+  }
+  #exploreByInterest br {
+    display: none;
+  }
+  .exploreContainer {
+    flex-direction: column;
+    padding-bottom: 32px;
+    padding-inline: 1rem;
+  }
+  .exploreContainer h2 {
+    font-size: var(--fonts--mobile--sub-heading1);
+    margin-bottom: 12px;
+  }
+  #exploreByInterest .seasonsTabDivider {
+    margin-bottom: 0;
+  }
+
+  .Tab1,
+  .Tab2,
+  .Tab3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .exploreTabContainer {
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+  .tab1,
+  .tab2,
+  .tab3,
+  .tab4,
+  .tab5 {
+    padding: 0;
+    padding-bottom: 1rem;
+    font-size: var(--fonts--mobile--body1);
+    letter-spacing: 0;
+  }
+  .exploreDataContainer {
+    margin-top: 24px;
+    padding-inline: 1rem;
+  }
+  .exploreGridItem img {
+    margin-bottom: 20px;
+  }
+  .exploreGridItem .gridHead {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: var(--fonts--mobile--sub-heading4);
+    line-height: var(--line-height--100);
+    letter-spacing: 0;
+  }
+  .exploreGridItem .gridText {
+    font-size: var(--fonts--mobile--body2);
+  }
+
+  #seasons {
+    padding: 40px 0rem;
+  }
+  .headingContainer h3 {
+    font-size: var(--fonts--mobile--sub-heading1);
+    padding-inline: 1rem;
+  }
+  .seasonsTab {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  .seasonContainer {
+    gap: 1rem;
+    border-bottom: 1px solid var(--light-grey-color);
+    padding-inline: 1rem;
+  }
+  .seasonContainer > div {
+    padding: 0;
+    padding-bottom: 1rem;
+    font-size: var(--fonts--mobile--body1-capital);
+    letter-spacing: 0;
+  }
+  #seasons .seasonsTabDivider {
+    display: none;
+  }
+  .seasonDetails {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-block: 24px;
+    padding-inline: 1rem;
+  }
+  .seasonDetails .seasonD {
+    font-size: var(--fonts--mobile--body1-capital);
+  }
+  .seasonsInnerSummer,
+  .seasonsGrid {
+    flex-direction: column;
+  }
+  .seasonsTitle {
+    width: 100%;
+  }
+  .seasonsGrid {
+    gap: 20px;
+    width: 100%;
+  }
+  .seasonsItem img {
+    width: 100%;
+    height: 15.375rem;
+  }
+  .seasonsTitle h3 {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+    margin-bottom: 20px;
+  }
+  .seasonsItem h5 {
+    font-size: var(--fonts--mobile--sub-heading4);
+  }
+  .seasonsInnerSummer {
+    padding-inline: 1rem;
+  }
+  .adventureDivider {
+    margin: 20px 0;
+  }
+  .adventureDivider:first-child {
+    display: block;
+    margin-top: 0;
+  }
+  .emptyDiv {
+    display: none;
+  }
+  .seasonsItem br {
+    display: none;
+  }
+  .last {
+    margin-top: 0;
+  }
+}
