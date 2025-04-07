@@ -3,6 +3,7 @@ import "./globals.css";
 import StickyNavbar from "./components/common/StickyNavbar";
 import Footer from "./components/common/Footer";
 import SmoothScroll from "./components/common/SmoothScroll";
+import { AppProvider } from "./components/AppContext";
 
 const ppNeuMontrealRegular = localFont({
   src: "./fonts/PPNeueMontreal-Regular.woff2",
@@ -19,9 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${ppNeuMontrealRegular.variable}`}>
-        <StickyNavbar />
-        <SmoothScroll>{children}</SmoothScroll>
-        <Footer />
+        <AppProvider>
+          <StickyNavbar />
+          <SmoothScroll>{children}</SmoothScroll>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

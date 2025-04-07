@@ -1,20 +1,20 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
-import { useContext, useRef } from "react";
-import globalBusinessData from "../../globalDestinationData";
-// import Popup from "./Popup";
-
+import { useRef } from "react";
+import { globalBusinessData } from "../../globalDestinationData";
 import styles from "../../page.module.css";
 import Image from "next/image";
+import { useAppContext } from "../AppContext";
+import Popup from "./Popup";
 
 const GlobalBusiness = () => {
   const globalBusinessRef = useRef();
   const scrollSectionRef = useRef();
   const scrollTriggerRef = useRef();
   const cardRef = useRef([]);
-  // const { selectedIndex, setSelectedIndex } = useContext(AppContext) || {};
-  // const { setActive } = useContext(AppContext) || {};
+  const { state, setState } = useAppContext();
+  const { selectedIndex, isActive } = state;
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
@@ -87,10 +87,7 @@ const GlobalBusiness = () => {
   });
 
   const handleCardClick = (id) => {
-    if (setSelectedIndex && setActive) {
-      setSelectedIndex(id);
-      setActive(true);
-    }
+    setState((prev) => ({ ...prev, selectedIndex: id, isActive: true }));
   };
 
   return (
@@ -125,18 +122,13 @@ const GlobalBusiness = () => {
               role="button"
               tabIndex={0}
             >
-              <Image
-                src={business.imgPath}
-                alt={business.name}
-                width={100}
-                height={100}
-              />
+              <img src={business.imgPath} alt={business.name} />
               <h3>{business.name}</h3>
             </div>
           ))}
         </div>
       </div>
-      {/* <Popup selectedIndex={selectedIndex} /> */}
+      <Popup />
     </section>
   );
 };

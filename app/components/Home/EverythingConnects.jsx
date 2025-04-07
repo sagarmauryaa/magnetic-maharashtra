@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 
 import styles from "../../page.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const imageStaggerContainer = {
   initial: {},
   animate: {
@@ -49,6 +47,7 @@ const EverythingConnects = () => {
     if (useFramerFallback) return;
 
     const ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,

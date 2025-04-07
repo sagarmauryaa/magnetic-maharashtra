@@ -5,8 +5,6 @@ import { useRef } from "react";
 
 import styles from "../../page.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Envelop = () => {
   const ikeaRef = useRef();
   const comfortRef = useRef();
@@ -27,6 +25,7 @@ const Envelop = () => {
   const mm = gsap.matchMedia();
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // gsap.set(ikeaRef.current, {
     //   top: "35%",
     //   left: "32%",

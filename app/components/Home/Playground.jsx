@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -27,6 +29,7 @@ const Playground = () => {
     // }
 
     const handleScroll = () => {
+      if (typeof window === "undefined") return;
       if (sectionRef.current && sectorInsightsRef.current) {
         const sectionRect = sectionRef.current.getBoundingClientRect();
         const sectionBottom = sectionRect.bottom;

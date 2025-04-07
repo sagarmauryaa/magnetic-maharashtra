@@ -1,11 +1,14 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Lottie from "lottie-react";
 import animationData from "../../../public/lottie/bollywood.json";
 import { useRef } from "react";
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
 import styles from "./Bollywood.module.css";
+
+const DynamicLottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
 
 function Bollywood() {
   const bollyTabRef = useRef();
@@ -15,13 +18,13 @@ function Bollywood() {
     // gsap.set(".rightB", { xPercent: 14 });
 
     const animateImages = () => {
-      gsap.from(" .image", {
+      gsap.from(`.${styles.image}`, {
         duration: 1,
         opacity: 0,
         stagger: 0.1,
         y: 50,
         scrollTrigger: {
-          trigger: ".bollywood-container",
+          trigger: `.${styles.bollywoodContainer}`,
           markers: false,
           start: "top bottom",
           ease: "ease.in",
@@ -32,20 +35,20 @@ function Bollywood() {
     const animateBollywoodText = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".bolly-text",
+          trigger: `.${styles.bollywoodText}`,
           // markers: true,
           start: "top 60%",
         },
       });
 
-      tl.to(".bolly-camera", {
+      tl.to(`.${styles.bollywoodCamera}`, {
         duration: 1,
         opacity: 1,
         visibility: "visible", // make it visible during animation
         display: "inline-block", // set display to inline-block before animation starts
         onStart: function () {
           // Ensure the element is set to inline-block before animation starts
-          gsap.set(".bolly-camera", { display: "inline-block" });
+          gsap.set(`.${styles.bollywoodCamera}`, { display: "inline-block" });
         },
       });
     };
@@ -168,7 +171,7 @@ function Bollywood() {
               <div className={styles.image}>
                 <Image
                   width={100}
-                  height={100}
+                  height={215}
                   loading="lazy"
                   src="/images/Bollywood/bollywood1.webp"
                   alt=""
@@ -195,7 +198,7 @@ function Bollywood() {
               <div className={styles.image}>
                 <Image
                   width={100}
-                  height={100}
+                  height={215}
                   loading="lazy"
                   src="/images/Bollywood/bollywood4.webp"
                   alt=""
@@ -233,7 +236,7 @@ function Bollywood() {
             </div>
             <div className={styles.bollywoodCamera}>
               <div>
-                <Lottie
+                <DynamicLottie
                   animationData={animationData}
                   loop={true}
                   speed={0.01}

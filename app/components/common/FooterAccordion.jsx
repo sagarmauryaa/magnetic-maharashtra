@@ -1,4 +1,5 @@
-import styles from "./cardAccordion.module.css";
+// import styles from "./cardAccordion.module.css";
+import styles from "./Footer.module.css";
 import { useState } from "react";
 
 const explore = [

@@ -143,6 +143,7 @@
   .roadMap {
     padding-inline: 0;
     margin-block: 60px;
+    box-sizing: border-box;
   }
   .roadMapContainer {
     padding: 0 1rem;

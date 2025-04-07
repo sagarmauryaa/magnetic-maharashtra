@@ -4,7 +4,6 @@ import Link from "next/link";
 import Flag from "./Flag";
 import styles from "./Footer.module.css";
 import FooterAccordion from "./FooterAccordion";
-
 import UseScreenSize from "./UseScreenSize";
 
 const explore = [
@@ -68,11 +67,11 @@ function Footer() {
         style={{
           position: "absolute",
           width: "100%",
-          height: isMobile ? "100%" : "100%",
+          height: "100%",
           top: "0%",
           zIndex: -1,
           userSelect: "none",
-          opacity: isMobile ? 1 : 1,
+          opacity: 1,
         }}
       >
         <Flag />

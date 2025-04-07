@@ -1,10 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import styles from "./Statistics.module.css";
-import gsap, { MotionPathPlugin } from "gsap/all";
+import gsap from "gsap/all";
 import { useRef } from "react";
 import Image from "next/image";
-
-gsap.registerPlugin(MotionPathPlugin);
 
 const Statistics = () => {
   const heroContentRef = useRef([]);

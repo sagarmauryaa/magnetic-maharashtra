@@ -1,0 +1,324 @@
+.artContainer {
+  margin-top: 4.5rem;
+  margin-inline: 2.5rem;
+  overflow: hidden;
+}
+
+.ArtCultureContainer {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid black;
+}
+.artHeroContainer {
+  /* padding: 0 2.5rem; */
+  /* padding-top: 40px; */
+  max-width: 1600px;
+  margin: 0 auto;
+  /* overflow: auto; */
+}
+.artHero {
+  background-color: var(--light-grey-color);
+  position: relative;
+  width: 100%;
+}
+
+.artHero .artHeading .artsCultureTitle span {
+  line-height: var(--line-height--90);
+}
+.artHero .cultureTitle {
+  margin-top: -2rem;
+}
+
+.artsTitle {
+  display: inline-block;
+}
+
+.artHero .artHeading h1,
+.artHero .artHeading span div {
+  /* background: linear-gradient(to bottom right, #ff7128, #7e01a2); */
+  /* -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+
+  background: url("/images/Art&Culture_page/text_clip.webp") center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-size: 100px; */
+  /* font-weight: bold; */
+  /* display: inline-block; */
+}
+.artHeading {
+  padding-top: 2.5rem;
+}
+.artHeroBody {
+  width: 40%;
+  margin-left: 50%;
+}
+.artHeroConatiner .artImage {
+  padding-top: 5rem;
+}
+.artHeroBody {
+  /* background: linear-gradient(to bottom right, #7e01a2, #ff7128);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+
+  background: url("/images/Art&Culture_page/text_clip_flip.webp") center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.artHeroBody span.andTitle {
+  width: 8%;
+}
+.artsCultureTitle {
+  text-align: center;
+  position: relative;
+  font-size: 15rem;
+  line-height: 60%;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.artHero .andTitle {
+  position: absolute;
+  bottom: 50%;
+  left: 60%;
+}
+
+.andTitle {
+  font-size: 5rem;
+  font-family: "EB Garamond";
+  font-style: italic;
+  transform: rotate(-14deg);
+}
+
+.artHeroBody span {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: var(--fonts--desktop--sub-heading2);
+}
+.flagCulture img {
+  position: absolute;
+  top: 11%;
+  left: -3%;
+  /* z-index: 1; */
+}
+.flagCulture img {
+  width: 50%;
+}
+
+.topRight {
+  position: absolute;
+  top: -5%;
+  right: 0%;
+  z-index: 10;
+}
+.imgContainerMobile {
+  display: none;
+}
+.cardArtImage {
+  width: 353px;
+  /* height: 520px; */
+  aspect-ratio: 353/455;
+  border-radius: 3.71px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 1.188px 4.754px 0px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cardImage img {
+  width: 100%;
+  height: 22.938rem;
+  aspect-ratio: 74 / 79;
+  object-fit: cover;
+  border-radius: 3.71px;
+}
+
+.cardArtTitle {
+  font-size: 24px;
+}
+
+.artHeroImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 3rem;
+  /* overflow: hidden; */
+}
+
+.artHeroImage .img1 {
+  position: relative;
+  transform: rotate(1.68deg);
+}
+
+.artHeroImage .img2 {
+  position: relative;
+  transform: rotate(-4.285deg);
+}
+
+.artHeroImage .img3 {
+  position: relative;
+  transform: rotate(3.479deg);
+}
+
+.artHeroImage .img4 {
+  position: relative;
+  transform: rotate(-5.598deg);
+}
+
+.artHeroImage .img5 {
+  position: relative;
+  transform: rotate(7.329deg);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .artHero .andTitle {
+    left: 63%;
+  }
+  .artHero .cultureTitle {
+    margin-top: -1rem;
+  }
+  .topRight {
+    width: 55%;
+    right: -5%;
+  }
+
+  .topRight img {
+    width: 90%;
+  }
+
+  .artHeroBody {
+    width: 100%;
+    margin-left: 0;
+    padding-inline: 40px;
+  }
+  .flagCulture {
+    width: 31%;
+    top: 73%;
+  }
+
+  .rhythm .rhythm-heading {
+    font-size: 107px;
+  }
+
+  .rhythm .rhythm-para {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .artHero .andTitle {
+    left: 64%;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .artHero .andTitle {
+    left: 62%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .artHeading {
+    padding-top: 4.5rem;
+  }
+
+  .artContainer {
+    margin: 0rem;
+  }
+
+  .cardArtImage {
+    width: auto;
+    /* height: 520px; */
+    padding: 1rem;
+    aspect-ratio: 0.856;
+  }
+  .ArtCultureContainer {
+    padding-top: 0;
+  }
+  .artHeroContainer {
+    padding: 0;
+    margin: 0 auto;
+  }
+  .artHero {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    /* padding-top: 4rem; */
+    padding-bottom: 60px;
+  }
+
+  .artsCultureTitle {
+    font-size: 72px;
+  }
+
+  .artHero .andTitle {
+    left: 60%;
+  }
+  .andTitle div {
+    width: 165%;
+    display: inline-block;
+    transform: rotate(-11deg);
+  }
+  .topRight {
+    width: 35%;
+    top: -1%;
+    right: 0%;
+  }
+  .topRight img {
+    width: 100%;
+  }
+
+  .artHeroBody span {
+    font-size: var(--fonts--mobile--body1-capital);
+  }
+  .artHeroBody {
+    width: 73%;
+    margin-left: 25%;
+  }
+
+  .flagCulture {
+    width: 50%;
+    top: 9%;
+  }
+  .artHero .imgContainer .img1 {
+    position: relative;
+    transform: none;
+  }
+
+  .artHero .imgContainer {
+    display: none;
+  }
+  .imgContainerMobile {
+    display: block;
+    margin-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+  }
+  .artHero .cultureTitle {
+    margin-top: -0.5rem;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 479px) {
+  .flagCulture img {
+    top: 13%;
+  }
+
+  .artHero .andTitle {
+    left: 62%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .topRight {
+    top: 0;
+    right: 0;
+  }
+
+  .flagCulture {
+    top: 15%;
+  }
+  .artHero .andTitle {
+    left: 64%;
+  }
+}

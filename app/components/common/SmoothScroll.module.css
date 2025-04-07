@@ -1,0 +1,14 @@
+.smooth-scroll {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Ensure proper scrolling on mobile devices */
+@media (max-width: 768px) {
+  .smooth-scroll {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

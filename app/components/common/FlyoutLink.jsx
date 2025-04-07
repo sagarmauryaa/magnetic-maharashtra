@@ -6,10 +6,13 @@ function FlyoutLink({ children, menuItem, menu, setisMenuOpen, isMenuOpen }) {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   const handleMenu = (menu) => {
-    push(menu, { replace: true });
+    const url = menu.startsWith("/") ? menu : `/${menu}`;
+    push(url, { replace: true });
     setisMenuOpen(!isMenuOpen);
   };
+  // ... existing code ...
   return (
     <div>
       <div

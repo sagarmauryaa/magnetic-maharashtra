@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
 import gsap from "gsap";
 
 import styles from "./Brilliance.module.css";
@@ -9,15 +9,16 @@ import styles from "./Brilliance.module.css";
 function Brilliance() {
   const pathRef = useRef([]);
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".brilliance",
+        trigger: `.${styles.brilliance}`,
         ease: "ease.in",
         start: "top 75%",
       },
     });
 
-    tl.from(".brilliance-element ", {
+    tl.from(`.${styles.brillianceElement}`, {
       opacity: 0,
       y: 100,
       stagger: 0.03,
@@ -33,7 +34,7 @@ function Brilliance() {
           duration: 0.75, // Duration of the animation
           ease: "power2.out", // Easing function
           scrollTrigger: {
-            trigger: ".brilliance",
+            trigger: `.${styles.brilliance}`,
             ease: "ease.in",
             start: "top 75%",
           },

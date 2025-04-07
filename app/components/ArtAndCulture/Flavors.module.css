@@ -1,0 +1,127 @@
+.flavorContainer {
+  /* border-top: 1px solid black; */
+  padding: 5rem 0;
+  border-bottom: 1px solid black;
+}
+.flavors {
+  width: 100%;
+  padding: 0 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+
+.heading,
+.flavors .heading span {
+  font-size: var(--fonts--desktop--heading2);
+  line-height: var(--line-height--90);
+}
+
+.flavorGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(208px, 1fr);
+  column-gap: 30px;
+  margin-top: 3rem;
+}
+.flavorGridItem {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 4;
+  padding-block: 24px;
+  border-top: 1px solid var(--body-grey-color);
+}
+.flavorGridItem .flavorImage {
+  grid-column: 3;
+}
+
+.flavorImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.flavorTitle {
+  font-size: var(--fonts--desktop--sub-heading2);
+  line-height: var(--line-height--115);
+}
+.flavorGridItem .flavorBody {
+  grid-column: 4;
+  /* grid-row: 1; */
+  color: var(--body-grey-color);
+  font-size: var(--fonts--desktop--body1);
+  line-height: var(--line-height--115);
+}
+.flavorButton {
+  height: 48px;
+  border-radius: 2px;
+  border: 2px solid #d1d1d2;
+  color: var(--orange-color);
+  font-size: 16px;
+  background-color: white;
+  grid-column: 3 / 5;
+  margin-top: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .flavorGridItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flavorGridItem img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .flavorGridItem {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: 208px;
+  }
+  .flavorImage img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .flavorContainer {
+    /* border-top: 1px solid black; */
+    padding: 3.75rem 0;
+  }
+  .flavors {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .heading,
+  .flavors .heading span {
+    font-size: var(--fonts--mobile--sub-heading1);
+    line-height: var(--line-height--90);
+  }
+
+  .flavorGridItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border-top: none; */
+  }
+
+  .flavorGridItem img {
+    width: 100%;
+  }
+
+  .flavorTitle {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+    line-height: var(--line-height--100);
+  }
+  .flavorGridItem .flavorBody {
+    font-size: var(--fonts--mobile--body2);
+  }
+  .flavorButton {
+    grid-column: 1 / 5;
+    height: 40px;
+    font-size: 14px;
+  }
+}

@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react";
 
 import styles from "./Milestone.module.css";
@@ -5,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
-gsap.registerPlugin(ScrollTrigger);
+
 function Milestones() {
   const milestoneContainerRef = useRef();
   const mileClipPathRef = useRef();
@@ -17,18 +18,34 @@ function Milestones() {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollTrigger);
       // const master = gsap.timeline();
+
+      const initialStates = () => {
+        gsap.set(`.${styles.infrastructure}`, {
+          xPercent: -130,
+          opacity: 0,
+        });
+        gsap.set(`.${styles.business}`, {
+          xPercent: -200,
+          opacity: 0,
+        });
+        gsap.set(`.${styles.development}`, {
+          xPercent: -300,
+          opacity: 0,
+        });
+      };
 
       const animateBoxes = () => {
         let tl = gsap.timeline({
           scrollTrigger: {
-            trigger: milestonesRef.current,
+            trigger: `.${styles.box}`,
             ease: "power2.inOut",
             start: "top 60%",
           },
         });
 
-        tl.to(".milestone-box:not(:first-child)", {
+        tl.to(`.${styles.box}`, {
           xPercent: 0,
           stagger: 0.35,
           opacity: 1,
@@ -48,17 +65,17 @@ function Milestones() {
             markers: false,
           },
         });
-        gsap.from(".milestoneElements .item", {
+        gsap.from(`.${styles.milestoneElements} .${styles.item}`, {
           opacity: 0,
           stagger: 0.3,
           scrollTrigger: {
-            trigger: ".mileClipPath",
+            trigger: `.${styles.mileClipPath}`,
             start: "top 70%",
             // markers: true,
           },
         });
       };
-      // initialStates();
+      initialStates();
       animateBoxes();
       animateMilestone();
     },
@@ -75,7 +92,7 @@ function Milestones() {
           <div className={styles.elements}>
             <div
               ref={revolutionRef}
-              className={styles.box + " " + styles.revolution + "milestone-box"}
+              className={styles.box + " " + styles.revolution}
             >
               <div className={styles.icon}>
                 <Image
@@ -94,9 +111,7 @@ function Milestones() {
 
             <div
               ref={infrastructureRef}
-              className={
-                styles.box + " " + styles.infrastructure + "milestone-box"
-              }
+              className={styles.box + " " + styles.infrastructure}
             >
               <div className={styles.icon}>
                 <Image
@@ -115,7 +130,7 @@ function Milestones() {
 
             <div
               ref={businessRef}
-              className={styles.box + " " + styles.business + "milestone-box"}
+              className={styles.box + " " + styles.business}
             >
               <div className={styles.icon}>
                 <Image
@@ -134,9 +149,7 @@ function Milestones() {
 
             <div
               ref={developmentRef}
-              className={
-                styles.box + " " + styles.development + "milestone-box"
-              }
+              className={styles.box + " " + styles.development}
             >
               <div className={styles.icon}>
                 <Image

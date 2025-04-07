@@ -5,8 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
-gsap.registerPlugin(ScrollTrigger);
-
 function RoadMap() {
   const arrowRef = useRef(null);
 
@@ -44,6 +42,7 @@ function RoadMap() {
   }, []);
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // Animation for road elements grid items
     gsap.from(".grid-item", {
       xPercent: -10,
@@ -68,7 +67,7 @@ function RoadMap() {
               media="(min-width:960px)"
             />
             <source
-              srcSet="images/RoadMap/roadMapMobile.png"
+              srcSet="images/RoadMap/roadMap-mobile.png"
               media="(min-width:360px)"
             />
             <img src="images/RoadMap/roadMap.png" alt="" />
@@ -115,7 +114,11 @@ function RoadMap() {
             </button>
           </div>
           <div className={styles.roadElementsGrid}>
-            <div className={styles.roadElementsGridItem + " grid-item"}>
+            <div
+              className={
+                styles.roadElementsGridItem + " " + styles.item + " grid-item"
+              }
+            >
               <div className={styles.number}>1</div>
               <hr />
               <div className={styles.roadElementContainer}>

@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const UseScreenSize = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming 768px as mobile breakpoint
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Set initial value after component mounts
+    setIsMobile(window.innerWidth <= 768);
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };

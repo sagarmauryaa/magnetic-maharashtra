@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import styles from "../../page.module.css";
 const slides = [
   { text: "Airports", imageIndex: 0 },
   { text: "Sea Ports", imageIndex: 1 },
@@ -33,19 +33,19 @@ const EverythingConnectsMobile = () => {
   }, [activeIndex, isAnimating]);
 
   return (
-    <div className="everything-wrapper">
-      <section className="everything-content-section">
-        <div className="everything-text-content">
-          <h2 className="everything-heading">Everything Just</h2>
+    <div className={styles.everythingWrapper}>
+      <section className={styles.everythingContentSection}>
+        <div className={styles.everythingTextContent}>
+          <h2 className={styles.everythingHeading}>Everything Just</h2>
 
           {/* Animated Word Section */}
-          <h1 className="everything-animated-heading">
+          <h1 className={styles.everythingAnimatedHeading}>
             Connects.&nbsp;
-            <div className="everything-marquee-wrapper">
+            <div className={styles.everythingMarqueeWrapper}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
-                  className="everything-marquee"
+                  className={styles.everythingMarquee}
                   initial={{ y: 50 }}
                   animate={{ y: 0 }}
                   exit={{ y: -50 }}
@@ -62,7 +62,7 @@ const EverythingConnectsMobile = () => {
             </div>
           </h1>
 
-          <div className="everything-description">
+          <div className={styles.everythingDescription}>
             <p>
               Airports, roads, and seaports link Maharashtra seamlessly to India
               and the world, fueling business growth.
@@ -71,12 +71,12 @@ const EverythingConnectsMobile = () => {
         </div>
 
         {/* Image Animation */}
-        <div className="everything-image-content">
+        <div className={styles.everythingImageContent}>
           <AnimatePresence mode="wait">
             {slides[activeIndex].imageIndex === 0 && (
               <motion.div
                 key="airports"
-                className="single-image airportsImg"
+                className={`${styles.singleImage} ${styles.airportsImg}`}
                 style={imageSpacing}
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -90,7 +90,7 @@ const EverythingConnectsMobile = () => {
             {slides[activeIndex].imageIndex === 1 && (
               <motion.div
                 key="seaports"
-                className="single-image seaportsImg"
+                className={`${styles.singleImage} ${styles.seaportsImg}`}
                 style={imageSpacing}
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -104,7 +104,7 @@ const EverythingConnectsMobile = () => {
             {slides[activeIndex].imageIndex === 2 && (
               <motion.div
                 key="roads"
-                className="single-image roadImg"
+                className={`${styles.singleImage} ${styles.roadImg}`}
                 style={imageSpacing}
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

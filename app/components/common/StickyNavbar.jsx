@@ -23,17 +23,17 @@ const menuItems = [
     label: "Sectors",
     url: "#",
     subMenu: [
-      { label: "Automobile", url: "sectors/automobile" },
-      { label: "Textile & Apparels", url: "sectors/textile" },
-      { label: "Aerospace & Defence", url: "sectors/aerospace" },
-      { label: "Gems & Jewellery", url: "sectors/gem&jewellery" },
-      { label: "Petroleum & Crude Products", url: "sectors/petroleum" },
-      { label: "IT/ITeS & Emerging Tech", url: "sectors/emergingTech" },
-      { label: "Toys & Games", url: "sectors/toys&games" },
-      { label: "Food Processing", url: "sectors/food" },
-      { label: "Chemicals", url: "sectors/chemicals" },
-      { label: "Pharma & Bulk Drugs", url: "sectors/pharma&bulk" },
-      { label: "Electronics & ESDM", url: "sectors/electronics" },
+      { label: "Automobile", url: "/sectors/automobile" },
+      { label: "Textile & Apparels", url: "/sectors/textile" },
+      { label: "Aerospace & Defence", url: "/sectors/aerospace" },
+      { label: "Gems & Jewellery", url: "/sectors/gem&jewellery" },
+      { label: "Petroleum & Crude Products", url: "/sectors/petroleum" },
+      { label: "IT/ITeS & Emerging Tech", url: "/sectors/emergingTech" },
+      { label: "Toys & Games", url: "/sectors/toys&games" },
+      { label: "Food Processing", url: "/sectors/food" },
+      { label: "Chemicals", url: "/sectors/chemicals" },
+      { label: "Pharma & Bulk Drugs", url: "/sectors/pharma&bulk" },
+      { label: "Electronics & ESDM", url: "/sectors/electronics" },
       { label: "AI & Smart Manufacturing", url: "/aismartmanufacturing" },
     ],
   },
@@ -60,7 +60,7 @@ const menuItems = [
       { label: "Art And Culture", url: "/artAndCulture" },
     ],
   },
-  { label: "News and Events", url: "/newsAndEvents" },
+  // { label: "News and Events", url: "/newsAndEvents" },
 ];
 const StickyNavbar = () => {
   const menuRefs = useRef({});
@@ -84,6 +84,8 @@ const StickyNavbar = () => {
 
   // Simplified scroll handler for more reliable behavior
   const handleScroll = () => {
+    if (typeof window === undefined) return;
+
     const currentScrollY = window.scrollY;
     const currentPath = window.location.pathname;
     const isHomePage = currentPath === "/" || currentPath === "/artAndCulture";
@@ -261,13 +263,13 @@ const StickyNavbar = () => {
     const tl = gsap.timeline();
 
     if (isMenuOpen) {
-      tl.from(".mobile-inner-menu", {
+      tl.from(`.${styles.mobileInnerMenu}`, {
         height: "0dvh",
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: "",
       }).from(
-        ".mobile-links a",
+        `.${styles.mobileLinks} a`,
         {
           yPercent: 100,
           opacity: 0,
@@ -277,12 +279,12 @@ const StickyNavbar = () => {
         "<0.35"
       );
     } else {
-      tl.to(".mobile-inner-menu", {
+      tl.to(`.${styles.mobileInnerMenu}`, {
         height: "100dvh",
         duration: 0.8,
         ease: "power2.out",
       }).from(
-        ".mobile-links a",
+        `.${styles.mobileLinks} a`,
         {
           yPercent: 100,
           opacity: 0,
@@ -504,8 +506,8 @@ const StickyNavbar = () => {
             <Image
               src="/images/StickyNavbar/menu.svg"
               alt=""
-              width={100}
-              height={100}
+              width={30}
+              height={30}
             />
           </button>
         </div>
@@ -540,8 +542,8 @@ const StickyNavbar = () => {
                 <Image
                   src="/images/StickyNavbar/close.svg"
                   alt=""
-                  width={100}
-                  height={100}
+                  width={30}
+                  height={30}
                 />
               </button>
             </div>

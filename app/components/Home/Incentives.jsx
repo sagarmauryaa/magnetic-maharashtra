@@ -3,6 +3,7 @@ import styles from "./Incentives.module.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/all";
 
 function Incentives() {
   const capRef = useRef(null);
@@ -16,6 +17,7 @@ function Incentives() {
   const incentivesRef = useRef(null);
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let mm = gsap.matchMedia();
     mm.add("(max-width:480px)", () => {
       const master = gsap.timeline({
@@ -327,7 +329,7 @@ function Incentives() {
       // initalStates();
       master.add(animate());
     });
-  });
+  }, []);
 
   return (
     <div className={styles.incentivesContainer}>

@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import styles from "../../page.module.css";
-import gsap, { CustomEase, MotionPathPlugin, ScrollTrigger } from "gsap/all";
+import gsap, { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
 const ProofofProgress = () => {
@@ -11,9 +11,8 @@ const ProofofProgress = () => {
   const InnerCircleRef = useRef();
   const OuterCircleRef = useRef();
 
-  gsap.registerPlugin(CustomEase);
-
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.set(mapSvgRef.current, { opacity: 0 });
     gsap.set(proofTitleRef.current, { opacity: 0, yPercent: 40 });
     ScrollTrigger.create({
@@ -22,8 +21,6 @@ const ProofofProgress = () => {
       end: "bottom top",
       once: true,
       onEnter: () => {
-        gsap.registerPlugin(MotionPathPlugin);
-
         gsap.set(mapSvgRef.current, { opacity: 1, ease: "power1.in" });
 
         const MapTl = gsap.timeline({

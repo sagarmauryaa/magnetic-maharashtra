@@ -1,0 +1,244 @@
+.divineContainer {
+  /* border-top: 1px solid black; */
+  padding: 5rem 0;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+.divine {
+  width: 100%;
+  padding: 0 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+.artImageContent {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.artImageContent picture img {
+  /* margin: 5rem 0; */
+  width: 100%;
+  aspect-ratio: 20/11;
+  object-fit: cover;
+  object-position: top;
+}
+
+.imageContentBody {
+  width: fit-content;
+  position: absolute;
+  /* top: 8%; */
+  top: 0%;
+  padding: 2.5rem;
+  /* left: 5%; */
+  display: flex;
+  justify-content: space-between;
+}
+.imageContentBody div {
+  display: inline-block;
+}
+
+.imageContentBody div:first-child {
+  font-size: var(--fonts--desktop--heading2);
+  color: var(--white-color);
+  line-height: var(--line-height--90);
+  width: 36.5%;
+}
+
+.imageContentBody div:last-child {
+  font-size: var(--fonts--desktop--sub-heading3);
+  color: var(--white-color);
+  width: 18%;
+  line-height: var(--line-height--115);
+}
+.boxContainer {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  justify-content: flex-end;
+}
+.divineBox {
+  width: 18.75rem;
+  height: 18.75rem;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  border-radius: 2px;
+}
+.divineBox .body {
+  font-size: var(--fonts--desktop--body2);
+  line-height: var(--line-height--115);
+  color: #2b2f34;
+}
+
+.divineBox .title {
+  width: 80%;
+  font-size: var(--fonts--desktop--sub-heading3);
+  line-height: var(--line-height--115);
+}
+.divineImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.cultureSignificance hr {
+  height: 3px;
+  background: linear-gradient(to right, #ff7128, #7e01a2);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+.cultureSignificance div {
+  display: flex;
+}
+
+.cultureSignificance div div:first-child {
+  font-size: var(--fonts--desktop--sub-heading1);
+  line-height: var(--line-height--90);
+  width: 50%;
+  background: linear-gradient(to bottom right, #ff7128, #7e01a2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cultureSignificance div div:last-child {
+  font-size: var(--fonts--desktop--body2);
+  line-height: var(--line-height--115);
+  width: 25%;
+  color: #2b2f34;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .imageContentBody div:first-child {
+    font-size: 60px;
+    color: var(--white-color);
+    line-height: var(--line-height--90);
+    width: 65%;
+  }
+
+  .imageContentBody div:last-child {
+    font-size: var(--fonts--desktop--navigation);
+    color: var(--white-color);
+    width: 30%;
+    line-height: var(--line-height--115);
+  }
+
+  .cultureSignificance div {
+    align-items: center;
+  }
+  .cultureSignificance div div:last-child {
+    width: 50%;
+  }
+  .boxContainer {
+    gap: 1rem;
+  }
+  .divineBox {
+    width: 12rem;
+    height: 12rem;
+    gap: 30px;
+
+    .title {
+      font-size: 18px;
+    }
+
+    .body {
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .divineContainer {
+    padding: 3.75rem 0;
+  }
+  .divine {
+    padding: 0 1rem;
+  }
+
+  .artImageContent {
+    height: 80vh;
+    width: auto;
+    overflow: hidden;
+  }
+  .artImageContent picture img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 41/70;
+  }
+
+  .cultureSignificance div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cultureSignificance div div:first-child {
+    font-size: var(--fonts--mobile--sub-heading-capital);
+    line-height: var(--line-height--110);
+    width: 100%;
+  }
+
+  .cultureSignificance div div:last-child {
+    font-size: var(--fonts--mobile--body1);
+    line-height: var(--line-height--115);
+    width: 100%;
+    color: #2b2f34;
+  }
+
+  .cultureSignificance hr {
+    margin: 2rem 0;
+  }
+
+  .imageContentBody {
+    flex-direction: column;
+    gap: 8px;
+    padding: 1rem;
+    padding-top: 24px;
+  }
+
+  .imageContentBody div:first-child {
+    font-size: var(--fonts--mobile--sub-heading2);
+    line-height: var(--line-height--115);
+    width: 100%;
+  }
+
+  .imageContentBody div:last-child {
+    font-size: var(--fonts--mobile--sub-heading4);
+    color: var(--white-color);
+
+    width: 100%;
+    line-height: var(--line-height--100);
+  }
+
+  .boxContainer {
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    bottom: 24px;
+    right: 0;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    gap: 1rem;
+    scrollbar-color: transparent transparent;
+  }
+  .divineBox {
+    width: 242px;
+    height: 242px;
+    flex-shrink: 0;
+    gap: 70px;
+    padding: 20px 12px;
+  }
+  .divineBox .title {
+    width: 77%;
+    font-size: var(--fonts--mobile--sub-heading4);
+    line-height: var(--line-height--115);
+  }
+}

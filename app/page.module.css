@@ -1,4 +1,4 @@
-.canvas-container {
+.canvasContainer {
   position: relative;
   top: 0;
   left: 0;
@@ -10,18 +10,18 @@
   width: 100%;
   height: auto;
 }
-.heroVideo-wrapper {
+.heroVideoWrapper {
   width: 100%;
   max-width: 100%;
   transform-origin: top center;
   margin-inline: auto;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 main.heroVideoContainer {
   position: relative;
   width: 100%;
-  max-width: 1600px;
   height: auto;
   margin-inline: auto;
 }
@@ -79,19 +79,19 @@ main.heroVideoContainer {
   justify-content: space-between;
   align-content: center;
   margin-bottom: 2.5rem;
+}
 
-  .title {
-    text-align: left;
-  }
+.title {
+  text-align: left;
+}
 
-  .subTitle {
-    width: 17rem;
-    font-family: "PP Neu Book", sans-serif;
-    font-size: var(--fonts--desktop--body1);
-    display: flex;
-    flex-direction: column;
-    text-wrap: balance;
-  }
+.subTitle {
+  width: 17rem;
+  font-family: "PP Neu Book", sans-serif;
+  font-size: var(--fonts--desktop--body1);
+  display: flex;
+  flex-direction: column;
+  text-wrap: balance;
 }
 
 .subTitle p:nth-child(1) {
@@ -109,11 +109,11 @@ main.heroVideoContainer {
   transition: all 0.3s ease;
   max-width: 1600px;
   margin-inline: auto;
+}
 
-  .sectorInsightsTitle {
-    font-size: var(--fonts--desktop--sub-heading2);
-    margin-right: 1.8rem;
-  }
+.sectorInsightsTitle {
+  font-size: var(--fonts--desktop--sub-heading2);
+  margin-right: 1.8rem;
 }
 
 .sectorsInsightsContainer {
@@ -261,6 +261,7 @@ main.heroVideoContainer {
   position: fixed;
   inset: 0%;
   overflow: visible;
+  z-index: 100001;
 }
 
 .popupDescription {
@@ -295,7 +296,7 @@ main.heroVideoContainer {
 
 .cursor {
   z-index: 9999; /* Original value */
-  background-image: url("/public/images/cursor.png");
+  background-image: url("/images/cursor.png");
   background-position: 50%;
   background-size: 30px 30px;
   width: 30px;
@@ -329,7 +330,7 @@ main.heroVideoContainer {
   line-height: 90%;
 }
 
-#Proof_Of_Progress {
+#ProofOfProgress {
   height: 100vh;
   width: 100%;
 }
@@ -350,6 +351,7 @@ main.heroVideoContainer {
   right: 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  box-sizing: border-box;
 }
 
 .globalBusiness h1 {
@@ -735,7 +737,7 @@ main.heroVideoContainer {
   overflow: hidden;
 }
 
-.canvas-container {
+.canvasContainer {
   width: 100%;
   height: 100%;
 }
@@ -1208,23 +1210,21 @@ main.heroVideoContainer {
   .heroHeadingSection .heroHeading {
     width: 100%;
   }
-  .svg-container svg {
+  .svgContainer svg {
     margin-top: 5rem;
   }
 
   /* playground */
-  .heading-title {
+  .headingTitle {
     flex-direction: column;
     gap: 40px;
   }
 
-  .heading-title {
-    .sub-title {
-      width: 100%;
-    }
+  .headingTitle .subTitle {
+    width: 100%;
   }
 
-  .sector-insights {
+  .sectorInsights {
     width: 100%;
   }
   .playgroundGrid {
@@ -1379,18 +1379,19 @@ main.heroVideoContainer {
     width: 100%;
   }
 
-  .svg-container {
+  .svgContainer {
     padding: 0 1rem;
+    box-sizing: border-box;
   }
 
   /* proof of progress */
 
-  .proof-left {
+  .proofLeft {
     position: absolute;
     top: 60px;
     left: 16px;
   }
-  .proof-title {
+  .proofTitle {
     width: 71%;
     font-size: var(--fonts--desktop--sub-heading2);
     line-height: var(--line-height--115);
@@ -1398,11 +1399,11 @@ main.heroVideoContainer {
     color: var(--black-color);
   }
 
-  .svg-container svg {
+  .svgContainer svg {
     margin-top: 5rem;
     height: 360px;
   }
-  .svg-container {
+  .svgContainer {
     height: 600px;
   }
 
@@ -1460,7 +1461,7 @@ main.heroVideoContainer {
   .container {
     margin-block: 60px;
   }
-  .heading-title {
+  .headingTitle {
     flex-direction: column;
     gap: 40px;
   }
@@ -1468,11 +1469,10 @@ main.heroVideoContainer {
     display: inline;
     font-size: var(--fonts--mobile--sub-heading2);
   }
-  .headingTitle {
-    .subTitle {
-      font-size: var(--fonts--mobile--sub--body1);
-      width: 100%;
-    }
+
+  .subTitle {
+    font-size: var(--fonts--mobile--sub--body1);
+    width: 100%;
   }
 
   .sectorInsights {
@@ -1480,32 +1480,33 @@ main.heroVideoContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-sizing: border-box;
+  }
 
-    .sector-insights-title {
-      font-size: var(--fonts--mobile--sub-heading4);
-      margin-bottom: 22px;
-    }
+  .sectorInsightsTitle {
+    font-size: var(--fonts--mobile--sub-heading4);
+    margin-bottom: 22px;
+  }
 
-    & .layoutHFlex {
-      align-items: center;
-      gap: 4px;
-      margin-left: 0rem;
-      font-size: 14px;
-    }
+  .layoutHFlex {
+    align-items: center;
+    gap: 4px;
+    margin-left: 0rem;
+    font-size: 14px;
+  }
 
-    .layoutHFlex .circle-indicator {
-      width: 0.8rem;
-      height: 0.8rem;
-      border-radius: 50%;
-    }
+  .layoutHFlex .circle-indicator {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+  }
 
-    .layoutHFlex:nth-child(even) .circle-indicator {
-      background-color: var(--orange-color);
-    }
+  .layoutHFlex:nth-child(even) .circle-indicator {
+    background-color: var(--orange-color);
+  }
 
-    .layoutHFlex:nth-child(odd) .circle-indicator {
-      background-color: hsl(233, 64%, 48%);
-    }
+  .layoutHFlex:nth-child(odd) .circle-indicator {
+    background-color: hsl(233, 64%, 48%);
   }
 
   .sectorInsights.sticky {
@@ -1701,7 +1702,7 @@ main.heroVideoContainer {
     display: none;
   }
 
-  #land-of-wonders {
+  #landOfWonders {
     position: absolute;
     width: 100%;
     bottom: 15%;
@@ -1934,12 +1935,13 @@ main.heroVideoContainer {
   .heroHeadingSpanHighlight {
     margin-left: 10%;
   }
-  .everything-content-section {
+  .everythingContentSection {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    box-sizing: border-box;
   }
 
   .everythingMarquee {
@@ -2041,6 +2043,7 @@ main.heroVideoContainer {
     padding-inline: 1rem;
     gap: 20px;
     height: auto;
+    box-sizing: border-box;
   }
 
   .everythingTextContent {
@@ -2102,6 +2105,7 @@ main.heroVideoContainer {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    box-sizing: border-box;
   }
 
   .everythingMarquee {
@@ -2221,6 +2225,7 @@ main.heroVideoContainer {
   .everythingContentSection {
     padding-inline: 1rem;
     height: 100%;
+    box-sizing: border-box;
   }
 
   .everythingTextContent {

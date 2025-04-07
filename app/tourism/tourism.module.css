@@ -797,6 +797,7 @@
     flex-direction: column;
     padding-bottom: 32px;
     padding-inline: 1rem;
+    box-sizing: border-box;
   }
   .exploreContainer h2 {
     font-size: var(--fonts--mobile--sub-heading1);
@@ -829,6 +830,7 @@
   .exploreDataContainer {
     margin-top: 24px;
     padding-inline: 1rem;
+    box-sizing: border-box;
   }
   .exploreGridItem img {
     margin-bottom: 20px;
@@ -878,6 +880,10 @@
   }
   .seasonDetails .seasonD {
     font-size: var(--fonts--mobile--body1-capital);
+  }
+
+  .seasonsInnerSummer {
+    box-sizing: border-box;
   }
   .seasonsInnerSummer,
   .seasonsGrid {

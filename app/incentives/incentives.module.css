@@ -294,6 +294,7 @@
     padding-inline: 1rem;
     max-width: 1600px;
     margin-inline: auto;
+    box-sizing: border-box;
   }
   .stepsContent {
     margin-inline: 0;

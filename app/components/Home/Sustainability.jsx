@@ -12,6 +12,7 @@ function Sustainability() {
   const sustainSubtitleRef = useRef();
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let sustainTimeline = gsap.timeline({ defaults: { duration: 1 } });
 
     sustainTimeline

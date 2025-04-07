@@ -147,6 +147,7 @@ const CardAccordion = () => {
   });
 
   const toggleAccordion = (index) => {
+    if (typeof window === "undefined") return;
     setActiveIndex(activeIndex === index ? null : index);
 
     if (activeIndex === index) {

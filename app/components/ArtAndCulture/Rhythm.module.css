@@ -1,0 +1,180 @@
+.rhythmContainer {
+  /* border-top: 1px solid black; */
+  padding: 5rem 0;
+  border-bottom: 1px solid black;
+}
+.rhythm {
+  width: 100%;
+  padding: 0 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+
+.rhythmHeading {
+  font-size: 102px;
+  line-height: var(--line-height--90);
+  will-change: transform;
+}
+.rhythmHeading span {
+  background: linear-gradient(to left, #7e01a2, #ff7128);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rhythmPara p {
+  font-size: var(--fonts--desktop--body1);
+  line-height: var(--line-height--115);
+  width: 100%;
+  margin: 2.5rem 0;
+  /* margin-left: 67%; */
+  grid-column: 2/2;
+  color: var(--dark-grey-color);
+}
+.rhythmScroll {
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.scrollImageContainer,
+.rhythmPara {
+  display: grid;
+  grid-template-columns: 36.563rem 17.375rem 17.375rem 36.563rem 17.375rem 17.375rem;
+  gap: 30px;
+}
+.scrollImageContainer div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.scrollImageContainer div img {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.scrollImageContainer div div {
+  /* margin-top: 1rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rhythmTitle {
+  font-size: var(--fonts--desktop--sub-heading3);
+  line-height: var(--line-height--115);
+  width: 50%;
+  line-height: 90%;
+  margin-top: 16px;
+}
+.rhythmBody {
+  font-size: var(--fonts--desktop--body2);
+  line-height: var(--line-height--115);
+  color: var(--body-grey-color);
+  width: 90%;
+  white-space: normal;
+  letter-spacing: 0;
+}
+.rhythmMobileImageContainer {
+  display: none;
+}
+
+.rhythmScroll .rhythmTitle {
+  margin-top: 0;
+}
+
+.cultureSignificance hr {
+  height: 3px;
+  background: linear-gradient(to right, #ff7128, #7e01a2);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+.cultureSignificance div {
+  display: flex;
+}
+
+.cultureSignificance div div:first-child {
+  font-size: var(--fonts--desktop--sub-heading1);
+  line-height: var(--line-height--90);
+  width: 50%;
+  background: linear-gradient(to bottom right, #ff7128, #7e01a2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cultureSignificance div div:last-child {
+  font-size: var(--fonts--desktop--body2);
+  line-height: var(--line-height--115);
+  width: 25%;
+  color: #2b2f34;
+}
+
+@media screen and (max-width: 480px) {
+  .rhythmContainer {
+    padding: 3.75rem 0;
+  }
+  .rhythmHeading {
+    font-size: var(--fonts--mobile--sub-heading1);
+    line-height: var(--line-height--100);
+    width: 82%;
+  }
+  .rhythmPara {
+    display: flex;
+  }
+  .rhythmPara p {
+    margin-left: 0;
+    width: 100%;
+    margin: 1rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--light-grey-color);
+    padding-bottom: 40px;
+    font-size: var(--fonts--mobile--body2);
+  }
+  .rhythm {
+    padding: 0 1rem;
+  }
+  .rhythmScroll {
+    overflow-x: hidden;
+    display: none;
+  }
+  .scrollImageContainer {
+    flex-direction: column;
+  }
+  .scrollImageContainer div img {
+    width: 100%;
+  }
+  .rhythmMobileImageContainer {
+    display: block;
+  }
+  .rhythmMobileImageContainer img {
+    width: 100%;
+    margin-block: 30px;
+  }
+  .rhythmBody {
+    /* margin-top: 12px; */
+    color: #999999;
+    font-size: var(--fonts--mobile--body2);
+    width: 100%;
+    border-bottom: 1px solid var(--light-grey-color);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+  .rhythmWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .rhythmInnerTitle {
+    font-size: var(--fonts--mobile--sub-heading4);
+  }
+  .rhythmTitle {
+    margin-top: 0;
+  }
+  .rhythmMobileImageContainer .rhythmTitle {
+    width: 100%;
+  }
+}

@@ -54,7 +54,9 @@ const AiSmartManufacturing = () => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   useGSAP(() => {
@@ -493,6 +495,7 @@ const AiSmartManufacturing = () => {
               }
             >
               <Image
+                className={styles.contentImageMobile}
                 loading="lazy"
                 src="/images/Ai/wildlife.webp"
                 alt=""
@@ -513,6 +516,7 @@ const AiSmartManufacturing = () => {
               }
             >
               <Image
+                className={styles.contentImageMobile}
                 loading="lazy"
                 src="/images/Ai/robotics_ai_integration.webp"
                 alt=""
@@ -533,6 +537,7 @@ const AiSmartManufacturing = () => {
               }
             >
               <Image
+                className={styles.contentImageMobile}
                 loading="lazy"
                 src="/images/Ai/iot_predictive_analytics.webp"
                 alt=""
@@ -553,6 +558,7 @@ const AiSmartManufacturing = () => {
               }
             >
               <Image
+                className={styles.contentImageMobile}
                 loading="lazy"
                 src="/images/Ai/digital_twin_technology.webp"
                 alt=""
