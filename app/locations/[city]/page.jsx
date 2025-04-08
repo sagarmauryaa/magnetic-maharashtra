@@ -38,23 +38,6 @@ const Locations = () => {
   const whyMumbaiContainerRef = useRef(null);
   const qualityLifeRef = useRef(null);
 
-  const data = [
-    {
-      id: "mumbai",
-      name: "Mumbai",
-      pathName: "mumbai",
-    },
-    {
-      id: "pune",
-      name: "Pune",
-      pathName: "pune",
-    },
-    {
-      id: "nagpur",
-      name: "Nagpur",
-    },
-  ];
-
   const COLORS = {
     active: {
       fill: "#FF5100",
