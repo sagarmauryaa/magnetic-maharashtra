@@ -156,7 +156,7 @@ const StickyNavbar = () => {
         setIsVisible(true);
         // setIsSectorInsightsSticky(false);
       }
-    }, 100); // 500ms without scroll events is considered "stopped scrolling"
+    }, 150); // Reduced from 500ms to 150ms for more responsive shrinking
   };
 
   // Add touch event handlers for mobile devices
@@ -165,6 +165,8 @@ const StickyNavbar = () => {
     if (scrollTimeoutRef.current) {
       clearTimeout(scrollTimeoutRef.current);
     }
+    // Set scrolling state to true immediately on touch start
+    setIsScrolling(true);
   };
 
   const handleTouchEnd = () => {
@@ -183,7 +185,7 @@ const StickyNavbar = () => {
       if (!(currentScrollY === 0 && isHomePage)) {
         setIsVisible(true);
       }
-    }, 100);
+    }, 150); // Reduced from 100ms to 150ms for consistency with scroll handler
   };
 
   useEffect(() => {

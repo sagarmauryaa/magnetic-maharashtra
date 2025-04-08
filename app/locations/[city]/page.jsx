@@ -1340,7 +1340,7 @@ const Locations = () => {
               onMouseMove={(e) => handleMouseMove(e, itemsRef)}
             >
               <div ref={whyMumbaiContainerRef} id={styles.whyMumbaiContainer}>
-                {data.map((cardData) => (
+                {data.fourthSection?.cardsData.map((cardData) => (
                   <div className={styles.gridItem} key={cardData.title}>
                     <img src={cardData.icon} alt={cardData.title} />
                     <h3>{cardData.title}</h3>

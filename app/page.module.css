@@ -1874,7 +1874,7 @@ main.heroVideoContainer {
 /* --------- Styles for max-width: 390px --------- */
 @media screen and (max-width: 390px) {
   .everythingMarqueeWrapper {
-    height: 100px;
+    height: 50px;
   }
 
   .imageWrapper {
@@ -2224,13 +2224,14 @@ main.heroVideoContainer {
 @media (max-width: 480px) {
   .everythingContentSection {
     padding-inline: 1rem;
-    height: 100%;
+
     box-sizing: border-box;
   }
 
   .everythingTextContent {
     width: 100%;
     text-align: start;
+    margin-top: 2.5rem;
   }
 
   .everythingImageContent {
@@ -2238,10 +2239,11 @@ main.heroVideoContainer {
     text-align: start;
     display: flex;
     justify-content: start;
-    height: -webkit-fill-available;
+    height: fit-content;
+    margin-bottom: 2rem;
   }
   .everythingWrapper {
-    height: 120vh;
+    height: 100vh;
   }
 
   .everythingHeading,
@@ -2278,7 +2280,7 @@ main.heroVideoContainer {
 
   .everythingMarqueeWrapper {
     padding-top: 0;
-    height: 100px;
+    height: 50px;
     overflow: hidden;
   }
 
