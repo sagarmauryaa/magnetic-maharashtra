@@ -474,7 +474,7 @@ const StickyNavbar = () => {
 
       <nav
         className={`${styles.mobileNavbar} ${
-          isScrolling ? "is-scrolling" : ""
+          isScrolling ? `${styles.isScrolling}` : ""
         }`}
       >
         <div
@@ -482,7 +482,9 @@ const StickyNavbar = () => {
             isAtTop ? "at-top" : ""
           }`}
         >
-          <div className={`${styles.logo} ${isAtTop ? "logo-at-top" : ""}`}>
+          <div
+            className={`${styles.logo} ${isAtTop ? `${styles.logoAtTop}` : ""}`}
+          >
             <Link href="/">
               <div>
                 <Image
@@ -515,10 +517,14 @@ const StickyNavbar = () => {
           <div className={styles.mobileInnerMenu}>
             <div
               className={`${styles.mobileNavContent} ${styles.onMobile} ${
-                isAtTop ? "at-top" : ""
+                isAtTop ? `${styles.atTop}` : ""
               }`}
             >
-              <div className={`${styles.logo} ${isAtTop ? "logo-at-top" : ""}`}>
+              <div
+                className={`${styles.logo} ${
+                  isAtTop ? `${styles.logoAtTop}` : ""
+                }`}
+              >
                 <Link href="/">
                   <div>
                     <Image

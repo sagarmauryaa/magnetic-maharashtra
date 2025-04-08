@@ -29,6 +29,7 @@ image {
   position: relative;
   z-index: 1;
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 .flagVideo {

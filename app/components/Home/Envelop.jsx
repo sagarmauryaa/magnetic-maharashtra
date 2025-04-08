@@ -1001,7 +1001,7 @@ const Envelop = () => {
         <img
           ref={airplaneRef}
           id={styles.airplane}
-          src="/images/EnvelopImages/airplane.png"
+          src="/images/EnvelopImages/Airplane.png"
           alt="airplane"
         />
         <img
@@ -1013,19 +1013,19 @@ const Envelop = () => {
         <img
           ref={cameraRef}
           id={styles.camera}
-          src="/images/EnvelopImages/camera.png"
+          src="/images/EnvelopImages/Camera.png"
           alt="camera"
         />
         <img
           ref={incentivesRef}
           id={styles.incentivesImg}
-          src="/images/EnvelopImages/incentives.png"
+          src="/images/EnvelopImages/Incentives.png"
           alt="incentives"
         />
         <img
           ref={manufacturingRef}
           id={styles.manufacturing}
-          src="/images/EnvelopImages/manufacturing.png"
+          src="/images/EnvelopImages/Manufacturing.png"
           alt="manufacturing"
         />
         <img
