@@ -40,7 +40,7 @@ const EverythingConnectsMobile = () => {
 
           {/* Animated Word Section */}
           <h1 className={styles.everythingAnimatedHeading}>
-            Connects.&nbsp;
+            Connects&nbsp;
             <div className={styles.everythingMarqueeWrapper}>
               <AnimatePresence mode="wait">
                 <motion.div

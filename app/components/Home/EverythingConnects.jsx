@@ -184,7 +184,7 @@ const EverythingConnects = () => {
           <div className={styles.everythingTextContent}>
             <h2 className={styles.everythingHeading}>Everything</h2>
             <h1 className={styles.everythingAnimatedHeading}>
-              Just Connects.&nbsp;
+              Just Connects&nbsp;
               <span className={styles.everythingMarquee}>
                 <span ref={word1Ref} className={styles.word}>
                   Airports
