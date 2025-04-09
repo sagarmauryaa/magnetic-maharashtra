@@ -58,7 +58,7 @@ const OrangeCity = () => {
             <p>
               Nagpur is known for its logistics dominance through MIHAN and is
               globally recognized as the Orange Capital of India, contributing
-              to 70% of India's orange exports.
+              to 70% of India&apos;s orange exports.
             </p>
           </div>
 
@@ -161,7 +161,7 @@ const OrangeCity = () => {
           <p>
             Nagpur is known for its logistics dominance through MIHAN and is
             globally recognized as the Orange Capital of India, contributing to
-            70% of India's orange exports.
+            70% of India&apos;s orange exports.
           </p>
         </div>
         <div className={styles.orangeText}>
