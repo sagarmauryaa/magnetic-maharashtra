@@ -1100,9 +1100,7 @@
     transform: scale(1.1);
   }
 
-  #MaharashtraMap {
-    top: -15%;
-  }
+  
 }
 @media screen and (max-width: 390px) {
   #industrialContainer {

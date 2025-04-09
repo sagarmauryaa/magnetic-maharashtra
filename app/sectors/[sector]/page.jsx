@@ -537,10 +537,11 @@ const Sectors = () => {
                   <div className={styles.gridItemEmpty}></div>
                   {data?.thirdSection?.tabsData?.tab1Data.map((tabData) => (
                     <div className={styles.gridItem} key={tabData.title}>
-                      <img
-                        loading="lazy"
+                      <Image
                         src={tabData.icon}
                         alt={tabData.title}
+                        width={100}
+                        height={100}
                       />
                       <p className={styles.gridHead}>{tabData.title}</p>
                       <p className={styles.gridText}>{tabData.desc}</p>
@@ -553,10 +554,11 @@ const Sectors = () => {
                   <div className={styles.emptyDiv}></div>
                   {data?.thirdSection?.tabsData?.tab2Data.map((tabData) => (
                     <div className={styles.gridItem} key={tabData.title}>
-                      <img
-                        loading="lazy"
+                      <Image
                         src={tabData.icon}
                         alt={tabData.title}
+                        width={100}
+                        height={100}
                       />
                       <p className={styles.gridHead}>{tabData.title}</p>
                       <p className={styles.gridText}>{tabData.desc}</p>
@@ -588,11 +590,7 @@ const Sectors = () => {
                 <h3>{opportunity.title}</h3>
               </div>
               <div className={styles.sectorsImageContent}>
-                <img
-                  loading="lazy"
-                  src={opportunity.imageUrl}
-                  alt={opportunity.title}
-                />
+                <img src={opportunity.imageUrl} alt={opportunity.title} />
                 <div className={styles.bodyText}>
                   <p>{opportunity.desc}</p>
                 </div>
@@ -640,9 +638,10 @@ const Sectors = () => {
           <div className={styles.innovationImageContainer}>
             <div className={styles.imageBox}>
               {data?.fifthSection?.powerhouseData.map((data, index) => (
-                <img
+                <Image
                   key={data.title}
-                  loading="lazy"
+                  width={100}
+                  height={100}
                   ref={(el) => (innovationImageRef.current[index] = el)}
                   className={`${data.dataLocation} ${styles.visible}
                   `}
@@ -735,10 +734,13 @@ const Sectors = () => {
       <section className={styles.smartManufacturing}>
         <div className={styles.manufacturingContainer}>
           <div className={styles.manufacturingImage}>
-            <img
-              loading="lazy"
+            <Image
+              width={100}
+              height={100}
+              quality={100}
               src={data?.seventhSection?.imageUrl}
               alt={data?.seventhSection?.title}
+              unoptimized
             />
           </div>
           <div className={styles.manufacturingContent}>

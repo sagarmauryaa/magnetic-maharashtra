@@ -813,12 +813,12 @@ const sectorsData = [
           },
         },
         {
-          title: "Nagpur",
-          dataLocation: "nagpur",
-          imageUrl: "/images/Sectors/nagpur_automobile.webp",
+          title: "Mumbai",
+          dataLocation: "mumbai",
+          imageUrl: "/images/Sectors/mumbai_automobile.webp",
           imageDescription: {
             descOne:
-              "Home to Tata Motors, Mercedes-Benz, Bajaj, and Volkswagen.",
+              "Hosts major car brands and luxury icons, appealing to every auto enthusiast.",
             descTwo: "",
           },
         },
@@ -841,7 +841,7 @@ const sectorsData = [
       ],
     },
     seventhSection: {
-      imageUrl: "/images/Sectors/smart_manufacturing_automobile.webp",
+      imageUrl: "/images/Sectors/smart_manufacturing_automobile.jpg",
       glowColor: "#00AEFF",
       title: "Smart Manufacturing in the Sector",
       desc: "Driving the Future with Innovation, Automation, and Sustainable Production.",
