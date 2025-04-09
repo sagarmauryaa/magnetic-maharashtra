@@ -105,6 +105,7 @@ const Statistics = () => {
               alt="Manufacturing"
               width={410}
               height={507}
+              quality={100}
             />
           </div>
 
@@ -117,6 +118,7 @@ const Statistics = () => {
               alt="Manufacturing"
               width={442}
               height={277}
+              quality={100}
             />
           </div>
         </div>
@@ -149,6 +151,7 @@ const Statistics = () => {
               alt="Services"
               width={100}
               height={100}
+              quality={100}
             />
           </div>
 
@@ -161,6 +164,7 @@ const Statistics = () => {
               alt="Services"
               width={442}
               height={277}
+              quality={100}
             />
           </div>
         </div>
@@ -193,6 +197,8 @@ const Statistics = () => {
               alt="Infrastructure"
               width={100}
               height={100}
+              quality={100}
+              unoptimized
             />
           </div>
 
@@ -205,6 +211,7 @@ const Statistics = () => {
               alt="Infrastructure"
               width={442}
               height={277}
+              quality={100}
             />
           </div>
         </div>

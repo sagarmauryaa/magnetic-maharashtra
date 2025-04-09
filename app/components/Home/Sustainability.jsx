@@ -58,6 +58,7 @@ function Sustainability() {
               alt="Naturally Better"
               width={100}
               height={100}
+              quality={75}
             />
           </picture>
         </div>

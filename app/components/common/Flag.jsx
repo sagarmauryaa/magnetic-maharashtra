@@ -27,18 +27,8 @@ const Flag = () => {
         playsInline
         preload="auto"
         controls={false}
-        style={{
-          backgroundColor: "transparent",
-          objectFit: "contain",
-          mixBlendMode: "screen",
-          WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-        }}
       >
-        {isIOS ? (
-          <source src="/videos/Flag_iOS.mp4" type="video/mp4" />
-        ) : (
-          <source src="/videos/Flag.mp4" type="video/mp4" />
-        )}
+        <source src="/videos/Flag.mp4" type="video/mp4" />
       </video>
     </main>
   );

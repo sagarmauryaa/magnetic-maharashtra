@@ -841,7 +841,7 @@ const sectorsData = [
       ],
     },
     seventhSection: {
-      imageUrl: "/images/Sectors/smart_manufacturing_automobile.jpg",
+      imageUrl: "/images/Sectors/smart_manufacturing_automobile.webp",
       glowColor: "#00AEFF",
       title: "Smart Manufacturing in the Sector",
       desc: "Driving the Future with Innovation, Automation, and Sustainable Production.",

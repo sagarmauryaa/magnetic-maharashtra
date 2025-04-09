@@ -91,6 +91,8 @@ function Bollywood() {
               loading="lazy"
               src="/images/Bollywood/bollywood1.webp"
               alt=""
+              quality={100}
+              unoptimized
             />
           </div>
           {/* <div className='inner-grid-wrapper'>
@@ -109,6 +111,8 @@ function Bollywood() {
                 loading="lazy"
                 src="/images/Bollywood/bollywood2.webp"
                 alt=""
+                quality={100}
+                unoptimized
               />
             </div>
             <div className={styles.image}>
@@ -118,6 +122,8 @@ function Bollywood() {
                 loading="lazy"
                 src="/images/Bollywood/bollywood3.webp"
                 alt=""
+                quality={100}
+                unoptimized
               />
             </div>
           </div>
@@ -129,6 +135,8 @@ function Bollywood() {
               src="/images/Bollywood/bollywood4.webp"
               alt=""
               objectFit="cover"
+              quality={100}
+              unoptimized
             />
             <p>
               Bollywood makes Maharashtra the center of India’s film industry,
@@ -152,6 +160,8 @@ function Bollywood() {
                 loading="lazy"
                 src="/images/Bollywood/bollywood5.webp"
                 alt=""
+                quality={100}
+                unoptimized
               />
             </div>
             <div className={styles.image}>
@@ -161,6 +171,8 @@ function Bollywood() {
                 loading="lazy"
                 src="/images/Bollywood/bollywood6.webp"
                 alt=""
+                quality={100}
+                unoptimized
               />
             </div>
           </div>
@@ -175,6 +187,8 @@ function Bollywood() {
                   loading="lazy"
                   src="/images/Bollywood/bollywood1.webp"
                   alt=""
+                  quality={100}
+                  unoptimized
                 />
               </div>
               <div className={styles.image}>

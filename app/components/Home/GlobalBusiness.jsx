@@ -122,7 +122,14 @@ const GlobalBusiness = () => {
               role="button"
               tabIndex={0}
             >
-              <img src={business.imgPath} alt={business.name} />
+              <Image
+                src={business.imgPath}
+                alt={business.name}
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
               <h3>{business.name}</h3>
             </div>
           ))}

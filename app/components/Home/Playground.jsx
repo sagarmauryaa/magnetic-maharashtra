@@ -144,8 +144,9 @@ const Playground = () => {
                 className={styles.playgroundGridItemImage}
                 src={item.imgPath}
                 alt={item.name}
-                width={100}
-                height={100}
+                width={400}
+                height={400}
+                quality={100}
               />
               <div className={styles.playgroundContent}>
                 <p>{item.name}</p>
