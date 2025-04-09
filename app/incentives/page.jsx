@@ -5,6 +5,7 @@ import styles from "./incentives.module.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+import Image from "next/image";
 
 function Incentives() {
   useGSAP(() => {
@@ -89,7 +90,14 @@ function Incentives() {
     <>
       <section className={styles.incentivesHero}>
         <div className={styles.incentivesHeroImage}>
-          <img src="/images/IncentivesPage/image.webp" alt="Incentives Hero" />
+          <Image
+            width={100}
+            height={100}
+            src="/images/IncentivesPage/image.webp"
+            alt="Incentives Hero"
+            quality={100}
+            unoptimized={true}
+          />
         </div>
         <div className={styles.flexContainer}>
           <div className={styles.heroHeading}>Incentives</div>

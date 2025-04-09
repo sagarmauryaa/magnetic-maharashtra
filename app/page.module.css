@@ -1195,6 +1195,18 @@ main.heroVideoContainer {
   .everythingImageContent {
     padding-block-start: 100px;
   }
+
+  .airportsImg img {
+    scale: 1.2;
+  }
+
+  .seaportsImg img {
+    scale: 1.2;
+  }
+
+  .roadImg img {
+    scale: 1.2;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {

@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import styles from "./cardAccordion.module.css";
 import { useRef, useState } from "react";
 import gsap from "gsap/all";
+import Image from "next/image";
 
 const CardAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -208,7 +209,14 @@ const CardAccordion = () => {
                 <div className={styles.cardsContainer}>
                   {item.cards.map((card, cardIndex) => (
                     <div className={styles.card} key={cardIndex}>
-                      <img src={card.image} alt={card.title} />
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={100}
+                        height={100}
+                        quality={100}
+                        unoptimized={true}
+                      />
                       <div className={styles.cardContent}>
                         <h3>{card.title}</h3>
                         <p>{card.description}</p>

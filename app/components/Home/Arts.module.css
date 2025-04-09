@@ -104,8 +104,7 @@
 .andTitle {
   /* display: inline-block; */
   font-size: 5rem;
-  font-family: "EB Garamond";
-  font-style: italic;
+  font-family: var(--font-ebgaramond-italic);
   transform: rotate(-14deg);
 }
 .cultureTitle {

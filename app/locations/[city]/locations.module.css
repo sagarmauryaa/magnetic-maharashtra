@@ -78,10 +78,10 @@
   }
 }
 
-/* #Mumbai > #Mumbai_Bg {
-    animation: pulseStroke 2s infinite;
-    transition: stroke-width stroke-opacity 0.3s ease-in-out;
-  } */
+#Mumbai > #Mumbai_Bg {
+  animation: pulseStroke 2s infinite;
+  transition: stroke-width stroke-opacity 0.3s ease-in-out;
+}
 
 #Mumbai:hover > #Mumbai_Bg {
   fill: var(--orange-color);
@@ -95,10 +95,10 @@
   cursor: pointer;
 }
 
-/* #Pune > #Pune_Bg {
-    animation: pulseStroke 2s infinite;
-    transition: stroke-width stroke-opacity 0.3s ease-in-out;
-  } */
+#Pune > #Pune_Bg {
+  animation: pulseStroke 2s infinite;
+  transition: stroke-width stroke-opacity 0.3s ease-in-out;
+}
 
 #Pune:hover > #Pune_Bg {
   fill: var(--orange-color);
@@ -112,10 +112,10 @@
   cursor: pointer;
 }
 
-/* #Nashik > #Nashik_Bg {
-    animation: pulseStroke 2s infinite;
-    transition: stroke-width stroke-opacity 0.3s ease-in-out;
-  } */
+#Nashik > #Nashik_Bg {
+  animation: pulseStroke 2s infinite;
+  transition: stroke-width stroke-opacity 0.3s ease-in-out;
+}
 
 #Nashik:hover > #Nashik_Bg {
   fill: var(--orange-color);
@@ -129,10 +129,10 @@
   cursor: pointer;
 }
 
-/* #Aurangabad > #Aurangabad_Bg {
-    animation: pulseStroke 2s infinite;
-    transition: stroke-width stroke-opacity 0.3s ease-in-out;
-  } */
+#Aurangabad > #Aurangabad_Bg {
+  animation: pulseStroke 2s infinite;
+  transition: stroke-width stroke-opacity 0.3s ease-in-out;
+}
 
 #Aurangabad:hover > #Aurangabad_Bg {
   fill: var(--orange-color);
@@ -145,11 +145,11 @@
 #Nagpur:hover {
   cursor: pointer;
 }
-/* 
-  #Nagpur > #Nagpur_Bg {
-    animation: pulseStroke 2s infinite;
-    transition: stroke-width stroke-opacity 0.3s ease-in-out;
-  } */
+
+#Nagpur > #Nagpur_Bg {
+  animation: pulseStroke 2s infinite;
+  transition: stroke-width stroke-opacity 0.3s ease-in-out;
+}
 
 #Nagpur:hover > #Nagpur_Bg {
   fill: var(--orange-color);
@@ -1099,8 +1099,6 @@
     left: 15%;
     transform: scale(1.1);
   }
-
-  
 }
 @media screen and (max-width: 390px) {
   #industrialContainer {

@@ -81,12 +81,12 @@
 .artHero .andTitle {
   position: absolute;
   bottom: 50%;
-  left: 60%;
+  left: 62%;
 }
 
 .andTitle {
   font-size: 5rem;
-  font-family: "EB Garamond";
+  font-family: var(--font-ebgaramond-italic);
   font-style: italic;
   transform: rotate(-14deg);
 }

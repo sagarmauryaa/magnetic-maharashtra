@@ -76,7 +76,7 @@ const ParallaxExperience = () => {
               .to(
                 parallaxTextRef.current,
                 {
-                  y: "250%",
+                  y: "350%",
                   force3D: true,
                 },
                 "<"
@@ -217,13 +217,15 @@ const ParallaxExperience = () => {
 
   return (
     <section ref={parallaxRef} className={styles.parallax}>
-      <img
+      <Image
         width={100}
         height={100}
         ref={mountainBackRef}
         src="/images/Mountain back.png"
         id={styles.mountain2}
         alt="back-image"
+        quality={100}
+        unoptimized={true}
       />
       <h2
         ref={parallaxTextRef}
@@ -237,13 +239,15 @@ const ParallaxExperience = () => {
         Experience
       </h2>
       <div className={styles.gradientBG}></div>
-      <img
+      <Image
         width={100}
         height={100}
         ref={mountainFrontRef}
         src="/images/Mountain_front.png"
         id={styles.mountain1}
         alt="front-image"
+        quality={100}
+        unoptimized={true}
       />
       <div className={styles.landOfWonders}>
         A Land{" "}
@@ -262,6 +266,7 @@ const ParallaxExperience = () => {
                 height={100}
                 src="/images/flower.png"
                 alt="flower"
+                quality={100}
               />
               <p>Discover Vibrant Destinations</p>
             </div>

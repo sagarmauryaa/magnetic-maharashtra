@@ -11,6 +11,12 @@ const ppNeuMontrealRegular = localFont({
   weight: "100 900",
 });
 
+const ebGaramondItalic = localFont({
+  src: "./fonts/EBGaramond-Italic.ttf",
+  variable: "--font-ebgaramond-italic",
+  weight: "100 900",
+});
+
 export const metadata = {
   title: "Magnetic Maharashtra",
   description: "Magnetic Maharashtra is a Event",
@@ -19,7 +25,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${ppNeuMontrealRegular.variable}`}>
+      <body
+        className={`${ppNeuMontrealRegular.variable} ${ebGaramondItalic.variable}`}
+      >
         <AppProvider>
           <StickyNavbar />
           <SmoothScroll>{children}</SmoothScroll>

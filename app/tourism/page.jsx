@@ -157,14 +157,14 @@ function Tourism() {
   useGSAP(() => {
     gsap
       .timeline()
-      .from("#tourism-hero-section img", {
+      .from(`#${styles.tourismHeroSection} img`, {
         clipPath: "inset(0 0 100% 0)",
         opacity: 0,
         duration: 1,
         ease: "power2.inOut",
       })
       .from(
-        ".hero-heading  ",
+        `.${styles.heroHeading}`,
         {
           yPercent: 30,
           opacity: 0,
@@ -174,7 +174,7 @@ function Tourism() {
         "<=0.2"
       )
       .from(
-        ".t-text-block",
+        `.${styles.tTextBlock}`,
         {
           yPercent: 30,
           opacity: 0,
@@ -187,19 +187,19 @@ function Tourism() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#tourism-experiences",
+          trigger: `#${styles.tourismExperiences}`,
           start: "top center",
           end: "bottom top",
         },
       })
-      .from(".section-heading", {
+      .from(`.${styles.sectionHeading}`, {
         yPercent: 30,
         opacity: 0,
         duration: 1,
         ease: "power2.inOut",
       })
       .from(
-        ".tourism-imageBox",
+        `.${styles.tourismImageBox}`,
         {
           yPercent: 30,
           duration: 0.65,
@@ -208,7 +208,7 @@ function Tourism() {
         "<"
       )
       .from(
-        ".tourism-title-container h5",
+        `.${styles.tourismTitleContainer} h5`,
         {
           yPercent: 50,
           opacity: 0,
@@ -219,7 +219,7 @@ function Tourism() {
         "<=0.4"
       )
       .from(
-        ".experience-divider",
+        `.${styles.experienceDivider}`,
         {
           width: 0,
           duration: 0.65,
@@ -232,12 +232,12 @@ function Tourism() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#explore-by-interest",
+          trigger: `#${styles.exploreByInterest}`,
           start: "top center",
           end: "bottom center",
         },
       })
-      .from([".explore-head", ".explore-subheading"], {
+      .from([`.${styles.exploreHead}`, `.${styles.exploreSubheading}`], {
         yPercent: 30,
         opacity: 0,
         duration: 0.65,
@@ -245,7 +245,7 @@ function Tourism() {
         stagger: 0.2,
       })
       .from(
-        ".seasonsTab-Divider",
+        `.${styles.seasonsTabDivider}`,
         {
           width: 0,
           transformOrigin: "left center",
@@ -255,7 +255,7 @@ function Tourism() {
         "<=0.2"
       )
       .from(
-        ".explore-tabContainer > div",
+        `.${styles.exploreTabContainer} > div`,
         {
           yPercent: 30,
           opacity: 0,
@@ -272,19 +272,19 @@ function Tourism() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#seasons",
+          trigger: `#${styles.seasons}`,
           start: "top center",
           end: "bottom center",
         },
       })
-      .from(".heading-container", {
+      .from(`.${styles.headingContainer}`, {
         yPercent: 30,
         opacity: 0,
         duration: 0.65,
         ease: "power2.inOut",
       })
       .from(
-        ".explore-inner-container .seasonsTab-Divider",
+        `.${styles.exploreInnerContainer} .${styles.seasonsTabDivider}`,
         {
           width: 0,
           transformOrigin: "left center",
@@ -294,7 +294,7 @@ function Tourism() {
         "<=0.2"
       )
       .from(
-        ".season-container > div",
+        `.${styles.seasonContainer} > div`,
         {
           yPercent: 30,
           opacity: 0,
@@ -320,14 +320,14 @@ function Tourism() {
   });
 
   useGSAP(() => {
-    gsap.from(".explore-gridItem", {
+    gsap.from(`.${styles.exploreGridItem}`, {
       yPercent: 30,
       opacity: 0,
       duration: 0.65,
       stagger: 0.2,
       ease: "power2.inOut",
       scrollTrigger: {
-        trigger: ".explore-DataContainer",
+        trigger: `.${styles.exploreDataContainer}`,
         start: "top center",
         end: "bottom center",
       },
@@ -335,7 +335,7 @@ function Tourism() {
   }, [exploreActiveTab]);
 
   useGSAP(() => {
-    gsap.from(".seasonsInner-summer", {
+    gsap.from(`.${styles.seasonsInnerSummer}`, {
       yPercent: 30,
       opacity: 0,
       duration: 0.65,
@@ -343,9 +343,9 @@ function Tourism() {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: [
-          ".summer_container",
-          ".monsoon_container",
-          ".winter_container",
+          `.${styles.summerContainer}`,
+          `.${styles.monsoonContainer}`,
+          `.${styles.winterContainer}`,
         ],
         start: "top center",
         end: "bottom center",
@@ -356,7 +356,14 @@ function Tourism() {
   return (
     <main>
       <section id={styles.tourismHeroSection}>
-        <img src="/images/TourismPage/Hero-image.png" alt="Hero Image" />
+        <Image
+          src="/images/TourismPage/Hero-image.png"
+          alt="Hero Image"
+          width={100}
+          height={100}
+          quality={100}
+          unoptimized={true}
+        />
         <div className={styles.tFlexContainer}>
           <div className={styles.heroHeading}>Experience</div>
           <div className={styles.tTextBlock}>
@@ -386,6 +393,8 @@ function Tourism() {
                   data-location="chronicles"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[1] = el)}
@@ -395,6 +404,8 @@ function Tourism() {
                   data-location="heritage"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[2] = el)}
@@ -404,6 +415,8 @@ function Tourism() {
                   data-location="festivals"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[3] = el)}
@@ -413,6 +426,8 @@ function Tourism() {
                   data-location="forts"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[4] = el)}
@@ -422,6 +437,8 @@ function Tourism() {
                   data-location="art"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[5] = el)}
@@ -431,6 +448,8 @@ function Tourism() {
                   data-location="folk-dance"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[6] = el)}
@@ -440,6 +459,8 @@ function Tourism() {
                   data-location="food"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[7] = el)}
@@ -449,6 +470,8 @@ function Tourism() {
                   data-location="beaches"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[8] = el)}
@@ -458,6 +481,8 @@ function Tourism() {
                   data-location="landscapes"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[9] = el)}
@@ -467,6 +492,8 @@ function Tourism() {
                   data-location="hill-stations"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[10] = el)}
@@ -476,6 +503,8 @@ function Tourism() {
                   data-location="wildlife"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[11] = el)}
@@ -485,6 +514,8 @@ function Tourism() {
                   data-location="sports"
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -618,12 +649,14 @@ function Tourism() {
                   className={styles.tourismExperienceContainerMobileItem}
                   key={index}
                 >
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.name}
                     loading="lazy"
-                    width="100%"
-                    height="auto"
+                    width={100}
+                    height={100}
+                    quality={100}
+                    unoptimized={true}
                   />
                   {item.name}
                 </div>
@@ -690,6 +723,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Trekking in the Sahyadris</h5>
                   <p className={styles.gridText}>
@@ -707,6 +742,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>
                     Rock Climbing and Rappelling
@@ -727,6 +764,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Water Sports</h5>
                   <p className={styles.gridText}>
@@ -744,6 +783,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Paragliding</h5>
                   <p className={styles.gridText}>
@@ -760,6 +801,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Camping</h5>
                   <p className={styles.gridText}>
@@ -777,6 +820,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Spelunking</h5>
                   <p className={styles.gridText}>
@@ -799,6 +844,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Heritage Forts</h5>
                   <p className={styles.gridText}>
@@ -816,6 +863,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Folk Arts</h5>
                   <p className={styles.gridText}>
@@ -833,6 +882,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Festivals & Fairs</h5>
                   <p className={styles.gridText}>
@@ -850,6 +901,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Caves & Sculptures</h5>
                   <p className={styles.gridText}>
@@ -867,6 +920,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Museums</h5>
                   <p className={styles.gridText}>
@@ -884,6 +939,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Traditional Crafts</h5>
                   <p className={styles.gridText}>
@@ -906,6 +963,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Ashtavinayak Temples</h5>
                   <p className={styles.gridText}>
@@ -924,6 +983,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Mahalakshmi Temple</h5>
                   <p className={styles.gridText}>
@@ -941,6 +1002,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Jyotirlingas</h5>
                   <p className={styles.gridText}>
@@ -958,6 +1021,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Shirdi (Sai Baba Temple)</h5>
                   <p className={styles.gridText}>
@@ -975,6 +1040,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>Ellora and Ajanta Caves</h5>
                   <p className={styles.gridText}>
@@ -992,6 +1059,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5 className={styles.gridHead}>
                     Pandharpur (Vithoba Temple)
@@ -1065,6 +1134,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Hill stations</h5>
                 </div>
@@ -1075,6 +1146,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Seaside Escapades</h5>
                 </div>
@@ -1094,6 +1167,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Trekking in cooler hill regions</h5>
                 </div>
@@ -1104,6 +1179,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Paragliding in Kamshet</h5>
                 </div>
@@ -1114,6 +1191,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Mango picking tours in the
@@ -1135,6 +1214,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Seasonal mango dishes like
@@ -1148,6 +1229,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Lighter meals like (raw mango <br />
@@ -1170,6 +1253,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Gudi Padwa (Marathi New Year)</h5>
                 </div>
@@ -1180,6 +1265,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Holi - The festival of colours</h5>
                 </div>
@@ -1204,6 +1291,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Sahyadri Ranges for lush green, <br />
@@ -1217,6 +1306,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Waterfalls </h5>
                 </div>
@@ -1227,6 +1318,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Kolad for river rafting </h5>
                 </div>
@@ -1245,6 +1338,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Trekking to forts</h5>
                 </div>
@@ -1255,6 +1350,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Waterfall rappelling</h5>
                 </div>
@@ -1265,6 +1362,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Photography tours</h5>
                 </div>
@@ -1283,6 +1382,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Hot and spicy local snacks like <br />
@@ -1296,6 +1397,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Warm soups and stews</h5>
                 </div>
@@ -1315,6 +1418,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Nag Panchami with traditional <br />
@@ -1328,6 +1433,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Ganesh Chaturthi</h5>
                 </div>
@@ -1352,6 +1459,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
 
                   <h5>
@@ -1367,6 +1476,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Nashik for vineyard tours</h5>
                 </div>
@@ -1377,6 +1488,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Wildlife sanctuaries</h5>
                 </div>
@@ -1395,6 +1508,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Bird watching in Bhigwan</h5>
                 </div>
@@ -1405,6 +1520,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Heritage walks in Pune and
@@ -1427,6 +1544,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Rich dishes like Saoji Chicken,
@@ -1440,6 +1559,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>
                     Seasonal vegetables in spicy
@@ -1462,6 +1583,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Diwali</h5>
                 </div>
@@ -1472,6 +1595,8 @@ function Tourism() {
                     loading="lazy"
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                   <h5>Makar Sankranti</h5>
                 </div>

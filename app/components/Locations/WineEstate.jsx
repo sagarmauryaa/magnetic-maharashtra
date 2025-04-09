@@ -1,4 +1,5 @@
 import styles from "./WineEstate.module.css";
+import Image from "next/image";
 
 const WineEstate = () => {
   return (
@@ -6,7 +7,14 @@ const WineEstate = () => {
       <div className={styles.wine}>
         <div className={styles.wineImages}>
           <div className={styles.image}>
-            <img src="/images/WineEstate/wine1.webp" alt="" />
+            <Image
+              src="/images/WineEstate/wine1.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
           </div>
           {/* <div className='inner-grid-wrapper'>
               <div className='image'>
@@ -18,18 +26,39 @@ const WineEstate = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/WineEstate/wine2.webp" alt="" />
+              <Image
+                src="/images/WineEstate/wine2.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/WineEstate/wine3.webp" alt="" />
+              <Image
+                src="/images/WineEstate/wine3.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
           <div className={`${styles.image} ${styles.wineSubtitle}`}>
-            <img src="/images/WineEstate/wine4.webp" alt="" />
+            <Image
+              src="/images/WineEstate/wine4.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
             <p>
-              Nashik is renowned as India’s largest producer of wine, with its
-              vineyards and wineries contributing to over 80% of India’s wine
-              production.
+              Nashik is renowned as India&apos;s largest producer of wine, with
+              its vineyards and wineries contributing to over 80% of
+              India&apos;s wine production.
             </p>
           </div>
 
@@ -43,10 +72,24 @@ const WineEstate = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/WineEstate/wine5.webp" alt="" />
+              <Image
+                src="/images/WineEstate/wine5.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/WineEstate/wine6.webp" alt="" />
+              <Image
+                src="/images/WineEstate/wine6.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -54,33 +97,82 @@ const WineEstate = () => {
           <div className={styles.imageMobileContainer}>
             <div className={styles.innerMobileImages}>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine1.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine1.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine2.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine2.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine3.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine3.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine4.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine4.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine5.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine5.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/WineEstate/wine6.webp" alt="" />
+                <Image
+                  src="/images/WineEstate/wine6.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
             </div>
           </div>
           <p>
-            Nashik is renowned as India’s largest producer of wine, with its
-            vineyards and wineries contributing to over 80% of India’s wine
-            production.
+            Nashik is renowned as India&apos;s largest producer of wine, with
+            its vineyards and wineries contributing to over 80% of India&apos;s
+            wine production.
           </p>
         </div>
         <div className={styles.wineText}>
-          <img src="/images/WineEstate/WineEstate.svg" alt="" />
+          <Image
+            src="/images/WineEstate/WineEstate.svg"
+            alt=""
+            width={100}
+            height={100}
+            quality={100}
+            unoptimized
+          />
         </div>
       </div>
     </section>

@@ -642,6 +642,8 @@ const Sectors = () => {
                   key={data.title}
                   width={100}
                   height={100}
+                  quality={100}
+                  unoptimized
                   ref={(el) => (innovationImageRef.current[index] = el)}
                   className={`${data.dataLocation} ${styles.visible}
                   `}
@@ -692,7 +694,13 @@ const Sectors = () => {
                     : styles.content
                 }
               >
-                <img src={data.imageUrl} alt="" />
+                <Image
+                  src={data.imageUrl}
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                />
                 <p
                   style={{
                     paddingBottom: `${data.imageDescription.descTwo && "1rem"}`,

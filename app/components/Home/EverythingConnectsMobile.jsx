@@ -6,7 +6,7 @@ const slides = [
   { text: "Sea Ports", imageIndex: 1 },
   { text: "Roads", imageIndex: 2 },
   { text: "Everything", imageIndex: 2 },
-  { text: "Yes. Everything", imageIndex: 2 },
+  { text: "Yes. Everything.", imageIndex: 2 },
 ];
 
 // CSS for image spacing

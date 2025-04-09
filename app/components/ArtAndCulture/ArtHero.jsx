@@ -172,7 +172,8 @@ function ArtHero() {
                         alt=""
                         width={100}
                         height={100}
-                        objectFit="contain"
+                        quality={100}
+                        unoptimized
                       />
                     </div>
                     <div className={styles.cardArtTitle}>Pottery</div>
@@ -187,6 +188,8 @@ function ArtHero() {
                         alt=""
                         width={100}
                         height={100}
+                        quality={100}
+                        unoptimized
                       />
                     </div>
                     <div className={styles.cardArtTitle}>Leather Works</div>
@@ -201,6 +204,8 @@ function ArtHero() {
                         alt=""
                         width={100}
                         height={100}
+                        quality={100}
+                        unoptimized
                       />
                     </div>
                     <div className={styles.cardArtTitle}>Warli Painting</div>
@@ -217,6 +222,8 @@ function ArtHero() {
                         alt=""
                         width={100}
                         height={100}
+                        quality={100}
+                        unoptimized
                       />
                     </div>
                     <div className={styles.cardArtTitle}>Textiles</div>
@@ -230,6 +237,8 @@ function ArtHero() {
                         alt=""
                         width={100}
                         height={100}
+                        quality={100}
+                        unoptimized
                       />
                     </div>
                     <div className={styles.cardArtTitle}>Bidriware</div>
@@ -245,6 +254,8 @@ function ArtHero() {
                     alt=""
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
                 <div className={styles.cardArtTitle}>Pottery</div>
@@ -257,6 +268,8 @@ function ArtHero() {
                     alt=""
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
                 <div className={styles.cardArtTitle}>Leather Works</div>
@@ -269,6 +282,8 @@ function ArtHero() {
                     alt=""
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
                 <div className={styles.cardArtTitle}>Warli Painting</div>
@@ -281,6 +296,8 @@ function ArtHero() {
                     alt=""
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
                 <div className={styles.cardArtTitle}>Textiles</div>
@@ -293,6 +310,8 @@ function ArtHero() {
                     alt=""
                     width={100}
                     height={100}
+                    quality={100}
+                    unoptimized
                   />
                 </div>
                 <div className={styles.cardArtTitle}>Bidriware</div>

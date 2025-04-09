@@ -1,4 +1,5 @@
 import styles from "./OrangeCity.module.css";
+import Image from "next/image";
 
 const OrangeCity = () => {
   return (
@@ -6,7 +7,14 @@ const OrangeCity = () => {
       <div className={styles.orange}>
         <div className={styles.orangeImages}>
           <div className={styles.image}>
-            <img src="/images/OrangeCity/orange1.webp" alt="" />
+            <Image
+              src="/images/OrangeCity/orange1.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
           </div>
           {/* <div className='inner-grid-wrapper'>
               <div className='image'>
@@ -18,18 +26,39 @@ const OrangeCity = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/OrangeCity/orange2.webp" alt="" />
+              <Image
+                src="/images/OrangeCity/orange2.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/OrangeCity/orange3.webp" alt="" />
+              <Image
+                src="/images/OrangeCity/orange3.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
           <div className={`${styles.image} ${styles.orangeSubtitle}`}>
-            <img src="/images/OrangeCity/orange4.webp" alt="" />
+            <Image
+              src="/images/OrangeCity/orange4.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
             <p>
               Nagpur is known for its logistics dominance through MIHAN and is
               globally recognized as the Orange Capital of India, contributing
-              to 70% of India’s orange exports.
+              to 70% of India's orange exports.
             </p>
           </div>
 
@@ -43,10 +72,24 @@ const OrangeCity = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/OrangeCity/orange5.webp" alt="" />
+              <Image
+                src="/images/OrangeCity/orange5.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/OrangeCity/orange6.webp" alt="" />
+              <Image
+                src="/images/OrangeCity/orange6.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -54,33 +97,82 @@ const OrangeCity = () => {
           <div className={styles.imageMobileContainer}>
             <div className={styles.innerMobileImages}>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange1.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange1.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange2.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange2.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange3.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange3.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange4.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange4.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange5.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange5.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/OrangeCity/orange6.webp" alt="" />
+                <Image
+                  src="/images/OrangeCity/orange6.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
             </div>
           </div>
           <p>
             Nagpur is known for its logistics dominance through MIHAN and is
             globally recognized as the Orange Capital of India, contributing to
-            70% of India’s orange exports.
+            70% of India's orange exports.
           </p>
         </div>
         <div className={styles.orangeText}>
-          <img src="/images/OrangeCity/OrangeCity.svg" alt="" />
+          <Image
+            src="/images/OrangeCity/OrangeCity.svg"
+            alt=""
+            width={100}
+            height={100}
+            quality={100}
+            unoptimized
+          />
         </div>
       </div>
     </section>

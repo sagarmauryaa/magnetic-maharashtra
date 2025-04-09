@@ -1,4 +1,5 @@
 import styles from "./Education.module.css";
+import Image from "next/image";
 
 const Education = () => {
   return (
@@ -6,7 +7,14 @@ const Education = () => {
       <div className={styles.education}>
         <div className={styles.educationImages}>
           <div className={styles.image}>
-            <img src="/images/Education/education1.webp" alt="" />
+            <Image
+              src="/images/Education/education1.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
           </div>
           {/* <div className='inner-grid-wrapper'>
               <div className='image'>
@@ -18,14 +26,35 @@ const Education = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/Education/education2.webp" alt="" />
+              <Image
+                src="/images/Education/education2.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/Education/education3.webp" alt="" />
+              <Image
+                src="/images/Education/education3.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
           <div className={`${styles.image} ${styles.educationSubtitle}`}>
-            <img src="/images/Education/education4.webp" alt="" />
+            <Image
+              src="/images/Education/education4.webp"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              unoptimized
+            />
             <p>
               Pune is renowned for its world-class educational institutions and
               universities, making it a leading center for learning, research,
@@ -43,10 +72,24 @@ const Education = () => {
             </div> */}
           <div className={styles.innerGridWrapper}>
             <div className={styles.image}>
-              <img src="/images/Education/education5.webp" alt="" />
+              <Image
+                src="/images/Education/education5.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
             <div className={styles.image}>
-              <img src="/images/Education/education6.webp" alt="" />
+              <Image
+                src="/images/Education/education6.webp"
+                alt=""
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -54,22 +97,64 @@ const Education = () => {
           <div className={styles.imageMobileContainer}>
             <div className={styles.innerMobileImages}>
               <div className={styles.image}>
-                <img src="/images/Education/education1.webp" alt="" />
+                <Image
+                  src="/images/Education/education1.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/Education/education2.webp" alt="" />
+                <Image
+                  src="/images/Education/education2.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/Education/education3.webp" alt="" />
+                <Image
+                  src="/images/Education/education3.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/Education/education4.webp" alt="" />
+                <Image
+                  src="/images/Education/education4.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/Education/education5.webp" alt="" />
+                <Image
+                  src="/images/Education/education5.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
               <div className={styles.image}>
-                <img src="/images/Education/education6.webp" alt="" />
+                <Image
+                  src="/images/Education/education6.webp"
+                  alt=""
+                  width={100}
+                  height={100}
+                  quality={100}
+                  unoptimized
+                />
               </div>
             </div>
           </div>
@@ -80,7 +165,14 @@ const Education = () => {
           </p>
         </div>
         <div className={styles.educationText}>
-          <img src="/images/Education/Education.svg" alt="" />
+          <Image
+            src="/images/Education/Education.svg"
+            alt=""
+            width={100}
+            height={100}
+            quality={100}
+            unoptimized
+          />
         </div>
       </div>
     </section>

@@ -12,6 +12,7 @@ import CityOfGates from "@/app/components/Locations/CityOfGates";
 import OrangeCity from "@/app/components/Locations/OrangeCity";
 import WineEstate from "@/app/components/Locations/WineEstate";
 import Education from "@/app/components/Locations/Education";
+import Image from "next/image";
 
 const Locations = () => {
   const [filteredData, setFilteredData] = useState([]);
@@ -1284,10 +1285,14 @@ const Locations = () => {
           <div className={styles.divider}></div>
           <section id={styles.seaLink}>
             <div className={styles.sectionImage}>
-              <img
+              <Image
                 src={data.secondSection?.imageUrl}
                 alt={data.secondSection?.name}
                 loading="lazy"
+                width={100}
+                height={100}
+                quality={100}
+                unoptimized
               />
             </div>
             <div className={styles.sectionBody}>

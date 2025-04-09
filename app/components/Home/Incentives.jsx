@@ -92,7 +92,7 @@ function Incentives() {
           interestRef.current,
           {
             xPercent: 0,
-            yPercent: -30,
+            yPercent: -50,
           },
           "-=0.5"
         );
@@ -199,7 +199,7 @@ function Incentives() {
       };
       master.add(animate());
     });
-    mm.add("(min-width:1024px)", () => {
+    mm.add("(min-width:1024px) and (max-width: 1280px)", () => {
       const master = gsap.timeline({
         duration: 1,
         ease: "power2.InOut",
@@ -210,47 +210,38 @@ function Incentives() {
           start: "top 80%",
         },
       });
-      // const initalStates = () => {
-      //   gsap.set(".cap", {
-      //     xPercent: 210,
-      //     yPercent: 160,
-      //   });
+      const initalStates = () => {
+        gsap.set(`.${styles.cap}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".environmental", {
-      //     xPercent: 85,
-      //     yPercent: 50,
-      //   });
+        gsap.set(`.${styles.environmental}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".single", {
-      //     xPercent: -55,
-      //     yPercent: 250,
-      //     zIndex: 1,
-      //   });
-      //   gsap.set(".landscape", {
-      //     xPercent: -175,
-      //     yPercent: 170,
-      //   });
+        gsap.set(`.${styles.single}`, {
+          scale: 0.8,
+        });
+        gsap.set(`.${styles.landscape}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".sew", {
-      //     xPercent: 150,
-      //     yPercent: -195,
-      //   });
+        gsap.set(`.${styles.sew}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".labor", {
-      //     xPercent: -25,
-      //     yPercent: -180,
-      //   });
+        gsap.set(`.${styles.labor}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".interest", {
-      //     xPercent: -20,
-      //     yPercent: -125,
-      //   });
+        gsap.set(`.${styles.interest}`, {
+          scale: 0.8,
+        });
 
-      //   gsap.set(".tax", {
-      //     xPercent: -150,
-      //     yPercent: -110,
-      //   });
-      // };
+        gsap.set(`.${styles.tax}`, {
+          scale: 0.8,
+        });
+      };
       const animate = () => {
         const tl = gsap.timeline();
         tl.from(
@@ -311,7 +302,127 @@ function Incentives() {
           interestRef.current,
           {
             xPercent: -20,
-            yPercent: -125,
+            yPercent: -155,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          taxRef.current,
+          {
+            xPercent: -150,
+            yPercent: -110,
+          },
+          "-=0.5"
+        );
+        return tl;
+      };
+      master.add(animate());
+    });
+    mm.add("(min-width:1281px)", () => {
+      const master = gsap.timeline({
+        duration: 1,
+        ease: "power2.InOut",
+        scrollTrigger: {
+          id: "in",
+          markers: false,
+          trigger: incentivesRef.current,
+          start: "top 80%",
+        },
+      });
+      const initalStates = () => {
+        gsap.set(`.${styles.cap}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.environmental}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.single}`, {
+          scale: 0.8,
+        });
+        gsap.set(`.${styles.landscape}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.sew}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.labor}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.interest}`, {
+          scale: 0.8,
+        });
+
+        gsap.set(`.${styles.tax}`, {
+          scale: 0.8,
+        });
+      };
+      const animate = () => {
+        const tl = gsap.timeline();
+        tl.from(
+          capRef.current,
+          {
+            xPercent: 210,
+            yPercent: 160,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          environmentalRef.current,
+          {
+            xPercent: 85,
+            yPercent: 80,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          singleRef.current,
+          {
+            xPercent: -55,
+            yPercent: 250,
+            zIndex: 1,
+          },
+          "-=0.5"
+        );
+        tl.from(
+          landscapeRef.current,
+          {
+            xPercent: -175,
+            yPercent: 170,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          sewRef.current,
+          {
+            xPercent: 150,
+            yPercent: -195,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          laborRef.current,
+          {
+            xPercent: -25,
+            yPercent: -180,
+          },
+          "-=0.5"
+        );
+
+        tl.from(
+          interestRef.current,
+          {
+            xPercent: -20,
+            yPercent: -155,
           },
           "-=0.5"
         );
