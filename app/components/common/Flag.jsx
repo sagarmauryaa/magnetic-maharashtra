@@ -29,7 +29,7 @@ const Flag = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="none"
         controls={false}
         fetchPriority="high"
       >
