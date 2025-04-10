@@ -737,7 +737,7 @@ const Envelop = () => {
         />
         <img
           id={styles.backEnvelop}
-          src="/images/EnvelopImages/backEnvelop.png"
+          src="/images/EnvelopImages/BackEnvelop.png"
           alt="backEnvelop"
         />
         {/* <img id="frontEnvelopBack" src={frontEvelopBack} alt="frontEnvelop" />  */}
@@ -964,7 +964,7 @@ const Envelop = () => {
         <img
           ref={ikeaRef}
           id={styles.ikea}
-          src="/images/EnvelopImages/ikea.png"
+          src="/images/EnvelopImages/Ikea.png"
           alt="Ikea"
         />
         <div

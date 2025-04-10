@@ -1,42 +1,34 @@
 import styles from "./Flag.module.css";
 import { useEffect, useRef, useState } from "react";
 
-const Flag = () => {
-  const [isIOS, setIsIOS] = useState(false);
-  const videoRef = useRef(null);
-  useEffect(() => {
-    // Detect iOS devices
-    const detectIOS = () => {
-      if (typeof window === "undefined") return false;
-      const userAgent = window.navigator.userAgent.toLowerCase();
-      return (
-        /iphone|ipad|ipod|macintosh/.test(userAgent) && "ontouchend" in document
-      );
-    };
+export default function Flag() {
+  const flagVideoRef = useRef(null);
 
-    setIsIOS(detectIOS());
-    if (videoRef.current) {
-      videoRef.current.play();
+  useEffect(() => {
+    const video = flagVideoRef.current;
+    if (video) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.warn("Flag video failed to play:", err);
+        });
+      }
     }
   }, []);
 
   return (
-    <main className={styles.flagContainer}>
-      <video
-        ref={videoRef}
-        className={styles.flagVideo}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        controls={false}
-        fetchPriority="high"
-      >
-        <source src="/videos/Flag.mp4" type="video/mp4" />
-      </video>
-    </main>
+    <video
+      ref={flagVideoRef}
+      className={styles.flagVideo}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      controls={false}
+      fetchPriority="high"
+    >
+      <source src="/videos/Flag.mp4" type="video/mp4" />
+    </video>
   );
-};
-
-export default Flag;
+}
