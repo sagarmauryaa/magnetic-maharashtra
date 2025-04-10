@@ -1,51 +1,42 @@
-"use client";
-
 import styles from "./Flag.module.css";
 import { useEffect, useRef, useState } from "react";
 
-export default function Flag() {
-  const flagVideoRef = useRef(null);
-
+const Flag = () => {
+  const [isIOS, setIsIOS] = useState(false);
+  const videoRef = useRef(null);
   useEffect(() => {
-    const videoEl = flagVideoRef.current;
-    if (!videoEl) return;
+    // Detect iOS devices
+    const detectIOS = () => {
+      if (typeof window === "undefined") return false;
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      return (
+        /iphone|ipad|ipod|macintosh/.test(userAgent) && "ontouchend" in document
+      );
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const playPromise = videoEl.play();
-            if (playPromise !== undefined) {
-              playPromise.catch((err) => {
-                console.warn("Play blocked:", err);
-              });
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.25, // Play when 25% of video is visible
-      }
-    );
-
-    observer.observe(videoEl);
-
-    return () => observer.disconnect();
+    setIsIOS(detectIOS());
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   }, []);
 
   return (
-    <video
-      ref={flagVideoRef}
-      className={styles.flagVideo}
-      muted
-      playsInline
-      loop
-      preload="auto"
-      controls={false}
-      fetchPriority="high"
-      style={{ width: "100%", height: "auto", objectFit: "cover" }}
-    >
-      <source src="/videos/Flag.mp4" type="video/mp4" />
-    </video>
+    <main className={styles.flagContainer}>
+      <video
+        ref={videoRef}
+        className={styles.flagVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        controls={false}
+        fetchPriority="high"
+      >
+        <source src="/videos/Flag.mp4" type="video/webm" />
+      </video>
+    </main>
   );
-}
+};
+
+export default Flag;
