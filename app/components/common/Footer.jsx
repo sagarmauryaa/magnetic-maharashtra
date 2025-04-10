@@ -10,6 +10,7 @@ const explore = [
   { label: "Incentives", url: "/incentives" },
   { label: "Tourism ", url: "/tourism" },
   { label: "Art and Culture", url: "/artAndCulture" },
+  { label: "Sustainability", url: "/sustainability" },
 ];
 
 const importantLinks = [
@@ -22,23 +23,23 @@ const importantLinks = [
 const quickLinks = [
   { label: "Tenders", url: "/tenders" },
   { label: "Contact Us", url: "/contact" },
-  { label: "News & Events", url: "/newsAndEvents " },
+  // { label: "News & Events", url: "/newsAndEvents " },
   { label: "Public Notices", url: "/publicNotices" },
   { label: "FAQs", url: "/FAQs" },
 ];
 
 const Sectors = [
-  { label: "Automobile", url: "sectors/automobile" },
-  { label: "Textile & Apparels", url: "sectors/textile" },
-  { label: "Aerospace & Defence", url: "sectors/aerospace" },
-  { label: "Gems & Jewellery", url: "sectors/gem&jewellery" },
-  { label: "Petroleum & Crude Products", url: "sectors/petroleum" },
-  { label: "IT/ITeS & Emerging Tech", url: "sectors/emergingTech" },
-  { label: "Toys & Games", url: "sectors/toys&games" },
-  { label: "Food Processing", url: "sectors/food" },
-  { label: "Chemicals", url: "sectors/chemicals" },
-  { label: "Pharma & Bulk Drugs", url: "sectors/pharma&bulk" },
-  { label: "Electronics & ESDM", url: "sectors/electronics" },
+  { label: "Automobile", url: "/sectors/automobile" },
+  { label: "Textile & Apparels", url: "/sectors/textile" },
+  { label: "Aerospace & Defence", url: "/sectors/aerospace" },
+  { label: "Gems & Jewellery", url: "/sectors/gem&jewellery" },
+  { label: "Petroleum & Crude Products", url: "/sectors/petroleum" },
+  { label: "IT/ITeS & Emerging Tech", url: "/sectors/emergingTech" },
+  { label: "Toys & Games", url: "/sectors/toys&games" },
+  { label: "Food Processing", url: "/sectors/food" },
+  { label: "Chemicals", url: "/sectors/chemicals" },
+  { label: "Pharma & Bulk Drugs", url: "/sectors/pharma&bulk" },
+  { label: "Electronics & ESDM", url: "/sectors/electronics" },
   { label: "AI & Smart Manufacturing", url: "/aismartmanufacturing" },
 ];
 
@@ -48,7 +49,7 @@ const Location = [
   { label: "Nashik", url: "/locations/nashik" },
   {
     label: "Chhatrapati Sambhaji Nagar",
-    url: "/locations/aurangabad",
+    url: "/locations/chhatrapatisambhajinagar",
   },
   { label: "Nagpur", url: "/locations/nagpur" },
 ];

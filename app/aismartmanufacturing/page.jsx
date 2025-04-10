@@ -375,6 +375,8 @@ const AiSmartManufacturing = () => {
                 alt="Industrial"
                 width={100}
                 height={100}
+                quality={100}
+                unoptimized
               />
               <Image
                 loading="lazy"
@@ -384,6 +386,8 @@ const AiSmartManufacturing = () => {
                 alt="Robotics"
                 width={100}
                 height={100}
+                quality={100}
+                unoptimized
               />
               <Image
                 loading="lazy"
@@ -393,6 +397,8 @@ const AiSmartManufacturing = () => {
                 alt="Analytics"
                 width={100}
                 height={100}
+                quality={100}
+                unoptimized
               />
               <Image
                 loading="lazy"
@@ -402,6 +408,8 @@ const AiSmartManufacturing = () => {
                 alt="Digital Tech"
                 width={100}
                 height={100}
+                quality={100}
+                unoptimized
               />
             </div>
             <div
