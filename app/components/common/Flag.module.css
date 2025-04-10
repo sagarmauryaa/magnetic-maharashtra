@@ -32,13 +32,13 @@ image {
   box-sizing: border-box;
 }
 
-.flagVideo {
+/* .flagVideo {
   background-color: transparent !important;
   mix-blend-mode: screen;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   filter: brightness(1.1) contrast(1.05);
   isolation: isolate;
-}
+} */
 
 @media (max-width: 480px) {
   .flagContainer {
@@ -52,7 +52,7 @@ image {
   .flagVideo {
     width: 100%;
     transform: scale(0.9);
-    background-color: transparent;
+    /* background-color: transparent; */
   }
 }
 @media (max-width: 390px) {

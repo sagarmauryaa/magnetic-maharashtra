@@ -33,7 +33,7 @@ const Flag = () => {
         controls={false}
         fetchPriority="high"
       >
-        <source src="/videos/Flag_old.webm" type="video/webm" />
+        <source src="/videos/Flag_final.webm" type="video/webm" />
       </video>
     </main>
   );
