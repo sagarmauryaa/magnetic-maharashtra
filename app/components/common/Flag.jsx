@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Flag.module.css";
 import { useEffect, useRef, useState } from "react";
 
