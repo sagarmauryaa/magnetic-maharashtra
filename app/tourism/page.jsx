@@ -142,7 +142,9 @@ function Tourism() {
     experienceImageRef.current.forEach((img) => {
       if (img) {
         // First remove visible class from all images
+
         const isSelected = img.dataset.location === experience;
+
         img.classList.remove(styles.visible);
         // Then add visible class only to the selected image
         if (isSelected) {
@@ -387,7 +389,7 @@ function Tourism() {
               <div className={styles.tourismImageBox}>
                 <Image
                   ref={(el) => (experienceImageRef.current[0] = el)}
-                  className={`${styles.hiddenImage} ${styles.visible} ${styles.img0} ${styles.chronicles}`}
+                  className={`${styles.hiddenImage} ${styles.visible} ${styles.img0} chronicles`}
                   src="/images/TourismPage/Chronicles.webp"
                   alt="Chronicles"
                   data-location="chronicles"
@@ -398,7 +400,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[1] = el)}
-                  className={`${styles.hiddenImage} ${styles.img1} ${styles.heritage}`}
+                  className={`${styles.hiddenImage} ${styles.img1} heritage`}
                   src="/images/TourismPage/Heritage.png"
                   alt="Heritage"
                   data-location="heritage"
@@ -409,7 +411,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[2] = el)}
-                  className={`${styles.hiddenImage} ${styles.img2} ${styles.festivals}`}
+                  className={`${styles.hiddenImage} ${styles.img2} festivals`}
                   src="/images/TourismPage/Festivals.webp"
                   alt="Festivals"
                   data-location="festivals"
@@ -420,7 +422,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[3] = el)}
-                  className={`${styles.hiddenImage} ${styles.img3} ${styles.forts}`}
+                  className={`${styles.hiddenImage} ${styles.img3} forts`}
                   src="/images/TourismPage/forts.webp"
                   alt="Forts"
                   data-location="forts"
@@ -431,7 +433,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[4] = el)}
-                  className={`${styles.hiddenImage} ${styles.img4} ${styles.art}`}
+                  className={`${styles.hiddenImage} ${styles.img4} art`}
                   src="/images/TourismPage/Art.webp"
                   alt="Art"
                   data-location="art"
@@ -442,7 +444,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[5] = el)}
-                  className={`${styles.hiddenImage} ${styles.img5} ${styles.folkDance}`}
+                  className={`${styles.hiddenImage} ${styles.img5} folk-dance`}
                   src="/images/TourismPage/folk_dance.webp"
                   alt="Folk-dance"
                   data-location="folk-dance"
@@ -453,7 +455,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[6] = el)}
-                  className={`${styles.hiddenImage} ${styles.img6} ${styles.food}`}
+                  className={`${styles.hiddenImage} ${styles.img6} food`}
                   src="/images/TourismPage/Food.webp"
                   alt="Food"
                   data-location="food"
@@ -464,7 +466,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[7] = el)}
-                  className={`${styles.hiddenImage} ${styles.img7} ${styles.beaches}`}
+                  className={`${styles.hiddenImage} ${styles.img7} beaches`}
                   src="/images/TourismPage/Beaches.webp"
                   alt="Beaches"
                   data-location="beaches"
@@ -475,7 +477,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[8] = el)}
-                  className={`${styles.hiddenImage} ${styles.img8} ${styles.landscapes}`}
+                  className={`${styles.hiddenImage} ${styles.img8} landscapes`}
                   src="/images/TourismPage/hill_stations.webp"
                   alt="Hill Stations"
                   data-location="landscapes"
@@ -486,7 +488,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[9] = el)}
-                  className={`${styles.hiddenImage} ${styles.img9} ${styles.hillStations}`}
+                  className={`${styles.hiddenImage} ${styles.img9} hill-stations`}
                   src="/images/TourismPage/Landscapes.webp"
                   alt="Landscapes"
                   data-location="hill-stations"
@@ -497,7 +499,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[10] = el)}
-                  className={`${styles.hiddenImage} ${styles.img10} ${styles.wildlife}`}
+                  className={`${styles.hiddenImage} ${styles.img10} wildlife`}
                   src="/images/TourismPage/Wildlife.webp"
                   alt="Wildlife"
                   data-location="wildlife"
@@ -508,7 +510,7 @@ function Tourism() {
                 />
                 <Image
                   ref={(el) => (experienceImageRef.current[11] = el)}
-                  className={`${styles.hiddenImage} ${styles.img11} ${styles.sports}`}
+                  className={`${styles.hiddenImage} ${styles.img11} sports`}
                   src="/images/TourismPage/Sports.webp"
                   alt="Sports"
                   data-location="sports"

@@ -1,9 +1,9 @@
 import styles from "./Flag.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Flag = () => {
   const [isIOS, setIsIOS] = useState(false);
-
+  const videoRef = useRef(null);
   useEffect(() => {
     // Detect iOS devices
     const detectIOS = () => {
@@ -15,11 +15,15 @@ const Flag = () => {
     };
 
     setIsIOS(detectIOS());
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   }, []);
 
   return (
     <main className={styles.flagContainer}>
       <video
+        ref={videoRef}
         className={styles.flagVideo}
         autoPlay
         muted
@@ -27,6 +31,7 @@ const Flag = () => {
         playsInline
         preload="auto"
         controls={false}
+        fetchPriority="high"
       >
         <source src="/videos/Flag.mp4" type="video/mp4" />
       </video>

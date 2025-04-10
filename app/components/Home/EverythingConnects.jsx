@@ -203,7 +203,7 @@ const EverythingConnects = () => {
                   className={styles.word}
                   style={{ letterSpacing: "-2px" }}
                 >
-                  Yes. Everything.
+                  Yes, Everything.
                 </span>
               </span>
             </h1>

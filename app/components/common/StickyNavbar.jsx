@@ -88,7 +88,7 @@ const StickyNavbar = () => {
 
     const currentScrollY = window.scrollY;
     const currentPath = window.location.pathname;
-    const isHomePage = currentPath === "/" || currentPath === "/artAndCulture";
+    const isHomePage = currentPath === "/";
 
     // Update isAtTop state
     setIsAtTop(currentScrollY === 0);
