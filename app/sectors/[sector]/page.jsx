@@ -500,6 +500,7 @@ const Sectors = () => {
                 ? data?.thirdSection?.imageMobile
                 : data?.thirdSection?.imageUrl
             })`,
+            objectFit: "cover",
           }}
         >
           <div id={styles.sectorsIncentivesHeadingContainer}>
