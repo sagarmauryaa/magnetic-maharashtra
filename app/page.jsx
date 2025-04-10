@@ -23,6 +23,7 @@ import Envelop from "./components/Home/Envelop";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import UseScreenSize from "./components/common/UseScreenSize";
+import Flag from "./components/common/Flag";
 
 export default function Home() {
   const heroHeadingSectionRef = useRef();
@@ -143,86 +144,7 @@ export default function Home() {
       {/* Hero Section */}
       <main>
         <div className={styles.heroVideoWrapper} ref={wrapperRef}>
-          <video
-            ref={videoRef}
-            className={styles.heroVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            fetchPriority="high"
-          >
-            {/* {videoSources["desktop-webm"] ? (
-            <source
-              src={videoSources["desktop-webm"]}
-              media="all and (min-width: 1024px)"
-              type="video/webm"
-            />
-          ) : (
-            <source
-              src="/videos/DesktopHeroVideoHQ.webm"
-              media="all and (min-width: 1024px)"
-              type="video/webm"
-            />
-          )} */}
-
-            {videoSources["desktop-mp4"] ? (
-              <source
-                src={videoSources["desktop-mp4"]}
-                media="all and (min-width: 1024px)"
-                type="video/mp4"
-              />
-            ) : (
-              <source
-                src="/videos/DesktopHeroVideoHQ.mp4"
-                media="all and (min-width: 1024px)"
-                type="video/mp4"
-              />
-            )}
-
-            {/* {videoSources["tablet-webm"] ? (
-            <source
-              src={videoSources["tablet-webm"]}
-              media="(min-width: 481px) and (max-width: 1023px)"
-              type="video/webm"
-            />
-          ) : (
-            <source
-              src="/videos/tablet.webm"
-              media="(min-width: 481px) and (max-width: 1023px)"
-              type="video/webm"
-            />
-          )} */}
-
-            {videoSources["tablet-mp4"] ? (
-              <source
-                src={videoSources["tablet-mp4"]}
-                media="(min-width: 481px) and (max-width: 1023px)"
-                type="video/mp4"
-              />
-            ) : (
-              <source
-                src="/videos/tablet.mp4"
-                media="(min-width: 481px) and (max-width: 1023px)"
-                type="video/mp4"
-              />
-            )}
-
-            {videoSources["mobile-mp4"] ? (
-              <source
-                src={videoSources["mobile-mp4"]}
-                type="video/mp4"
-                media="all and (max-width: 480px)"
-              />
-            ) : (
-              <source
-                src="/videos/MobileHeroVideo.mp4"
-                type="video/mp4"
-                media="all and (max-width: 480px)"
-              />
-            )}
-          </video>
+          <Flag />
         </div>
       </main>
 
