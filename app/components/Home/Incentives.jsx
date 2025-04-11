@@ -330,38 +330,7 @@ function Incentives() {
           start: "top 80%",
         },
       });
-      const initalStates = () => {
-        gsap.set(`.${styles.cap}`, {
-          scale: 0.8,
-        });
 
-        gsap.set(`.${styles.environmental}`, {
-          scale: 0.8,
-        });
-
-        gsap.set(`.${styles.single}`, {
-          scale: 0.8,
-        });
-        gsap.set(`.${styles.landscape}`, {
-          scale: 0.8,
-        });
-
-        gsap.set(`.${styles.sew}`, {
-          scale: 0.8,
-        });
-
-        gsap.set(`.${styles.labor}`, {
-          scale: 0.8,
-        });
-
-        gsap.set(`.${styles.interest}`, {
-          scale: 0.8,
-        });
-
-        gsap.set(`.${styles.tax}`, {
-          scale: 0.8,
-        });
-      };
       const animate = () => {
         const tl = gsap.timeline();
         tl.from(
@@ -376,7 +345,7 @@ function Incentives() {
         tl.from(
           environmentalRef.current,
           {
-            xPercent: 85,
+            xPercent: 35,
             yPercent: 80,
           },
           "-=0.5"

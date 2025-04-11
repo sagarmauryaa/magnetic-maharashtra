@@ -147,7 +147,7 @@ const Statistics = () => {
             className={styles.contentImage}
           >
             <Image
-              src="/images/Statistics/Services.png"
+              src="/images/Statistics/Services.webp"
               alt="Services"
               width={100}
               height={100}
