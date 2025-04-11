@@ -271,7 +271,7 @@ function Rhythm() {
             <div>
               <img src="/images/Art&Culture_page/img2.webp" alt="" />
               <div className={styles.rhythmWrapper}>
-                <p className="rhythm-body">
+                <p className={styles.rhythmBody}>
                   A musical theatre genre that is a blend of drama and music,
                   Natya Sangeet plays a crucial role in Marathi culture, used in
                   both folk theatre and modern performances. It originated to

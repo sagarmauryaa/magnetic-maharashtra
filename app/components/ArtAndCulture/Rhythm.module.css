@@ -177,4 +177,18 @@
   .rhythmMobileImageContainer .rhythmTitle {
     width: 100%;
   }
+
+  .cultureSignificance div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cultureSignificance div div:first-child {
+    width: 100%;
+    font-size: var(--fonts--mobile--sub-heading-capital);
+  }
+
+  .cultureSignificance div div:last-child {
+    width: 100%;
+  }
 }
