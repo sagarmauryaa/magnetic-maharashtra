@@ -10,19 +10,19 @@ function Divine() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".divine-container",
+          trigger: `.${styles.divineContainer}`,
           start: "top center",
           end: "bottom center",
         },
       })
-      .from(".image-content-body-title", {
+      .from(`.${styles.imageContentBodyTitle}`, {
         yPercent: 50,
         opacity: 0,
         duration: 0.65,
         ease: "expo.Out",
       })
       .from(
-        ".image-content-body-body",
+        `.${styles.imageContentBodyBody}`,
         {
           yPercent: 50,
           opacity: 0,
@@ -32,7 +32,7 @@ function Divine() {
         "<0.2"
       )
       .from(
-        ".divineBox",
+        `.${styles.divineBox}`,
         {
           opacity: 0,
           yPercent: 50,

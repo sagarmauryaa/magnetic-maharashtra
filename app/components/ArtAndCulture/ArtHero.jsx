@@ -6,113 +6,113 @@ import styles from "../ArtAndCulture/ArtHero.module.css";
 import Image from "next/image";
 
 function ArtHero() {
-  // useGSAP(() => {
-  //   let mm = gsap.matchMedia();
-  //   // mm.add("(min-width:786px)", () => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".ArtCulture-container",
-  //       // markers: true,
-  //       start: "center top+=300px",
-  //       end: "bottom center",
-  //       // scrub: true,
-  //       duration: 1,
-  //     },
-  //   });
-  //   gsap.set(".img1", {
-  //     x: 250,
-  //     y: 350,
-  //     marginTop: 0,
-  //   });
+  useGSAP(() => {
+    let mm = gsap.matchMedia();
+    // mm.add("(min-width:786px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: `.${styles.ArtCultureContainer}`,
+        // markers: true,
+        start: "center top+=300px",
+        end: "bottom center",
+        // scrub: true,
+        duration: 1,
+      },
+    });
+    gsap.set(`.${styles.img1}`, {
+      x: 250,
+      y: 350,
+      marginTop: 0,
+    });
 
-  //   gsap.set(".img2", {
-  //     x: 50,
-  //     y: 350,
-  //     marginTop: 0,
-  //   });
+    gsap.set(`.${styles.img2}`, {
+      x: 50,
+      y: 350,
+      marginTop: 0,
+    });
 
-  //   gsap.set(".img3", {
-  //     x: -250,
-  //     y: 350,
-  //     marginTop: 0,
-  //   });
+    gsap.set(`.${styles.img3}`, {
+      x: -250,
+      y: 350,
+      marginTop: 0,
+    });
 
-  //   gsap.set(".img4", {
-  //     x: 150,
-  //     // y: -250,
-  //     marginTop: 0,
-  //   });
+    gsap.set(`.${styles.img4}`, {
+      x: 150,
+      // y: -250,
+      marginTop: 0,
+    });
 
-  //   gsap.set(".img5", {
-  //     x: -150,
-  //     // y: -250,
-  //     marginTop: 0,
-  //   });
+    gsap.set(`.${styles.img5}`, {
+      x: -150,
+      // y: -250,
+      marginTop: 0,
+    });
 
-  //   gsap
-  //     .timeline()
-  //     .from(".artsCultureTitle", {
-  //       yPercent: 30,
-  //       opacity: 0,
-  //       duration: 0.65,
-  //       ease: "expo.Out",
-  //     })
-  //     .from(".artHeroBody", {
-  //       yPercent: 30,
-  //       opacity: 0,
-  //       duration: 0.65,
-  //       ease: "expo.Out",
-  //     });
+    gsap
+      .timeline()
+      .from(`.${styles.artsCultureTitle}`, {
+        yPercent: 30,
+        opacity: 0,
+        duration: 0.65,
+        ease: "expo.Out",
+      })
+      .from(`.${styles.artHeroBody}`, {
+        yPercent: 30,
+        opacity: 0,
+        duration: 0.65,
+        ease: "expo.Out",
+      });
 
-  //   tl.to(".img1", {
-  //     transform: "rotate(1.68deg)",
-  //     marginTop: "-4rem",
-  //     ease: "power4.inOut",
+    tl.to(`.${styles.img1}`, {
+      transform: "rotate(1.68deg)",
+      marginTop: "-4rem",
+      ease: "power4.inOut",
 
-  //     duration: 0.35,
-  //   })
-  //     .to(
-  //       ".img2",
-  //       {
-  //         transform: "rotate(-4.285deg)",
-  //         // marginTop: "3rem",
+      duration: 0.35,
+    })
+      .to(
+        `.${styles.img2}`,
+        {
+          transform: "rotate(-4.285deg)",
+          // marginTop: "3rem",
 
-  //         duration: 0.35,
-  //       },
-  //       "<=0.1"
-  //     )
-  //     .to(
-  //       ".img3",
-  //       {
-  //         transform: "rotate(3.479deg)",
-  //         marginTop: "-3rem",
+          duration: 0.35,
+        },
+        "<=0.1"
+      )
+      .to(
+        `.${styles.img3}`,
+        {
+          transform: "rotate(3.479deg)",
+          marginTop: "-3rem",
 
-  //         duration: 0.35,
-  //       },
-  //       "<=0.1"
-  //     )
-  //     .to(
-  //       ".img4",
-  //       {
-  //         transform: "rotate(-5.598deg)",
-  //         marginTop: "-2rem",
+          duration: 0.35,
+        },
+        "<=0.1"
+      )
+      .to(
+        `.${styles.img4}`,
+        {
+          transform: "rotate(-5.598deg)",
+          marginTop: "-2rem",
 
-  //         duration: 0.35,
-  //       },
-  //       "<=0.1"
-  //     )
-  //     .to(
-  //       ".img5",
-  //       {
-  //         transform: "rotate(7.329deg)",
-  //         // marginTop: "-10rem",
+          duration: 0.35,
+        },
+        "<=0.1"
+      )
+      .to(
+        `.${styles.img5}`,
+        {
+          transform: "rotate(7.329deg)",
+          // marginTop: "-10rem",
 
-  //         duration: 0.35,
-  //       },
-  //       "<=0.1"
-  //     );
-  //   // });
-  // });
+          duration: 0.35,
+        },
+        "<=0.1"
+      );
+    // });
+  });
 
   return (
     <div className={styles.artContainer}>

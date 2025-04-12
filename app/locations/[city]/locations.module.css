@@ -78,12 +78,12 @@
   }
 }
 
-#Mumbai > #Mumbai_Bg {
+#Mumbai > #MumbaiBg {
   animation: pulseStroke 2s infinite;
   transition: stroke-width stroke-opacity 0.3s ease-in-out;
 }
 
-#Mumbai:hover > #Mumbai_Bg {
+#Mumbai:hover > #MumbaiBg {
   fill: var(--orange-color);
 }
 
@@ -95,16 +95,16 @@
   cursor: pointer;
 }
 
-#Pune > #Pune_Bg {
+#Pune > #PuneBg {
   animation: pulseStroke 2s infinite;
   transition: stroke-width stroke-opacity 0.3s ease-in-out;
 }
 
-#Pune:hover > #Pune_Bg {
+#Pune:hover > #PuneBg {
   fill: var(--orange-color);
 }
 
-#Pune:hover > #Pune_text {
+#Pune:hover > #PuneText {
   fill: var(--white-color);
 }
 
@@ -112,16 +112,16 @@
   cursor: pointer;
 }
 
-#Nashik > #Nashik_Bg {
+#Nashik > #NashikBg {
   animation: pulseStroke 2s infinite;
   transition: stroke-width stroke-opacity 0.3s ease-in-out;
 }
 
-#Nashik:hover > #Nashik_Bg {
+#Nashik:hover > #NashikBg {
   fill: var(--orange-color);
 }
 
-#Nashik:hover > #Nashik_text {
+#Nashik:hover > #NashikText {
   fill: var(--white-color);
 }
 
@@ -129,16 +129,16 @@
   cursor: pointer;
 }
 
-#Aurangabad > #Aurangabad_Bg {
+#Aurangabad > #AurangabadBg {
   animation: pulseStroke 2s infinite;
   transition: stroke-width stroke-opacity 0.3s ease-in-out;
 }
 
-#Aurangabad:hover > #Aurangabad_Bg {
+#Aurangabad:hover > #AurangabadBg {
   fill: var(--orange-color);
 }
 
-#Aurangabad:hover > #Aurangabad_text {
+#Aurangabad:hover > #AurangabadText {
   fill: var(--white-color);
 }
 
@@ -146,16 +146,16 @@
   cursor: pointer;
 }
 
-#Nagpur > #Nagpur_Bg {
+#Nagpur > #NagpurBg {
   animation: pulseStroke 2s infinite;
   transition: stroke-width stroke-opacity 0.3s ease-in-out;
 }
 
-#Nagpur:hover > #Nagpur_Bg {
+#Nagpur:hover > #NagpurBg {
   fill: var(--orange-color);
 }
 
-#Nagpur:hover > #Nagpur_text {
+#Nagpur:hover > #NagpurText {
   fill: var(--white-color);
 }
 
@@ -340,11 +340,12 @@
   max-width: 1600px;
   overflow: hidden;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 0px;
   /* gap: 40px; */
 }
 #whyMumbai .sectionHead {
   margin-bottom: 24px;
+  padding-inline: 40px;
 }
 .sectionHead h2 {
   font-size: 50px;
@@ -375,6 +376,8 @@
   width: 100%;
   overflow-x: scroll;
   cursor: url("/images/Locations/CTA.svg"), auto;
+  padding-inline: 40px;
+  box-sizing: border-box;
 }
 
 #whyMumbaiContainer {
@@ -444,20 +447,21 @@
   flex-direction: column;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 0px;
   /* gap: 40px; */
   box-sizing: border-box;
 }
 .headingContainer {
   margin-bottom: 2rem;
-}
-.headingContainer {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-content: space-between;
   flex-direction: row;
+  padding-inline: 40px;
+  box-sizing: border-box;
 }
+
 .sectionHeading {
   width: 50%;
   color: black;
@@ -489,8 +493,10 @@
   gap: 1rem;
   overflow: scroll;
   width: 100%;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   cursor: url("/images/Locations/CTA.svg"), auto;
+  padding-inline: 40px;
+  box-sizing: border-box;
 }
 
 .customGrid::-webkit-scrollbar,

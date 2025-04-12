@@ -5,7 +5,7 @@
 }
 .rhythm {
   width: 100%;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
   max-width: 1600px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -16,6 +16,7 @@
   font-size: 102px;
   line-height: var(--line-height--90);
   will-change: transform;
+  padding: 0 2.5rem;
 }
 .rhythmHeading span {
   background: linear-gradient(to left, #7e01a2, #ff7128);
@@ -37,6 +38,7 @@
   white-space: nowrap;
   overflow-x: scroll;
   scrollbar-width: none;
+  padding: 0 2.5rem;
 }
 .scrollImageContainer,
 .rhythmPara {

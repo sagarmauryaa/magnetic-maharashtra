@@ -187,7 +187,7 @@ li:hover .submenuLocation {
 
   /* Styles for when at top of page */
   .mobileNavContent.atTop {
-    height: 72px;
+    /* height: 72px; */
     padding-block: 16px;
   }
 
@@ -330,7 +330,7 @@ li:hover .submenuLocation {
 
   /* Styles for when at top of page */
   .mobileNavContent.atTop {
-    height: 72px;
+    /* height: 72px; */
     padding-block: 16px;
   }
 
@@ -377,7 +377,7 @@ li:hover .submenuLocation {
 
   /* Ensure consistent styling for the inner menu when at top */
   .mobileInnerMenu .mobileNavContent.atTop {
-    height: 72px;
+    /* height: 72px; */
     padding-block: 16px;
   }
 

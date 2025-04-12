@@ -26,13 +26,13 @@ const menuItems = [
       { label: "Automobile", url: "/sectors/automobile" },
       { label: "Textile & Apparels", url: "/sectors/textile" },
       { label: "Aerospace & Defence", url: "/sectors/aerospace" },
-      { label: "Gems & Jewellery", url: "/sectors/gem&jewellery" },
+      { label: "Gems & Jewellery", url: "/sectors/gem-jewellery" },
       { label: "Petroleum & Crude Products", url: "/sectors/petroleum" },
       { label: "IT/ITeS & Emerging Tech", url: "/sectors/emergingTech" },
-      { label: "Toys & Games", url: "/sectors/toys&games" },
+      { label: "Toys & Games", url: "/sectors/toys-games" },
       { label: "Food Processing", url: "/sectors/food" },
       { label: "Chemicals", url: "/sectors/chemicals" },
-      { label: "Pharma & Bulk Drugs", url: "/sectors/pharma&bulk" },
+      { label: "Pharma & Bulk Drugs", url: "/sectors/pharma-bulk" },
       { label: "Electronics & ESDM", url: "/sectors/electronics" },
       { label: "AI & Smart Manufacturing", url: "/aismartmanufacturing" },
     ],
@@ -76,15 +76,30 @@ const StickyNavbar = () => {
   const scrollTimeoutRef = useRef(null);
   const pauseTimeoutRef = useRef(null);
   const [menuCloseTimeoutRef, setMenuCloseTimeoutRef] = useState(null);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   // const { setIsSectorInsightsSticky } = useContext(AppContext);
 
   // Use a small threshold to prevent minor scroll fluctuations from triggering visibility changes
   const scrollThreshold = 5;
 
+  // Handle link clicks to prevent navbar movement
+  const handleLinkClick = () => {
+    setIsNavigating(true);
+    setIsVisible(true);
+
+    // Reset navigation state after a short delay
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 500);
+  };
+
   // Simplified scroll handler for more reliable behavior
   const handleScroll = () => {
     if (typeof window === undefined) return;
+
+    // If we're navigating, don't change visibility
+    if (isNavigating) return;
 
     const currentScrollY = window.scrollY;
     const currentPath = window.location.pathname;
@@ -266,7 +281,7 @@ const StickyNavbar = () => {
 
     if (isMenuOpen) {
       tl.from(`.${styles.mobileInnerMenu}`, {
-        height: "0dvh",
+        height: "0svh",
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: "",
@@ -282,7 +297,7 @@ const StickyNavbar = () => {
       );
     } else {
       tl.to(`.${styles.mobileInnerMenu}`, {
-        height: "100dvh",
+        height: "100svh",
         duration: 0.8,
         ease: "power2.out",
       }).from(
@@ -379,7 +394,7 @@ const StickyNavbar = () => {
     >
       <nav className={styles.navbar + " " + styles.onDesktop}>
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" onClick={handleLinkClick}>
             <div>
               <Image
                 src="/images/StickyNavbar/Logo.svg"
@@ -415,6 +430,7 @@ const StickyNavbar = () => {
               <a
                 ref={(el) => (menuRefs.current[menu.label] = el)}
                 href={menu.url}
+                onClick={handleLinkClick}
               >
                 {menu.label}
               </a>
@@ -455,7 +471,10 @@ const StickyNavbar = () => {
                                 menuPositions[menu.label] || 0
                               }px`,
                             }}
-                            onClick={() => setActiveMenu(null)}
+                            onClick={() => {
+                              setActiveMenu(null);
+                              handleLinkClick();
+                            }}
                           >
                             {menuInner.label}
                           </Link>
@@ -470,7 +489,9 @@ const StickyNavbar = () => {
         </div>
 
         <div className={styles.contact + " " + styles.onDesktop}>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact" onClick={handleLinkClick}>
+            Contact
+          </Link>
         </div>
       </nav>
 
@@ -479,62 +500,33 @@ const StickyNavbar = () => {
           isScrolling ? `${styles.isScrolling}` : ""
         }`}
       >
-        <div
-          className={`${styles.mobileNavContent} ${styles.onMobile} ${
-            isAtTop ? "at-top" : ""
-          }`}
-        >
-          <div
-            className={`${styles.logo} ${isAtTop ? `${styles.logoAtTop}` : ""}`}
-          >
-            <Link href="/">
+        <div className={`${styles.mobileNavContent} ${styles.onMobile} `}>
+          <div className={`${styles.logo} `}>
+            <a href="/" onClick={handleLinkClick}>
               <div>
-                <Image
-                  src="/images/StickyNavbar/Logo.svg"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <img src="/images/StickyNavbar/Logo.svg" alt="" />
               </div>
               <div>
                 Magnetic <br />
                 Maharashtra
               </div>
-            </Link>
+            </a>
           </div>
           <button
             onClick={() => {
               setisMenuOpen(!isMenuOpen);
             }}
           >
-            <Image
-              src="/images/StickyNavbar/menu.svg"
-              alt=""
-              width={30}
-              height={30}
-            />
+            <img src="/images/StickyNavbar/menu.svg" alt="" />
           </button>
         </div>
         {isMenuOpen && (
           <div className={styles.mobileInnerMenu}>
-            <div
-              className={`${styles.mobileNavContent} ${styles.onMobile} ${
-                isAtTop ? `${styles.atTop}` : ""
-              }`}
-            >
-              <div
-                className={`${styles.logo} ${
-                  isAtTop ? `${styles.logoAtTop}` : ""
-                }`}
-              >
-                <Link href="/">
+            <div className={`${styles.mobileNavContent} ${styles.onMobile} `}>
+              <div className={`${styles.logo} `}>
+                <Link href="/" onClick={handleLinkClick}>
                   <div>
-                    <Image
-                      src="/images/StickyNavbar/whiteLogo.svg"
-                      alt=""
-                      width={100}
-                      height={100}
-                    />
+                    <img src="/images/StickyNavbar/whiteLogo.svg" alt="" />
                   </div>
                   <div>
                     Magnetic <br />
@@ -547,12 +539,7 @@ const StickyNavbar = () => {
                   setisMenuOpen(!isMenuOpen);
                 }}
               >
-                <Image
-                  src="/images/StickyNavbar/close.svg"
-                  alt=""
-                  width={30}
-                  height={30}
-                />
+                <img src="/images/StickyNavbar/close.svg" alt="" />
               </button>
             </div>
             <div className={styles.mobileLinks}>
@@ -575,7 +562,7 @@ const StickyNavbar = () => {
                           </FlyoutLink>
                         </a>
                       ) : (
-                        <Link href={menu.url}>{menu.label}</Link>
+                        <a onClick={handleLinkClick}>{menu.label}</a>
                       )}
                     </li>
                   );
@@ -583,7 +570,9 @@ const StickyNavbar = () => {
               </div>
               <div className={styles.mobileContact}>
                 {" "}
-                <Link href="/contact">Contact</Link>
+                <a href="/contact" onClick={handleLinkClick}>
+                  Contact
+                </a>
               </div>
             </div>
           </div>

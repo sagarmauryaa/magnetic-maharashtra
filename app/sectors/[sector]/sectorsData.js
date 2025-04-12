@@ -145,7 +145,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Cotton Capital",
-          desc: "Maharashtra&apos;s contribution to over 25% of India&apos;s cotton production.",
+          desc: "Maharashtra's contribution to over 25% of India's cotton production.",
         },
         {
           title: "Textile Parks",
@@ -242,7 +242,7 @@ const sectorsData = [
         {
           title: "#1",
           titleSuperScript: "",
-          desc: "Maharashtra is India&apos;s leading producer of specialty chemicals.",
+          desc: "Maharashtra is India's leading producer of specialty chemicals.",
           gridArea: "gridItem1",
         },
         {
@@ -370,7 +370,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Chemical Corridor",
-          desc: "Maharashtra accounts for over 20% of India&apos;s chemical production.",
+          desc: "Maharashtra accounts for over 20% of India's chemical production.",
         },
         {
           title: "R&D Focus",
@@ -449,7 +449,7 @@ const sectorsData = [
   },
   {
     id: "gem&jewellery",
-    pathName: "gem&jewellery",
+    pathName: "gem-jewellery",
     name: "Gems & Jewellery",
     imgPath: "/images/PlaygroundImages/PGGridImage3.png",
     gridArea: "area3",
@@ -466,7 +466,7 @@ const sectorsData = [
         {
           title: "75",
           titleSuperScript: "%",
-          desc: "Maharashtra accounts for India&apos;s diamond exports.",
+          desc: "Maharashtra accounts for India's diamond exports.",
           gridArea: "gridItem1",
         },
         {
@@ -557,7 +557,7 @@ const sectorsData = [
           imageUrl: "/images/Sectors/mumbai_gem.webp",
           imageDescription: {
             descOne:
-              "Home to the Bharat Diamond Bourse, Asia&apos;s largest diamond trading hub.",
+              "Home to the Bharat Diamond Bourse, Asia's largest diamond trading hub.",
             descTwo: "",
           },
         },
@@ -595,7 +595,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Global Trade Leader",
-          desc: "Maharashtra handles 70% of India&apos;s polished diamond exports.",
+          desc: "Maharashtra handles 70% of India's polished diamond exports.",
         },
         {
           title: "Innovation in Design",
@@ -787,7 +787,7 @@ const sectorsData = [
           dataLocation: "chakan",
           imageUrl: "/images/Sectors/chakan_pune_automobile.webp",
           imageDescription: {
-            descOne: "India&apos;s Largest Auto Hub.",
+            descOne: "India's Largest Auto Hub.",
             descTwo:
               "Home to Tata Motors, Mercedes-Benz, Bajaj, and Volkswagen.",
           },
@@ -828,7 +828,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Cutting-Edge R&D",
-          desc: "Maharashtra is home to India&apos;s largest autonomous vehicle testing zone, leading innovation in future mobility.",
+          desc: "Maharashtra is home to India's largest autonomous vehicle testing zone, leading innovation in future mobility.",
         },
         {
           title: "EV Revolution Leader",
@@ -911,7 +911,7 @@ const sectorsData = [
   },
   {
     id: "pharma&bulk",
-    pathName: "pharma&bulk",
+    pathName: "pharma-bulk",
     name: "Pharma & Bulk Drugs",
     imgPath: "/images/PlaygroundImages/PGGridImage5.png",
     gridArea: "area5",
@@ -928,7 +928,7 @@ const sectorsData = [
         {
           title: "20",
           titleSuperScript: "%",
-          desc: "Maharashtra&apos;s contribution to India&apos;s pharmaceutical output.",
+          desc: "Maharashtra's contribution to India's pharmaceutical output.",
           gridArea: "gridItem1",
         },
         {
@@ -1059,11 +1059,11 @@ const sectorsData = [
         },
         {
           title: "API Leadership",
-          desc: "Aims to contribute 30% of India&apos;s API production by 2030.",
+          desc: "Aims to contribute 30% of India's API production by 2030.",
         },
         {
           title: "Vaccine Capital",
-          desc: "Maharashtra manufactures 60% of India&apos;s vaccines.",
+          desc: "Maharashtra manufactures 60% of India's vaccines.",
         },
       ],
     },
@@ -1151,7 +1151,7 @@ const sectorsData = [
         {
           title: "35",
           titleSuperScript: "%",
-          desc: "Maharashtra&apos;s contribution to India's total oil refining capacity.",
+          desc: "Maharashtra's contribution to India's total oil refining capacity.",
           gridArea: "gridItem1",
         },
         {
@@ -1278,7 +1278,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Refining Hub",
-          desc: "Maharashtra refines over 25% of India&apos;s crude oil.",
+          desc: "Maharashtra refines over 25% of India's crude oil.",
         },
         {
           title: "Strategic Location",
@@ -1374,7 +1374,7 @@ const sectorsData = [
         {
           title: "40",
           titleSuperScript: "%",
-          desc: "Maharashtra&apos;s contribution to India&apos;s defence production.",
+          desc: "Maharashtra's contribution to India's defence production.",
           gridArea: "gridItem1",
         },
         {
@@ -1464,8 +1464,7 @@ const sectorsData = [
           dataLocation: "nagpur",
           imageUrl: "/images/Sectors/nagpur_aerospace.webp",
           imageDescription: {
-            descOne:
-              "Home to Mihan SEZ – India&apos;s largest aerospace MRO hub.",
+            descOne: "Home to Mihan SEZ – India's largest aerospace MRO hub.",
             descTwo: "",
           },
         },
@@ -1475,7 +1474,7 @@ const sectorsData = [
           imageUrl: "/images/Sectors/nashik_aerospace.webp",
           imageDescription: {
             descOne:
-              "HAL&apos;s aircraft manufacturing facility and missile development units.",
+              "HAL's aircraft manufacturing facility and missile development units.",
             descTwo: "",
           },
         },
@@ -1505,7 +1504,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Strategic Defence Zone",
-          desc: "Maharashtra accounts for over 30% of India&apos;s defence exports.",
+          desc: "Maharashtra accounts for over 30% of India's defence exports.",
         },
         {
           title: "Innovation & Collaboration",
@@ -1601,7 +1600,7 @@ const sectorsData = [
         {
           title: "25",
           titleSuperScript: "%",
-          desc: "Maharashtra&apos;s contribution to India&apos;s IT exports.",
+          desc: "Maharashtra's contribution to India's IT exports.",
           gridArea: "gridItem1",
         },
         {
@@ -1692,7 +1691,7 @@ const sectorsData = [
           imageUrl: "/images/Sectors/pune_IT.webp",
           imageDescription: {
             descOne:
-              "India&apos;s second-largest IT hub with leading global tech companies.",
+              "India's second-largest IT hub with leading global tech companies.",
             descTwo: "",
           },
         },
@@ -1731,7 +1730,7 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Digital Transformation Leader",
-          desc: "Maharashtra is home to over 20% of India&apos;s tech startups.",
+          desc: "Maharashtra is home to over 20% of India's tech startups.",
         },
         {
           title: "FinTech Powerhouse",
@@ -1739,7 +1738,7 @@ const sectorsData = [
         },
         {
           title: "Global Competitiveness",
-          desc: "Maharashtra ranks as India&apos;s top state for IT infrastructure and connectivity.",
+          desc: "Maharashtra ranks as India's top state for IT infrastructure and connectivity.",
         },
       ],
     },
@@ -2038,7 +2037,7 @@ const sectorsData = [
   },
   {
     id: "toys&games",
-    pathName: "toys&games",
+    pathName: "toys-games",
     name: "Toys & Games",
     imgPath: "/images/PlaygroundImages/PGGridImage10.png",
     gridArea: "area10",
@@ -2055,7 +2054,7 @@ const sectorsData = [
         {
           title: "15",
           titleSuperScript: "%",
-          desc: "Maharashtra&apos;s rapidly expanding contribution in India&apos;s toy production.",
+          desc: "Maharashtra's rapidly expanding contribution in India's toy production.",
           gridArea: "gridItem1",
         },
         {
@@ -2278,7 +2277,7 @@ const sectorsData = [
         {
           title: "13%",
           titleSuperScript: "",
-          desc: "Maharashtra&apos;s contribution to India&apos;s total food processing output.",
+          desc: "Maharashtra's contribution to India's total food processing output.",
           gridArea: "gridItem1",
         },
         {
@@ -2378,7 +2377,7 @@ const sectorsData = [
           imageUrl: "/images/Sectors/nashik_food.webp",
           imageDescription: {
             descOne:
-              "India&apos;s leading center for fruit processing and wineries.",
+              "India's leading center for fruit processing and wineries.",
             descTwo: "",
           },
         },
@@ -2407,15 +2406,15 @@ const sectorsData = [
       growthCardsData: [
         {
           title: "Agro-Abundance",
-          desc: "Maharashtra is India&apos;s largest producer of grapes, mangoes, and onions.",
+          desc: "Maharashtra is India's largest producer of grapes, mangoes, and onions.",
         },
         {
           title: "Export Leadership",
-          desc: "Contributes 20% of India&apos;s processed food exports.",
+          desc: "Contributes 20% of India's processed food exports.",
         },
         {
           title: "Infrastructure & Connectivity",
-          desc: "Proximity to ports and airports boosts Maharashtra&apos;s agro-export potential.",
+          desc: "Proximity to ports and airports boosts Maharashtra's agro-export potential.",
         },
       ],
     },

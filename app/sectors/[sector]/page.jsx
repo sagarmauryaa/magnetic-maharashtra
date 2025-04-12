@@ -500,7 +500,7 @@ const Sectors = () => {
                 ? data?.thirdSection?.imageMobile
                 : data?.thirdSection?.imageUrl
             })`,
-            objectFit: "cover",
+            backgroundSize: "cover",
           }}
         >
           <div id={styles.sectorsIncentivesHeadingContainer}>
@@ -541,8 +541,8 @@ const Sectors = () => {
                       <Image
                         src={tabData.icon}
                         alt={tabData.title}
-                        width={100}
-                        height={100}
+                        width={30}
+                        height={30}
                       />
                       <p className={styles.gridHead}>{tabData.title}</p>
                       <p className={styles.gridText}>{tabData.desc}</p>
@@ -558,8 +558,8 @@ const Sectors = () => {
                       <Image
                         src={tabData.icon}
                         alt={tabData.title}
-                        width={100}
-                        height={100}
+                        width={30}
+                        height={30}
                       />
                       <p className={styles.gridHead}>{tabData.title}</p>
                       <p className={styles.gridText}>{tabData.desc}</p>
