@@ -254,6 +254,7 @@
 
   .artHero .andTitle {
     left: 60%;
+    font-size: 2rem;
   }
   .andTitle div {
     width: 165%;
@@ -261,7 +262,7 @@
     transform: rotate(-11deg);
   }
   .topRight {
-    width: 75%;
+    width: 55%;
     top: -1%;
     right: -30%;
   }
@@ -323,5 +324,6 @@
   }
   .artHero .andTitle {
     left: 64%;
+    font-size: 2rem;
   }
 }
