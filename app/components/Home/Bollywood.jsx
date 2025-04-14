@@ -93,6 +93,7 @@ function Bollywood() {
               alt=""
               quality={100}
               unoptimized
+              preload="true"
             />
           </div>
           {/* <div className='inner-grid-wrapper'>
@@ -113,6 +114,7 @@ function Bollywood() {
                 alt=""
                 quality={100}
                 unoptimized
+                preload="true"
               />
             </div>
             <div className={styles.image}>
@@ -124,6 +126,7 @@ function Bollywood() {
                 alt=""
                 quality={100}
                 unoptimized
+                preload="true"
               />
             </div>
           </div>
@@ -134,9 +137,9 @@ function Bollywood() {
               loading="lazy"
               src="/images/Bollywood/bollywood4.webp"
               alt=""
-              objectFit="cover"
               quality={100}
               unoptimized
+              preload="true"
             />
             <p>
               Bollywood makes Maharashtra the center of India’s film industry,
@@ -162,6 +165,7 @@ function Bollywood() {
                 alt=""
                 quality={100}
                 unoptimized
+                preload="true"
               />
             </div>
             <div className={styles.image}>
@@ -173,6 +177,7 @@ function Bollywood() {
                 alt=""
                 quality={100}
                 unoptimized
+                preload="true"
               />
             </div>
           </div>
@@ -189,6 +194,7 @@ function Bollywood() {
                   alt=""
                   quality={100}
                   unoptimized
+                  preload="true"
                 />
               </div>
               <div className={styles.image}>
@@ -198,6 +204,7 @@ function Bollywood() {
                   loading="lazy"
                   src="/images/Bollywood/bollywood2.webp"
                   alt=""
+                  preload="true"
                 />
               </div>
               <div className={styles.image}>
@@ -207,6 +214,7 @@ function Bollywood() {
                   loading="lazy"
                   src="/images/Bollywood/bollywood3.webp"
                   alt=""
+                  preload="true"
                 />
               </div>
               <div className={styles.image}>
@@ -216,6 +224,8 @@ function Bollywood() {
                   loading="lazy"
                   src="/images/Bollywood/bollywood4.webp"
                   alt=""
+                  unoptimized
+                  preload="true"
                 />
               </div>
               <div className={styles.image}>
@@ -234,6 +244,7 @@ function Bollywood() {
                   loading="lazy"
                   src="/images/Bollywood/bollywood6.webp"
                   alt=""
+                  preload="true"
                 />
               </div>
             </div>

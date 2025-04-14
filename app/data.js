@@ -461,7 +461,7 @@ const sectorsData = [
   },
   {
     id: "gem&jewellery",
-    pathName: "/sectors/gem&jewellery",
+    pathName: "/sectors/gem-jewellery",
     name: "Gems & Jewellery",
     imgPath: PGGridImage3,
     gridArea: "area3",
@@ -923,7 +923,7 @@ const sectorsData = [
   },
   {
     id: "pharma&bulk",
-    pathName: "/sectors/pharma&bulk",
+    pathName: "/sectors/pharma-bulk",
     name: "Pharma & Bulk Drugs",
     imgPath: PGGridImage5,
     gridArea: "area5",
@@ -2049,7 +2049,7 @@ const sectorsData = [
   },
   {
     id: "toys&games",
-    pathName: "/sectors/toys&games",
+    pathName: "/sectors/toys-games",
     name: "Toys & Games",
     imgPath: PGGridImage10,
     gridArea: "area10",

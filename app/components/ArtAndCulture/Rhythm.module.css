@@ -123,6 +123,7 @@
     font-size: var(--fonts--mobile--sub-heading1);
     line-height: var(--line-height--100);
     width: 82%;
+    padding: 0;
   }
   .rhythmPara {
     display: flex;

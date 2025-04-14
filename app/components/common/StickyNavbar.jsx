@@ -108,7 +108,7 @@ const StickyNavbar = () => {
     // Update isAtTop state
     setIsAtTop(currentScrollY === 0);
 
-    // Set scrolling state to true
+    // Set scrolling state to true (used for opacity changes only now)
     setIsScrolling(true);
 
     // Determine scroll direction with threshold
@@ -125,27 +125,18 @@ const StickyNavbar = () => {
       clearTimeout(scrollTimeoutRef.current);
     }
 
-    // Simple rules:
-    // 1. At top (scrollY = 0): Hide navbar ONLY on homepage
-    // 2. Scrolling up: Always show navbar
-    // 3. Scrolling down past 20px: Show navbar initially
-    // 4. Scrolling down past 100vh: Hide navbar
-
+    // Handle navbar visibility logic (keep this part)
     if (currentScrollY === 0 && isHomePage) {
-      // At the very top on homepage - hide navbar
       setIsVisible(false);
     } else if (currentScrollY === 0 && !isHomePage) {
-      // At the very top on other pages - show navbar
       setIsVisible(true);
     } else if (isScrollingDown) {
-      // When scrolling down, visibility depends on position
       if (currentScrollY > 20 && currentScrollY < window.innerHeight) {
         setIsVisible(true);
       } else if (currentScrollY >= window.innerHeight) {
         setIsVisible(false);
       }
     } else if (isScrollingUp) {
-      // ALWAYS show navbar when scrolling up, regardless of position
       setIsVisible(true);
     }
 
@@ -155,23 +146,13 @@ const StickyNavbar = () => {
     // Reset active menu when scrolling
     setActiveMenu(null);
 
-    // Set timeout to show navbar when scrolling pauses
-    pauseTimeoutRef.current = setTimeout(() => {
-      if (currentScrollY > 0 || (currentScrollY === 0 && !isHomePage)) {
-        setIsVisible(true);
-        // setIsSectorInsightsSticky(true);
-      }
-    }, 200);
-
-    // Set timeout to detect when scrolling has stopped
+    // Set timeout for scrolling pause detection (keep for opacity changes)
     scrollTimeoutRef.current = setTimeout(() => {
       setIsScrolling(false);
-      // Show navbar when scrolling stops, except at top of homepage
       if (!(currentScrollY === 0 && isHomePage)) {
         setIsVisible(true);
-        // setIsSectorInsightsSticky(false);
       }
-    }, 150); // Reduced from 500ms to 150ms for more responsive shrinking
+    }, 150);
   };
 
   // Add touch event handlers for mobile devices

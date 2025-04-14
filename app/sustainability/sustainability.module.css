@@ -1305,7 +1305,6 @@
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
-    -ms-overflow-style: none;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--light-grey-color);
     padding-inline: 1rem;

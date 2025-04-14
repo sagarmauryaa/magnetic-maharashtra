@@ -787,6 +787,12 @@
     margin-top: 32px;
   }
 
+  .tourismExperienceContainerMobileItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   #exploreByInterest {
     padding: 60px 0rem;
   }

@@ -30,6 +30,8 @@ image {
   z-index: 1;
   background-color: transparent;
   box-sizing: border-box;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
 /* .flagVideo {

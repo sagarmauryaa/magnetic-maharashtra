@@ -228,6 +228,7 @@
   }
 
   .cardArtImage {
+    width: -webkit-fill-available;
     width: auto;
     /* height: 520px; */
     padding: 1rem;
@@ -289,7 +290,7 @@
     display: none;
   }
   .imgContainerMobile {
-    display: block;
+    width: 100%;
     margin-top: 13rem;
     display: flex;
     flex-direction: column;

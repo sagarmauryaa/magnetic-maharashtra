@@ -64,10 +64,20 @@
   border: 2px solid #d1d1d2;
   background-color: var(--white-color);
   border-radius: 4px;
+  color: var(--orange-color);
+  cursor: pointer;
 }
+
+/* .roadElements button:hover {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--orange-color);
+} */
+
 .roadElements button a {
   text-decoration: none;
-  color: var(--orange-color);
+  /* color: var(--orange-color); */
 }
 .roadElementsGrid {
   margin-top: 3rem;

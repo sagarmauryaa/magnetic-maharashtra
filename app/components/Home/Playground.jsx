@@ -133,7 +133,7 @@ const Playground = () => {
           {sectorsData.map((item, index) => (
             <Link
               ref={(el) => (sectorsRef.current[index] = el)}
-              href={`sectors/${item.id}`}
+              href={`${item.pathName}`}
               key={index}
               aria-controls=""
               className={styles.playgroundGridItem}

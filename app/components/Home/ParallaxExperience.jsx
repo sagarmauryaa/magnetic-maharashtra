@@ -27,63 +27,63 @@ const ParallaxExperience = () => {
   useGSAP(() => {
     mm.add("(min-width: 1024px) and (max-width: 1919px)", () => {
       gsap.set(mountainFrontRef.current, {
-        scale: 1.1,
+        scale: 1,
         transformOrigin: "center center",
       });
-      gsap.set(mountainBackRef.current, { yPercent: 20 });
+      gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
-        y: "250%",
+        y: "0%",
       });
 
-      gsap.timeline({
-        defaults: { duration: 1 },
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: "10% top",
-          end: "40% 40%",
-          markers: false,
-          onEnter: () => {
-            gsap
-              .timeline({ defaults: { duration: 1, ease: "expo.out" } })
-              .to(mountainFrontRef.current, {
-                scale: 1,
-                transformOrigin: "center center",
-              })
-              .to(mountainBackRef.current, { yPercent: 0 }, "<")
-              .to(
-                parallaxTextRef.current,
-                {
-                  y: "0%",
-                  force3D: true,
-                },
-                "<"
-              );
-          },
-          onLeave: () => {
-            gsap
-              .timeline({
-                defaults: { duration: 1, ease: "none" },
-                scrollTrigger: {
-                  trigger: parallaxRef.current,
-                  start: "30% 20%",
-                  end: "bottom center-=50px",
-                  markers: false,
-                  scrub: 0.5,
-                },
-              })
+      // gsap.timeline({
+      //   defaults: { duration: 1 },
+      //   scrollTrigger: {
+      //     trigger: parallaxRef.current,
+      //     start: "10% top",
+      //     end: "40% 40%",
+      //     markers: false,
+      //     onEnter: () => {
+      //       gsap
+      //         .timeline({ defaults: { duration: 1, ease: "expo.out" } })
+      //         .to(mountainFrontRef.current, {
+      //           scale: 1,
+      //           transformOrigin: "center center",
+      //         })
+      //         .to(mountainBackRef.current, { yPercent: 0 }, "<")
+      //         .to(
+      //           parallaxTextRef.current,
+      //           {
+      //             y: "0%",
+      //             force3D: true,
+      //           },
+      //           "<"
+      //         );
+      //     },
+      //     onLeave: () => {},
+      //   },
+      // });
 
-              .to(mountainBackRef.current, { yPercent: -5 }, "<")
-              .to(
-                parallaxTextRef.current,
-                {
-                  y: "350%",
-                  force3D: true,
-                },
-                "<"
-              );
+      gsap
+        .timeline({
+          defaults: { duration: 1, ease: "none" },
+          scrollTrigger: {
+            trigger: parallaxRef.current,
+            start: "30% 20%",
+            end: "bottom center-=50px",
+            markers: false,
+            scrub: 0.5,
           },
-        },
-      });
+        })
+
+        .to(mountainBackRef.current, { yPercent: -5 }, "<")
+        .to(
+          parallaxTextRef.current,
+          {
+            y: "350%",
+            force3D: true,
+          },
+          "<"
+        );
     });
 
     mm.add("(min-width: 1920px)", () => {

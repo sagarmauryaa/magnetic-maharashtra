@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import Image from "next/image";
 
 function RoadMap() {
   const arrowRef = useRef(null);
@@ -109,7 +110,12 @@ function RoadMap() {
               </Link>
 
               <span>
-                <img src="/images/RoadMap/Union.svg" alt="" />
+                <Image
+                  width={12}
+                  height={12}
+                  src="/images/RoadMap/Union.svg"
+                  alt=""
+                />
               </span>
             </button>
           </div>

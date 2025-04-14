@@ -227,8 +227,14 @@
   .imageMobileConatiner {
     white-space: nowrap;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     height: fit-content;
   }
+
+  .imageMobileConatiner::-webkit-scrollbar {
+    display: none;
+  }
+
   .image {
     display: inline-block;
   }

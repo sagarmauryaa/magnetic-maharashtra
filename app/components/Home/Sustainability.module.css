@@ -60,9 +60,18 @@
   margin-top: 24px;
   cursor: pointer;
 }
+
+.sustainReadMore button:hover {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--orange-color);
+}
+
 .sustainReadMore a {
   color: var(--orange-color);
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .sustainTitles {
     flex-direction: column;

@@ -1211,8 +1211,9 @@
     border-bottom: 1px solid var(--light-grey-color);
   }
 
-  .tabsContainer::-webkit-scrollbar {
+  .tabsContainer ::-webkit-scrollbar {
     display: none;
+    background-color: transparent;
   }
 
   .innoTab {
@@ -1344,7 +1345,7 @@
     font-size: var(--fonts--mobile--body2);
   }
 
-  .fueling-investment {
+  .fuelingInvestment {
     padding: 3.75rem 1rem;
   }
   #heading-container {
@@ -1356,7 +1357,7 @@
   .sectionHead {
     font-size: var(--fonts--mobile--sub-heading2);
   }
-  .section-subheading {
+  .sectionSubheading {
     font-size: var(--fonts--mobile--sub-heading4);
   }
 
@@ -1383,6 +1384,9 @@
     overflow: scroll;
     scrollbar-width: 0;
     scrollbar-color: transparent transparent;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     height: max-content;
     margin-bottom: 24px;
   }
@@ -1663,6 +1667,7 @@
 
   .tabsContainer::-webkit-scrollbar {
     display: none;
+    background-color: transparent;
   }
 
   .innoTab {
@@ -1692,6 +1697,7 @@
   }
   .content img {
     width: 100%;
+    height: 220px;
     margin-block: 20px;
   }
   .content {

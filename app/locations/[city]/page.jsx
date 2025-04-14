@@ -743,6 +743,14 @@ const Locations = () => {
           }}
         /> */}
 
+        <Image
+          className={styles.MaharashtraMapImage}
+          src="/images/locations/MaharashtraMap.svg"
+          width={100}
+          height={100}
+          alt="Maharashtra Map"
+        />
+
         <svg
           id={styles.MaharashtraMapSvg}
           width="907"
