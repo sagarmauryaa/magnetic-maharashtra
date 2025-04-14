@@ -745,7 +745,7 @@ const Locations = () => {
 
         <Image
           className={styles.MaharashtraMapImage}
-          src="/images/locations/MaharashtraMap.svg"
+          src="/images/Locations/MaharashtraMap.svg"
           width={100}
           height={100}
           alt="Maharashtra Map"
