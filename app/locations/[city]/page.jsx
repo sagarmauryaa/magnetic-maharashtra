@@ -742,14 +742,55 @@ const Locations = () => {
             setIsActive(true);
           }}
         /> */}
+        {location == "mumbai" && (
+          <Image
+            className={styles.MaharashtraMapImage}
+            src="/images/Locations/MumbaiMap.svg"
+            width={100}
+            height={100}
+            alt="Mumbai Map"
+          />
+        )}
 
-        <Image
-          className={styles.MaharashtraMapImage}
-          src="/images/Locations/MaharashtraMap.svg"
-          width={100}
-          height={100}
-          alt="Maharashtra Map"
-        />
+        {location == "pune" && (
+          <Image
+            className={styles.MaharashtraMapImage}
+            src="/images/Locations/PuneMap.svg"
+            width={100}
+            height={100}
+            alt="Pune Map"
+          />
+        )}
+
+        {location == "nashik" && (
+          <Image
+            className={styles.MaharashtraMapImage}
+            src="/images/Locations/NashikMap.svg"
+            width={100}
+            height={100}
+            alt="Nashik Map"
+          />
+        )}
+
+        {location == "chhatrapatisambhajinagar" && (
+          <Image
+            className={styles.MaharashtraMapImage}
+            src="/images/Locations/CSNMap.svg"
+            width={100}
+            height={100}
+            alt="Chattrapati Sambhaji Nagar Map"
+          />
+        )}
+
+        {location == "nagpur" && (
+          <Image
+            className={styles.MaharashtraMapImage}
+            src="/images/Locations/NagpurMap.svg"
+            width={100}
+            height={100}
+            alt="Nagpur Map"
+          />
+        )}
 
         <svg
           id={styles.MaharashtraMapSvg}
