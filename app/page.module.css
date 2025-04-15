@@ -1370,6 +1370,11 @@ main.heroVideoContainer {
     padding-inline: 1rem;
     padding-block: 3.75rem;
   }
+
+  .heroVideoWrapper {
+    height: 650px;
+  }
+
   .heroVideo-wrapper video,
   .heroVideoContainer video {
     user-select: none;
@@ -1389,7 +1394,7 @@ main.heroVideoContainer {
     padding: 0 1rem;
   }
   .heroVideo {
-    height: 650px;
+    height: 100%;
     width: 100%;
   }
 
