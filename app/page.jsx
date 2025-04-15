@@ -24,6 +24,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import UseScreenSize from "./components/common/UseScreenSize";
 import Flag from "./components/common/Flag";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const heroHeadingSectionRef = useRef();
@@ -52,57 +53,65 @@ export default function Home() {
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
 
-  // Video caching effect
+  // // Video caching effect
+  // useEffect(() => {
+  //   // Function to fetch and cache video
+  //   const fetchAndCacheVideo = async (src, videoId) => {
+  //     try {
+  //       // Check if video is already cached in localStorage
+  //       const isCached = localStorage.getItem(`video_cached_${videoId}`);
+
+  //       if (isCached) {
+  //         // Try to get video from IndexedDB
+  //         const cachedBlob = await getVideoFromIndexedDB(videoId);
+  //         if (cachedBlob) {
+  //           const objectURL = URL.createObjectURL(cachedBlob);
+  //           setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
+  //           return;
+  //         }
+  //       }
+
+  //       // If not cached or not found in IndexedDB, fetch and cache
+  //       const response = await fetch(src);
+  //       if (!response.ok)
+  //         throw new Error(`Failed to fetch video: ${response.statusText}`);
+
+  //       const blob = await response.blob();
+  //       await saveVideoToIndexedDB(videoId, blob);
+
+  //       const objectURL = URL.createObjectURL(blob);
+  //       setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
+  //     } catch (error) {
+  //       console.error(`Error caching video ${videoId}:`, error);
+  //     }
+  //   };
+
+  //   // Determine which videos to cache based on screen width
+  //   const width = window.innerWidth;
+
+  //   if (width >= 1024) {
+  //     fetchAndCacheVideo("/videos/DesktopHeroVideoHQ.mp4", "desktop-mp4");
+  //   } else if (width >= 481) {
+  //     fetchAndCacheVideo("/videos/tablet.mp4", "tablet-mp4");
+  //   } else {
+  //     fetchAndCacheVideo("/videos/MobileHeroVideo.mp4", "mobile-mp4");
+  //   }
+
+  //   // Cleanup function to revoke object URLs
+  //   return () => {
+  //     Object.values(videoSources).forEach((url) => {
+  //       URL.revokeObjectURL(url);
+  //     });
+  //   };
+  // }, []);
+
+  const router = useRouter();
+
   useEffect(() => {
-    // Function to fetch and cache video
-    const fetchAndCacheVideo = async (src, videoId) => {
-      try {
-        // Check if video is already cached in localStorage
-        const isCached = localStorage.getItem(`video_cached_${videoId}`);
-
-        if (isCached) {
-          // Try to get video from IndexedDB
-          const cachedBlob = await getVideoFromIndexedDB(videoId);
-          if (cachedBlob) {
-            const objectURL = URL.createObjectURL(cachedBlob);
-            setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
-            return;
-          }
-        }
-
-        // If not cached or not found in IndexedDB, fetch and cache
-        const response = await fetch(src);
-        if (!response.ok)
-          throw new Error(`Failed to fetch video: ${response.statusText}`);
-
-        const blob = await response.blob();
-        await saveVideoToIndexedDB(videoId, blob);
-
-        const objectURL = URL.createObjectURL(blob);
-        setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
-      } catch (error) {
-        console.error(`Error caching video ${videoId}:`, error);
-      }
-    };
-
-    // Determine which videos to cache based on screen width
-    const width = window.innerWidth;
-
-    if (width >= 1024) {
-      fetchAndCacheVideo("/videos/DesktopHeroVideoHQ.mp4", "desktop-mp4");
-    } else if (width >= 481) {
-      fetchAndCacheVideo("/videos/tablet.mp4", "tablet-mp4");
-    } else {
-      fetchAndCacheVideo("/videos/MobileHeroVideo.mp4", "mobile-mp4");
+    if (router.isReady) {
+      router.push("/");
     }
-
-    // Cleanup function to revoke object URLs
-    return () => {
-      Object.values(videoSources).forEach((url) => {
-        URL.revokeObjectURL(url);
-      });
-    };
-  }, []);
+  });
 
   useGSAP(() => {
     const mm = gsap.matchMedia();

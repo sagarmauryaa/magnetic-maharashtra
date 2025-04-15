@@ -12,6 +12,7 @@
 }
 .heroVideoWrapper {
   width: 100%;
+  height: 100%;
   max-width: 100%;
   transform-origin: top center;
   margin-inline: auto;
@@ -28,6 +29,7 @@ main.heroVideoContainer {
 
 .heroVideo {
   width: 100%;
+  height: 100%;
   /* max-width: 1600px; */
 }
 .heroHeadingSection-container {
@@ -1387,7 +1389,7 @@ main.heroVideoContainer {
     padding: 0 1rem;
   }
   .heroVideo {
-    /* height: 80vh; */
+    height: 650px;
     width: 100%;
   }
 
