@@ -75,7 +75,7 @@ const ParallaxExperience = () => {
           },
         })
 
-        .to(mountainBackRef.current, { yPercent: -5 }, "<")
+        .to(mountainBackRef.current, { yPercent: -10 }, "<")
         .to(
           parallaxTextRef.current,
           {
