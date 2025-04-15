@@ -39,6 +39,7 @@ export default function Home() {
           start: "0% 80%",
           end: "bottom bottom",
           markers: false,
+          toggleActions: "play none none reverse",
         },
       })
       .from(heroHeadingRef.current, {
@@ -52,56 +53,56 @@ export default function Home() {
   const wrapperRef = useRef(null);
 
   // Video caching effect
-  // useEffect(() => {
-  //   // Function to fetch and cache video
-  //   const fetchAndCacheVideo = async (src, videoId) => {
-  //     try {
-  //       // Check if video is already cached in localStorage
-  //       const isCached = localStorage.getItem(`video_cached_${videoId}`);
+  useEffect(() => {
+    // Function to fetch and cache video
+    const fetchAndCacheVideo = async (src, videoId) => {
+      try {
+        // Check if video is already cached in localStorage
+        const isCached = localStorage.getItem(`video_cached_${videoId}`);
 
-  //       if (isCached) {
-  //         // Try to get video from IndexedDB
-  //         const cachedBlob = await getVideoFromIndexedDB(videoId);
-  //         if (cachedBlob) {
-  //           const objectURL = URL.createObjectURL(cachedBlob);
-  //           setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
-  //           return;
-  //         }
-  //       }
+        if (isCached) {
+          // Try to get video from IndexedDB
+          const cachedBlob = await getVideoFromIndexedDB(videoId);
+          if (cachedBlob) {
+            const objectURL = URL.createObjectURL(cachedBlob);
+            setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
+            return;
+          }
+        }
 
-  //       // If not cached or not found in IndexedDB, fetch and cache
-  //       const response = await fetch(src);
-  //       if (!response.ok)
-  //         throw new Error(`Failed to fetch video: ${response.statusText}`);
+        // If not cached or not found in IndexedDB, fetch and cache
+        const response = await fetch(src);
+        if (!response.ok)
+          throw new Error(`Failed to fetch video: ${response.statusText}`);
 
-  //       const blob = await response.blob();
-  //       await saveVideoToIndexedDB(videoId, blob);
+        const blob = await response.blob();
+        await saveVideoToIndexedDB(videoId, blob);
 
-  //       const objectURL = URL.createObjectURL(blob);
-  //       setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
-  //     } catch (error) {
-  //       console.error(`Error caching video ${videoId}:`, error);
-  //     }
-  //   };
+        const objectURL = URL.createObjectURL(blob);
+        setVideoSources((prev) => ({ ...prev, [videoId]: objectURL }));
+      } catch (error) {
+        console.error(`Error caching video ${videoId}:`, error);
+      }
+    };
 
-  //   // Determine which videos to cache based on screen width
-  //   const width = window.innerWidth;
+    // Determine which videos to cache based on screen width
+    const width = window.innerWidth;
 
-  //   if (width >= 1024) {
-  //     fetchAndCacheVideo("/videos/DesktopHeroVideoHQ.mp4", "desktop-mp4");
-  //   } else if (width >= 481) {
-  //     fetchAndCacheVideo("/videos/tablet.mp4", "tablet-mp4");
-  //   } else {
-  //     fetchAndCacheVideo("/videos/MobileHeroVideo.mp4", "mobile-mp4");
-  //   }
+    if (width >= 1024) {
+      fetchAndCacheVideo("/videos/DesktopHeroVideoHQ.mp4", "desktop-mp4");
+    } else if (width >= 481) {
+      fetchAndCacheVideo("/videos/tablet.mp4", "tablet-mp4");
+    } else {
+      fetchAndCacheVideo("/videos/MobileHeroVideo.mp4", "mobile-mp4");
+    }
 
-  //   // Cleanup function to revoke object URLs
-  //   return () => {
-  //     Object.values(videoSources).forEach((url) => {
-  //       URL.revokeObjectURL(url);
-  //     });
-  //   };
-  // }, []);
+    // Cleanup function to revoke object URLs
+    return () => {
+      Object.values(videoSources).forEach((url) => {
+        URL.revokeObjectURL(url);
+      });
+    };
+  }, []);
 
   useGSAP(() => {
     const mm = gsap.matchMedia();

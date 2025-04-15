@@ -664,7 +664,7 @@ const Envelop = () => {
           },
           scrollTrigger: {
             trigger: envelopSectionRef.current,
-            start: "0% 0%",
+            start: "top top",
             end: "100% 70%",
             markers: false,
             pin: false,
@@ -966,6 +966,8 @@ const Envelop = () => {
           id={styles.ikea}
           src="/images/EnvelopImages/Ikea.png"
           alt="Ikea"
+          preload="true"
+          loading="lazy"
         />
         <div
           ref={comfortRef}
@@ -993,6 +995,8 @@ const Envelop = () => {
           id={styles.university}
           src="/images/EnvelopImages/university.png"
           alt="Ikea"
+          preload="true"
+          loading="lazy"
         />
         <div ref={gdpRef} className={styles.gdp}>
           <p>Largest GDP</p>
@@ -1003,36 +1007,48 @@ const Envelop = () => {
           id={styles.airplane}
           src="/images/EnvelopImages/Airplane.png"
           alt="airplane"
+          preload="true"
+          loading="lazy"
         />
         <img
           ref={sustainbilityRef}
           id={styles.sustainbility}
           src="/images/EnvelopImages/sustainbilty.png"
           alt="sustainbility"
+          preload="true"
+          loading="lazy"
         />
         <img
           ref={cameraRef}
           id={styles.camera}
           src="/images/EnvelopImages/Camera.png"
           alt="camera"
+          preload="true"
+          loading="lazy"
         />
         <img
           ref={incentivesRef}
           id={styles.incentivesImg}
           src="/images/EnvelopImages/Incentives.png"
           alt="incentives"
+          preload="true"
+          loading="lazy"
         />
         <img
           ref={manufacturingRef}
           id={styles.manufacturing}
           src="/images/EnvelopImages/Manufacturing.png"
           alt="manufacturing"
+          preload="true"
+          loading="lazy"
         />
         <img
           ref={bookRef}
           id={styles.book}
           src="/images/EnvelopImages/book.png"
           alt="book"
+          preload="true"
+          loading="lazy"
         />
 
         {/* <div id="Flap"></div> */}

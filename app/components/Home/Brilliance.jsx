@@ -15,6 +15,7 @@ function Brilliance() {
         trigger: `.${styles.brilliance}`,
         ease: "ease.in",
         start: "top 75%",
+        end: "bottom 50%",
       },
     });
 
