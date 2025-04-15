@@ -155,19 +155,19 @@ const CardAccordion = () => {
       cardRef.current[index]?.scrollTo(0, 0);
     }
 
-    if (activeIndex !== index && index !== null) {
-      const element = cardRef.current[index];
-      if (element) {
-        const headerOffset = 70;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    // if (activeIndex !== index && index !== null) {
+    //   const element = cardRef.current[index];
+    //   if (element) {
+    //     const headerOffset = 70;
+    //     const elementPosition = element.getBoundingClientRect().top;
+    //     const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    }
+    //     window.scrollTo({
+    //       top: offsetPosition,
+    //       behavior: "smooth",
+    //     });
+    //   }
+    // }
   };
 
   return (

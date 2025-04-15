@@ -1,5 +1,6 @@
 .accordionContainer {
   /* max-width: 1600px; */
+  height: 100%;
   margin: 2.5rem auto;
   margin-top: 0;
   /* padding-inline: 2.5rem; */
@@ -43,14 +44,15 @@
   will-change: max-height, opacity;
   display: flex;
   flex-wrap: wrap;
-  transform-origin: top;
+  transform-origin: bottom;
   /* padding-inline: 2.5rem; */
 }
 
 .accordionContent.show {
-  max-height: 1500px; /* Adjust based on content height */
+  max-height: fit-content; /* Adjust based on content height */
   opacity: 1;
   height: auto;
+  transform-origin: bottom;
   /* overflow-y: visible; */
 }
 

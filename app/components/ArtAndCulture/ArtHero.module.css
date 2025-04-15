@@ -263,8 +263,8 @@
   }
   .topRight {
     width: 55%;
-    top: -1%;
-    right: -30%;
+    top: 0%;
+    right: -10%;
   }
   .topRight img {
     width: 100%;
@@ -297,6 +297,7 @@
     flex-direction: column;
     gap: 32px;
     position: relative;
+    box-sizing: border-box;
   }
   .artHero .cultureTitle {
     margin-top: -0.5rem;

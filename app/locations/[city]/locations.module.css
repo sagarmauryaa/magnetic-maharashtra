@@ -1087,6 +1087,7 @@
     padding-inline: 1rem;
     flex-direction: column;
     padding-block: 60px;
+    gap: 24px;
   }
 
   .brandingHeading h2,
@@ -1094,7 +1095,7 @@
     font-size: var(--fonts--desktop--sub-heading-capital);
   }
   .brandingHeading h2 {
-    width: 38%;
+    width: 100%;
   }
   #placesOfInterest .sectionDivider {
     margin-block: 48px;
