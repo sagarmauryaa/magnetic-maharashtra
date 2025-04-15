@@ -228,11 +228,12 @@
   }
 
   .cardArtImage {
-    width: fit-content;
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     /* height: 520px; */
     padding: 1rem;
     aspect-ratio: 0.856;
+    box-sizing: border-box;
   }
   .ArtCultureContainer {
     padding-top: 0;
@@ -298,6 +299,16 @@
     gap: 32px;
     position: relative;
     box-sizing: border-box;
+    padding: 0 10px;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  .cardImage {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cardImage img {
+    width: 100%;
+    height: auto;
   }
   .artHero .cultureTitle {
     margin-top: -0.5rem;

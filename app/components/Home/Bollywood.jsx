@@ -18,7 +18,7 @@ function Bollywood() {
     // gsap.set(".rightB", { xPercent: 14 });
 
     const animateImages = () => {
-      gsap.from(`.${styles.image}`, {
+      gsap.from([`.${styles.image} , .${styles.bollywoodSubtitle}`], {
         duration: 1,
         opacity: 0,
         stagger: 0.1,
@@ -26,7 +26,7 @@ function Bollywood() {
         scrollTrigger: {
           trigger: `.${styles.bollywoodContainer}`,
           markers: false,
-          start: "top bottom",
+          start: "top center",
           ease: "ease.in",
         },
       });

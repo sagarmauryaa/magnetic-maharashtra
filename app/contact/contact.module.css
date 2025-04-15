@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+.contactWrapper h2.heading {
+  padding-top: 2.5rem;
+  font-size: var(--fonts--desktop--heading2);
+}
+
 /* #emailInput:invalid,
   input[type="text"]:invalid {
     border-color: #ff2929;
@@ -123,6 +128,7 @@
   border: 1px solid var(--light-grey-color);
   border-radius: 2px;
   font-family: var(--font-ppneumontreal-medium);
+  box-sizing: border-box;
 }
 
 .formmm button {
@@ -292,6 +298,7 @@
   }
   .contactWrapper {
     padding: 0 1rem;
+    box-sizing: border-box;
   }
   .contactPage {
     padding: 0;

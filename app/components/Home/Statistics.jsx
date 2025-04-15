@@ -106,6 +106,7 @@ const Statistics = () => {
               width={410}
               height={507}
               quality={100}
+              priority
             />
           </div>
 
@@ -153,6 +154,7 @@ const Statistics = () => {
               height={100}
               quality={100}
               unoptimized
+              priority
             />
           </div>
 
@@ -200,6 +202,7 @@ const Statistics = () => {
               height={100}
               quality={100}
               unoptimized
+              priority
             />
           </div>
 
