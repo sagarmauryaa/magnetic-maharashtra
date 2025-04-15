@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 const menuItems = [
   {
     label: "Sectors",
-    url: "#",
+
     subMenu: [
       { label: "Automobile", url: "/sectors/automobile" },
       { label: "Textile & Apparels", url: "/sectors/textile" },
@@ -39,7 +39,7 @@ const menuItems = [
   },
   {
     label: "Locations",
-    url: "#",
+
     subMenu: [
       { label: "Mumbai", url: "/locations/mumbai" },
       { label: "Pune", url: "/locations/pune" },

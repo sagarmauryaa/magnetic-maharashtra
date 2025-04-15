@@ -770,7 +770,7 @@
 }
 @media screen and (max-width: 1280px) {
   .locationsHero {
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 100px;
   }
   #industrialContainer {
@@ -780,6 +780,7 @@
 @media screen and (max-width: 480px) {
   .MaharashtraMapImage {
     display: block;
+    aspect-ratio: 4/3;
   }
 
   #MaharashtraMapSvg {
@@ -787,6 +788,7 @@
   }
 
   .locationsHero {
+    height: 70vh;
     padding-top: 0px;
   }
 
