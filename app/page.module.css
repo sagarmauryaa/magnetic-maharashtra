@@ -1186,6 +1186,31 @@ main.heroVideoContainer {
   }
 }
 @media (min-width: 1600px) {
+  .heroHeadingSection {
+    padding-inline: 0rem;
+  }
+
+  .proofLeft {
+    left: 0;
+  }
+
+  .playgroundSection .container {
+    padding-inline: 0rem;
+  }
+
+  .sectorInsights.sticky {
+    border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  .globalBusiness {
+    padding-inline: 0rem;
+  }
+
+  .everythingContentSection {
+    padding-inline: 0rem;
+  }
+
   #FlapSvg {
     left: 30.5%;
   }

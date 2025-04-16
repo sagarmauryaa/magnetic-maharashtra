@@ -115,11 +115,25 @@ export default function Home() {
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
-    mm.add("(min-width: 768px)", () => {
+    mm.add("(min-width: 768px) and (max-width: 1599px)", () => {
       // New padding animation
       gsap.to(wrapperRef.current, {
         maxWidth: "1600px",
         padding: "2.5rem",
+        ease: "linear",
+        scrollTrigger: {
+          trigger: wrapperRef.current,
+          start: "top top",
+          end: "+=300",
+          scrub: 0,
+          markers: false,
+        },
+      });
+    });
+
+    mm.add("(min-width: 1600px)", () => {
+      gsap.to(wrapperRef.current, {
+        maxWidth: "1600px",
         ease: "linear",
         scrollTrigger: {
           trigger: wrapperRef.current,

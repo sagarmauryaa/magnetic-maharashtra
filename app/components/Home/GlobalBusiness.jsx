@@ -63,7 +63,7 @@ const GlobalBusiness = () => {
         x: -scrollWidth,
         ease: "linear",
         scrollTrigger: {
-          trigger: ".globalBusiness",
+          trigger: globalBusinessRef.current,
           markers: false, // Set to false in production
           start: "top top",
           end: `+=${scrollWidth}`, // Add extra space for larger screens

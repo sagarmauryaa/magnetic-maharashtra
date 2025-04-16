@@ -1497,7 +1497,6 @@ const Locations = () => {
               ))}
             </div>
           </section>
-          <div className={styles.divider}></div>
         </main>
       ))}
     </main>

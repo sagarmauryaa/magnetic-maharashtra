@@ -107,6 +107,12 @@
   width: 100%;
 }
 
+@media screen and (min-width: 1600px) {
+  .parentContainer {
+    padding-inline: 0rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .parentContainer {
     flex-direction: column;
