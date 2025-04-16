@@ -1441,7 +1441,9 @@ const Locations = () => {
                   key={cardData.title}
                   onDragStart={(e) => e.preventDefault()}
                 >
-                  <img src={cardData.imageUrl} alt={cardData.title} />
+                  <div className={styles.gridItemImage}>
+                    <img src={cardData.imageUrl} alt={cardData.title} />
+                  </div>
                   <h2>{cardData.title}</h2>
                   <p>{cardData.desc}</p>
                 </div>

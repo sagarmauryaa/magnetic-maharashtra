@@ -111,7 +111,7 @@ const ParallaxExperience = () => {
           scale: 1.1,
           transformOrigin: "center center",
         })
-        .to(mountainBackRef.current, { yPercent: -5 }, "<")
+        .to(mountainBackRef.current, { yPercent: -20 }, "<")
         .to(
           parallaxTextRef.current,
           {

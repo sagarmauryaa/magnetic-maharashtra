@@ -529,11 +529,13 @@
   width: 100%;
   height: 27.375rem;
   height: auto;
+  box-sizing: border-box;
 }
 .gridItemSmall {
   width: 100%;
   height: 13rem;
   height: auto;
+  box-sizing: border-box;
 }
 .gridItemLarge img,
 .gridItemSmall img {
@@ -788,7 +790,7 @@
   }
 
   .locationsHero {
-    height: 70vh;
+    height: 75vh;
     padding-top: 0px;
   }
 
@@ -1033,8 +1035,8 @@
   .customGrid {
     margin-top: 40px;
     grid-template-columns: 15.125rem 9.75rem 15.125rem 15.125rem;
-    /* grid-auto-rows: 19rem; */
-    grid-auto-rows: auto;
+    grid-auto-rows: 19rem;
+    /* grid-auto-rows: auto; */
     /* padding-left: 1rem; */
     /* padding-right: 1rem; */
     overflow: hidden;
@@ -1049,10 +1051,22 @@
   .gridItemSmall p {
     font-size: var(--fonts--mobile--body2);
   }
-  .gridItemLarge img,
-  .gridItemSmall img {
+  .gridItemLarge .gridItemImage,
+  .gridItemSmall .gridItemImage {
     margin-bottom: 12px;
   }
+
+  .gridItemLarge .gridItemImage {
+    width: 100%;
+    height: 182px;
+    aspect-ratio: 4/3;
+  }
+  .gridItemSmall .gridItemImage {
+    width: 100%;
+    height: 117px;
+    aspect-ratio: 4/3;
+  }
+
   #placesOfInterest {
     padding: 60px 1rem;
   }
