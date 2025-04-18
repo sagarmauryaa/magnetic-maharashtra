@@ -1396,6 +1396,10 @@ main.heroVideoContainer {
     padding-block: 3.75rem;
   }
 
+  .heroVideoWrapper {
+    height: 100%;
+  }
+
   .heroVideo-wrapper video,
   .heroVideoContainer video {
     user-select: none;
