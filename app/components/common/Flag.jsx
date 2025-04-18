@@ -33,7 +33,10 @@ const Flag = () => {
         controls={false}
         fetchPriority="high"
       >
-        <source src="/videos/Flag_Final.webm" type="video/webm" />
+        <source
+          src="https://ik.imagekit.io/bn4qs1mj3/Flag_Final.webm/ik-video.mp4?updatedAt=1745003850162"
+          type="video/webm"
+        />
       </video>
     </main>
   );

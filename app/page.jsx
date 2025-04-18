@@ -200,7 +200,7 @@ export default function Home() {
               />
             ) : (
               <source
-                src="/videos/DesktopHeroVideoHQ.mp4"
+                src="https://ik.imagekit.io/bn4qs1mj3/DesktopHeroVideoHQ.mp4?updatedAt=1744977909415"
                 media="all and (min-width: 1024px)"
                 type="video/mp4"
               />

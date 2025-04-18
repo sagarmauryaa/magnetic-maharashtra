@@ -47,7 +47,7 @@ function Milestones() {
 
         tl.to(`.${styles.box}`, {
           xPercent: 0,
-          stagger: 0.35,
+          stagger: 0.2,
           opacity: 1,
         });
 
