@@ -1,0 +1,60 @@
+@use "@/styles/abstracts/" as *;
+
+.ui-heroBanner {
+    padding-inline: var(--container-padding);
+
+    &__wrapper {
+        width: 100%;
+        max-width: var(--w-max);
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-80);
+
+        @include media("<md") {
+            gap: var(--space-60);
+        }
+    }
+
+    &__video {
+        height: 100dvh;
+        width: 100%;
+        object-fit: cover;
+
+        @include media("<md") {
+            margin-inline-start: calc(var(--space-16) * -1); 
+            width: calc(100% + var(--space-16)*2);
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-32);
+
+        @include media("<md") {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__heading {
+        @include font-d-sub-heading;
+
+        @include media("<=sm") {
+            @include font-m-sub-heading;
+        }
+
+        @include media(">md") {
+            grid-column: 2 / span 3;
+        }
+
+        span:nth-child(2) {
+            color: var(--orange-color);
+        }
+
+        span:first-child {
+            color: var(--orange-color);
+            margin-left: 20%;
+        }
+    }
+}

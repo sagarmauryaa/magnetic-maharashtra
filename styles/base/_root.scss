@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+:root {
+  --w-viewport: 100vw;
+  --h-viewport: 100vh;
+  --w-max: 1600px;
+  --h-header: 88px;
+  --h-header-with-breadcrumbs: 130px;
+  --h-header-with-level2-nav: 158px;
+  --h-stickyMenu: 63px;
+  --scrollbar-width: 0px;
+
+
+  --font-ppneumontreal-medium: "PP Neu Montreal", sans-serif;
+  --font-ppneumontreal-book: "PP Neu Montreal Book", sans-serif;
+  --font-ebgaramond-italic: "EBGaramond Italic", serif;
+}

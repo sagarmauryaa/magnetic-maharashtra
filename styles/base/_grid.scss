@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+@mixin define-colspans {
+  /* inner-colspan doesn't accomodate gutter spacing */
+  --inner-colspan1: calc(
+    (
+        (var(--container-width) - var(--container-padding) * 2) -
+          var(--gutter-width) * (var(--total-columns) - 1)
+      ) / var(--total-columns)
+  );
+  @for $i from 2 through 16 {
+    --inner-colspan#{$i}: calc(
+      var(--inner-colspan1) * #{$i} + var(--gutter-width) * (#{$i} - 1)
+    );
+  }
+  /* outer-colspan accomodates gutter spacing */
+  --outer-colspan1: calc(
+    var(--adjusted-container-width) / var(--total-columns)
+  );
+  @for $i from 2 through 16 {
+    --outer-colspan#{$i}: calc(var(--outer-colspan1) * #{$i});
+  }
+}
+:root {
+  --total-columns: 12;
+  --gutter-width: var(--space-2xs);
+  --container-width: var(--w-viewport);
+  --section-space: var(--space-4xl);
+  --container-padding: var(--space-40);
+  --adjusted-container-padding: calc(
+    var(--container-padding) - var(--gutter-width) / 2
+  );
+  --adjusted-container-width: calc(
+    var(--container-width) - 2 * var(--adjusted-container-padding)
+  );
+  @include define-colspans();
+}
+@include media("<md") {
+  :root {
+    --section-space: var(--space-3xl);
+    --container-padding: var(--space-16);
+  }
+}
+@include media("<sm") {
+  :root {
+    --total-columns: 4;
+    --gutter-width: var(--space-2xs);
+    --container-padding: var(--space-16);
+  }
+}
+@include media(">=sm", "<md") {
+  :root {
+    --total-columns: 10;
+  }
+}
+@include media(">=md") {
+  :root {
+    --total-columns: 12;
+  }
+}
+// @include media(">maxwidth") {
+//   :root {
+//     --container-padding: 0;
+//   }
+// }
+main {
+  position: relative;
+}

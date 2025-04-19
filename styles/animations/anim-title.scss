@@ -1,5 +1,10 @@
 /* Animated Titles */
+[observer-animation="title"]{
+	display: flex;
+	flex-wrap: wrap;
+}
 .anim-title[observer-animation="title"] {
+	
 	opacity: 0;
 	.wordWrapper {
 		/* display:inline-flex seems to cause blurryness in Deepak's and Sanjana's systems */

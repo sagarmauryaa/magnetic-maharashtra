@@ -107,7 +107,7 @@ body.-scrollLock {
         pointer-events: none;
     }
 }
-
+@import "./base/index";
 /* Animations */
 @import "animations/anim-micro.scss";
 @import "animations/anim-image.scss";

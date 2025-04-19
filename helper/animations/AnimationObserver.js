@@ -9,7 +9,7 @@ import Gif from "./Gif";
 import DeviceDetection from "../classes/DeviceDetection";
 
 const AnimationObserver = () => {
-  const elementRef = useRef(document.documentElement);
+  const elementRef = useRef();
   const animationSelectors = {
     cssClassAnimations: '[observer-animation="cssClass"]',
     titleAnimations: '[observer-animation="title"]',
@@ -24,6 +24,9 @@ const AnimationObserver = () => {
   const animationInstancesRef = useRef([]);
   const intersectionObserverRef = useRef(null);
 
+  useEffect(()=>{
+    elementRef.current =  document.documentElement
+  },[])
   useEffect(() => {
     queryDOM();
     createObserver();
@@ -32,7 +35,7 @@ const AnimationObserver = () => {
     return () => {
       unobserve();
     };
-  }, []);
+  }, [elementRef]);
 
   const queryDOM = () => {
     const elements = {};

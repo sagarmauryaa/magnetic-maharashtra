@@ -1,0 +1,100 @@
+@mixin hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin sr-only {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+}
+
+@mixin absolute-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+}
+@mixin image-placeholder($size: "default", $mode: "light") {
+	$background-color: var(--white-color);
+	$background-gradient: linear-gradient(to right, rgba(250, 250, 247, 0) 20%, rgba(250, 250, 247, 0.5) 35%, rgba(250, 250, 247, 0.5) 40%, rgba(250, 250, 247, 0) 50%);
+	$background-size: 130px;
+	@if $size == "xxs" {
+		$background-size: 20px;
+	}
+	@if $size == "xs" {
+		$background-size: 40px;
+	}
+	@if $size == "sm" {
+		$background-size: 65px;
+	}
+	&:not(.is-loaded) {
+		background-color: $background-color;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMjEiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0wIC40OTJoOS4wMzhjNS4yMiAwIDcuODMxIDEuNjY1IDcuODMxIDQuOTkzIDAgMi4wNzQtMS4wNjMgMy40NjUtMy4xODcgNC4xNzUgMi42MzYuODczIDMuOTU4IDIuNDI4IDMuOTU4IDQuNjY0IDAgMS44MzktLjY5NyAzLjIzOC0yLjA4OSA0LjItMS4zOS45NjMtMy40MzQgMS40NDctNi4xMjYgMS40NDdIMFYuNDkxWm0xMi40MzQgMy4yM2MtLjc0Mi0uNDA4LTEuOTI4LS42MTMtMy41NTYtLjYxM0gzLjE5djUuNDNoNS45NjNjMS41MiAwIDIuNjMzLS4yMyAzLjMzNy0uNjgzLjcwNC0uNDUzIDEuMDU2LTEuMTczIDEuMDU2LTIuMTUzIDAtLjkxLS4zNy0xLjU2OS0xLjExMi0xLjk3N3YtLjAwNFptMS44MjQgMTAuNTcxYzAtMS4wOS0uNDA4LTEuOS0xLjIyNC0yLjQyNy0uODE2LS41MjYtMi4wNjQtLjc5My0zLjc0OC0uNzkzSDMuMTg3djYuMjc0SDkuMjNjMS43NzQgMCAzLjA1OC0uMjQyIDMuODQ2LS43MjQuNzg4LS40ODEgMS4xODItMS4yNiAxLjE4Mi0yLjMzM3YuMDAzWk0yMC42MDggMTAuMjI4YzAtMi4wOTEuNDU3LTMuOTAyIDEuMzc0LTUuNDI5LjkxNy0xLjUyNyAyLjIwNy0yLjcxMSAzLjg3My0zLjU0NkMyNy41MjMuNDE1IDI5LjQ4MiAwIDMxLjczNSAwYzIuMjUyIDAgNC4yMzYuNDE5IDUuODkyIDEuMjUzIDEuNjU2LjgzOCAyLjk0IDIuMDE5IDMuODQ2IDMuNTQ2LjkwNyAxLjUyNyAxLjM2IDMuMzM4IDEuMzYgNS40MyAwIDIuMDktLjQ1NyAzLjg3Ny0xLjM3NCA1LjQxNC0uOTE3IDEuNTM4LTIuMjA0IDIuNzI1LTMuODYgMy41Ni0xLjY1Ni44MzgtMy42MjMgMS4yNTMtNS44OTIgMS4yNTMtMi4yNyAwLTQuMjEzLS40MTktNS44OC0xLjI1My0xLjY2Ni0uODM4LTIuOTUzLTIuMDE5LTMuODYtMy41NDYtLjkwNi0xLjUyNy0xLjM2LTMuMzM4LTEuMzYtNS40MjlabTMuNDU5IDBjMCAyLjMyNy42NzMgNC4xNDEgMi4wMTkgNS40NDMgMS4zNDYgMS4zMDIgMy4yMjkgMS45NSA1LjY0NSAxLjk1IDIuNDE2IDAgNC4yNzEtLjY1NSA1LjYxNy0xLjk2NHMyLjAyLTMuMTIgMi4wMi01LjQyOWMwLTIuMzEtLjY3LTQuMTQxLTIuMDA2LTUuNDQzLTEuMzM1LTEuMjk4LTMuMjE1LTEuOTUtNS42MzEtMS45NS0yLjQxNyAwLTQuMjc5LjY1Mi01LjYzMSAxLjk1LTEuMzU3IDEuMzAyLTIuMDMzIDMuMTE2LTIuMDMzIDUuNDQzWk00Ni45MjIuNDkyaDQuMDFsNy43MiAxNi4wMTRMNjYuMzcyLjQ5MmgzLjkwMXYxOS40OGgtMy4xODdWNS4xMDNMNTkuOTE3IDE5Ljk3aC0yLjY5MUw1MC4wNTYgNS4yNFYxOS45N2gtMy4xM1YuNDkxaC0uMDA0Wk03NS4zODYuNDkyaDkuMDM4YzUuMjIgMCA3LjgzMSAxLjY2NSA3LjgzMSA0Ljk5MyAwIDIuMDc0LTEuMDYzIDMuNDY1LTMuMTg3IDQuMTc1IDIuNjM2Ljg3MyAzLjk1OCAyLjQyOCAzLjk1OCA0LjY2NCAwIDEuODM5LS42OTggMy4yMzgtMi4wODkgNC4yLTEuMzkxLjk2My0zLjQzNCAxLjQ0Ny02LjEyNiAxLjQ0N2gtOS40MjVWLjQ5MVptMTIuNDMgMy4yM2MtLjc0Mi0uNDA4LTEuOTI4LS42MTMtMy41NTYtLjYxM2gtNS42ODd2NS40M2g1Ljk2MmMxLjUyIDAgMi42MzMtLjIzIDMuMzM3LS42ODMuNzA0LS40NTMgMS4wNTctMS4xNzMgMS4wNTctMi4xNTMgMC0uOTEtLjM3LTEuNTY5LTEuMTEzLTEuOTc3di0uMDA0Wm0xLjgyOCAxMC41NzFjMC0xLjA5LS40MDgtMS45LTEuMjI0LTIuNDI3LS44MTYtLjUyNi0yLjA2NS0uNzkzLTMuNzQ5LS43OTNoLTYuMDk4djYuMjc0aDYuMDQzYzEuNzc0IDAgMy4wNTctLjI0MiAzLjg0Ni0uNzI0Ljc4Ny0uNDgxIDEuMTgxLTEuMjYgMS4xODEtMi4zMzN2LjAwM1pNOTcuNTU2IDE5Ljk2OGgtMy40OUwxMDMuMzguNDg4aDMuNTk4bDkuMzEzIDE5LjQ4aC0zLjYyNmwtMi4zNjQtNS4wMmgtMTAuNDRsLTIuMzA4IDUuMDJoLjAwNFptNy41NTYtMTYuMzEyLTQuMDM3IDguNjVoOC4wNzVsLTQuMDM4LTguNjVaTTEyMS44OTggMTEuOTIxIDExMy41MTkuNDkxaDMuODc0bDYuMjM4IDguNzU3IDYuMjYyLTguNzU2aDMuNzFsLTguMzc4IDExLjQzdjguMDQ2aC0zLjMyM3YtOC4wNDdoLS4wMDRaTTEzNi41NjcuNDkyaDguNDljMy42MjYgMCA2LjQwMi44MzggOC4zMjMgMi41MSAxLjkyMiAxLjY3MiAyLjg4NCA0LjA4MiAyLjg4NCA3LjIzIDAgMy4xNDctMS4wMjUgNS41MzMtMy4wNzYgNy4yMTUtMi4wNSAxLjY4My00Ljk3MiAyLjUyNC04Ljc2MiAyLjUyNGgtNy44NTZWLjQ5MWgtLjAwM1ptMTYuMjY2IDkuNzM2YzAtNC42MTktMi41ODQtNi45MjgtNy43NDgtNi45MjhoLTUuMTkydjEzLjg2aDQuNjQ1YzIuNzMgMCA0Ljc5NC0uNTgyIDYuMTk2LTEuNzQ1IDEuNDAxLTEuMTYzIDIuMTAyLTIuODkxIDIuMTAyLTUuMTgzbC0uMDAzLS4wMDRaTTE1OS4zNDQgMTAuMjI4YzAtMi4wMzYuNDM2LTMuODE5IDEuMzA0LTUuMzQ2Ljg2OC0xLjUyNyAyLjEwMi0yLjcyNSAzLjY5Ni0zLjU4N0MxNjUuOTM3LjQzMyAxNjcuODI0IDAgMTcwLjAwMyAwYzUuMjM3IDAgOC40NjMgMi4xNzQgOS42NjkgNi41MmwtMy4yNy40MzZjLS41MTMtMS40NTQtMS4yNzMtMi41MDctMi4yODEtMy4xNS0xLjAwOC0uNjQ1LTIuMzgxLS45Ny00LjEyMS0uOTctMS40ODIgMC0yLjc2Mi4zMDEtMy44MzIuOWE2LjE5NiA2LjE5NiAwIDAgMC0yLjQ4NyAyLjU1MmMtLjU4NSAxLjEtLjg3OCAyLjQxMy0uODc4IDMuOTQ0IDAgMi4zMDkuNjQ1IDQuMTIgMS45MzUgNS40MjkgMS4yOSAxLjMwOSAzLjA3MiAxLjk2MyA1LjM0MiAxLjk2MyAxLjkwNCAwIDMuMzc5LS4zNDYgNC40MjUtMS4wMzUgMS4wNDItLjY5MyAxLjc0LTEuNzU2IDIuMDg4LTMuMTkzSDE4MGMtLjM0OSAyLjI3NS0xLjM4NCA0LjAyLTMuMTAzIDUuMjM5LTEuNzIzIDEuMjE5LTQuMDAzIDEuODI4LTYuODQyIDEuODI4LTIuMjE3IDAtNC4xMjUtLjQyMi01LjcyOC0xLjI2Ny0xLjYwNC0uODQ1LTIuODM1LTIuMDMzLTMuNjk3LTMuNTYtLjg2MS0xLjUyNi0xLjI5LTMuMzI3LTEuMjktNS40MDFsLjAwNC0uMDA3WiIgZmlsbD0iI0Q5RDlEOSIvPjwvc3ZnPg==");
+		background-size: $background-size auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		&::before {
+			content: "";
+			@include absolute-cover();
+			background: $background-gradient;
+			background-size: 200% 100%;
+			background-position: 100% 0;
+			// animation: skeleton-animation 2s infinite var(--emphasized);
+		}
+	}
+	&.is-loaded {
+		background-color: $background-color;
+	}
+}
+@mixin lineclamp($lines: 2) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@mixin unsetLineclamp() {
+	display: inherit;
+	-webkit-line-clamp: unset;
+	-webkit-box-orient: unset;
+	overflow: unset;
+	text-overflow: unset;
+}
+
+@mixin label {
+	background-color: #0000004d;
+	padding: var(--space-nano) var(--space-3xs);
+	border-radius: var(--radius-1000);
+	backdrop-filter: blur(24px);
+	border: 1px solid #ffffff4d;
+	color: var(--white-color);
+
+	span {
+		font: initial;
+	}
+}
+@mixin define-prefixed-root-variables($prefix, $map) {
+	@if $prefix == "" or $prefix == null {
+		@warn "No prefix provided. Variables will not be scoped.";
+		@each $key, $value in $map {
+			--#{$key}: #{$value};
+		}
+	} @else {
+		@each $key, $value in $map {
+			--#{$prefix}-#{$key}: #{$value};
+		}
+	}
+}

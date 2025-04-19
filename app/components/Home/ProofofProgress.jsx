@@ -163,7 +163,7 @@ const ProofofProgress = () => {
     <section>
       <section ref={svgContainerRef} className={styles.svgContainer}>
         <div className={styles.proofLeft}>
-          <div ref={proofTitleRef} className={styles.proofTitle}>
+          <div observer-animation="title" className={styles.proofTitle}>
             Proof of Progress, Promise of Growth
           </div>
         </div>

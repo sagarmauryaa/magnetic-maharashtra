@@ -60,18 +60,12 @@ main.heroVideoContainer {
   color: var(--orange-color); 
   margin-left: 20%;
 }
-.heroHeading span:nth-child(2){
-  color: var(--orange-color); 
-}
-.heroHeading span:first-child{
-  color: var(--orange-color); 
-  margin-left: 20%;
-}
+
 .playgroundSection {
   position: relative;
   padding-block: 80px;
   /* padding-inline: 40px; */
-  border-bottom: 1px solid var(--black-color);
+  /* border-bottom: 1px solid var(--black-color); */
   max-width: 1600px;
   margin: auto;
 }
@@ -191,6 +185,7 @@ main.heroVideoContainer {
 }
 
 .sectionTitle {
+  width: 560px;
   font-size: var(--fonts--desktop--heading2);
   line-height: 90%;
   font-kerning: -2%;

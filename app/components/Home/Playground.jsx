@@ -91,12 +91,13 @@ const Playground = () => {
       <div ref={sectionContainerRef} className={styles.container}>
         <div className={styles.headingTitle}>
           <div className={styles.title}>
-            <h1 className={styles.sectionTitle}>India&apos;s Growth </h1>
-            <h1 className={styles.sectionTitle}>Engine</h1>
+            <h1 className={styles.sectionTitle} observer-animation="title">India&apos;s Growth <br />
+              Engine
+            </h1>
           </div>
           <div className={styles.subTitle}>
-            <p className="">Powering India</p>
-            <p className="">
+            <p className="" observer-animation="title">Powering India</p>
+            <p className="" observer-animation="title">
               Maharashtra&apos;s contributions shape India&apos;s economic
               landscape, driving both domestic growth and global exports,
               setting benchmarks across diverse key industries.
@@ -105,9 +106,8 @@ const Playground = () => {
         </div>
 
         <div
-          className={`${styles.sectorInsights} ${
-            isSticky ? styles.sticky : ""
-          }`}
+          className={`${styles.sectorInsights} ${isSticky ? styles.sticky : ""
+            }`}
           ref={sectorInsightsRef}
         >
           <p className={styles.sectorInsightsTitle}>Sector Insights</p>
@@ -132,22 +132,25 @@ const Playground = () => {
         <div className={styles.playgroundGrid}>
           {sectorsData.map((item, index) => (
             <Link
-              ref={(el) => (sectorsRef.current[index] = el)}
+              // ref={(el) => (sectorsRef.current[index] = el)}
               href={`sectors/${item.id}`}
               key={index}
               aria-controls=""
+              observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
               className={styles.playgroundGridItem}
-              style={{ gridArea: `${item.gridArea}` }}
-              // onClick={() => handleChange(index)}
+              style={{ gridArea: `${item.gridArea}` }} 
             >
-              <Image
-                className={styles.playgroundGridItemImage}
-                src={item.imgPath}
-                alt={item.name}
-                width={400}
-                height={400}
-                quality={100}
-              />
+              <div className={`${styles.playgroundGridItemImage} anim-imageContainer`}>
+                <div className="anim-imageWrapper">
+                  <Image
+                    className={` anim-image`}
+                    src={item.imgPath}
+                    alt={item.name}
+                    width={400}
+                    height={400}
+                    quality={100}
+                  />
+                </div></div>
               <div className={styles.playgroundContent}>
                 <p>{item.name}</p>
                 <p className={styles.playgroundPercent}>
@@ -159,6 +162,7 @@ const Playground = () => {
           ))}
         </div>
       </div>
+      <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
     </section>
   );
 };

@@ -6,6 +6,7 @@ import SmoothScroll from "./components/common/SmoothScroll";
 import { AppProvider } from "./components/AppContext";
 import Helper from "@/helper";
 import '@/styles/main.scss';
+import AnimationOverlay from "./components/Home/AnimationOverlay";
 
 const ppNeuMontrealRegular = localFont({
   src: "./fonts/PPNeueMontreal-Regular.woff2",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${ppNeuMontrealRegular.variable} ${ebGaramondItalic.variable}`}
       >
+        <AnimationOverlay/>
         <AppProvider>
           <StickyNavbar />
           <SmoothScroll>{children}</SmoothScroll>
