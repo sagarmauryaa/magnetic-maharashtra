@@ -30,17 +30,17 @@ function Sustainability() {
           </picture>
         </div>
         <div className={styles.sustainTitles}>
-          <div className={styles.sustainTitle}>
-            Sustainability -
-            <span>
+          <div className={styles.sustainTitle} observer-animation="title">
+            Sustainability - 
               Business,
               <br />
-              Naturally Better
-            </span>
+              Naturally Better 
           </div>
-          <div className={styles.sustainSubtitle}>
-            Building for tomorrow, without compromising today—Maharashtra&apos;s
-            commitment to sustainability is as strong as its drive to grow.
+          <div className={styles.sustainSubtitle} >
+           <p>
+              Building for tomorrow, without compromising today—Maharashtra&apos;s
+              commitment to sustainability is as strong as its drive to grow.
+           </p>
             <Link href="/sustainability" className={styles.sustainReadMore}>
               <button>Read More </button>
             </Link>
