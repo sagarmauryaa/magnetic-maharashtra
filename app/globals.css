@@ -100,7 +100,3 @@ header {
   align-items: flex-start;
   display: flex;
 }
-span.wordWrapper.higlight {
-  width: 100%;
-  color: var(--orange-color);
-}

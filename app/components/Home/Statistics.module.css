@@ -53,6 +53,10 @@ position: relative;
   line-height: 100%;
   letter-spacing: -1px;
 }
+.heading > span:first-child {
+  width: 100%;
+  color: var(--orange-color);
+}
 
 .contentContainer p {
   font-size: var(--fonts--desktop--body1);
