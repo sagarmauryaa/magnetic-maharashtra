@@ -1,0 +1,29 @@
+$breakpoints: (
+	"767": 767px,
+	"1024": 1024px,
+	"1280": 1280px,
+	"1440": 1440px,
+	"1540": 1540px,
+	"1920": 1920px,
+) !default;
+@import "../../node_modules/include-media/dist/include-media";
+@include media("<=767") {
+	.is-desktop {
+		display: none !important;
+	}
+}
+@include media(">767") {
+	.is-phone {
+		display: none !important;
+	}
+}
+@include media(">=1024") {
+	.is-below-1024 {
+		display: none !important;
+	}
+}
+@include media("<1024") {
+	.is-above-1023 {
+		display: none !important;
+	}
+}

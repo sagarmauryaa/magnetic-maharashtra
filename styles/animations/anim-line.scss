@@ -9,7 +9,7 @@ html[data-theme="dark"] {
 .anim-line {
   position: absolute;
   z-index: z("animLine");
-  background-color: $borderColor;
+  background-color: var(--border-color);
   transition-property: transform;
   transition-timing-function: $sineOut;
   transition-duration: 0s;

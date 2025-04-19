@@ -1,0 +1,17 @@
+$zIndices: ("paperplane", "search", "camlin", "overlay", "getInspiration", "popup", "bottomNavBar", "snowflakes", "menu", "header", "stickySecondaryMenu", "letterAboveSleigh", "sleigh", "dropdown", "tooltip", "gif", "animLine");
+@function z($name) {
+	@if index($zIndices, $name) {
+		@return (length($zIndices) - index($zIndices, $name)) + 20;
+	} @else {
+		@warn 'There is no item "#{$name}" in this list; Choose one of: #{$zIndices}';
+		@return null;
+	}
+}
+/* Function to adjust the design to scale up or down responsively */
+@function vw($value) {
+	@return calc($value * var(--maxContentScaling) / 1280);
+}
+/* percent based values*/
+@function relativeToViewportWidth($value) {
+	@return calc($value * 100vw / 1280);
+}
