@@ -88,6 +88,8 @@ const Playground = () => {
 
   return (
     <section className={styles.playgroundSection} ref={sectionRef}>
+      <span className="anim-line -top is-below-1024" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+
       <div ref={sectionContainerRef} className={styles.container}>
         <div className={styles.headingTitle}>
           <div className={styles.title}>

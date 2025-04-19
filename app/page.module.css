@@ -1508,11 +1508,12 @@ main.heroVideoContainer {
     color: hsl(233, 64%, 48%);
   } */
   .playgroundSection {
+    position: relative;
     padding: 0 1rem;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
   }
   .container {
-    margin-block: 60px;
+    padding-block: 60px;
   }
   .headingTitle {
     flex-direction: column;
