@@ -38,7 +38,7 @@ export default function Home() {
       <Brilliance />
       <Statistics />
       <Sustainability />
-      {/*  {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
+      {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
       <GlobalBusiness />
       <Milestones />
       <RoadMap />
@@ -47,7 +47,7 @@ export default function Home() {
       <BookExperience />
       <ParallaxExperience />
       <Bollywood />
-      <Envelop /> */}
+      <Envelop />
     </>
   );
 }

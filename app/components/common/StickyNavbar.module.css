@@ -42,6 +42,7 @@
 .contact a {
   color: var(--black-color);
   display: inline-block;
+  cursor: pointer;
   font-family: "Neue Montreal", sans-serif;
 }
 

@@ -1426,14 +1426,22 @@ main.heroVideoContainer {
   .svgContainer {
     padding: 0 1rem;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-block: var(--space-60);
+    gap: var(--space-40);
   }
 
   /* proof of progress */
 
   .proofLeft {
-    position: absolute;
+    position: relative;
+    left: unset;
+    top: unset;
+    /* position: absolute;
     top: 60px;
-    left: 16px;
+    left: 16px; */
   }
   .proofTitle {
     width: 71%;
@@ -1444,12 +1452,13 @@ main.heroVideoContainer {
   }
 
   .svgContainer svg {
-    margin-top: 5rem;
-    height: 360px;
-  }
-  .svgContainer {
-    height: 600px;
-  }
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    /* aspect-ratio: 1; */
+    /* margin-top: 5rem; */
+    /* height: 360px; */
+  } 
 
   /* playground */
 

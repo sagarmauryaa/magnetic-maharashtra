@@ -30,8 +30,7 @@
         clip-path: inset(1px 1px);
 
         @include media("<md") {
-            margin-inline-start: calc(var(--space-16) * -1);
-            width: calc(100% + var(--space-16)*2);
+            object-position: left bottom;
         }
     }
 
