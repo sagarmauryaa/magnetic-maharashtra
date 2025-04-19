@@ -12,3 +12,8 @@
 @forward "./breakpoints";
 @forward "./root";
 // @forward "./base";
+body[data-scroll-locked] {
+    padding-right: var(--scrollbar-width);
+    overflow: hidden !important;
+    touch-action: none;
+}

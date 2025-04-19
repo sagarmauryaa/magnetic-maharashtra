@@ -10,6 +10,7 @@ import FlyoutLink from "./FlyoutLink";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { disableScroll, enableScroll } from "@/helper/utils/scroll";
 // const menuItems = {
 //   Business: "Business",
 //   Tourism: "Tourism",
@@ -276,7 +277,9 @@ const StickyNavbar = () => {
         },
         "<0.35"
       );
+      disableScroll();
     } else {
+      enableScroll();
       tl.to(`.${styles.mobileInnerMenu}`, {
         height: "100svh",
         duration: 0.8,

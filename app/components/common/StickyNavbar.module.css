@@ -326,13 +326,18 @@ li:hover .submenuLocation {
     color: white;
     transition: transform 0.3s ease-in-out;
     z-index: 1000; /* Lower than the book modal z-index (10001) */
+    overflow-x: auto;
   }
 
   .mobileInnerMenu .logo a {
     color: white;
   }
   .mobileInnerMenu .mobileNavContent {
+    position: sticky;
+    top: 0;
     border-bottom: 1px solid white;
+    background-color: var(--orange-color);
+    z-index: 2;
   }
   .mobileLinks {
     height: calc(100% - 8rem);

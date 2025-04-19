@@ -1,20 +1,16 @@
-"use client";
-
-import dynamic from "next/dynamic";
-// import AnimationObserver from "@/helper/animations/AnimationObserver";
-
-// Dynamically import components (client-side only)
+"use client"; 
+import dynamic from "next/dynamic";  
 const MotionObserver = dynamic(() => import("@/helper/MotionObserver").then((mod) => mod.default), { ssr: false, loading: () => null }); 
 const AnimationObserver = dynamic(() => import("@/helper/animations/AnimationObserver").then((mod) => mod.default), { ssr: false, loading: () => null }); 
-
-// Title is instantiated as a class, not used as a React component 
+const ViewportProvider = dynamic(() => import("@/helper/ViewportProvider").then((mod) => mod.default), { ssr: false, loading: () => null }); 
+ 
 
 const Helper = () => {
 	return (
 		<> 
 			<MotionObserver /> 
 			<AnimationObserver/>
-			{/* Title is not a React component, so it cannot be used here */}
+			<ViewportProvider /> 
 		</>
 	);
 };

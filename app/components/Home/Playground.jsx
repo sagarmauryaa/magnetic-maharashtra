@@ -29,26 +29,23 @@ const Playground = () => {
     // }
 
     const handleScroll = () => {
-      if (typeof window === "undefined") return;
-      if (sectionRef.current && sectorInsightsRef.current) {
-        const sectionRect = sectionRef.current.getBoundingClientRect();
-        const sectionBottom = sectionRect.bottom;
-        const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
-        const insightsTop = insightsRect.top;
-        const sectionTop = sectionRect.top;
+      if (typeof window === "undefined" || !sectionRef.current || !sectorInsightsRef.current) return;
 
-        // Make sticky only when the insights section reaches the top of viewport
-        // And unstick when scrolling back up when original position is visible
-        if (
-          insightsTop <= 0 &&
-          sectionBottom > spacerHeight &&
-          sectionTop < -250
-        ) {
-          if (!isSticky) setIsSticky(true);
-        } else {
-          if (isSticky) setIsSticky(false);
-        }
+      // Use requestAnimationFrame for better performance
+      requestAnimationFrame(() => {
+      const sectionRect = sectionRef.current.getBoundingClientRect();
+      const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
+      
+      const shouldBeSticky = 
+        insightsRect.top <= 0 && 
+        sectionRect.bottom > spacerHeight && 
+        sectionRect.top < -250;
+
+      // Only update state if it actually changes
+      if (shouldBeSticky !== isSticky) {
+        setIsSticky(shouldBeSticky);
       }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -107,20 +104,21 @@ const Playground = () => {
           </div>
         </div>
 
-        <div
-          className={`${styles.sectorInsights} ${isSticky ? styles.sticky : ""
-            }`}
-          ref={sectorInsightsRef}
-        >
-          <p className={styles.sectorInsightsTitle}>Sector Insights</p>
-          <div className={styles.sectorsInsightsContainer}>
-            <div className={styles.layoutHFlex}>
-              <div className={styles.circleIndicator}></div>
-              <p>Share in India&apos;s Output</p>
-            </div>
-            <div className={styles.layoutHFlex}>
-              <div className={styles.circleIndicator}></div>
-              <p>Share in India&apos;s Exports</p>
+        <div className={`${styles.sectorInsightsWrapper} ${isSticky ? styles.sticky : ""}`} ref={sectorInsightsRef}>
+
+          <div
+            className={`${styles.sectorInsights}`}
+          >
+            <p className={styles.sectorInsightsTitle}>Sector Insights</p>
+            <div className={styles.sectorsInsightsContainer}>
+              <div className={styles.layoutHFlex}>
+                <div className={styles.circleIndicator}></div>
+                <p>Share in India&apos;s Output</p>
+              </div>
+              <div className={styles.layoutHFlex}>
+                <div className={styles.circleIndicator}></div>
+                <p>Share in India&apos;s Exports</p>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +138,7 @@ const Playground = () => {
               aria-controls=""
               observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
               className={styles.playgroundGridItem}
-              style={{ gridArea: `${item.gridArea}` }} 
+              style={{ gridArea: `${item.gridArea}` }}
             >
               <div className={`${styles.playgroundGridItemImage} anim-imageContainer`}>
                 <div className="anim-imageWrapper">
