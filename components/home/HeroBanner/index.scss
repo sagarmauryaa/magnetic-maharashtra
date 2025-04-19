@@ -56,10 +56,12 @@
             grid-column: 2 / span 3;
         }
 
+        span.wordWrapper:nth-child(2),
         span:nth-child(2) {
             color: var(--orange-color);
         }
 
+        span.wordWrapper:first-child,
         span:first-child {
             color: var(--orange-color);
             margin-left: 20%;

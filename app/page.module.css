@@ -103,7 +103,9 @@ main.heroVideoContainer {
 .subTitle p:nth-child(2) {
   color: var(--body-grey-color);
 }
-
+/* .sectorInsightsSec{
+  max
+} */
 /* Base styles for sector-insights */
 .sectorInsights {
   width: 100%;

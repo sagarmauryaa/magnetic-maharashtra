@@ -1,4 +1,4 @@
- 
+
 
 'use client'
 
@@ -24,20 +24,20 @@ import Envelop from "./components/Home/Envelop";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 import UseScreenSize from "./components/common/UseScreenSize";
-import Flag from "./components/common/Flag"; 
+import Flag from "./components/common/Flag";
 import HeroBanner from "@/components/home/HeroBanner";
 
 export default function Home() {
   const isMobile = UseScreenSize();
   return (
-    <> 
-      <HeroBanner/>
+    <>
+      <HeroBanner />
       <Popup />
       <ProofofProgress />
       <Playground />
       <Brilliance />
       <Statistics />
-    <Sustainability />
+      <Sustainability />
       {/*  {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
       <GlobalBusiness />
       <Milestones />
