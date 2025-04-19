@@ -1,0 +1,46 @@
+html.-disableTransitionsAndAnimations,
+html.-disableTransitionsAndAnimations * {
+	/* 	transition-duration: 0ms !important;
+	animation-duration: 0ms !important; */
+}
+/* Anim Delays */
+// $nAnimDelays: 100;
+$nAnimDelays: 200;
+@mixin del__x {
+	@for $i from 1 through $nAnimDelays {
+		.del__#{$i*20} {
+			animation-delay: $i * 20ms;
+		}
+	}
+}
+/* Anim Durations */
+$nAnimDurations: 50;
+@mixin dur__x {
+	@for $i from 1 through $nAnimDurations {
+		.dur__#{$i*100} {
+			animation-duration: $i * 100ms;
+		}
+	}
+}
+/* Animation Duration */
+@include dur__x;
+/* Animation Delays */
+@include del__x;
+/* Keyframe Animations */
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, 8px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
+.floating {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}

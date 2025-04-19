@@ -113,38 +113,38 @@ export default function Home() {
     }
   });
 
-  useGSAP(() => {
-    const mm = gsap.matchMedia();
-    mm.add("(min-width: 768px) and (max-width: 1599px)", () => {
-      // New padding animation
-      gsap.to(wrapperRef.current, {
-        maxWidth: "1600px",
-        padding: "2.5rem",
-        ease: "linear",
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top top",
-          end: "+=300",
-          scrub: 0,
-          markers: false,
-        },
-      });
-    });
+  // useGSAP(() => {
+  //   const mm = gsap.matchMedia();
+  //   mm.add("(min-width: 768px) and (max-width: 1599px)", () => {
+  //     // New padding animation
+  //     gsap.to(wrapperRef.current, {
+  //       maxWidth: "1600px",
+  //       padding: "2.5rem",
+  //       ease: "linear",
+  //       scrollTrigger: {
+  //         trigger: wrapperRef.current,
+  //         start: "top top",
+  //         end: "+=300",
+  //         scrub: 0,
+  //         markers: false,
+  //       },
+  //     });
+  //   });
 
-    mm.add("(min-width: 1600px)", () => {
-      gsap.to(wrapperRef.current, {
-        maxWidth: "1600px",
-        ease: "linear",
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top top",
-          end: "+=300",
-          scrub: 0,
-          markers: false,
-        },
-      });
-    });
-  });
+  //   mm.add("(min-width: 1600px)", () => {
+  //     gsap.to(wrapperRef.current, {
+  //       maxWidth: "1600px",
+  //       ease: "linear",
+  //       scrollTrigger: {
+  //         trigger: wrapperRef.current,
+  //         start: "top top",
+  //         end: "+=300",
+  //         scrub: 0,
+  //         markers: false,
+  //       },
+  //     });
+  //   });
+  // });
 
   // useGSAP(() => {
   //   gsap
@@ -252,18 +252,12 @@ export default function Home() {
       </main>
 
       <section
-        ref={heroHeadingSectionRef}
         className={styles.heroHeadingSectionContainer}
       >
-        <section ref={heroHeadingRef} className={styles.heroHeadingSection}>
-          <h1 className={styles.heroHeading}>
-            <span className={styles.heroHeadingSpan}>
-              <span className={styles.heroHeadingSpanHighlight}>
-                {" "}
+        <section className={styles.heroHeadingSection}>
+          <h1 className={`${styles.heroHeading} stagger-fade__el-1`} observer-animation="title"> 
                 Magnetic Maharashtra
-              </span>{" "}
               is your hub for
-            </span>{" "}
             growth, with endless opportunities, smart policies, and dedicated
             support to ensure your success. Here, your ambitions can truly take
             flight.

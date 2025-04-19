@@ -1,0 +1,22 @@
+/* Animated Titles */
+.anim-title[observer-animation="title"] {
+	opacity: 0;
+	.wordWrapper {
+		/* display:inline-flex seems to cause blurryness in Deepak's and Sanjana's systems */
+		display: inline-flex;
+		overflow: hidden;
+		padding-bottom: 17px;
+		margin-bottom: -17px;
+	}
+	.word {
+		transform-origin: left center;
+		vertical-align: top;
+	}
+	&:not(.is-unobserved) {
+		/* Promoting this to another layer seems to cause blurryness in Deepak's and Sanjana's systems */
+		will-change: opacity;
+		.word {
+			will-change: opacity, transform;
+		}
+	}
+}

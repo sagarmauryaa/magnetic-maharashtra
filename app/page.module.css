@@ -52,14 +52,21 @@ main.heroVideoContainer {
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: -1.2px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .heroHeadingSpanHighlight {
-  color: var(--orange-color);
-
+  color: var(--orange-color); 
   margin-left: 20%;
 }
-
+.heroHeading span:nth-child(2){
+  color: var(--orange-color); 
+}
+.heroHeading span:first-child{
+  color: var(--orange-color); 
+  margin-left: 20%;
+}
 .playgroundSection {
   position: relative;
   padding-block: 80px;

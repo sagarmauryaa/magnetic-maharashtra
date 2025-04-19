@@ -1,0 +1,72 @@
+/* Animated Paragraphs */
+.anim-paragraph[observer-animation="paragraph"] {
+	opacity: 0;
+	.word {
+		transform-origin: left center;
+	}
+	.wordWrapper {
+		/* display:inline-flex seems to cause blurryness in Deepak's and Sanjana's systems */
+		display: inline-flex;
+		overflow: hidden;
+		padding-bottom: 5px;
+		margin-bottom: -5px;
+	}
+	&:not(.is-unobserved) {
+		/* Promoting this to another layer seems to cause blurryness in Deepak's and Sanjana's systems */
+		will-change: opacity;
+		.word {
+			will-change: opacity, transform;
+		}
+	}
+}
+
+/* Elements with a Fade In Animation */
+[observer-animation="fadeInUpPara"] {
+	opacity: 0;
+	transform: translate3d(0, 10px, 0);
+	will-change: opacity, transform;
+}
+[observer-animation="fadeInUpPara"].fadeInUpPara {
+	animation-name: fadeInUp;
+	animation-duration: 0.6s;
+	animation-timing-function: $easeInOut;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 10px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInUp20 {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInUp30 {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
