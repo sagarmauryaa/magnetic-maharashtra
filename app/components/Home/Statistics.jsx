@@ -1,225 +1,88 @@
-import { useGSAP } from "@gsap/react";
-import styles from "./Statistics.module.css";
-import gsap from "gsap/all";
-import { useRef } from "react";
+ 
+import styles from "./Statistics.module.css"; 
 import Image from "next/image";
 
 const Statistics = () => {
-  const heroContentRef = useRef([]);
-  const containerRef = useRef([]);
-  const imageRef = useRef([]);
-  const svgContentRef = useRef([]);
-  const pathsRef = useRef([]);
-
-  useGSAP(() => {
-    containerRef.current.forEach((item) => {
-      gsap.set(item, { opacity: 0, yPercent: 100 });
-    });
-
-    svgContentRef.current.forEach((item) => {
-      gsap.set(item, { opacity: 0 });
-    });
-
-    heroContentRef.current.forEach((heroContent, idx) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: heroContent,
-          start: "top 75%",
-          onEnter: () => {
-            gsap
-              .timeline()
-              .to(containerRef.current[idx], {
-                duration: 1,
-                yPercent: 0,
-                opacity: 1,
-                ease: "power4.inOut",
-              })
-              .to(
-                imageRef.current[idx],
-                {
-                  duration: 1,
-                  clipPath: "inset(0 0 0% 0)",
-                  ease: "power4.inOut",
-                },
-                "<=0.2"
-              )
-              .to(
-                svgContentRef.current[idx],
-                {
-                  duration: 1,
-                  opacity: 1,
-                  ease: "power4.inOut",
-                  onComplete: () => {
-                    pathsRef.current.forEach((pathId, idx) => {
-                      // console.log(pathsRef.current[idx]);
-                      if (!pathId) {
-                        return;
-                      }
-
-                      gsap.to(pathId, {
-                        strokeDashoffset: 1,
-                        duration: 0.5,
-                        ease: "linear",
-                        delay: idx * 0.1,
-                      });
-                    });
-                  },
-                },
-                "<=0.2"
-              );
-          },
-        },
-      });
-    });
-  });
+  
+  const statsData = [
+    {
+      heading: "<span><span class='higlight'>Manufacturing&nbsp;&hyphen;&nbsp;</span></span>  Made in Maharashtra",
+      content: " We lead in automotive, electronics, and textiles, driving innovation and quality.",
+      "img": "/images/Statistics/Manufacturing.png",
+      alt: "Manufacturing",
+      "stats": "/images/Statistics/Manufacturing.svg"
+    },
+    {
+      heading: "<span><span class='higlight'>Services&nbsp;&hyphen;&nbsp;</span></span>  Innovation Delivered",
+      content: " From IT to healthcare, Maharashtra’s service sector is booming, powering growth across industries.",
+      "img": "/images/Statistics/Services.webp",
+      alt: "Services",
+      "stats": "/images/Statistics/Services.svg"
+    },
+    {
+      heading: "<span><span class='higlight'>Infrastructure&nbsp;&hyphen;&nbsp;</span></span>  Built to Grow",
+      content: "With world-class roads, ports, and airports, Maharashtra’s infrastructure connects people and opportunities seamlessly.",
+      "img": "/images/Statistics/Infrastructure.png",
+      alt: "Infrastructure",
+      "stats": "/images/Statistics/Infrastructure.svg"
+    }
+  ]
 
   return (
-    <section id={styles.statisticsSection}>
+    <section id={styles.statisticsSection} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
       <div className={styles.dataContainer}>
-        <div
-          ref={(el) => (heroContentRef.current[0] = el)}
-          className={styles.parentContainer}
-        >
-          <div
-            ref={(el) => (containerRef.current[0] = el)}
-            className={styles.contentContainer}
-          >
-            <h2 className={styles.heading}>
-              <span>
-                Manufacturing <span>-</span>{" "}
-              </span>
-              <br></br>
-              Made in Maharashtra
-            </h2>
-            <p>
-              We lead in automotive, electronics, and textiles, driving
-              innovation and quality.
-            </p>
-          </div>
-          <div
-            ref={(el) => (imageRef.current[0] = el)}
-            className={styles.contentImage}
-          >
-            <Image
-              src="/images/Statistics/Manufacturing.png"
-              alt="Manufacturing"
-              width={410}
-              height={507}
-              quality={100}
-              priority
-            />
-          </div>
+        {
+          statsData.map((data, index) =>
+            <div
+              key={index} 
+              className={styles.parentContainer}
+              observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
+            >
+              <div 
+                className={styles.contentContainer}
+              >
+                <h2 className={styles.heading} observer-animation="title" dangerouslySetInnerHTML={{ __html: data.heading }} />
 
-          <div
-            ref={(el) => (svgContentRef.current[0] = el)}
-            className={styles.svgContainer}
-          >
-            <Image
-              src="/images/Statistics/Manufacturing.svg"
-              alt="Manufacturing"
-              width={442}
-              height={277}
-              quality={100}
-            />
-          </div>
-        </div>
-        <div
-          ref={(el) => (heroContentRef.current[1] = el)}
-          className={styles.parentContainer}
-        >
-          <div
-            ref={(el) => (containerRef.current[1] = el)}
-            className={styles.contentContainer}
-          >
-            <h2 className={styles.heading}>
-              <span>
-                Services <span>-</span>{" "}
-              </span>
-              <br></br>
-              Innovation Delivered
-            </h2>
-            <p>
-              From IT to healthcare, Maharashtra’s service sector is booming,
-              powering growth across industries.
-            </p>
-          </div>
-          <div
-            ref={(el) => (imageRef.current[1] = el)}
-            className={styles.contentImage}
-          >
-            <Image
-              src="/images/Statistics/Services.webp"
-              alt="Services"
-              width={100}
-              height={100}
-              quality={100}
-              unoptimized
-              priority
-            />
-          </div>
+                <p observer-animation="title" >
+                  {data.content}
+                </p>
+              </div>
+              <div 
+                className={styles.contentImage + ' anim-imageContainer'}
+              >
+                <div className="anim-imageWrapper">
+                  <Image
+                    src={data.img}
+                    className={` anim-image`}
+                    alt={data.alt}
+                    width={410}
+                    height={507}
+                    quality={100}
+                    priority
+                  />
+                </div>
+              </div>
 
-          <div
-            ref={(el) => (svgContentRef.current[1] = el)}
-            className={styles.svgContainer}
-          >
-            <Image
-              src="/images/Statistics/Services.svg"
-              alt="Services"
-              width={442}
-              height={277}
-              quality={100}
-            />
-          </div>
-        </div>
-        <div
-          ref={(el) => (heroContentRef.current[2] = el)}
-          className={styles.parentContainer}
-        >
-          <div
-            ref={(el) => (containerRef.current[2] = el)}
-            className={styles.contentContainer}
-          >
-            <h2 className={styles.heading}>
-              <span>
-                Infrastructure <span>-</span>{" "}
-              </span>
-              <br></br>
-              Built to Grow
-            </h2>
-            <p>
-              With world-class roads, ports, and airports, Maharashtra’s
-              infrastructure connects people and opportunities seamlessly.
-            </p>
-          </div>
-          <div
-            ref={(el) => (imageRef.current[2] = el)}
-            className={styles.contentImage}
-          >
-            <Image
-              src="/images/Statistics/Infrastructure.png"
-              alt="Infrastructure"
-              width={100}
-              height={100}
-              quality={100}
-              unoptimized
-              priority
-            />
-          </div>
-
-          <div
-            ref={(el) => (svgContentRef.current[2] = el)}
-            className={styles.svgContainer}
-          >
-            <Image
-              src="/images/Statistics/Infrastructure.svg"
-              alt="Infrastructure"
-              width={442}
-              height={277}
-              quality={100}
-            />
-          </div>
-        </div>
+              <div 
+                className={styles.svgContainer}
+              >
+                <Image
+                  src={data.stats}
+                  alt={data.alt}
+                  width={442}
+                  height={277}
+                  quality={100}
+                />
+              </div>
+              {
+                index < statsData.length - 1 &&
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+              }
+            </div>
+          )
+        }
       </div>
+      <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
     </section>
   );
 };

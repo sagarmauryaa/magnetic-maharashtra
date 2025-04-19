@@ -1,7 +1,13 @@
 @use "@/styles/abstracts/" as *;
 
 .ui-heroBanner {
+    position: relative;
     padding-inline: var(--container-padding);
+    padding-block-end: var(--space-80);
+
+    @include media("<md") {
+        padding-block-end: var(--space-60);
+    }
 
     &__wrapper {
         width: 100%;
@@ -9,7 +15,7 @@
         margin-inline: auto;
         display: flex;
         flex-direction: column;
-        gap: var(--space-80);   
+        gap: var(--space-80);
 
         @include media("<md") {
             gap: var(--space-60);
@@ -17,12 +23,14 @@
     }
 
     &__video {
-        height: 100dvh;
+        height: calc(100dvh - var(--container-padding) * 2);
+        margin-top: var(--container-padding);
         width: 100%;
         object-fit: cover;
+        clip-path: inset(1px 1px);
 
         @include media("<md") {
-            margin-inline-start: calc(var(--space-16) * -1); 
+            margin-inline-start: calc(var(--space-16) * -1);
             width: calc(100% + var(--space-16)*2);
         }
     }

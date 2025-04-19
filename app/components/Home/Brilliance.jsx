@@ -47,7 +47,7 @@ function Brilliance() {
     <div className={styles.brillianceContainer}>
       <div className={styles.brilliance}>
         <div className={styles.brillianceLeft}>
-          <div className={styles.brillianceTitle}>The Base of Brilliance</div>
+          <div className={styles.brillianceTitle} observer-animation="title">The Base of Brilliance</div>
         </div>
         <div className={styles.brillianceRight}>
           <div className={styles.brillianceElements}>
@@ -171,24 +171,7 @@ function Brilliance() {
                 With 70% employable talent, it powers advanced industries and
                 drives economic growth.
               </div>
-            </div>
-            {/* <div className='divline'>
-              <svg
-                className={styles.line}
-                width='785'
-                height='2'
-                viewBox='0 0 785 2'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  ref={(el) => (pathRef.current[3] = el)}
-                  id='line'
-                  d='M0 1L785 1.00003'
-                  stroke='#D1D1D2'
-                />
-              </svg>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import './index.scss';
 const HeroBanner = () => {
   return (
-    <div className='ui-heroBanner'>
+    <section className='ui-heroBanner' observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
       <div className="ui-heroBanner__wrapper">
         <video
           className="ui-heroBanner__video"
@@ -38,7 +38,8 @@ const HeroBanner = () => {
           </h1>
         </div>
       </div>
-    </div>
+      <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+    </section>
   )
 }
 

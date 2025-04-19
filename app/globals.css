@@ -15,7 +15,7 @@
   --background-color: hsl(0, 0%, 94%);
   --white-color: hsl(0, 0%, 100%);
   --colors--background-grey: hsl(0, 0%, 94%);
-  --black-color: hsl(0, 0%, 0%); */
+   */
 
   --font-ppneumontreal-medium: "PP Neu Montreal", sans-serif;
   --font-ppneumontreal-book: "PP Neu Montreal Book", sans-serif;
@@ -99,4 +99,8 @@ header {
   flex-direction: row;
   align-items: flex-start;
   display: flex;
+}
+span.wordWrapper.higlight {
+  width: 100%;
+  color: var(--orange-color);
 }
