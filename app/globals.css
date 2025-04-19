@@ -5,7 +5,7 @@
 }
 
 :root {
-  --orange-color: hsl(19, 100%, 50%);
+  /* --orange-color: hsl(19, 100%, 50%);
   --green-color: hsl(161, 97%, 29%);
   --black-color: hsl(0, 0%, 0%);
   --dark-grey-color: hsl(213, 9%, 19%);
@@ -15,6 +15,7 @@
   --background-color: hsl(0, 0%, 94%);
   --white-color: hsl(0, 0%, 100%);
   --colors--background-grey: hsl(0, 0%, 94%);
+  --black-color: hsl(0, 0%, 0%); */
 
   --font-ppneumontreal-medium: "PP Neu Montreal", sans-serif;
   --font-ppneumontreal-book: "PP Neu Montreal Book", sans-serif;

@@ -9,7 +9,7 @@
         margin-inline: auto;
         display: flex;
         flex-direction: column;
-        gap: var(--space-80);
+        gap: var(--space-80);   
 
         @include media("<md") {
             gap: var(--space-60);
