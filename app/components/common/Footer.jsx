@@ -175,9 +175,9 @@ function Footer() {
         </div>
       </div>
       <div className={styles.copyright}>
-        <div>
+        {/* <div>
           Copyright © 2024 Government of Maharashtra. All Rights Reserved.
-        </div>
+        </div> */}
         {/* <div>Website by Stuvio</div> */}
       </div>
     </section>

@@ -45,7 +45,7 @@ input,
 textarea,
 select {
   color: var(--black-p);
-  font-family: "Inter", serif;
+  font: inherit;
 }
 
 body {
@@ -115,9 +115,11 @@ body.--case-study-modal main {
 // video::-webkit-media-controls-volume-slider {
 //   display: none;
 // }
+// .lenis.lenis-stopped {
+//   padding-right: var(--scrollbar-width);
+//   overflow: hidden;
+// }
 body[data-scroll-locked] {
-  padding-right: var(--scrollbar-width);
-  overflow: hidden;
   touch-action: none;
 }
 

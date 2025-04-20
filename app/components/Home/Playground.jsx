@@ -39,7 +39,7 @@ const Playground = () => {
       const shouldBeSticky = 
         insightsRect.top <= 0 && 
         sectionRect.bottom > spacerHeight && 
-        sectionRect.top < -250;
+        sectionRect.top < -280;
 
       // Only update state if it actually changes
       if (shouldBeSticky !== isSticky) {

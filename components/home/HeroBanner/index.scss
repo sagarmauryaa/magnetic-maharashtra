@@ -28,8 +28,9 @@
         width: 100%;
         object-fit: cover;
         clip-path: inset(1px 1px);
+        object-position: right;
 
-        @include media("<md") {
+        @include media("<=md") {
             object-position: left bottom;
         }
     }
@@ -39,7 +40,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: var(--space-32);
 
-        @include media("<md") {
+        @include media("<=md") {
             grid-template-columns: 1fr;
         }
     }

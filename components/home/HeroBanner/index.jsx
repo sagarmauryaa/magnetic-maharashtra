@@ -14,18 +14,13 @@ const HeroBanner = () => {
         >
           <source
             src="https://ik.imagekit.io/bn4qs1mj3/DesktopHeroVideoHQ.mp4?updatedAt=1744977909415"
-            media="all and (min-width: 1024px)"
+            media="all and (min-width: 1025px)"
             type="video/mp4"
-          />
-          <source
-            src="/videos/tablet.mp4"
-            media="(min-width: 481px) and (max-width: 1023px)"
-            type="video/mp4"
-          />
+          /> 
           <source
             src="/videos/MobileHeroVideo.mp4"
             type="video/mp4"
-            media="all and (max-width: 480px)"
+            media="all and (max-width: 1024px)"
           />
         </video>
         <div className='ui-heroBanner__content'> 

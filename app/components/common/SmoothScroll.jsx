@@ -1,7 +1,17 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+"use client"; 
+import { disableScroll, enableScroll } from "@/helper/utils/scroll";
 import styles from "./SmoothScroll.module.css";
+import { useEffect, useRef, createContext, useContext } from "react";
+
+const ScrollContext = createContext(null);
+
+export const useScroll = () => {
+  const context = useContext(ScrollContext);
+  if (!context) {
+    throw new Error("useScroll must be used within a SmoothScrollProvider");
+  }
+  return context;
+};
 
 export default function SmoothScroll({ children }) {
   const locomotiveScrollRef = useRef(null);
@@ -42,7 +52,6 @@ export default function SmoothScroll({ children }) {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
       if (locomotiveScrollRef.current) {
@@ -51,9 +60,25 @@ export default function SmoothScroll({ children }) {
     };
   }, []);
 
+  const lockScroll = () => {
+    if (locomotiveScrollRef.current) { 
+      disableScroll()
+      locomotiveScrollRef.current.stop();
+    }
+  };
+  
+  const unlockScroll = () => {
+    if (locomotiveScrollRef.current) {
+      enableScroll()
+      locomotiveScrollRef.current.start();
+    }
+  };
+
   return (
-    <div data-scroll-container className={styles.smoothScroll}>
-      {children}
-    </div>
+    <ScrollContext.Provider value={{ lockScroll, unlockScroll }}>
+      <div data-scroll-container className={styles.smoothScroll}>
+        {children}
+      </div>
+    </ScrollContext.Provider>
   );
 }

@@ -4,12 +4,14 @@ import styles from "../../page.module.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { globalBusinessData } from "../../globalDestinationData";
-import { useAppContext } from "../AppContext";
+import { useAppContext } from "../AppContext"; 
+import { useScroll } from "../common/SmoothScroll";
 // import SplitType from "split-type"
 
 const Popup = () => {
   const { state, setState } = useAppContext();
   const { selectedIndex, isActive } = state;
+  const { lockScroll, unlockScroll } = useScroll()
 
   let cursor = useRef();
   let popup = useRef();
@@ -49,25 +51,24 @@ const Popup = () => {
   }
 
   useGSAP(() => {
-    let popuptl = gsap.timeline();
-
+    let popuptl = gsap.timeline(); 
+    isActive ? lockScroll() : unlockScroll();
     popuptl
       .to(popup.current, {
-        scaleY: isActive ? "1" : "0",
         opacity: isActive ? "1" : "0",
         pointerEvents: isActive ? "all" : "none",
-        duration: 0.65,
+        duration: 0.4,
         ease: "power1.inOut",
       })
-      .to(popupDesc.current, {
-        opacity: isActive ? "1" : "0",
-        duration: "0.65",
-      })
-      .to(
-        `.${styles.imgOverlay}`,
-        { x: isActive ? "100%" : "0%", duration: "1" },
-        "<=0.1"
-      );
+    // .to(popupDesc.current, {
+    //   opacity: isActive ? "1" : "0",
+    //   duration: "0.65",
+    // })
+    // .to(
+    //   `.${styles.imgOverlay}`,
+    //   { y: isActive ? "-100%" : "0%", duration: ".8" },
+    //   "<=0.1"
+    // );
   }, [isActive]);
 
   useEffect(() => {
@@ -88,11 +89,13 @@ const Popup = () => {
       onMouseMove={moveCursor}
       onClick={handleClose}
     >
-      <div ref={cursor} className={styles.cursor}></div>
-      <p ref={popupDesc} className={styles.popupDescription}></p>
-      <div className={styles.popupImageContainer}>
-        <img ref={popupImage} className={styles.popupImage} />
-        <div ref={imgOverlay} className={styles.imgOverlay}></div>
+      <div className={styles.popupWrapper}>
+        <div ref={cursor} className={styles.cursor}></div>
+        <p ref={popupDesc} className={styles.popupDescription}></p>
+        <div className={styles.popupImageContainer}>
+          <img ref={popupImage} className={styles.popupImage} />
+          {/* <div ref={imgOverlay} className={styles.imgOverlay}></div> */}
+        </div>
       </div>
     </div>
   );
