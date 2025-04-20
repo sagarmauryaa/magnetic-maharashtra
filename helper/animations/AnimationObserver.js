@@ -7,11 +7,12 @@ import FadeInUpPara from "./FadeInUpPara";
 import Video from "./Video";
 import Gif from "./Gif";
 import DeviceDetection from "../classes/DeviceDetection";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+
 
 const AnimationObserver = () => {
   const elementRef = useRef();
-  const router =  useRouter()
+  const pathname = usePathname();
   const animationSelectors = {
     cssClassAnimations: '[observer-animation="cssClass"]',
     titleAnimations: '[observer-animation="title"]',
@@ -26,9 +27,9 @@ const AnimationObserver = () => {
   const animationInstancesRef = useRef([]);
   const intersectionObserverRef = useRef(null);
 
-  useEffect(()=>{
+  useEffect(()=>{ 
     elementRef.current =  document.documentElement
-  }, [router])
+  }, [pathname]);
   useEffect(() => {
     queryDOM();
     createObserver();
@@ -37,7 +38,7 @@ const AnimationObserver = () => {
     return () => {
       unobserve();
     };
-  }, [elementRef]);
+  }, [elementRef, pathname]);
 
   const queryDOM = () => {
     const elements = {};
