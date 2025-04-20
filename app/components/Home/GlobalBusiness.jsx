@@ -14,7 +14,6 @@ const GlobalBusiness = () => {
   const scrollTriggerRef = useRef();
   const cardRef = useRef([]);
   const { state, setState } = useAppContext();
-  const { selectedIndex, isActive } = state;
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
@@ -26,64 +25,94 @@ const GlobalBusiness = () => {
       }
     });
 
-    mm.add("(min-width:768px) and (max-width:1598px)", () => {
-      const scrollWidth =
-        scrollSectionRef.current.scrollWidth -
-        scrollSectionRef.current.clientWidth;
+    // mm.add("(min-width:768px) and (max-width:1598px)", () => {
+    //   const scrollWidth =
+    //     scrollSectionRef.current.scrollWidth -
+    //     scrollSectionRef.current.clientWidth;
 
-      gsap.to(scrollSectionRef.current, {
-        x: -scrollWidth,
-        ease: "none",
-        scrollTrigger: {
-          trigger: globalBusinessRef.current,
-          markers: false, // Set to false in production
-          start: "35% top",
-          end: `+=${scrollWidth}`,
-          scrub: 1,
-          pin: true,
-          pinSpacing: true,
-          invalidateOnRefresh: true,
-          refreshPriority: 5,
-          anticipatePin: 1,
-          onLeave: (self) => {
-            // Ensure proper unpinning when leaving section
-            self.disable(false);
-            setTimeout(() => self.enable(false), 100);
-          },
+    //   gsap.to(scrollSectionRef.current, {
+    //     x: -scrollWidth,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: globalBusinessRef.current,
+    //       markers: false, // Set to false in production
+    //       start: "35% top",
+    //       end: `+=${scrollWidth}`,
+    //       scrub: 1,
+    //       pin: true,
+    //       pinSpacing: true,
+    //       invalidateOnRefresh: true,
+    //       refreshPriority: 5,
+    //       anticipatePin: 1,
+    //       onLeave: (self) => {
+    //         // Ensure proper unpinning when leaving section
+    //         self.disable(false);
+    //         setTimeout(() => self.enable(false), 100);
+    //       },
+    //     },
+    //   });
+    // });
+
+    // mm.add("(min-width:1599px)", () => {
+    //   const scrollWidth =
+    //     scrollSectionRef.current.scrollWidth -
+    //     scrollSectionRef.current.clientWidth;
+
+    //   gsap.to(scrollSectionRef.current, {
+    //     x: -scrollWidth,
+    //     ease: "linear",
+    //     scrollTrigger: {
+    //       trigger: globalBusinessRef.current,
+    //       markers: false, // Set to false in production
+    //       start: "top top",
+    //       end: `+=${scrollWidth}`, // Add extra space for larger screens
+    //       scrub: 0.6,
+    //       pin: true,
+    //       pinSpacing: true,
+    //       invalidateOnRefresh: true,
+    //       anticipatePin: 1,
+    //       onLeaveBack: (self) => {
+    //         globalBusinessRef.current.style.marginBottom = "0px";
+    //       },
+    //       onLeave: (self) => {
+    //         // Force unpin when section is left
+    //         self.disable(false);
+    //         setTimeout(() => self.enable(false), 100);
+    //         globalBusinessRef.current.style.marginBottom = "0px";
+    //       },
+    //     },
+    //   });
+    // });
+    // Inside your useGSAP hook, update the animation configurations:
+
+
+    const scrollWidth =
+      scrollSectionRef.current.scrollWidth -
+      scrollSectionRef.current.clientWidth;
+
+    gsap.to(scrollSectionRef.current, {
+      x: -scrollWidth,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: globalBusinessRef.current,
+        start: "top top",
+        end: `+=${scrollWidth}`,
+        scrub: 1.5,
+        pin: true,
+        pinSpacing: true,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        smoothTouch: true,
+        snap: {
+          snapTo: 1,
+          duration: 0.5,
+          ease: "power1.inOut",
         },
-      });
+      },
     });
 
-    mm.add("(min-width:1599px)", () => {
-      const scrollWidth =
-        scrollSectionRef.current.scrollWidth -
-        scrollSectionRef.current.clientWidth;
 
-      gsap.to(scrollSectionRef.current, {
-        x: -scrollWidth,
-        ease: "linear",
-        scrollTrigger: {
-          trigger: globalBusinessRef.current,
-          markers: false, // Set to false in production
-          start: "top top",
-          end: `+=${scrollWidth}`, // Add extra space for larger screens
-          scrub: 0.6,
-          pin: true,
-          pinSpacing: true,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
-          onLeaveBack: (self) => {
-            globalBusinessRef.current.style.marginBottom = "0px";
-          },
-          onLeave: (self) => {
-            // Force unpin when section is left
-            self.disable(false);
-            setTimeout(() => self.enable(false), 100);
-            globalBusinessRef.current.style.marginBottom = "0px";
-          },
-        },
-      });
-    });
+
   });
 
   const handleCardClick = (id) => {
@@ -109,7 +138,7 @@ const GlobalBusiness = () => {
           {globalBusinessData.map((business, index) => (
             <div
               ref={(el) => (cardRef.current[index] = el)}
-              className={`${business.class === "largeCard"
+              className={`${styles.globalBusinessCard} ${business.class === "largeCard"
                 ? styles.largeCard
                 : styles.smallCard
                 }`}
@@ -122,18 +151,9 @@ const GlobalBusiness = () => {
               role="button"
               tabIndex={0}
             >
-              {/* <Image
-                className="anim-image"
-                src={business.imgPath}
-                alt={business.name}
-                width={100}
-                height={100}
-                quality={100}
-                unoptimized
-              /> */}
-              <div className="anim-imageContainer">
+              <div className={`${styles.globalBusinessImgWrapper} anim-imageContainer`}>
                 <div className="anim-imageWrapper">
-                  <Image 
+                  <Image
                     className="anim-image"
                     src={business.imgPath}
                     alt={business.name}

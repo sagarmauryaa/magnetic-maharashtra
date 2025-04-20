@@ -191,7 +191,7 @@ main.heroVideoContainer {
   transform-origin: top left;
   transition: transform 0.3s ease-in-out;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-} 
+}
 
 /* Spacer to prevent content jump */
 .sectorsInsightsSpacer {
@@ -203,10 +203,11 @@ main.heroVideoContainer {
 /* Responsive styles for sticky sector-insights */
 
 @media screen and (max-width: 768px) {
-  .sectorInsights{
+  .sectorInsights {
     gap: 0;
   }
 }
+
 @media screen and (max-width: 480px) {
   .playgroundSection .container {
     padding-inline: 0;
@@ -458,14 +459,33 @@ main.heroVideoContainer {
 .scrollSection h3 {
   margin-top: 22px;
 }
+/* 
+.globalBusinessCard:last-child {
+  margin-inline-end: calc(var(--gutter-width) * -1);
+}
 
-.largeCard .anim-imageContainer,
+.largeCard {
+  width: var(--inner-colspan6);
+  flex-shrink: 0;
+}
+
+.smallCard {
+  width: var(--inner-colspan3);
+  flex-shrink: 0;
+}
+
+.globalBusinessImgWrapper {
+  width: 100%;
+  aspect-ratio: 585/432;
+} */
+
+.largeCard .globalBusinessImgWrapper,
 .largeCard img {
   height: 438px;
   width: 585px;
 }
 
-.smallCard .anim-imageContainer,
+.smallCard .globalBusinessImgWrapper,
 .smallCard img {
   height: 208px;
   width: 278px;
