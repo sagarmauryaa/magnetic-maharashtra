@@ -7,9 +7,11 @@ import FadeInUpPara from "./FadeInUpPara";
 import Video from "./Video";
 import Gif from "./Gif";
 import DeviceDetection from "../classes/DeviceDetection";
+import { useRouter } from "next/navigation";
 
 const AnimationObserver = () => {
   const elementRef = useRef();
+  const router =  useRouter()
   const animationSelectors = {
     cssClassAnimations: '[observer-animation="cssClass"]',
     titleAnimations: '[observer-animation="title"]',
@@ -26,7 +28,7 @@ const AnimationObserver = () => {
 
   useEffect(()=>{
     elementRef.current =  document.documentElement
-  },[])
+  }, [router])
   useEffect(() => {
     queryDOM();
     createObserver();

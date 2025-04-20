@@ -2435,16 +2435,18 @@ main.heroVideoContainer {
 }
 
 @media (max-width: 480px) {
+ 
+
   .everythingContentSection {
     padding-inline: 1rem;
-
+    padding-block: var(--space-40);
     box-sizing: border-box;
   }
 
   .everythingTextContent {
     width: 100%;
     text-align: start;
-    margin-top: 2.5rem;
+    margin-top: 0;
   }
 
   .everythingImageContent {
@@ -2457,7 +2459,7 @@ main.heroVideoContainer {
   }
 
   .everythingWrapper {
-    height: 100vh;
+    height: auto;
   }
 
   .everythingHeading,
