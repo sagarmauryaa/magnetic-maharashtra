@@ -168,7 +168,7 @@ const Playground = () => {
           ))}
         </div>
       </div>
-      <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+      <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
     </section>
   );
 };

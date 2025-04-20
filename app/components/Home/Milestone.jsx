@@ -121,12 +121,12 @@ function Milestones() {
                   className={styles.box + " " + styles.revolution}
                   observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass"
                 >
-                  <span class="anim-line -left" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
-                  <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
-                  <span class="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  <span className="anim-line -left" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
                   {
                     index >= mileStoneData.length - 1 &&
-                    <span class="anim-line -right" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                    <span className="anim-line -right" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
                   }
 
                   <div className={styles.icon}>

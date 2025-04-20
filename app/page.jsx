@@ -1,6 +1,6 @@
 
 
-'use client' 
+'use client'
 
 import Popup from "./components/Home/Popup";
 import Playground from "./components/Home/Playground";
@@ -18,9 +18,10 @@ import Arts from "./components/Home/Arts";
 import BookExperience from "./components/Home/BookExperience";
 import ParallaxExperience from "./components/Home/ParallaxExperience";
 import Bollywood from "./components/Home/Bollywood";
-import Envelop from "./components/Home/Envelop"; 
-import UseScreenSize from "./components/common/UseScreenSize"; 
+import Envelop from "./components/Home/Envelop";
+import UseScreenSize from "./components/common/UseScreenSize";
 import HeroBanner from "@/components/home/HeroBanner";
+import { Suspense } from "react";
 
 export default function Home() {
   const isMobile = UseScreenSize();
@@ -33,8 +34,8 @@ export default function Home() {
       <Brilliance />
       <Statistics />
       <Sustainability />
-      {/* <EverythingConnectsMobile /> */}
-      {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
+      {/* <EverythingConnectsMobile /> */} 
+        {/* {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}  */}
       <GlobalBusiness />
       <Milestones />
       <RoadMap />

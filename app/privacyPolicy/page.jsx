@@ -13,31 +13,31 @@ function PrivacyPolicy() {
         <div className={styles.privacyPolicy}>
           <Hyperlink />
         </div>
-        <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </div>
       <div className={styles.privacyPolicyContainer} observer-animation="cssClass" observer-animation-classes="animateAllLinesIn, animateImagesIn">
         <div className={styles.privacyPolicy}>
           <Termsconditions />
         </div>
-        <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </div>
       <div className={styles.privacyPolicyContainer} observer-animation="cssClass" observer-animation-classes="animateAllLinesIn, animateImagesIn">
         <div className={styles.privacyPolicy}>
           <Privacy />
         </div>
-        <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </div>
       <div className={styles.privacyPolicyContainer} observer-animation="cssClass" observer-animation-classes="animateAllLinesIn, animateImagesIn">
         <div className={styles.privacyPolicy}>
           <Copyright />
         </div>
-        <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </div>
       <div className={styles.privacyPolicyContainer} observer-animation="cssClass" observer-animation-classes="animateAllLinesIn, animateImagesIn">
         <div className={styles.privacyPolicy}>
           <Disclaimer />
         </div>
-        <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </div>
     </section>
   );

@@ -65,7 +65,7 @@ function Brilliance() {
                 Home to premier institutions like IIT Bombay, TISS, and
                 Symbiosis, driving innovation in diverse fields.
               </div>
-            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
           <div className={styles.brillianceElements}>
@@ -84,7 +84,7 @@ function Brilliance() {
                 Hosts RBI, NSE, BSE, and SEBI, shaping India’s financial
                 policies and global markets.
               </div>
-            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
           <div className={styles.brillianceElements}>
@@ -103,7 +103,7 @@ function Brilliance() {
                 Combines infrastructure, skilled workforce, and strategic
                 location to remain India’s industrial backbone.
               </div>
-            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
           <div className={styles.brillianceElements}>
