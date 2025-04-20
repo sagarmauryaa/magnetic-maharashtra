@@ -191,7 +191,7 @@ main.heroVideoContainer {
   transform-origin: top left;
   transition: transform 0.3s ease-in-out;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+} 
 
 /* Spacer to prevent content jump */
 .sectorsInsightsSpacer {
@@ -202,6 +202,11 @@ main.heroVideoContainer {
 
 /* Responsive styles for sticky sector-insights */
 
+@media screen and (max-width: 768px) {
+  .sectorInsights{
+    gap: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .playgroundSection .container {
     padding-inline: 0;
@@ -454,11 +459,13 @@ main.heroVideoContainer {
   margin-top: 22px;
 }
 
+.largeCard .anim-imageContainer,
 .largeCard img {
   height: 438px;
   width: 585px;
 }
 
+.smallCard .anim-imageContainer,
 .smallCard img {
   height: 208px;
   width: 278px;

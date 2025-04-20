@@ -51,7 +51,7 @@ function Brilliance() {
         </div>
         <div className={styles.brillianceRight}>
           <div className={styles.brillianceElements}>
-            <div className={styles.brillianceElement}>
+            <div className={styles.brillianceElement} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
               <div
                 className={
                   styles.brillianceLeft + " " + styles.brillianceSubtitle
@@ -65,27 +65,11 @@ function Brilliance() {
                 Home to premier institutions like IIT Bombay, TISS, and
                 Symbiosis, driving innovation in diverse fields.
               </div>
-            </div>
-            <div className={styles.divline}>
-              <svg
-                className={styles.line}
-                width="785"
-                height="2"
-                viewBox="0 0 785 2"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  ref={(el) => (pathRef.current[0] = el)}
-                  id="line"
-                  d="M0 1L785 1.00003"
-                  stroke="#D1D1D2"
-                />
-              </svg>
+            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
           <div className={styles.brillianceElements}>
-            <div className={styles.brillianceElement}>
+            <div className={styles.brillianceElement} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
               <div
                 className={
                   styles.brillianceLeft + " " + styles.brillianceSubtitle
@@ -100,27 +84,11 @@ function Brilliance() {
                 Hosts RBI, NSE, BSE, and SEBI, shaping India’s financial
                 policies and global markets.
               </div>
-            </div>
-            <div className={styles.divline}>
-              <svg
-                className={styles.line}
-                width="785"
-                height="2"
-                viewBox="0 0 785 2"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  ref={(el) => (pathRef.current[1] = el)}
-                  id="line"
-                  d="M0 1L785 1.00003"
-                  stroke="#D1D1D2"
-                />
-              </svg>
+            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
           <div className={styles.brillianceElements}>
-            <div className={styles.brillianceElement}>
+            <div className={styles.brillianceElement} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
               <div
                 className={
                   styles.brillianceLeft + " " + styles.brillianceSubtitle
@@ -135,28 +103,11 @@ function Brilliance() {
                 Combines infrastructure, skilled workforce, and strategic
                 location to remain India’s industrial backbone.
               </div>
-            </div>
-            <div className={styles.divline}>
-              <svg
-                className={styles.line}
-                width="785"
-                height="2"
-                viewBox="0 0 785 2"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  ref={(el) => (pathRef.current[2] = el)}
-                  id="line"
-                  d="M0 1L785 1.00003"
-                  stroke="#D1D1D2"
-                />
-              </svg>
+            <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </div>
-
           <div className={styles.brillianceElements}>
-            <div className={styles.brillianceElement}>
+            <div className={styles.brillianceElement} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
               <div
                 className={
                   styles.brillianceLeft + " " + styles.brillianceSubtitle

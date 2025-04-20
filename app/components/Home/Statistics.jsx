@@ -43,7 +43,7 @@ const Statistics = () => {
               >
                 <h2 className={styles.heading} observer-animation="title" dangerouslySetInnerHTML={{ __html: data.heading }} />
 
-                <p observer-animation="title" >
+                <p observer-animation="fadeInUpPara">
                   {data.content}
                 </p>
               </div>

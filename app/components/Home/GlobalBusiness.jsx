@@ -92,28 +92,28 @@ const GlobalBusiness = () => {
 
   return (
     <section ref={globalBusinessRef} className={styles.globalBusiness}>
-      <h1>
+      <h1 observer-animation="fadeInUpPara" >
         Global Business
         <br /> Destination
       </h1>
-      <div className={styles.description1}>
+      <div className={styles.description1} observer-animation="fadeInUpPara">
         <p>
           We offer everything you need—great resources, talented
           <br />
           people, and a supportive environment.
         </p>
       </div>
-      <h2>The Stories of Success</h2>
+      <h2 observer-animation="title">The Stories of Success</h2>
       <div ref={scrollTriggerRef}>
         <div ref={scrollSectionRef} className={styles.scrollSection}>
           {globalBusinessData.map((business, index) => (
             <div
               ref={(el) => (cardRef.current[index] = el)}
-              className={`${
-                business.class === "largeCard"
-                  ? styles.largeCard
-                  : styles.smallCard
-              }`}
+              className={`${business.class === "largeCard"
+                ? styles.largeCard
+                : styles.smallCard
+                }`}
+              observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
               key={business.id}
               onClick={() => handleCardClick(business.id)}
               onKeyDown={(e) =>
@@ -122,14 +122,28 @@ const GlobalBusiness = () => {
               role="button"
               tabIndex={0}
             >
-              <Image
+              {/* <Image
+                className="anim-image"
                 src={business.imgPath}
                 alt={business.name}
                 width={100}
                 height={100}
                 quality={100}
                 unoptimized
-              />
+              /> */}
+              <div className="anim-imageContainer">
+                <div className="anim-imageWrapper">
+                  <Image 
+                    className="anim-image"
+                    src={business.imgPath}
+                    alt={business.name}
+                    width={100}
+                    height={100}
+                    quality={100}
+                    unoptimized
+                  />
+                </div>
+              </div>
               <h3>{business.name}</h3>
             </div>
           ))}

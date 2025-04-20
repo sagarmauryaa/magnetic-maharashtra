@@ -31,8 +31,19 @@
   line-height: 115%;
 }
 .brillianceElement {
+  position: relative;
   display: flex;
   gap: 30px;
+  padding-block: var(--space-24);
+}
+.brillianceElement span{
+  background-color: var(--light-gray);
+}
+.brillianceElements:first-child .brillianceElement{
+  padding-block-start: 0px;
+}
+.brillianceElements:last-child .brillianceElement{
+  padding-block-end: 0px;
 }
 
 .brillianceElement .line {

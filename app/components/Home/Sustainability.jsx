@@ -36,7 +36,7 @@ function Sustainability() {
               <br />
               Naturally Better 
           </div>
-          <div className={styles.sustainSubtitle} >
+          <div className={styles.sustainSubtitle} observer-animation="fadeInUpPara">
            <p>
               Building for tomorrow, without compromising today—Maharashtra&apos;s
               commitment to sustainability is as strong as its drive to grow.
