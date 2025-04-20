@@ -3,8 +3,8 @@ import styles from "../../privacyPolicy/privacyPolicy.module.css";
 function Copyright() {
   return (
     <div className={styles.privacyContainer}>
-      <h2 className={styles.heading}>Copyright Policy</h2>
-      <div className={styles.privacyBody}>
+      <h2 className={styles.heading} observer-animation="title">Copyright Policy</h2>
+      <div className={styles.privacyBody} observer-animation="fadeInUpPara">
         <div>
           <p>
             Material featured on this portal may be reproduced free of charge in

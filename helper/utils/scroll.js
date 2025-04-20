@@ -28,4 +28,3 @@ export const enableScroll = () => {
     document.documentElement.style.paddingInlineEnd ="";
     document.body.setAttribute("data-lenis-prevent", "false");
 };
-

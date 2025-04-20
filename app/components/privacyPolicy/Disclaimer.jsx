@@ -3,9 +3,9 @@ import styles from "../../privacyPolicy/privacyPolicy.module.css";
 function Disclaimer() {
   return (
     <div className={styles.privacyContainer}>
-      <h2 className={styles.heading}>Disclaimer</h2>
+      <h2 className={styles.heading} observer-animation="title">Disclaimer</h2>
       <div className={styles.privacyBody}>
-        <div>
+        <div observer-animation="fadeInUpPara">
           <p>
             Although information and content in this portal has been put with
             care and diligence, MIDC does not take responsibility on how this

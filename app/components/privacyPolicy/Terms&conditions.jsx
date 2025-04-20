@@ -3,9 +3,9 @@ import styles from "../../privacyPolicy/privacyPolicy.module.css";
 function Termsconditions() {
   return (
     <div className={styles.privacyContainer}>
-      <h2 className={styles.heading}>Terms And Conditions</h2>
+      <h2 className={styles.heading} observer-animation="title">Terms And Conditions</h2>
       <div className={styles.privacyBody}>
-        <div>
+        <div observer-animation="fadeInUpPara">
           <p>
             This portal is designed, developed and maintained by Maharashtra
             Industrial Development Corporation (hereafter MIDC). The content for

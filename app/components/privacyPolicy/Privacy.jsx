@@ -3,10 +3,10 @@ import styles from "../../privacyPolicy/privacyPolicy.module.css";
 function Privacy() {
   return (
     <div className={styles.privacyContainer}>
-      <h2 className={styles.heading}>Privacy Policy</h2>
+      <h2 className={styles.heading} observer-animation="title">Privacy Policy</h2>
       <div className={styles.privacyBody}>
         <div>
-          <p>
+          <p observer-animation="fadeInUpPara">
             As a general rule, this portal does not automatically capture any
             specific personal information from you, (like name, phone number or
             e-mail address), that allows us to identify you individually. This

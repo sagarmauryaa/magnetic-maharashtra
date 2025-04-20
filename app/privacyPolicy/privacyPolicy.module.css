@@ -2,9 +2,10 @@
   padding-top: 4.5rem;
 }
 .privacyPolicyContainer {
+  position: relative;
   /* border-top: 1px solid black; */
   padding: 2.5rem 0;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   box-sizing: border-box;
 }
 .disclaimer {

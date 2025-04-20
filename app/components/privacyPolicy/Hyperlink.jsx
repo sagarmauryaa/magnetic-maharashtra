@@ -3,9 +3,9 @@ import styles from "../../privacyPolicy/privacyPolicy.module.css";
 function Hyperlink() {
   return (
     <div className={styles.privacyContainer}>
-      <h2 className={styles.heading}>Hyperlinking Policies</h2>
-      <div className={styles.privacyBody}>
-        <div>
+      <h2 className={styles.heading} observer-animation="title">Hyperlinking Policies</h2>
+      <div className={styles.privacyBody} >
+        <div observer-animation="fadeInUpPara">
           <h4 className={styles.heading}>Links to External Websites/Portals</h4>
 
           <p>
@@ -22,8 +22,8 @@ function Hyperlink() {
             assumed as endorsement of any kind.
           </p>
         </div>
-        <div>
-          <h4 className="heading">
+        <div observer-animation="fadeInUpPara">
+          <h4 className={styles.heading}>
             Links to the Portal by Other Websites/Portals
           </h4>
           <p>
