@@ -9,11 +9,9 @@ const AutoplayVideo = ({
     wrapperClass = "",
     videoClass = "",
     preload = ""
-}) => {
+}) => { 
     const videoRef = useRef(null);
     const isClient = typeof window !== "undefined";
-
-    if (!desktopSrc) return null;
 
     useEffect(() => {
         if (!isClient) return;
@@ -36,6 +34,7 @@ const AutoplayVideo = ({
         return () => observer.disconnect();
     }, [isClient]);
 
+    if (!desktopSrc) return null;
 
     return (
         <div className={wrapperClass}
