@@ -10,10 +10,10 @@ const AutoplayVideo = ({
     videoClass = "",
     preload = ""
 }) => {
-    if (!desktopSrc) return null;
-
     const videoRef = useRef(null);
     const isClient = typeof window !== "undefined";
+
+    if (!desktopSrc) return null;
 
     useEffect(() => {
         if (!isClient) return;
