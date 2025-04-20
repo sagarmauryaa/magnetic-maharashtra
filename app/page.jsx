@@ -1,8 +1,6 @@
 
 
-'use client'
-
-import styles from "./page.module.css";
+'use client' 
 
 import Popup from "./components/Home/Popup";
 import Playground from "./components/Home/Playground";
@@ -20,11 +18,8 @@ import Arts from "./components/Home/Arts";
 import BookExperience from "./components/Home/BookExperience";
 import ParallaxExperience from "./components/Home/ParallaxExperience";
 import Bollywood from "./components/Home/Bollywood";
-import Envelop from "./components/Home/Envelop";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap/all";
-import UseScreenSize from "./components/common/UseScreenSize";
-import Flag from "./components/common/Flag";
+import Envelop from "./components/Home/Envelop"; 
+import UseScreenSize from "./components/common/UseScreenSize"; 
 import HeroBanner from "@/components/home/HeroBanner";
 
 export default function Home() {
@@ -38,7 +33,7 @@ export default function Home() {
       <Brilliance />
       <Statistics />
       <Sustainability />
-      {/* {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />} */}
+      {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
       <GlobalBusiness />
       <Milestones />
       <RoadMap />

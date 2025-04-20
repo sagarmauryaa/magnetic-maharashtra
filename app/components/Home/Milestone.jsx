@@ -106,8 +106,7 @@ function Milestones() {
   ]
 
   return (
-    <div ref={milestoneContainerRef} className={styles.milestoneContainer} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
-      <span class="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+    <div ref={milestoneContainerRef} className={styles.milestoneContainer} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass"> 
       <div ref={milestonesRef} className={styles.milestones}>
         <div className={styles.milestoneTitle} observer-animation="title">
           Maharashtra&apos;s Path to a $1 Trillion Economy

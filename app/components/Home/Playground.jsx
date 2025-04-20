@@ -22,33 +22,38 @@ const Playground = () => {
       setSpacerHeight(sectorInsightsRef.current.offsetHeight);
     }
 
-    // if (isSectorInsightsSticky) {
-    //   sectorInsightsRef.current.style.top = "72px";
-    // } else {
-    //   sectorInsightsRef.current.style.top = "0px";
-    // }
+
+
+    if (typeof window === "undefined" || !sectionRef.current || !sectorInsightsRef.current) return;
+
+    let ticking = false;
 
     const handleScroll = () => {
-      if (typeof window === "undefined" || !sectionRef.current || !sectorInsightsRef.current) return;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!sectionRef.current || !sectorInsightsRef.current) return;
 
-      // Use requestAnimationFrame for better performance
-      requestAnimationFrame(() => {
-      const sectionRect = sectionRef.current.getBoundingClientRect();
-      const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
-      
-      const shouldBeSticky = 
-        insightsRect.top <= 0 && 
-        sectionRect.bottom > spacerHeight && 
-        sectionRect.top < -280;
+          const sectionRect = sectionRef.current.getBoundingClientRect();
+          const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
 
-      // Only update state if it actually changes
-      if (shouldBeSticky !== isSticky) {
-        setIsSticky(shouldBeSticky);
+          const shouldBeSticky =
+            insightsRect.top <= 0 &&
+            sectionRect.bottom > spacerHeight &&
+            sectionRect.top < -280;
+
+          setIsSticky(prev => {
+            // Only update if value actually changes
+            return prev !== shouldBeSticky ? shouldBeSticky : prev;
+          });
+
+          ticking = false;
+        });
+
+        ticking = true;
       }
-      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll);
 
     // Initial check
@@ -58,7 +63,8 @@ const Playground = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, [isSticky, spacerHeight]);
+  }, [spacerHeight]);
+
 
   useGSAP(
     () => {
