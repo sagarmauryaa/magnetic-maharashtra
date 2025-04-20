@@ -7,6 +7,7 @@ import { AppProvider } from "./components/AppContext";
 import Helper from "@/helper";
 import '@/styles/main.scss';
 import AnimationOverlay from "./components/Home/AnimationOverlay";
+import Header from "@/components/common/Header";
 
 const ppNeuMontrealRegular = localFont({
   src: "./fonts/PPNeueMontreal-Regular.woff2",
@@ -31,8 +32,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${ppNeuMontrealRegular.variable} ${ebGaramondItalic.variable}`}
       >
-        <AnimationOverlay/>
+        <AnimationOverlay />
         <AppProvider>
+          {/* <Header /> */}
           <StickyNavbar />
           <SmoothScroll>{children}</SmoothScroll>
           <Footer />

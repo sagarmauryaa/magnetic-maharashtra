@@ -1,3 +1,32 @@
 .ui-header {
-    
+    position: fixed;
+    top: 0;
+    height: var(--h-header);
+    z-index: 99;
+    background-color: var(--white-color);
+
+    &__container {
+        max-width: var(--w-max);
+        margin-inline: auto;
+        padding-block: var(--space-16);
+        padding-inline: var(--container-padding);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-10);
+        color: var(--orange-color);
+        font-size: 14px;
+        font-family: "Neue Montreal", sans-serif;
+
+        &-region{
+            width: 48px;
+            height: 40px;
+        }
+    }
 }
