@@ -120,7 +120,8 @@ const GlobalBusiness = () => {
   };
 
   return (
-    <section ref={globalBusinessRef} className={styles.globalBusiness}>
+    <section ref={globalBusinessRef} className={styles.globalBusiness} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+      <span class="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       <h1 observer-animation="fadeInUpPara" >
         Global Business
         <br /> Destination

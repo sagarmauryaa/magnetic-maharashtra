@@ -81,90 +81,70 @@ function Milestones() {
     },
     { scope: milestoneContainerRef.current }
   );
+
+  const mileStoneData = [
+    {
+      "icon": "/images/Milestones/buildings.svg",
+      "title": "Industrial Revolution 4.0",
+      "content": "Pioneering smart manufacturing and cutting-edge technologies to position Maharashtra as a global leader."
+    },
+    {
+      "icon": "/images/Milestones/infrastructure.svg",
+      "title": "World-Class Infrastructure",
+      "content": "Building unmatched connectivity with global markets through world- class infrastructure projects."
+    },
+    {
+      "icon": "/images/Milestones/business.svg",
+      "title": "Ease of Doing Business",
+      "content": "Creating a seamless, business-friendly environment with simplified regulations and transparent governance."
+    },
+    {
+      "icon": "/images/Milestones/development.svg",
+      "title": "Talent Development",
+      "content": "Nurturing a world- class talent pool ready to drive innovation and growth."
+    }
+  ]
+
   return (
-    <div ref={milestoneContainerRef} className={styles.milestoneContainer}>
+    <div ref={milestoneContainerRef} className={styles.milestoneContainer} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+      <span class="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       <div ref={milestonesRef} className={styles.milestones}>
-        <div className={styles.milestoneTitle}>
+        <div className={styles.milestoneTitle} observer-animation="title">
           Maharashtra&apos;s Path to a $1 Trillion Economy
         </div>
         <div className={styles.pillars}>
-          <div className={styles.subtitle}>The Pillars</div>
+          <div className={styles.subtitle} observer-animation="title">The Pillars</div>
           <div className={styles.elements}>
-            <div
-              ref={revolutionRef}
-              className={styles.box + " " + styles.revolution}
-            >
-              <div className={styles.icon}>
-                <Image
-                  src="/images/Milestones/buildings.svg"
-                  alt=""
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className={styles.boxTitle}>Industrial Revolution 4.0</div>
-              <div className={styles.boxBody}>
-                Pioneering smart manufacturing and cutting-edge technologies to
-                position Maharashtra as a global leader.
-              </div>
-            </div>
+            {
+              mileStoneData.map((data, index) =>
+                <div
+                  key={index}
+                  className={styles.box + " " + styles.revolution}
+                  observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass"
+                >
+                  <span class="anim-line -left" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  <span class="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  <span class="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  {
+                    index >= mileStoneData.length - 1 &&
+                    <span class="anim-line -right" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  }
 
-            <div
-              ref={infrastructureRef}
-              className={styles.box + " " + styles.infrastructure}
-            >
-              <div className={styles.icon}>
-                <Image
-                  src="/images/Milestones/infrastructure.svg"
-                  alt=""
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className={styles.boxTitle}>World-Class Infrastructure</div>
-              <div className={styles.boxBody}>
-                Building unmatched connectivity with global markets through
-                world-class infrastructure projects.
-              </div>
-            </div>
-
-            <div
-              ref={businessRef}
-              className={styles.box + " " + styles.business}
-            >
-              <div className={styles.icon}>
-                <Image
-                  src="/images/Milestones/business.svg"
-                  alt=""
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className={styles.boxTitle}>Ease of Doing Business</div>
-              <div className={styles.boxBody}>
-                Creating a seamless, business-friendly environment with
-                simplified regulations and transparent governance.
-              </div>
-            </div>
-
-            <div
-              ref={developmentRef}
-              className={styles.box + " " + styles.development}
-            >
-              <div className={styles.icon}>
-                <Image
-                  src="/images/Milestones/development.svg"
-                  alt=""
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className={styles.boxTitle}>Talent Development</div>
-              <div className={styles.boxBody}>
-                Nurturing a world-class talent pool ready to drive innovation
-                and growth.
-              </div>
-            </div>
+                  <div className={styles.icon}>
+                    <Image
+                      src={data.icon}
+                      alt=""
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                  <div className={styles.boxTitle} observer-animation="title">{data.title}</div>
+                  <div className={styles.boxBody} observer-animation="fadeInUpPara">
+                    {data.content}
+                  </div>
+                </div>
+              )
+            }
           </div>
         </div>
 

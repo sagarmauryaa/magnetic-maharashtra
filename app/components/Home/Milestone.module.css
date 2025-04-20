@@ -40,7 +40,7 @@
 }
 .box,
 .boxRev {
-  border: 1px solid var(--mid-grey-color);
+  /* border: 1px solid var(--mid-grey-color); */
   width: 30%;
   padding: 20px;
   display: flex;
@@ -96,6 +96,7 @@
   z-index: 3;
   width: 380px;
   height: 400px;
+
 }
 .infrastructure {
   z-index: 2;
