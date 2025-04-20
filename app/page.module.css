@@ -306,6 +306,7 @@ main.heroVideoContainer {
 }
 
 .popupWrapper {
+  flex-direction: row-reverse;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -460,6 +461,7 @@ main.heroVideoContainer {
 .scrollSection h3 {
   margin-top: 22px;
 }
+
 /* 
 .globalBusinessCard:last-child {
   margin-inline-end: calc(var(--gutter-width) * -1);
@@ -1497,9 +1499,21 @@ main.heroVideoContainer {
       padding: 0 0 1rem 1rem;
     }
   }
+
+  .cursor {
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .cursor {
+    position: absolute;
+    display: block;
+    left: unset;
+    top: var(--space-16) !important;
+    right: var(--space-16) !important;
+  }
+
   .heroHeadingSection {
     padding-inline: 1rem;
     padding-block: 3.75rem;
@@ -1843,11 +1857,15 @@ main.heroVideoContainer {
     width: 100%;
   }
 
+  .popupWrapper {
+    flex-direction: column;
+    gap: var(--space-30);
+  }
+
   .popupImageContainer {
     width: 100%;
     height: 100%;
-    order: 1;
-    display: none;
+    /* display: none; */
   }
 
   .popupImageContainer .imageOverlay {
@@ -1856,8 +1874,9 @@ main.heroVideoContainer {
   }
 
   .popupDescription {
-    order: 2;
-    margin-top: 20px;
+    font-size: var(--fonts--mobile--sub-heading2);
+    /* order: 2;
+    margin-top: 20px; */
   }
 
   /*  */

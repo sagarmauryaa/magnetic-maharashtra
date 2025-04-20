@@ -33,18 +33,19 @@
   --fonts--desktop--helper: 12px;
   --fonts--desktop--navigation: 18px;
 
-  --fonts--mobile--sub-heading3: 20px;
   --fonts--mobile--body1: 16px;
   --fonts--mobile--body2: 14px;
-
+  
+  
   --fonts--mobile--sub-heading4: 18px;
-
+  --fonts--mobile--sub-heading3: 20px;
+  --fonts--mobile--sub-heading2: 24px;
+  --fonts--mobile--sub-heading1: 32px;
+  
   --fonts--mobile--sub-heading-capital: 24px;
-  --fonts--mobile--sub-heading2: 32px;
   --fonts--desktop--cta: 16px;
   --fonts--mobile--cta: 16px;
 
-  --fonts--mobile--sub-heading1: 40px;
 
   --fonts--mobile--heading1: 60px;
   --fonts--mobile--body1-capital: 16px;

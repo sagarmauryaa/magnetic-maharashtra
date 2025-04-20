@@ -1,6 +1,7 @@
 .sustainabilityContainer {
   width: 100%;
-  border-bottom: 1px solid black;
+  position: relative;
+  /* border-bottom: 1px solid black; */
   /* margin-top: 5rem; */
 }
 .hSustainability {

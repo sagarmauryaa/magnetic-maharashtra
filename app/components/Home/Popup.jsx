@@ -41,7 +41,7 @@ const Popup = () => {
   }
 
   function moveCursor(e) {
-    if (cursor.current) {
+    if (cursor.current && window.innerWidth > 1024) {
       cursor.current.style.display = "block";
       let x = e.clientX;
       let y = e.clientY;
@@ -91,11 +91,11 @@ const Popup = () => {
     >
       <div className={styles.popupWrapper}>
         <div ref={cursor} className={styles.cursor}></div>
-        <p ref={popupDesc} className={styles.popupDescription}></p>
         <div className={styles.popupImageContainer}>
           <img ref={popupImage} className={styles.popupImage} />
           {/* <div ref={imgOverlay} className={styles.imgOverlay}></div> */}
         </div>
+        <p ref={popupDesc} className={styles.popupDescription}></p>
       </div>
     </div>
   );
