@@ -210,7 +210,7 @@ const StickyNavbar = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     // Add resize event listener to update viewport height calculations
-    window.addEventListener("resize", handleScroll, { passive: true });
+    // window.addEventListener("resize", handleScroll, { passive: true });
 
     // Add touch event listeners for mobile devices
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
@@ -219,7 +219,7 @@ const StickyNavbar = () => {
     // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      // window.removeEventListener("resize", handleScroll);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
       if (scrollTimeoutRef.current) {

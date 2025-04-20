@@ -26,31 +26,22 @@ const Playground = () => {
 
     if (typeof window === "undefined" || !sectionRef.current || !sectorInsightsRef.current) return;
 
-    let ticking = false;
 
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (!sectionRef.current || !sectorInsightsRef.current) return;
+      requestAnimationFrame(() => {
+        const sectionRect = sectionRef.current.getBoundingClientRect();
+        const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
 
-          const sectionRect = sectionRef.current.getBoundingClientRect();
-          const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
-
-          const shouldBeSticky =
-            insightsRect.top <= 0 &&
-            sectionRect.bottom > spacerHeight &&
-            sectionRect.top < -280;
-
+        const shouldBeSticky =
+          insightsRect.top <= 0 &&
+          sectionRect.bottom > spacerHeight &&
+          sectionRect.top < -280;
+        if (shouldBeSticky !== isSticky) {
           setIsSticky(prev => {
-            // Only update if value actually changes
             return prev !== shouldBeSticky ? shouldBeSticky : prev;
           });
-
-          ticking = false;
-        });
-
-        ticking = true;
-      }
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -128,13 +119,11 @@ const Playground = () => {
             </div>
           </div>
         </div>
-        {/* Add a spacer div to prevent content jump when sector-insights becomes fixed */}
-        {isSticky && (
-          <div
-            className={styles.sectorsInsightsSpacer}
-            style={{ height: `${spacerHeight}px` }}
-          ></div>
-        )}
+        {/* Add a spacer div to prevent content jump when sector-insights becomes fixed */} 
+        <div
+          className={styles.sectorsInsightsSpacer}
+          style={{ height: `${spacerHeight}px` }}
+        ></div>
         <div className={styles.playgroundGrid}>
           {sectorsData.map((item, index) => (
             <Link
