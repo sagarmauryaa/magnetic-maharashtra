@@ -1,3 +1,4 @@
+'use client'
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useEffect } from "react";
 import { Experience } from "./Experience";
