@@ -25,23 +25,28 @@ const Playground = () => {
 
 
     if (typeof window === "undefined" || !sectionRef.current || !sectorInsightsRef.current) return;
-
-
     const handleScroll = () => {
-      requestAnimationFrame(() => {
-        const sectionRect = sectionRef.current.getBoundingClientRect();
-        const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
+      // Use a debounced RAF for better performance
+      let ticking = false;
 
-        const shouldBeSticky =
-          insightsRect.top <= 0 &&
-          sectionRect.bottom > spacerHeight &&
-          sectionRect.top < -280;
-        if (shouldBeSticky !== isSticky) {
-          setIsSticky(prev => {
-            return prev !== shouldBeSticky ? shouldBeSticky : prev;
-          });
-        }
-      });
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (!sectionRef.current || !sectorInsightsRef.current) return;
+
+          const sectionRect = sectionRef.current.getBoundingClientRect();
+          const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
+
+          const shouldBeSticky =
+            window.pageYOffset > sectionRect.top + window.pageYOffset &&
+            sectionRect.bottom > spacerHeight &&
+            sectionRect.top < -280;
+
+
+          setIsSticky(shouldBeSticky);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -119,11 +124,13 @@ const Playground = () => {
             </div>
           </div>
         </div>
-        {/* Add a spacer div to prevent content jump when sector-insights becomes fixed */} 
+        {/* Add a spacer div to prevent content jump when sector-insights becomes fixed */}
+
         <div
           className={styles.sectorsInsightsSpacer}
           style={{ height: `${spacerHeight}px` }}
         ></div>
+
         <div className={styles.playgroundGrid}>
           {sectorsData.map((item, index) => (
             <Link
