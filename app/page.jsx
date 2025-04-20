@@ -33,7 +33,8 @@ export default function Home() {
       <Brilliance />
       <Statistics />
       <Sustainability />
-      {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />}
+      <EverythingConnectsMobile />
+      {/* {isMobile ? <EverythingConnectsMobile /> : <EverythingConnects />} */}
       <GlobalBusiness />
       <Milestones />
       <RoadMap />

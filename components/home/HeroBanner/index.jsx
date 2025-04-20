@@ -1,28 +1,19 @@
+import AutoplayVideo from '@/components/common/AutoplayVideo';
 import './index.scss';
 const HeroBanner = () => {
   return (
     <section className='ui-heroBanner' observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
       <div className="ui-heroBanner__wrapper">
-        <video
-          className="ui-heroBanner__video"
+        <AutoplayVideo className="ui-heroBanner__video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          fetchPriority="high"
-        >
-          <source
-            src="https://ik.imagekit.io/bn4qs1mj3/DesktopHeroVideoHQ.mp4?updatedAt=1744977909415"
-            media="all and (min-width: 1025px)"
-            type="video/mp4"
+          fetchPriority="high"  
+          desktopSrc={"https://ik.imagekit.io/bn4qs1mj3/DesktopHeroVideoHQ.mp4?updatedAt=1744977909415"}
+          mobileSrc={"/videos/MobileHeroVideo.mp4"}
           /> 
-          <source
-            src="/videos/MobileHeroVideo.mp4"
-            type="video/mp4"
-            media="all and (max-width: 1024px)"
-          />
-        </video>
         <div className='ui-heroBanner__content'> 
           <h1 className='ui-heroBanner__heading' observer-animation="title">
             Magnetic Maharashtra
