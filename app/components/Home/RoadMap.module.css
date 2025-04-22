@@ -191,6 +191,13 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  .elementTitle div svg path{
+    stroke-width: 3 !important;
+  }
+  .elementTitle div svg{
+    width: 26px;
+    height: 16px;
+  }
   .elementTitle div img {
     width: 10%;
   }
