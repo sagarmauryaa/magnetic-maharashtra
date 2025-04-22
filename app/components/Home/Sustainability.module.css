@@ -36,9 +36,9 @@
   margin-top: 30px;
 }
 
-/* .sustainTitles span {
-  color: #00b74b;
-} */
+.sustainTitles span {
+  height: fit-content;
+}
 .sustainSubtitle {
   width: 25%;
   font-size: var(--fonts--desktop--body2);
@@ -48,7 +48,8 @@
 .sustainTitle {
   max-width: 600px;
   font-size: 50px;
-  line-height: 90%;
+  line-height: 100%;
+  height: fit-content;
 }
 .sustainTitle span:not(:nth-child(2)):not(:first-child) {
   color: #00b74b;

@@ -304,6 +304,7 @@ main.heroVideoContainer {
   inset: 0%;
   overflow: visible;
   z-index: 100001;
+  padding-inline-end: calc(40px + var(--scrollbar-width));
 }
 
 .popupWrapper {
@@ -421,8 +422,8 @@ main.heroVideoContainer {
   max-width: 1600px;
 }
 
-.globalBusiness .description1 {
-  margin-bottom: 40px;
+.globalBusiness h2 {
+  padding-top: 40px;
 }
 
 .globalBusiness .description1 {
@@ -2435,7 +2436,7 @@ main.heroVideoContainer {
 }
 
 @media (max-width: 480px) {
- 
+
 
   .everythingContentSection {
     padding-inline: 1rem;

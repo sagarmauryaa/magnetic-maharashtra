@@ -51,11 +51,12 @@
   margin-top: 3.5rem;
   font-size: var(--fonts--desktop--sub-heading1);
   color: var(--orange-color);
-  display: flex;
-
+  display: flex; 
   justify-content: space-between;
 }
-
+.elementTitle svg path {
+  stroke: var(--orange-color) !important;
+}
 .roadElements button {
   display: flex;
   gap: 0.375rem;

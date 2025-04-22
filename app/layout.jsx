@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <AnimationOverlay />
         <AppProvider>
           {/* <Header /> */}
-          <StickyNavbar />
+          {/* <StickyNavbar /> */}
           <SmoothScroll>{children}</SmoothScroll>
           <Footer />
         </AppProvider>

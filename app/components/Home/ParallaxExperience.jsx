@@ -36,34 +36,6 @@ const ParallaxExperience = () => {
         y: "0%",
       });
 
-      // gsap.timeline({
-      //   defaults: { duration: 1 },
-      //   scrollTrigger: {
-      //     trigger: parallaxRef.current,
-      //     start: "10% top",
-      //     end: "40% 40%",
-      //     markers: false,
-      //     onEnter: () => {
-      //       gsap
-      //         .timeline({ defaults: { duration: 1, ease: "expo.out" } })
-      //         .to(mountainFrontRef.current, {
-      //           scale: 1,
-      //           transformOrigin: "center center",
-      //         })
-      //         .to(mountainBackRef.current, { yPercent: 0 }, "<")
-      //         .to(
-      //           parallaxTextRef.current,
-      //           {
-      //             y: "0%",
-      //             force3D: true,
-      //           },
-      //           "<"
-      //         );
-      //     },
-      //     onLeave: () => {},
-      //   },
-      // });
-
       gsap
         .timeline({
           defaults: { duration: 1, ease: "none" },
@@ -122,35 +94,6 @@ const ParallaxExperience = () => {
           "<"
         );
 
-      // gsap.timeline({
-      //   defaults: { duration: 1 },
-      //   scrollTrigger: {
-      //     trigger: parallaxRef.current,
-      //     start: "top center",
-      //     end: "40% 40%",
-      //     markers: false,
-      //     onEnter: () => {
-      //       gsap
-      //         .timeline({ defaults: { duration: 1, ease: "power2.inOut" } })
-      //         .to(mountainFrontRef.current, {
-      //           scale: 1,
-      //           transformOrigin: "center center",
-      //         })
-      //         .to(mountainBackRef.current, { yPercent: 0 }, "<")
-      //         .to(
-      //           parallaxTextRef.current,
-      //           {
-      //             y: "0%",
-      //             force3D: true,
-      //           },
-      //           "<"
-      //         );
-      //     },
-      //     onLeave: () => {
-
-      //     },
-      //   },
-      // });
     });
 
     mm.add("(min-width: 320px) and (max-width: 480px)", () => {
@@ -158,63 +101,35 @@ const ParallaxExperience = () => {
         scale: 1.05,
         transformOrigin: "center center",
       });
-      gsap.set(mountainBackRef.current, { yPercent: 20 });
+      gsap.set(mountainBackRef.current, { yPercent: 10 });
       gsap.set(parallaxTextRef.current, {
-        y: "200%",
+        y: "-150%",
       });
 
-      gsap.timeline({
-        defaults: { duration: 1 },
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: "top center",
-          end: "40% 40%",
-          markers: false,
-          onEnter: () => {
-            gsap
-              .timeline({ defaults: { duration: 1, ease: "power2.inOut" } })
-              .to(mountainFrontRef.current, {
-                scale: 1,
-                transformOrigin: "center center",
-              })
-              .to(mountainBackRef.current, { yPercent: 0 }, "<")
-              .to(
-                parallaxTextRef.current,
-                {
-                  y: "0%",
-                  force3D: true,
-                },
-                "<"
-              );
+      gsap
+        .timeline({
+          defaults: { duration: 1, ease: "none" },
+          scrollTrigger: {
+            trigger: parallaxRef.current,
+            start: "30% 20%",
+            end: "bottom center-=50px",
+            markers: false,
+            scrub: 0.1,
           },
-          onLeave: () => {
-            gsap
-              .timeline({
-                defaults: { duration: 1, ease: "none" },
-                scrollTrigger: {
-                  trigger: parallaxRef.current,
-                  start: "30% 20%",
-                  end: "bottom center-=50px",
-                  markers: false,
-                  scrub: 0.1,
-                },
-              })
-              .to(mountainFrontRef.current, {
-                scale: 1.1,
-                transformOrigin: "center center",
-              })
-              .to(mountainBackRef.current, { yPercent: -10 }, "<")
-              .to(
-                parallaxTextRef.current,
-                {
-                  y: "200%",
-                  force3D: true,
-                },
-                "<"
-              );
+        })
+        .to(mountainFrontRef.current, {
+          scale: 1.15,
+          transformOrigin: "center center",
+        })
+        .to(mountainBackRef.current, { yPercent: -15 }, "<")
+        .to(
+          parallaxTextRef.current,
+          {
+            y: "250%",
+            force3D: true,
           },
-        },
-      });
+          "<"
+        );
     });
   });
 

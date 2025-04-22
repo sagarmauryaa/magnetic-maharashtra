@@ -100,7 +100,7 @@ function RoadMap() {
                 <path
                   id="growth-arrow"
                   d="M1 30.25L19 12.75L27.5 24.75L52 1.75M52 1.75V13.75M52 1.75H40"
-                  stroke="#FF5100"
+                  stroke="currentColor"
                   strokeWidth="2"
                 />
               </svg>

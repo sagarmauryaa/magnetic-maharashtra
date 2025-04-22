@@ -4,20 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../page.module.css";
-import sectorsData from "../../data";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap/all";
-
-const Playground = () => {
-  const sectorsRef = useRef([]);
+import sectorsData from "../../data"; 
+const Playground = () => { 
   const sectorInsightsRef = useRef(null);
   const sectionRef = useRef(null);
   const sectionContainerRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [spacerHeight, setSpacerHeight] = useState(10);
 
-  useEffect(() => {
-    // Store the original height of the sector insights element
+  useEffect(() => { 
     if (sectorInsightsRef.current) {
       setSpacerHeight(sectorInsightsRef.current.offsetHeight);
     }
@@ -35,11 +30,11 @@ const Playground = () => {
 
           const sectionRect = sectionRef.current.getBoundingClientRect();
           const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
-
+ 
           const shouldBeSticky =
-            window.pageYOffset > sectionRect.top + window.pageYOffset &&
+            window.pageYOffset > sectionRect.top &&
             sectionRect.bottom > spacerHeight &&
-            sectionRect.top < -280;
+            sectionRect.top <=0;
 
 
           setIsSticky(shouldBeSticky);
@@ -61,32 +56,10 @@ const Playground = () => {
     };
   }, [spacerHeight]);
 
-
-  useGSAP(
-    () => {
-      sectorsRef.current.forEach((sectors, idx) => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: sectors,
-              start: "top bottom",
-              end: "bottom center",
-              markers: false,
-            },
-          })
-
-          .from(sectors, {
-            yPercent: 30,
-            delay: 0.05 * idx,
-            ease: "power2.inOut",
-          });
-      });
-    },
-    { scope: sectionContainerRef }
-  );
+ 
 
   return (
-    <section className={styles.playgroundSection} ref={sectionRef}>
+    <section className={styles.playgroundSection} >
       <span className="anim-line -top is-below-1024" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
 
       <div ref={sectionContainerRef} className={styles.container}>
@@ -106,62 +79,60 @@ const Playground = () => {
           </div>
         </div>
 
-        <div className={`${styles.sectorInsightsWrapper} ${isSticky ? styles.sticky : ""}`} ref={sectorInsightsRef}>
-
-          <div
-            className={`${styles.sectorInsights}`}
-          >
-            <p className={styles.sectorInsightsTitle}>Sector Insights</p>
-            <div className={styles.sectorsInsightsContainer}>
-              <div className={styles.layoutHFlex}>
-                <div className={styles.circleIndicator}></div>
-                <p>Share in India&apos;s Output</p>
-              </div>
-              <div className={styles.layoutHFlex}>
-                <div className={styles.circleIndicator}></div>
-                <p>Share in India&apos;s Exports</p>
+        <div ref={sectionRef}>
+          <div className={`${styles.sectorInsightsWrapper} ${isSticky ? styles.sticky : ""}`} ref={sectorInsightsRef}>
+            <div
+              className={`${styles.sectorInsights}`}
+            >
+              <p className={styles.sectorInsightsTitle}>Sector Insights</p>
+              <div className={styles.sectorsInsightsContainer}>
+                <div className={styles.layoutHFlex}>
+                  <div className={styles.circleIndicator}></div>
+                  <p>Share in India&apos;s Output</p>
+                </div>
+                <div className={styles.layoutHFlex}>
+                  <div className={styles.circleIndicator}></div>
+                  <p>Share in India&apos;s Exports</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* Add a spacer div to prevent content jump when sector-insights becomes fixed */}
+          <div
+            className={styles.sectorsInsightsSpacer}
+            style={{ height: `${spacerHeight}px` }}
+          ></div>
 
-        <div
-          className={styles.sectorsInsightsSpacer}
-          style={{ height: `${spacerHeight}px` }}
-        ></div>
-
-        <div className={styles.playgroundGrid}>
-          {sectorsData.map((item, index) => (
-            <Link
-              // ref={(el) => (sectorsRef.current[index] = el)}
-              href={`sectors/${item.id}`}
-              key={index}
-              aria-controls=""
-              observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
-              className={styles.playgroundGridItem}
-              style={{ gridArea: `${item.gridArea}` }}
-            >
-              <div className={`${styles.playgroundGridItemImage} anim-imageContainer`}>
-                <div className="anim-imageWrapper">
-                  <Image
-                    className={` anim-image`}
-                    src={item.imgPath}
-                    alt={item.name}
-                    width={400}
-                    height={400}
-                    quality={100}
-                  />
-                </div></div>
-              <div className={styles.playgroundContent}>
-                <p>{item.name}</p>
-                <p className={styles.playgroundPercent}>
-                  <span>{item.l1}</span>
-                  <span>{item.l2}</span>
-                </p>
-              </div>
-            </Link>
-          ))}
+          <div className={styles.playgroundGrid}>
+            {sectorsData.map((item, index) => (
+              <Link 
+                href={`sectors/${item.id}`}
+                key={index}
+                aria-controls=""
+                observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
+                className={styles.playgroundGridItem}
+                style={{ gridArea: `${item.gridArea}` }}
+              >
+                <div className={`${styles.playgroundGridItemImage} anim-imageContainer`}>
+                  <div className="anim-imageWrapper">
+                    <Image
+                      className={` anim-image`}
+                      src={item.imgPath}
+                      alt={item.name}
+                      width={400}
+                      height={400}
+                      quality={100}
+                    />
+                  </div></div>
+                <div className={styles.playgroundContent}>
+                  <p>{item.name}</p>
+                  <p className={styles.playgroundPercent}>
+                    <span>{item.l1}</span>
+                    <span>{item.l2}</span>
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
       <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>

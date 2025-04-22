@@ -7,8 +7,9 @@ if (typeof window !== 'undefined') {
 export const disableScroll = () => {
     const body = typeof document !== 'undefined' ? document.body : null;
     const main = document.querySelector('main');
-    if (!body || !main) return;
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (!body || !main || body.hasAttribute("data-scroll-locked")) return;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth; 
+    
     body.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
     body.setAttribute("data-scroll-locked", 'true');
     main.setAttribute('inert', ''); 
