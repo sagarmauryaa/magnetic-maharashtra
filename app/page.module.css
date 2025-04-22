@@ -349,7 +349,7 @@ main.heroVideoContainer {
 .cursor {
   z-index: 9999;
   /* Original value */
-  background-image: url("/images/cursor.png");
+background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='15' fill='%23FF5100'/%3E%3Cpath d='M19.091 10L15 14.091L10.909 10L10 10.909L14.091 15L10 19.091L10.909 20L15 15.909L19.091 20L20 19.091L15.909 15L20 10.909L19.091 10Z' fill='white'/%3E%3C/svg%3E%0A");
   background-position: 50%;
   background-size: 30px 30px;
   width: 30px;
@@ -1349,6 +1349,10 @@ main.heroVideoContainer {
     justify-content: flex-start;
   }
 
+  .playgroundGridItem .playgroundPercent {
+    opacity: 1;
+  }
+
   .heroHeadingSection .heroHeading {
     width: 100%;
   }
@@ -1508,6 +1512,9 @@ main.heroVideoContainer {
 }
 
 @media screen and (max-width: 480px) {
+  .playgroundGridItem .playgroundPercent {
+    opacity: 1;
+  }
   .cursor {
     position: absolute;
     display: block;
@@ -1651,7 +1658,7 @@ main.heroVideoContainer {
 
   .sectionTitle {
     display: inline;
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
   }
 
   .subTitle {
@@ -1988,6 +1995,7 @@ main.heroVideoContainer {
     }
 
     .containerText {
+    font-size: var(--fonts--mobile--body2);
       padding: 0 0 20px 20px;
     }
 

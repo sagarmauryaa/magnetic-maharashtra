@@ -95,7 +95,7 @@
   .brillianceTitle {
     width: 100%;
     margin-bottom: 30px;
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
   }
   .brillianceLeft,
   .brillianceRight {

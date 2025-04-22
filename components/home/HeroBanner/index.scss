@@ -71,6 +71,10 @@
         &>span:first-child {
             color: var(--orange-color);
             margin-left: 20%;
+            
+            @include media("<md"){
+                margin-left: 10%;
+            }
         }
     }
 }

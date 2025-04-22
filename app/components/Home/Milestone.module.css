@@ -6,12 +6,14 @@
   margin: 0 auto;
   margin-bottom: 80px;
 }
+
 .milestones {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
 }
+
 .milestoneTitle {
   margin-top: 80px;
   width: 54%;
@@ -21,7 +23,8 @@
 
 .subtitle {
   font-size: var(--fonts--desktop--sub-heading1);
-  line-height: 95%; /* not mentioned in style */
+  line-height: 95%;
+  /* not mentioned in style */
   letter-spacing: -2%;
 }
 
@@ -39,6 +42,7 @@
   grid-template-columns: repeat(4, calc(100% / 4));
   grid-template-rows: 1fr;
 }
+
 .box,
 .boxRev {
   /* border: 1px solid var(--mid-grey-color); */
@@ -49,6 +53,7 @@
   gap: 90px;
   background-color: var(--white-color);
 }
+
 .boxTitle {
   font-size: var(--fonts--desktop--sub-heading2);
   line-height: 115%;
@@ -62,23 +67,28 @@
   letter-spacing: -2%;
   width: 75%;
 }
+
 .boxBody,
 .itemBody {
   font-size: var(--fonts--desktop--body2);
   line-height: var(--line-height--115);
   color: var(--dark-grey-color);
 }
+
 .pillars,
 .milestone {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+
 .milestoneElements .itemNumber {
   color: var(--orange-color);
   font-size: var(--fonts--desktop--sub-heading1);
-  line-height: 95%; /* not mentioned in style */
+  line-height: 95%;
+  /* not mentioned in style */
 }
+
 .item .itemBody {
   /* width: 70%; */
   padding-right: 20px;
@@ -87,6 +97,7 @@
 .elements {
   display: flex;
 }
+
 .elements .box {
   width: 380px;
   height: 400px;
@@ -99,26 +110,33 @@
   height: 400px;
 
 }
+
 .infrastructure {
   z-index: 2;
 }
+
 .business {
   z-index: 1;
 }
+
 .development {
   z-index: 0;
 }
+
 svg.milestonePath {
   stroke: red;
 }
+
 .infrastructure,
 .business,
 .development {
   border-left: none;
 }
+
 .milestone {
   position: relative;
 }
+
 .mileClipPath {
   /* display: none; */
   clip-path: inset(0 0 0 0);
@@ -129,10 +147,12 @@ svg.milestonePath {
   top: 53%;
   height: 30px;
 }
+
 .mileClipPath .track {
   position: absolute;
   width: 100%;
 }
+
 .line {
   width: auto;
   display: inline-block;
@@ -140,11 +160,11 @@ svg.milestonePath {
   position: relative;
 }
 
-.line > picture > img {
+.line>picture>img {
   width: 100%;
 }
 
-.line > img {
+.line>img {
   width: 100%;
 }
 
@@ -152,15 +172,18 @@ svg.milestonePath {
   .milestoneTitle {
     width: 100%;
   }
+
   .elements {
     width: 100%;
     overflow-x: scroll;
     scrollbar-color: transparent transparent;
   }
+
   .elements .box {
     width: 350px;
     flex-shrink: 0;
   }
+
   .milestoneElements {
     display: flex;
     overflow-x: scroll;
@@ -175,11 +198,17 @@ svg.milestonePath {
     margin-bottom: 3.75rem;
   }
 
+  .milestones {
+    gap: 40px;
+  }
+
   .milestoneTitle {
     margin-top: 3.75rem;
     width: 100%;
-    font-size: var(--fonts--mobile--sub-heading1);
-    line-height: 90%;
+    font-size: 40px;
+    line-height: 100%;
+    width: 95%;
+
     padding-inline: 1rem;
     box-sizing: border-box;
   }
@@ -192,10 +221,12 @@ svg.milestonePath {
   .milestone {
     gap: 24px;
   }
+
   .pillars .subtitle,
   .milestone .subtitle {
     padding-inline: 1rem;
   }
+
   .elements {
     overflow-x: scroll;
     scrollbar-color: transparent transparent;
@@ -205,16 +236,20 @@ svg.milestonePath {
   .boxTitle {
     font-size: var(--fonts--mobile--sub-heading-capital);
   }
+
   .boxBody {
     font-size: var(--fonts--mobile--body2);
     width: 70vw;
   }
+
   .elements .box {
     height: auto;
   }
+
   .itemBody {
     width: 70vw;
   }
+
   .box,
   .boxRev {
     gap: 5.375rem;
@@ -226,26 +261,35 @@ svg.milestonePath {
     /* letter-spacing: -2%; */
     width: 75%;
   }
+
   .subtitle {
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
     line-height: var(--line-height--115);
+  }
+
+  .icon img {
+    width: 40px;
+    height: 40px;
   }
 
   .milestoneElements .itemNumber {
     font-size: var(--fonts--mobile--sub-heading2);
     line-height: 95%;
   }
+
   .milestoneElements {
     display: flex;
     overflow: scroll;
     scrollbar-color: transparent transparent;
     padding-inline: 1rem;
   }
+
   .milestoneElements .item {
     width: 100%;
     gap: 36px;
   }
 }
+
 @media screen and (max-width: 360px) {
   /* .milestone-elements .item {
     width: 77%;

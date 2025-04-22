@@ -17,3 +17,7 @@ body[data-scroll-locked] {
     overflow: hidden !important;
     touch-action: none;
 }
+
+body.--hide-header header {
+    transform: translateY(-100%) !important;
+}

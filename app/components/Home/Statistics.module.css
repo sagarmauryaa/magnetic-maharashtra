@@ -141,10 +141,11 @@ position: relative;
   .heading,
   .heading span,
   .contentContainer .heading {
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
     line-height: var(--line-height--115);
   }
   .contentContainer p {
+    font-size: var(--fonts--mobile--body1);
     line-height: var(--line-height--115);
   }
 

@@ -112,7 +112,7 @@ function Milestones() {
           Maharashtra&apos;s Path to a $1 Trillion Economy
         </div>
         <div className={styles.pillars}>
-          <div className={styles.subtitle} observer-animation="title">The Pillars</div>
+          <div className={styles.subtitle} observer-animation="fadeInUpPara">The Pillars</div>
           <div className={styles.elements}>
             {
               mileStoneData.map((data, index) =>

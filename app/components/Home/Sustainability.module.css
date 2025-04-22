@@ -126,12 +126,12 @@
     display: block;
     width: 100%;
     margin-top: 20px;
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
     line-height: var(--line-height--115);
     letter-spacing: -0.025rem;
   }
   .sustainSubtitle {
-    width: 100%;
+    width: 100%; 
     margin-top: 8px;
     font-size: var(--fonts--mobile--body1);
     line-height: var(--line-height--115);

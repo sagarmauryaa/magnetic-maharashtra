@@ -4,15 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../page.module.css";
-import sectorsData from "../../data"; 
-const Playground = () => { 
+import sectorsData from "../../data";
+const Playground = () => {
   const sectorInsightsRef = useRef(null);
   const sectionRef = useRef(null);
   const sectionContainerRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [spacerHeight, setSpacerHeight] = useState(10);
 
-  useEffect(() => { 
+  useEffect(() => {
     if (sectorInsightsRef.current) {
       setSpacerHeight(sectorInsightsRef.current.offsetHeight);
     }
@@ -30,12 +30,13 @@ const Playground = () => {
 
           const sectionRect = sectionRef.current.getBoundingClientRect();
           const insightsRect = sectorInsightsRef.current.getBoundingClientRect();
- 
+
           const shouldBeSticky =
             window.pageYOffset > sectionRect.top &&
             sectionRect.bottom > spacerHeight &&
-            sectionRect.top <=0;
+            sectionRect.top <= 0;
 
+          document.body.classList[shouldBeSticky ? 'add' : 'remove']('--hide-header')
 
           setIsSticky(shouldBeSticky);
           ticking = false;
@@ -56,7 +57,7 @@ const Playground = () => {
     };
   }, [spacerHeight]);
 
- 
+
 
   return (
     <section className={styles.playgroundSection} >
@@ -65,7 +66,7 @@ const Playground = () => {
       <div ref={sectionContainerRef} className={styles.container}>
         <div className={styles.headingTitle}>
           <div className={styles.title}>
-            <h1 className={styles.sectionTitle} observer-animation="title">India&apos;s Growth <br />
+            <h1 className={styles.sectionTitle} observer-animation="title">India&apos;s Growth
               Engine
             </h1>
           </div>
@@ -104,7 +105,7 @@ const Playground = () => {
 
           <div className={styles.playgroundGrid}>
             {sectorsData.map((item, index) => (
-              <Link 
+              <Link
                 href={`sectors/${item.id}`}
                 key={index}
                 aria-controls=""
