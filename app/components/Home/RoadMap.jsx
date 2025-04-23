@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/molecules/m-button";
 
 function RoadMap() {
   const arrowRef = useRef(null);
@@ -105,7 +106,9 @@ function RoadMap() {
                 />
               </svg>
             </div>
-            <button>
+            <Button text={'Know more'} tag="a" href="https://maitri.mahaonline.gov.in/Home/Home" target="_blank" />
+
+            {/* <button>
               <Link href="https://maitri.mahaonline.gov.in/Home/Home">
                 Know more
               </Link>
@@ -118,7 +121,7 @@ function RoadMap() {
                   alt=""
                 />
               </span>
-            </button>
+            </button> */}
           </div>
           <div className={styles.roadElementsGrid}>
             <div

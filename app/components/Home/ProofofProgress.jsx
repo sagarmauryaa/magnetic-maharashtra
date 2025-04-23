@@ -89,7 +89,7 @@ const ProofofProgress = () => {
             { opacity: 0, scale: 0, transformOrigin: "center center" },
             {
               opacity: 1,
-              scale: 1,
+              scale: .9,
               transformOrigin: "center center",
               ease: "elastic.out(0.5, 0.5)",
             },

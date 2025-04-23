@@ -2,6 +2,7 @@
 import styles from "./Sustainability.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/molecules/m-button";
 
 function Sustainability() {
 
@@ -41,9 +42,10 @@ function Sustainability() {
               Building for tomorrow, without compromising today—Maharashtra&apos;s
               commitment to sustainability is as strong as its drive to grow.
            </p>
-            <Link href="/sustainability" className={styles.sustainReadMore}>
+            <Button text={'Read More'} tag="a" href="/sustainability" className={styles.sustainReadMore} />
+            {/* <Link href="/sustainability" className={styles.sustainReadMore}>
               <button>Read More </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

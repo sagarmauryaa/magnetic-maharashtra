@@ -4,6 +4,7 @@
   /* border-bottom: 1px solid black; */
   /* margin-top: 5rem; */
 }
+
 .hSustainability {
   max-width: 1600px;
   padding: 5rem 2.5rem;
@@ -12,12 +13,13 @@
   position: relative;
 }
 
-.sustainImage picture{
+.sustainImage picture {
   width: 100%;
   height: 100%;
   display: block;
 }
-.sustainImage { 
+
+.sustainImage {
   width: 100%;
   height: 420px;
   aspect-ratio: 4/3;
@@ -30,6 +32,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 .sustainTitles {
   display: flex;
   justify-content: space-between;
@@ -39,6 +42,7 @@
 .sustainTitles span {
   height: fit-content;
 }
+
 .sustainSubtitle {
   width: 25%;
   font-size: var(--fonts--desktop--body2);
@@ -51,35 +55,13 @@
   line-height: 100%;
   height: fit-content;
 }
+
 .sustainTitle span:not(:nth-child(2)):not(:first-child) {
   color: #00b74b;
 }
+
 .sustainSubtitle a {
-  display: block;
-  width: max-content;
-  user-select: none;
-}
-.sustainReadMore button {
-  background-color: transparent;
-  padding: 16px 24px;
-  border: 2px solid #d1d1d2;
-  color: var(--orange-color);
-  border-radius: 2px;
-  font-size: var(--fonts--mobile--body1);
-  display: block;
-  margin-top: 24px;
-  cursor: pointer;
-}
-
-.sustainReadMore button:hover {
-  background-color: var(--orange-color);
-  color: var(--white-color);
-  transition: all 0.3s ease-in-out;
-  border: 2px solid var(--orange-color);
-}
-
-.sustainReadMore a {
-  color: var(--orange-color);
+  margin-block-start: var(--space-24);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -101,6 +83,7 @@
     }
   }
 }
+
 @media screen and (max-width: 480px) {
   .hSustainability {
     padding: 3.75rem 1rem;
@@ -122,6 +105,7 @@
   .sustainTitles {
     display: block;
   }
+
   .sustainTitle {
     display: block;
     width: 100%;
@@ -130,12 +114,14 @@
     line-height: var(--line-height--115);
     letter-spacing: -0.025rem;
   }
+
   .sustainSubtitle {
-    width: 100%; 
+    width: 100%;
     margin-top: 8px;
     font-size: var(--fonts--mobile--body1);
     line-height: var(--line-height--115);
   }
+
   .sustainReadMore button {
     padding: 12px 1rem;
     font-size: var(--fonts--mobile--body2);
