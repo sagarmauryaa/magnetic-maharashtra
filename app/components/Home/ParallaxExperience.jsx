@@ -33,7 +33,8 @@ const ParallaxExperience = () => {
       });
       gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
-        y: "0%",
+        y: "-100%",
+        color:"#d1d1d1",
       });
 
       gsap
@@ -41,8 +42,8 @@ const ParallaxExperience = () => {
           defaults: { duration: 1, ease: "none" },
           scrollTrigger: {
             trigger: parallaxRef.current,
-            start: "30% 20%",
-            end: "bottom center-=50px",
+            start: "30% 60%",
+            end: "bottom center+=10%",
             markers: false,
             scrub: 0.5,
           },
@@ -53,6 +54,7 @@ const ParallaxExperience = () => {
           parallaxTextRef.current,
           {
             y: "350%",
+            color: "#fff",
             force3D: true,
           },
           "<"
@@ -67,6 +69,8 @@ const ParallaxExperience = () => {
       gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
         y: "-10%",
+        color: "#d1d1d1",
+
       });
 
       gsap
@@ -89,6 +93,7 @@ const ParallaxExperience = () => {
           parallaxTextRef.current,
           {
             y: "400%",
+            color: "#fff",
             force3D: true,
           },
           "<"
@@ -104,6 +109,7 @@ const ParallaxExperience = () => {
       gsap.set(mountainBackRef.current, { yPercent: 10 });
       gsap.set(parallaxTextRef.current, {
         y: "-150%",
+        color: "#d1d1d1",
       });
 
       gsap
@@ -125,6 +131,8 @@ const ParallaxExperience = () => {
         .to(
           parallaxTextRef.current,
           {
+            color: "#fff",
+
             y: "250%",
             force3D: true,
           },
@@ -168,12 +176,10 @@ const ParallaxExperience = () => {
         unoptimized={true}
       />
       <div className={styles.landOfWonders}>
-        A Land{" "}
-        <span className={styles.highlight}>
+        A Land&nbsp;<span className={styles.highlight}>
           of
-          <br />
-        </span>{" "}
-        Wonders
+        </span><br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wonders
       </div>
       <div className={styles.outerContainer}>
         <div className={styles.outerChildContainer}>
