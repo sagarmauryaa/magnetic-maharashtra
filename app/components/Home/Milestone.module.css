@@ -58,7 +58,7 @@
   font-size: var(--fonts--desktop--sub-heading2);
   line-height: 115%;
   letter-spacing: -2%;
-  width: 80%;
+  width: 90%;
 }
 
 .box:nth-last-child(1) .boxTitle {
@@ -100,7 +100,8 @@
 
 .elements .box {
   width: 380px;
-  height: 400px;
+  /* height: 400px; */
+  height: auto;
 }
 
 .revolution {

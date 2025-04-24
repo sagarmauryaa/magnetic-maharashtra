@@ -81,13 +81,13 @@
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .environmentalContent p {
-  width: 2ch;
+  width: 100%;
   text-align: left;
-  font-size: 1em;
+  font-size: 20px;
   line-height: 115%;
   text-wrap: balance;
   color: var(--white-color);
@@ -110,13 +110,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2.5rem;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .singleContent p {
-  width: 2ch;
+  width: 85%;
   text-align: left;
-  font-size: 0.875rem;
+  font-size: 18px;
   line-height: 115%;
   text-wrap: balance;
 }
@@ -126,7 +127,7 @@
   height: 100%;
   display: flex;
   justify-content: end;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .landscape {
@@ -156,14 +157,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
   flex-shrink: 0;
   border-radius: 1rem;
   background: #ff7600;
 }
 
 .labor p {
-  font-size: 0.875rem;
+  font-size: 18px;
   line-height: 115%;
   text-wrap: balance;
   color: var(--white-color);
@@ -218,7 +219,7 @@
   border-radius: 1rem;
   background: #88b2dd;
   color: var(--white-color);
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 .taxContent {
@@ -229,6 +230,7 @@
 
 .taxContent p {
   color: var(--white-color);
+  font-size: 26px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {

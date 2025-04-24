@@ -545,7 +545,7 @@ main.heroVideoContainer {
 }
 
 .everythingWrapper {
-  height: 300vh;
+  height: 260vh;
   position: relative;
 }
 
@@ -926,7 +926,8 @@ main.heroVideoContainer {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(3.75rem, 0.687rem + 15.31vw, 16rem);
-  color: hsla(0, 0%, 59%, 0.658);
+  /* color: hsla(0, 0%, 59%, 0.658); */
+  color: #fff;
   /* color: var(--white-color); */
   z-index: 3;
   will-change: transform;
