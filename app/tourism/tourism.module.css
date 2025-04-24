@@ -3,7 +3,7 @@
   padding-inline: 40px;
   flex-direction: column;
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   position: static;
   box-sizing: border-box;
   margin-inline: auto;
@@ -13,7 +13,7 @@
 #tourismHeroSection img {
   height: 600px;
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   object-fit: cover;
   justify-content: center;
@@ -74,7 +74,7 @@
   position: relative;
   width: 100%;
   height: fit-content;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-block: 80px;
   padding-inline: 2.5rem;
   display: flex;
@@ -238,7 +238,7 @@
   margin-top: 80px;
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-inline: 40px;
   padding-block: 80px;
   display: flex;
@@ -457,7 +457,7 @@
 #seasons {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-block: 80px;
   padding-inline: 40px;
   margin: auto;

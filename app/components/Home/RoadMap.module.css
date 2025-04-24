@@ -5,7 +5,7 @@
 .roadMap {
   margin: 5rem auto;
   position: relative;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 0 2.5rem;
 }
 .imgBg {
@@ -123,6 +123,7 @@
 }
 .roadElementsGrid hr {
   background-color: var(--light-grey-color);
+  opacity: .5;
 }
 .arrow {
   display: grid;
@@ -165,19 +166,20 @@
   }
   .imgContent .title {
     width: 90%;
-    font-size: var(--fonts--mobile--sub-heading1);
+    font-size: 40px;
     line-height: var(--line-height--100);
     margin-left: 1rem;
   }
 
   .imgContent .subtitle {
-    margin-top: 1rem;
+    margin-top: 6px;
     font-size: var(--fonts--mobile--sub-heading-capital);
     line-height: var(--line-height--100);
   }
 
   .imgContent p {
-    width: 100%;
+    width: 90%;
+    margin-block-start: var(--space-24);
     padding: 1rem;
     line-height: var(--line-height--115);
     font-size: var(--fonts--mobile--body1);
@@ -200,6 +202,9 @@
   }
   .elementTitle div img {
     width: 10%;
+  }
+  .elementTitle a{
+    margin-top: 32px;
   }
   .roadElements button {
     /* width: 128px; */
@@ -240,5 +245,9 @@
   .roadElementsGrid .subtitle {
     font-size: var(--fonts--mobile--body2);
     width: 100%;
+  }
+  .roadElementsGrid img{
+    width: 82px;
+    height: 60px;
   }
 }

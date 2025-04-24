@@ -67,7 +67,7 @@ const StickyNavbar = () => {
   const menuRefs = useRef({});
   const [menuPositions, setMenuPositions] = useState({});
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -127,9 +127,7 @@ const StickyNavbar = () => {
     }
 
     // Handle navbar visibility logic (keep this part)
-    if (currentScrollY === 0 && isHomePage) {
-      setIsVisible(false);
-    } else if (currentScrollY === 0 && !isHomePage) {
+    if (currentScrollY === 0) {
       setIsVisible(true);
     } else if (isScrollingDown) {
       if (currentScrollY > 20 && currentScrollY < window.innerHeight) {
@@ -150,9 +148,9 @@ const StickyNavbar = () => {
     // Set timeout for scrolling pause detection (keep for opacity changes)
     scrollTimeoutRef.current = setTimeout(() => {
       setIsScrolling(false);
-      if (!(currentScrollY === 0 && isHomePage)) {
-        setIsVisible(true);
-      }
+      // if (!(currentScrollY === 0 && isHomePage)) {
+      //   setIsVisible(true);
+      // }
     }, 150);
   };
 
@@ -179,9 +177,9 @@ const StickyNavbar = () => {
       const isHomePage = currentPath === "/";
 
       // Show navbar when touch ends, except at top of homepage
-      if (!(currentScrollY === 0 && isHomePage)) {
-        setIsVisible(true);
-      }
+      // if (!(currentScrollY === 0 && isHomePage)) {
+      //   setIsVisible(true);
+      // }
     }, 150); // Reduced from 100ms to 150ms for consistency with scroll handler
   };
 
@@ -195,13 +193,13 @@ const StickyNavbar = () => {
     setIsAtTop(initialScrollY === 0);
 
     // Set initial visibility
-    if (initialScrollY === 0 && isHomePage) {
-      // At top of homepage - hide navbar
-      setIsVisible(false);
-    } else {
-      // Either not at top, or not on homepage - show navbar
-      setIsVisible(true);
-    }
+    // if (initialScrollY === 0 && isHomePage) {
+    //   // At top of homepage - hide navbar
+    //   setIsVisible(false);
+    // } else {
+    //   // Either not at top, or not on homepage - show navbar
+    //   setIsVisible(true);
+    // }
 
     // Set initial scroll position
     setLastScrollY(initialScrollY);
@@ -405,8 +403,8 @@ const StickyNavbar = () => {
               }
               style={
                 menu.label === "Sectors" ||
-                menu.label === "Locations" ||
-                menu.label === "Discover Maharashtra"
+                  menu.label === "Locations" ||
+                  menu.label === "Discover Maharashtra"
                   ? { cursor: "default" }
                   : { cursor: "pointer" }
               }
@@ -451,9 +449,8 @@ const StickyNavbar = () => {
                           <Link
                             href={menuInner.url}
                             style={{
-                              paddingLeft: `${
-                                menuPositions[menu.label] || 0
-                              }px`,
+                              paddingLeft: `${menuPositions[menu.label] || 0
+                                }px`,
                             }}
                             onClick={() => {
                               setActiveMenu(null);
@@ -480,9 +477,8 @@ const StickyNavbar = () => {
       </nav>
 
       <nav
-        className={`${styles.mobileNavbar} ${
-          isScrolling ? `${styles.isScrolling}` : ""
-        }`}
+        className={`${styles.mobileNavbar} ${isScrolling ? `${styles.isScrolling}` : ""
+          }`}
       >
         <div className={`${styles.mobileNavContent} ${styles.onMobile} `}>
           <div className={`${styles.logo} `}>

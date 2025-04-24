@@ -1,6 +1,6 @@
 .gatesContainer {
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   /* height: 100vh; */
   border-top: 1px solid black;
   border-bottom: 1px solid black;

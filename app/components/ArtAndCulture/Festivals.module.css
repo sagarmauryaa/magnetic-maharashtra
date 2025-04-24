@@ -6,7 +6,7 @@
 .festivals {
   width: 100%;
   padding: 0 2.5rem;
-  max-width: 1600px;
+  max-width: var(--w-max);
   margin: 0 auto;
   /* position: relative; */
   box-sizing: border-box;

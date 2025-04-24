@@ -1,7 +1,7 @@
 #sustainabilityHeroSection {
   width: 100%;
   height: 374.875rem;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 0px 40px 40px 40px;
   flex-direction: row;
@@ -51,7 +51,7 @@
 #smartCities {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 80px 40px 40px 40px;
   margin: auto;
@@ -129,7 +129,7 @@
 #transport {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 10px 40px 80px 40px;
   margin: 0 auto;
@@ -232,7 +232,7 @@
 #ecoIndustrial {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 80px 40px 80px 40px;
   margin: 0 auto;
@@ -353,7 +353,7 @@
 #greenProjects {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 80px 40px 80px 40px;
   margin: 0 auto;
@@ -442,7 +442,7 @@
 #economy {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 80px 40px 80px 40px;
   margin: 0 auto;
@@ -508,7 +508,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 80px 40px;
   margin-inline: auto;
   box-sizing: border-box;
@@ -687,7 +687,7 @@
 #keyInitiative {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   padding: 80px 40px 80px 40px;
   margin: 0 auto;
@@ -785,7 +785,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   margin: 0 auto;
   padding: 80px 40px;
   gap: 40px;
@@ -884,7 +884,7 @@
   align-items: flex-start;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 40px;
 }
 .economyActionHeader {
@@ -972,7 +972,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-block: 80px;
   margin-inline: auto;
   position: relative;

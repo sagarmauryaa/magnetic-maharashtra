@@ -1,7 +1,7 @@
 .heroSection {
   width: 100%;
   height: auto;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   margin-inline: auto;
   flex-direction: column;
@@ -59,7 +59,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   margin-inline: auto;
   padding-inline: 40px;
   padding-block: 80px;
@@ -179,7 +179,7 @@
 }
 .sectorsIncentives {
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--w-max);
   display: flex;
   justify-content: flex-start;
   align-items: start;
@@ -341,7 +341,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-inline: 40px;
   padding-block: 80px;
   padding-bottom: 56px;
@@ -427,7 +427,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding-inline: 40px;
   padding-block: 80px;
   margin-inline: auto;
@@ -585,7 +585,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 80px 40px;
   gap: 32px;
   margin-inline: auto;
@@ -663,7 +663,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 80px 40px;
   margin-inline: auto;
   box-sizing: border-box;
@@ -833,7 +833,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 80px 40px;
   margin-inline: auto;
   box-sizing: border-box;
@@ -995,7 +995,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 40px;
   margin-inline: auto;
 }

@@ -34,7 +34,7 @@ $c-grayF1: #f1f1f1;
 $border: 1px solid black;
 $borderColor: black;
 /* max width */
-$maxWidth: 1600px;
+$maxWidth: var(--w-max);
 /* css variables */
 :root {
   --themeFontColor: black;

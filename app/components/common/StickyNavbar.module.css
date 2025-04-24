@@ -9,8 +9,8 @@
 .navbar {
   /* width: 100%; */
   position: relative;
-  max-width: 1600px;
-  max-width: 1600px;
+  max-width: var(--w-max);
+  max-width: var(--w-max);
   padding: 0 2.5rem;
   margin: 0 auto;
   height: 72px;
@@ -426,7 +426,7 @@ li:hover .submenuLocation {
     right: 0;
     top: 72px; /* Match the height of the navbar */
     width: 100%;
-    /* max-width: 1600px; */
+    /* max-width: var(--w-max); */
     margin-bottom: 80px;
     margin-inline: auto;
     background: white;
@@ -442,7 +442,7 @@ li:hover .submenuLocation {
   }
 
   .desktopFlyoutMenuInner {
-    /* max-width: 1600px; */
+    /* max-width: var(--w-max); */
     margin: 0 auto;
     width: 100%;
   }

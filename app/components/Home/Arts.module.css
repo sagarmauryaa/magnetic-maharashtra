@@ -81,7 +81,7 @@
   margin: 0 auto;
   margin-top: 5rem;
   padding: 0 2.5rem;
-  max-width: 1600px;
+  max-width: var(--w-max);
 }
 
 .artContainer {
@@ -197,7 +197,7 @@
     /* margin: 0 auto; */
     margin-top: 0rem;
     padding: 0 0rem;
-    /* max-width: 1600px; */
+    /* max-width: var(--w-max); */
   }
   .artsCultureTitle {
     font-size: 72px;

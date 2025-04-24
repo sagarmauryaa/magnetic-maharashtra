@@ -30,7 +30,7 @@ image {
   z-index: 1;
   background-color: transparent;
   box-sizing: border-box;
-  max-width: 1600px;
+  max-width: var(--w-max);
   margin-inline: auto;
 }
 
@@ -92,7 +92,7 @@ image {
   .flagContainer {
     margin-top: 40px;
     width: 100%;
-    max-width: 1600px;
+    max-width: var(--w-max);
     display: grid;
     place-content: center;
     padding: 0 3rem;

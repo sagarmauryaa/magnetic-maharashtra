@@ -4,7 +4,7 @@
   /* margin-top: 5rem; */
 }
 .brilliance {
-  max-width: 1600px;
+  max-width: var(--w-max);
   padding: 5rem 2.5rem;
   margin: 0 auto;
   /* margin-top: 5rem; */

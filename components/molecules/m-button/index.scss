@@ -1,6 +1,7 @@
 @use "@/styles/abstracts/" as *;
 
 .m-button {
+    box-sizing: border-box;
     position: relative;
     width: fit-content;
     transition: 100ms ease-in-out;
@@ -42,11 +43,11 @@
 
     @include media("<md") {
         height: 44px;
-        padding: var(--space-3xs) var(--space-s);
+        padding: var(--space-12) var(--space-16);
     }
 
     &:disabled {
-       opacity: .6;
+        opacity: .6;
     }
 
     &:active {
