@@ -568,26 +568,26 @@ const Locations = () => {
         );
 
       // places
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: `#${styles.placesOfInterest}`,
-            start: "top center",
-            end: "center bottom",
-          },
-        })
-        .from(`#${styles.placesOfInterest} .${styles.sectionHead}`, {
-          yPercent: 30,
-          opacity: 0,
-          duration: 0.65,
-          ease: "expo.out",
-        })
-        .from(`#${styles.placesOfInterestContainer}`, {
-          yPercent: 30,
-          opacity: 0,
-          duration: 0.65,
-          ease: "expo.out",
-        });
+      // gsap
+      //   .timeline({
+      //     scrollTrigger: {
+      //       trigger: `#${styles.placesOfInterest}`,
+      //       start: "top center",
+      //       end: "center bottom",
+      //     },
+      //   })
+      //   .from(`#${styles.placesOfInterest} .${styles.sectionHead}`, {
+      //     yPercent: 30,
+      //     opacity: 0,
+      //     duration: 0.65,
+      //     ease: "expo.out",
+      //   })
+      //   .from(`#${styles.placesOfInterestContainer}`, {
+      //     yPercent: 30,
+      //     opacity: 0,
+      //     duration: 0.65,
+      //     ease: "expo.out",
+      //   });
 
       // Dividers
       const dividers = gsap.utils.toArray(`.${styles.divider}`);
@@ -1330,37 +1330,39 @@ const Locations = () => {
       </section>
 
       {filteredData.map((data) => (
-        <main ref={secondSectionRef} key={data.id}>
-          <div className={styles.divider}></div>
+        <main ref={secondSectionRef} key={data.id} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass"> 
+          <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
           <section id={styles.seaLink}>
-            <div className={styles.sectionImage}>
+            <div className={styles.sectionImage + ' anim-imageWrapper'}>
               <Image
                 src={data.secondSection?.imageUrl}
                 alt={data.secondSection?.name}
                 loading="lazy"
                 width={100}
+                className="anim-image"
                 height={100}
                 quality={100}
                 unoptimized
               />
             </div>
             <div className={styles.sectionBody}>
-              <h3>
+              <h3 observer-animation="title">
                 {data?.secondSection?.description.partOne} <br />
                 {data?.secondSection?.description.partTwo} <br />
                 {data?.secondSection?.description.partThree}
               </h3>
             </div>
-          </section>
-          <div className={styles.divider}></div>
-          <section id={styles.industrialCluster}>
+          </section> 
+          <section id={styles.industrialCluster} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+            <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             <div className={styles.industrialGradientGlow}></div>
-            <div className={styles.industrialHead}>
-              <h2>{data?.thirdSection?.headingTitle}</h2>
+            <div className={styles.industrialHead} >
+              <h2 observer-animation="fadeInUpPara">{data?.thirdSection?.headingTitle}</h2>
             </div>
             <div id={styles.industrialContainer}>
               {data.thirdSection?.gridData?.map((gridItem) => (
                 <div
+                  observer-animation="fadeInUpPara"
                   className={styles.gridItem}
                   style={{ gridArea: `${gridItem.gridArea}` }}
                   key={gridItem.title}
@@ -1374,7 +1376,7 @@ const Locations = () => {
           <div className={styles.divider}></div>
           <section ref={whyMumbaiRef} id={styles.whyMumbai}>
             <div className={styles.sectionHead}>
-              <h2>Why {data.name}</h2>
+              <h2 observer-animation="fadeInUpPara">Why {data.name}</h2>
             </div>
             <div
               className={styles.whyMumbaiScroll}
@@ -1393,7 +1395,8 @@ const Locations = () => {
               onMouseUp={handleMouseUp}
               onMouseMove={(e) => handleMouseMove(e, itemsRef)}
             >
-              <div ref={whyMumbaiContainerRef} id={styles.whyMumbaiContainer}>
+              <div  id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara">
+              {/* <div ref={whyMumbaiContainerRef} id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara"> */}
                 {data.fourthSection?.cardsData.map((cardData) => (
                   <div className={styles.gridItem} key={cardData.title}>
                     <img src={cardData.icon} alt={cardData.title} />
@@ -1452,20 +1455,31 @@ const Locations = () => {
           </section>
           <div className={styles.divider}></div>
           <section ref={placesRef} id={styles.placesOfInterest}>
-            <div className={styles.sectionHead}>
+            <div className={styles.sectionHead} observer-animation="fadeInUpPara">
               <h2>Places of Interest</h2>
             </div>
 
-            {data.sixthSection?.placesData.map((placeData) => (
-              <div id={styles.placesOfInterestContainer} key={placeData.title}>
-                <div className={styles.sectionDivider}></div>
-                <div className={styles.placesContentContainer}>
+            {data.sixthSection?.placesData.map((placeData, index) => (
+              <div id={styles.placesOfInterestContainer} key={placeData.title} >
+                {/* <div className={styles.sectionDivider}></div> */}
+                <div className={styles.placesContentContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+                  {
+                    index == 0 &&
+                    <span className="anim-line -top --light-gray" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  }{
+                    data.sixthSection?.placesData.length - 1 > index &&
+
+                    <span className="anim-line -bottom --light-gray" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                  }
+
                   <div className={styles.placesContentHead}>
-                    <h3>{placeData.title}</h3>
+                    <h3 observer-animation="fadeInUpPara">{placeData.title}</h3>
                   </div>
                   <div className={styles.placesImageContent}>
-                    <img src={placeData.imageUrl} alt="Gateway of india" />
-                    <div className={styles.bodyText}>
+                    <div className={`${styles.placesContentContainerWrapper} anim-imageWrapper`}>
+                      <img src={placeData.imageUrl} className={`anim-image`} alt="Gateway of india" />
+                    </div>
+                    <div className={styles.bodyText} observer-animation="fadeInUpPara">
                       <p>{placeData.desc}</p>
                     </div>
                   </div>

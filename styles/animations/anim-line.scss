@@ -17,6 +17,9 @@ html[data-theme="dark"] {
   @supports(will-change: transform) {
     will-change: transform;
   }
+  &.--light-gray{
+    background-color: var(--body-grey-color);
+  }
   &.-aboveTheFold {
     // @include media(">1024") {
     //   transition-delay: 500ms;
