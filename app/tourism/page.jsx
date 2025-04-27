@@ -157,34 +157,34 @@ function Tourism() {
   }
 
   useGSAP(() => {
-    gsap
-      .timeline()
-      .from(`#${styles.tourismHeroSection} img`, {
-        clipPath: "inset(0 0 100% 0)",
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-      })
-      .from(
-        `.${styles.heroHeading}`,
-        {
-          yPercent: 30,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        "<=0.2"
-      )
-      .from(
-        `.${styles.tTextBlock}`,
-        {
-          yPercent: 30,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut",
-        },
-        "<=0.2"
-      );
+    // gsap
+    //   .timeline()
+    //   .from(`#${styles.tourismHeroSection} img`, {
+    //     clipPath: "inset(0 0 100% 0)",
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "power2.inOut",
+    //   })
+    //   .from(
+    //     `.${styles.heroHeading}`,
+    //     {
+    //       yPercent: 30,
+    //       opacity: 0,
+    //       duration: 1,
+    //       ease: "power2.inOut",
+    //     },
+    //     "<=0.2"
+    //   )
+    //   .from(
+    //     `.${styles.tTextBlock}`,
+    //     {
+    //       yPercent: 30,
+    //       opacity: 0,
+    //       duration: 1,
+    //       ease: "power2.inOut",
+    //     },
+    //     "<=0.2"
+    //   );
 
     gsap
       .timeline({
@@ -355,31 +355,37 @@ function Tourism() {
     });
   }, [seasonActiveTab]);
 
+
+
   return (
     <main>
-      <section id={styles.tourismHeroSection}>
-        <Image
-          src="/images/TourismPage/Hero-image.png"
-          alt="Hero Image"
-          width={100}
-          height={100}
-          quality={100}
-          unoptimized={true}
-        />
+      <section id={styles.tourismHeroSection} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+        <div className={styles.tourismHeroSectionImg + ' anim-imageWrapper'}>
+
+          <Image
+            src="/images/TourismPage/Hero-image.png"
+            alt="Hero Image"
+            width={100}
+            height={100}
+            className="anim-image"
+            quality={100}
+            unoptimized={true}
+          />
+        </div>
         <div className={styles.tFlexContainer}>
-          <div className={styles.heroHeading}>Experience</div>
-          <div className={styles.tTextBlock}>
+          <div className={styles.heroHeading} observer-animation="title">Experience</div>
+          <div className={styles.tTextBlock} observer-animation="fadeInUpPara">
             Beyond the Map, <br />
             into the Soul
           </div>
         </div>
-      </section>
-      <div className={styles.divider}></div>
-
-      <section id={styles.tourismExperiences}>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+      </section> 
+      <section id={styles.tourismExperiences} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         <div className={styles.tContentContainer}>
           <div className={styles.sectionHeading}>
-            <h4>
+            <h4 observer-animation="fadeInUpPara">
               Experiences beyond <br />
               expectations
             </h4>
@@ -521,7 +527,7 @@ function Tourism() {
                 />
               </div>
             </div>
-            <div className={styles.tourismTitleContainer}>
+            <div className={styles.tourismTitleContainer} observer-animation="fadeInUpPara">
               <h5
                 ref={(el) => (experienceTitleRef.current[0] = el)}
                 className={styles.clicked}
@@ -531,8 +537,10 @@ function Tourism() {
                 }
               >
                 Chronicles
+                <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[1] = el)}
                 data-location="heritage"
@@ -541,8 +549,9 @@ function Tourism() {
                 }
               >
                 Heritage
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[2] = el)}
                 data-location="festivals"
@@ -551,8 +560,9 @@ function Tourism() {
                 }
               >
                 Festivals
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[3] = el)}
                 data-location="forts"
@@ -561,8 +571,9 @@ function Tourism() {
                 }
               >
                 Forts
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[4] = el)}
                 data-location="art"
@@ -571,8 +582,9 @@ function Tourism() {
                 }
               >
                 Art
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[5] = el)}
                 data-location="folk-dance"
@@ -581,8 +593,9 @@ function Tourism() {
                 }
               >
                 Folk-dance
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[6] = el)}
                 data-location="food"
@@ -591,8 +604,9 @@ function Tourism() {
                 }
               >
                 Food
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[7] = el)}
                 data-location="beaches"
@@ -601,8 +615,9 @@ function Tourism() {
                 }
               >
                 Beaches
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[8] = el)}
                 data-location="landscapes"
@@ -611,8 +626,9 @@ function Tourism() {
                 }
               >
                 Landscapes
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[9] = el)}
                 data-location="hill-stations"
@@ -621,8 +637,9 @@ function Tourism() {
                 }
               >
                 Hill Stations
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[10] = el)}
                 data-location="wildlife"
@@ -631,8 +648,9 @@ function Tourism() {
                 }
               >
                 Wildlife
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
-              <div className={styles.experienceDivider}></div>
+              {/* <div className={styles.experienceDivider}></div> */}
               <h5
                 ref={(el) => (experienceTitleRef.current[11] = el)}
                 data-location="sports"
@@ -641,6 +659,7 @@ function Tourism() {
                 }
               >
                 Sports
+                <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
               </h5>
             </div>
           </div>
@@ -666,16 +685,14 @@ function Tourism() {
             })}
           </div>
         </div>
-      </section>
-      <div className={styles.divider}></div>
-
-      <section id={styles.exploreByInterest}>
+      </section> 
+      <section id={styles.exploreByInterest} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
         <div className={styles.exploreContainer}>
-          <h2 className={styles.exploreHead}>
+          <h2 className={styles.exploreHead} observer-animation="title">
             Explore by <br />
             Interest
           </h2>
-          <p className={styles.exploreSubheading}>
+          <p className={styles.exploreSubheading} observer-animation="fadeInUpPara">
             Explore Maharashtra by your interest, <br />
             whether it&apos;s the thrill of Adventure <br />
             Tourism with trekking in the Sahyadri <br />
@@ -688,7 +705,7 @@ function Tourism() {
           </p>
         </div>
         <div className={styles.exploreInnerContainer}>
-          <div className={styles.exploreTabContainer}>
+          <div className={styles.exploreTabContainer} observer-animation="fadeInUpPara">
             <div
               ref={exploreTab1Ref}
               className={styles.tab1}
@@ -715,7 +732,7 @@ function Tourism() {
             </div>
           </div>
           <div className={styles.seasonsTabDivider}></div>
-          <div className={styles.exploreDataContainer}>
+          <div className={styles.exploreDataContainer} observer-animation="fadeInUpPara">
             {exploreActiveTab === "tab1" ? (
               <div className={styles.Tab1}>
                 <div className={styles.exploreGridItem}>

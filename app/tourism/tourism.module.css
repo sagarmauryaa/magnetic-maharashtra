@@ -9,8 +9,10 @@
   margin-inline: auto;
   margin-top: 72px;
   padding-bottom: 80px;
+  position: relative;
 }
-#tourismHeroSection img {
+
+.tourismHeroSectionImg {
   height: 600px;
   width: 100%;
   max-width: var(--w-max);
@@ -18,6 +20,15 @@
   object-fit: cover;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+#tourismHeroSection img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .tFlexContainer {
@@ -27,6 +38,7 @@
   margin-top: 40px;
   flex-direction: row;
 }
+
 #tourismHeroSection .heroHeading {
   width: 70%;
   display: block;
@@ -35,6 +47,7 @@
   line-height: 90%;
   letter-spacing: -2.4px;
 }
+
 .tTextBlock {
   width: 25%;
   display: block;
@@ -44,6 +57,7 @@
   letter-spacing: -0.64px;
   text-align: left;
 }
+
 .hiddenImage {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -62,6 +76,7 @@
   width: 100%;
   height: 0.5px;
 }
+
 .sectionDivider {
   background-color: #d1d1d2;
   width: 100%;
@@ -83,6 +98,7 @@
   margin: auto;
   box-sizing: border-box;
 }
+
 .tContentContainer {
   width: 100%;
   height: 100%;
@@ -92,11 +108,13 @@
   flex-direction: column;
   gap: 48px;
 }
+
 .sectionHeading h4 {
   font-size: 80px;
   line-height: 90%;
   letter-spacing: -1.6px;
 }
+
 .tourismExperienceContainer {
   position: relative;
   display: flex;
@@ -110,11 +128,13 @@
   height: 100%;
   align-items: flex-start;
 }
+
 .tourismImageBox {
   width: 100%;
   height: 34.5rem;
   position: relative;
 }
+
 .tourismImageBox img {
   position: absolute;
   width: 100%;
@@ -125,6 +145,7 @@
   object-fit: cover;
   aspect-ratio: 4/3;
 }
+
 .tourismImageBox img.visible {
   opacity: 1;
   transform: scale(1);
@@ -148,10 +169,18 @@
 .tourismTitleContainer h5:hover {
   cursor: pointer;
 }
-
+.tourismTitleContainer h5 span{
+  background-color: var(--body-grey-color);
+}
+.tourismTitleContainer h5{
+  position: relative;
+  padding-block: var(--space-16);
+}
 .tourismTitleContainer h5.clicked {
   color: #000;
+  position: relative; 
 }
+
 .supporingText p {
   font-size: 20px;
 
@@ -168,10 +197,12 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
 .tourismTitleContainer {
   margin-top: 0;
   width: 50%;
 }
+
 .tourismTitleContainer h5 {
   color: var(--light-grey-color);
   font-size: 32px;
@@ -191,6 +222,7 @@
   position: relative;
   gap: 24px;
 }
+
 .circularImageContainer img {
   position: absolute;
   width: 36.563;
@@ -200,36 +232,47 @@
 .circularImageContainer img.img0 {
   top: 0px;
 }
+
 .circularImageContainer img.img1 {
   top: 60px;
 }
+
 .circularImageContainer img.img2 {
   top: 120px;
 }
+
 .circularImageContainer img.img3 {
   top: 190px;
 }
+
 .circularImageContainer img.img4 {
   top: 210px;
 }
+
 .circularImageContainer img.img5 {
   top: 200px;
 }
+
 .circularImageContainer img.img6 {
   top: 200px;
 }
+
 .circularImageContainer img.img7 {
   top: 200px;
 }
+
 .circularImageContainer img.img8 {
   top: 200px;
 }
+
 .circularImageContainer img.img9 {
   top: 200px;
 }
+
 .circularImageContainer img.img10 {
   top: 240px;
 }
+
 .circularImageContainer img.img11 {
   top: 240px;
 }
@@ -248,6 +291,7 @@
   margin: auto;
   box-sizing: border-box;
 }
+
 .exploreContainer {
   width: 100%;
   height: 100%;
@@ -257,18 +301,21 @@
   flex-direction: row;
   padding-bottom: 40px;
 }
+
 .exploreContainer h2 {
   font-size: 80px;
 
   line-height: 90%;
   letter-spacing: -1.6px;
 }
+
 .exploreContainer p {
   font-size: 16px;
 
   line-height: 115%;
   color: #2b2f34;
 }
+
 .exploreInnerContainer {
   width: 100%;
   height: 100%;
@@ -277,6 +324,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .exploreTabContainer {
   width: 100%;
   display: flex;
@@ -286,12 +334,14 @@
   gap: 3.75rem;
   /* border-bottom: 1.5px solid var(--light-grey-color); */
 }
+
 .exploreDataContainer {
   margin-top: 32px;
   position: relative;
   width: 100%;
   height: auto;
 }
+
 .exploreInnerContainer .seasonsTabDivider {
   margin-bottom: 0;
 }
@@ -336,6 +386,7 @@
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
 }
+
 .tab3 {
   cursor: pointer;
   width: fit-content;
@@ -381,7 +432,7 @@
   border-bottom: 2px solid transparent;
 }
 
-.exploreTabContainer > div.active {
+.exploreTabContainer>div.active {
   color: #ff5100;
   border-bottom: 2px solid #ff5100;
 }
@@ -411,6 +462,7 @@
   row-gap: 40px;
   column-gap: 40px;
 }
+
 .Tab2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -418,6 +470,7 @@
   row-gap: 40px;
   column-gap: 40px;
 }
+
 .Tab3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -425,6 +478,7 @@
   row-gap: 40px;
   column-gap: 40px;
 }
+
 .exploreGridItem {
   width: 100%;
   display: flex;
@@ -433,12 +487,14 @@
   text-align: start;
   gap: 8px;
 }
+
 .exploreGridItem img {
   aspect-ratio: 4/3;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
+
 .exploreGridItem .gridHead {
   font-size: 24px;
 
@@ -446,6 +502,7 @@
   letter-spacing: -0.48px;
   margin: 8px 0;
 }
+
 .exploreGridItem .gridText {
   font-size: 16px;
 
@@ -463,10 +520,12 @@
   margin: auto;
   box-sizing: border-box;
 }
+
 .headingContainer {
   width: 100%;
   height: 100%;
 }
+
 .headingContainer h3 {
   font-size: 80px;
 
@@ -483,7 +542,8 @@
   flex-direction: row;
   gap: 3.75rem;
 }
-.seasonContainer > div {
+
+.seasonContainer>div {
   cursor: pointer;
   font-family: "Neue Montreal", sans-serif;
   font-size: 32px;
@@ -497,16 +557,19 @@
   /* transition: color 0.3s ease, border-bottom 0.3s ease; */
   /* transition: color 0.3s ease; */
 }
-.seasonContainer > div.active {
+
+.seasonContainer>div.active {
   color: #ff5100;
   border-bottom: 2px solid #ff5100;
 }
+
 .seasonDetails .seasonD {
   font-size: 32px;
   line-height: 115%;
   color: #ff5100;
   text-transform: uppercase;
 }
+
 /* .summer_container,
   .monsoon_container,
   .winter_container {
@@ -530,6 +593,7 @@
   text-transform: uppercase;
   padding: 16px;
 }
+
 .season2 {
   cursor: pointer;
   color: #72777f;
@@ -541,6 +605,7 @@
   text-transform: uppercase;
   padding: 16px;
 }
+
 .season3 {
   cursor: pointer;
   color: #72777f;
@@ -552,6 +617,7 @@
   text-transform: uppercase;
   padding: 16px;
 }
+
 .seasonsTab {
   width: 100%;
   height: 100%;
@@ -560,6 +626,7 @@
   align-content: end;
   margin-top: 48px;
 }
+
 .seasonDetails {
   display: flex;
   justify-content: center;
@@ -567,6 +634,7 @@
   width: 50%;
   flex-direction: column;
 }
+
 .seasonD {
   color: var(--Orange, #ff5100);
 
@@ -575,6 +643,7 @@
   line-height: 115%;
   letter-spacing: -0.64px;
 }
+
 .summerContainer {
   width: 100%;
   height: 100%;
@@ -582,6 +651,7 @@
   justify-content: flex-start;
   flex-direction: column;
 }
+
 .monsoonContainer {
   width: 100%;
   height: 100%;
@@ -589,6 +659,7 @@
   justify-content: flex-start;
   flex-direction: column;
 }
+
 .winterContainer {
   width: 100%;
   height: 100%;
@@ -596,6 +667,7 @@
   justify-content: flex-start;
   flex-direction: column;
 }
+
 .seasonsInnerSummer {
   width: 100%;
   height: 100%;
@@ -604,41 +676,49 @@
   align-content: flex-start;
   flex-direction: row;
 }
+
 .seasonsTitle {
   width: 25%;
   height: 100%;
 }
+
 .seasonsTitle h3 {
   font-size: 32px;
 
   line-height: 115%;
   letter-spacing: -0.64px;
 }
+
 .seasonsGrid {
   width: 75%;
   height: 100%;
 }
+
 .seasonsGrid {
   display: flex;
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: 16.25rem; */
   gap: 1.875rem;
 }
+
 .emptyDiv {
   width: 17.25rem;
   height: 100%;
 }
+
 .seasonsItem img {
   width: 17.375rem;
   height: 13rem;
   object-fit: cover;
 }
+
 .seasonsTabDivider {
   margin-bottom: 40px;
   width: 100%;
   height: 0.75px;
   background-color: #d1d1d2;
 }
+
 .adventureDivider {
   background-color: black;
   width: 100%;
@@ -646,6 +726,7 @@
   margin: 40px 0;
   box-sizing: border-box;
 }
+
 .adventureDivider:first-child {
   display: none;
 }
@@ -657,12 +738,14 @@
   flex-direction: column;
   gap: 1rem;
 }
+
 .seasonsItem h5 {
   font-size: 20px;
 
   line-height: 115%;
   color: #2b2f34;
 }
+
 /* .summer_container,
   .monsoon_container,
   .winter_container {
@@ -681,20 +764,25 @@
 .seasonDetails .seasonD.active {
   opacity: 1;
 }
+
 .tourismExperienceContainerMobile {
   display: none;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .tFlexContainer {
     flex-direction: column;
     gap: 40px;
   }
+
   .tTextBlock {
     width: 100%;
   }
+
   .tTextBlock br {
     display: none;
   }
+
   .seasonsTab {
     flex-direction: column;
     gap: 20px;
@@ -725,12 +813,14 @@
     height: auto;
   }
 }
+
 @media screen and (max-width: 480px) {
   #tourismHeroSection {
     margin-top: 48px;
     padding: 0rem;
     /* padding-bottom: 60px; */
   }
+
   .tFlexContainer {
     flex-direction: column;
     margin-top: 32px;
@@ -738,23 +828,28 @@
     gap: 16px;
     margin-bottom: 60px;
   }
+
   #tourismHeroSection .heroHeading {
     font-size: 48px;
   }
+
   .tTextBlock {
     font-size: var(--fonts--mobile--sub-heading-capital);
     width: 100%;
   }
+
   /* .divider {
       margin-top: 60px;
     } */
   #tourismExperiences {
     padding: 60px 1rem;
+
     /* padding-bottom: 0; */
     .tContentContainer {
       .sectionHeading {
         width: 100%;
       }
+
       .tContentContainer {
         .sectionHeading br {
           display: none;
@@ -762,20 +857,25 @@
       }
     }
   }
+
   .sectionHeading h4 {
     font-size: var(--fonts--mobile--sub-heading1);
   }
+
   .tContentContainer {
     display: block;
   }
+
   .tourismExperienceContainer {
     display: none;
   }
+
   .tourismExperienceContainerMobile {
     display: grid;
     grid-template-columns: repeat(2, minmax(9.75rem, 1fr));
     gap: 1rem;
   }
+
   .tourismExperienceContainerMobileItem {
     display: flex;
     flex-direction: column;
@@ -796,19 +896,23 @@
   #exploreByInterest {
     padding: 60px 0rem;
   }
+
   #exploreByInterest br {
     display: none;
   }
+
   .exploreContainer {
     flex-direction: column;
     padding-bottom: 32px;
     padding-inline: 1rem;
     box-sizing: border-box;
   }
+
   .exploreContainer h2 {
     font-size: var(--fonts--mobile--sub-heading1);
     margin-bottom: 12px;
   }
+
   #exploreByInterest .seasonsTabDivider {
     margin-bottom: 0;
   }
@@ -823,6 +927,7 @@
     gap: 1rem;
     padding-inline: 1rem;
   }
+
   .tab1,
   .tab2,
   .tab3,
@@ -833,14 +938,17 @@
     font-size: var(--fonts--mobile--body1);
     letter-spacing: 0;
   }
+
   .exploreDataContainer {
     margin-top: 24px;
     padding-inline: 1rem;
     box-sizing: border-box;
   }
+
   .exploreGridItem img {
     margin-bottom: 20px;
   }
+
   .exploreGridItem .gridHead {
     margin: 0;
     margin-bottom: 4px;
@@ -848,6 +956,7 @@
     line-height: var(--line-height--100);
     letter-spacing: 0;
   }
+
   .exploreGridItem .gridText {
     font-size: var(--fonts--mobile--body2);
   }
@@ -855,28 +964,34 @@
   #seasons {
     padding: 40px 0rem;
   }
+
   .headingContainer h3 {
     font-size: var(--fonts--mobile--sub-heading1);
     padding-inline: 1rem;
   }
+
   .seasonsTab {
     margin-top: 40px;
     flex-direction: column;
   }
+
   .seasonContainer {
     gap: 1rem;
     border-bottom: 1px solid var(--light-grey-color);
     padding-inline: 1rem;
   }
-  .seasonContainer > div {
+
+  .seasonContainer>div {
     padding: 0;
     padding-bottom: 1rem;
     font-size: var(--fonts--mobile--body1-capital);
     letter-spacing: 0;
   }
+
   #seasons .seasonsTabDivider {
     display: none;
   }
+
   .seasonDetails {
     width: 100%;
     justify-content: flex-start;
@@ -884,6 +999,7 @@
     margin-block: 24px;
     padding-inline: 1rem;
   }
+
   .seasonDetails .seasonD {
     font-size: var(--fonts--mobile--body1-capital);
   }
@@ -891,44 +1007,56 @@
   .seasonsInnerSummer {
     box-sizing: border-box;
   }
+
   .seasonsInnerSummer,
   .seasonsGrid {
     flex-direction: column;
   }
+
   .seasonsTitle {
     width: 100%;
   }
+
   .seasonsGrid {
     gap: 20px;
     width: 100%;
   }
+
   .seasonsItem img {
     width: 100%;
     height: 15.375rem;
   }
+
   .seasonsTitle h3 {
     font-size: var(--fonts--mobile--sub-heading-capital);
     margin-bottom: 20px;
   }
+
   .seasonsItem h5 {
     font-size: var(--fonts--mobile--sub-heading4);
   }
+
   .seasonsInnerSummer {
     padding-inline: 1rem;
   }
+
   .adventureDivider {
     margin: 20px 0;
   }
+
   .adventureDivider:first-child {
     display: block;
     margin-top: 0;
   }
+
   .emptyDiv {
     display: none;
   }
+
   .seasonsItem br {
     display: none;
   }
+
   .last {
     margin-top: 0;
   }
