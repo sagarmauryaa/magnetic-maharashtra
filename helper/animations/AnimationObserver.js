@@ -30,15 +30,7 @@ const AnimationObserver = () => {
   useEffect(()=>{ 
     elementRef.current =  document.documentElement
   }, [pathname]);
-  useEffect(() => {
-    queryDOM();
-    createObserver();
-    observe();
 
-    return () => {
-      unobserve();
-    };
-  }, [elementRef, pathname]);
 
   const queryDOM = () => {
     const elements = {};
@@ -70,6 +62,8 @@ const AnimationObserver = () => {
   const observe = () => {
     const animationInstances = [];
     const elements = elementsRef.current;
+    console.log("elements::",elements);
+    
 
     elements.cssClassAnimations.forEach((cssClassAnimationElement) => {
       cssClassAnimationElement.animationInstance = new CSSClass({ element: cssClassAnimationElement });
@@ -132,6 +126,15 @@ const AnimationObserver = () => {
     });
   };
 
+  useEffect(() => {
+    queryDOM();
+    createObserver();
+    observe();
+
+    return () => {
+      unobserve();
+    };
+  }, [elementRef, pathname]);
   return null;
 };
 

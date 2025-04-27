@@ -10,31 +10,31 @@ import Image from "next/image";
 function Incentives() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap
-      .timeline()
-      .to(`.${styles.incentivesHeroImage}`, {
-        duration: 1,
-        clipPath: "inset(0 0 0% 0)",
-        ease: "power2.out",
-      })
-      .from(
-        `.${styles.incentivesHero} .${styles.heroHeading}`,
-        {
-          opacity: 0,
-          y: 100,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        `.${styles.incentivesHero} .${styles.textBlock}`,
-        {
-          opacity: 0,
-          y: 100,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      );
+    // gsap
+    //   .timeline()
+    //   .to(`.${styles.incentivesHeroImage}`, {
+    //     duration: 1,
+    //     clipPath: "inset(0 0 0% 0)",
+    //     ease: "power2.out",
+    //   })
+    //   .from(
+    //     `.${styles.incentivesHero} .${styles.heroHeading}`,
+    //     {
+    //       opacity: 0,
+    //       y: 100,
+    //       ease: "power2.out",
+    //     },
+    //     "-=0.4"
+    //   )
+    //   .from(
+    //     `.${styles.incentivesHero} .${styles.textBlock}`,
+    //     {
+    //       opacity: 0,
+    //       y: 100,
+    //       ease: "power2.out",
+    //     },
+    //     "-=0.4"
+    //   );
 
     gsap.from(`.${styles.incentivesDivider}`, {
       width: 0,
@@ -88,36 +88,36 @@ function Incentives() {
   });
   return (
     <>
-      <section className={styles.incentivesHero}>
-        <div className={styles.incentivesHeroImage}>
+      <section className={styles.incentivesHero} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+        <div className={styles.incentivesHeroImage + ' anim-imageWrapper'}>
           <Image
             width={100}
             height={100}
             src="/images/IncentivesPage/image.webp"
             alt="Incentives Hero"
+            className="anim-image"
             quality={100}
             unoptimized={true}
           />
         </div>
         <div className={styles.flexContainer}>
-          <div className={styles.heroHeading}>Incentives</div>
-          <div className={styles.textBlock}>
+          <div className={styles.heroHeading} observer-animation="title">Incentives</div>
+          <div className={styles.textBlock} observer-animation="title">
             Unleashing <br /> Potential,
             <br /> Empowering Dreams
           </div>
         </div>
+        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
       </section>
-      <div className={styles.incentivesDivider}></div>
-
       <CardAccordion />
       {/* How to Apply */}
-      <section className={styles.howToApply}>
-        <h2>How to Apply</h2>
+      <section className={styles.howToApply} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+        <h2 observer-animation="title">How to Apply</h2>
       </section>
       {/* <div className='incentives-divider'></div> */}
       <section className={styles.steps}>
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             <div className={styles.left}>
               <h2>1</h2>
             </div>
@@ -135,10 +135,12 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             <div className={styles.left}>
               <h2>2</h2>
             </div>
@@ -170,11 +172,12 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
 
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             {" "}
             <div className={styles.left}>
               <h2>3</h2>
@@ -207,10 +210,11 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             {" "}
             <div className={styles.left}>
               <h2>4</h2>
@@ -228,10 +232,11 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             {" "}
             <div className={styles.left}>
               <h2>5</h2>
@@ -250,10 +255,11 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             {" "}
             <div className={styles.left}>
               <h2>6</h2>
@@ -272,10 +278,11 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
         {/* <div className='incentives-divider'></div> */}
-        <div className={styles.stepsContainer}>
-          <div className={styles.stepsContent}>
+        <div className={styles.stepsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+          <div className={styles.stepsContent}   observer-animation="fadeInUpPara">
             {" "}
             <div className={styles.left}>
               <h2>7</h2>
@@ -294,6 +301,7 @@ function Incentives() {
               </div>
             </div>
           </div>
+          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
       </section>
 

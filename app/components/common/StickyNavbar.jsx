@@ -399,7 +399,7 @@ const StickyNavbar = () => {
           {menuItems.map((menu) => (
             <li
               key={menu.label}
-              onMouseEnter={() => handleMenuEnter(menu)}
+              onMouseEnter={() => { if (menu.subMenu) handleMenuEnter(menu) }}
               onMouseLeave={handleMenuLeave}
               className={
                 activeMenu === menu.label ? styles.activeMenu : styles.menuItem

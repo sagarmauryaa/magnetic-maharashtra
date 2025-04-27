@@ -176,19 +176,19 @@ const CardAccordion = () => {
         {accordionItems.map((item, index) => (
           <>
             <div
-              className={`${styles.accordionItem} ${
-                activeIndex === index ? "active" : ""
-              }`}
+              className={`${styles.accordionItem} ${activeIndex === index ? "active" : ""
+                }`}
               key={index}
             >
               <div
                 className={styles.accordionHeader}
                 onClick={() => toggleAccordion(index)}
                 role="button"
+                observer-animation="fadeInUpPara"
                 tabIndex={0}
                 onKeyPress={(e) => e.key === "Enter" && toggleAccordion(index)}
               >
-                <h2>{item.title}</h2>
+                <h2 >{item.title}</h2>
                 <img
                   style={{
                     transform:
@@ -202,9 +202,8 @@ const CardAccordion = () => {
               </div>
               <div
                 ref={(el) => (cardRef.current[index] = el)}
-                className={`${styles.accordionContent} ${
-                  activeIndex === index ? styles.show : ""
-                }`}
+                className={`${styles.accordionContent} ${activeIndex === index ? styles.show : ""
+                  }`}
               >
                 <div className={styles.cardsContainer}>
                   {item.cards.map((card, cardIndex) => (
@@ -225,8 +224,8 @@ const CardAccordion = () => {
                   ))}
                 </div>
               </div>
+              <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
-            <div className={styles.accordionDivider}></div>
           </>
         ))}
       </div>
