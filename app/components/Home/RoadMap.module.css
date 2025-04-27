@@ -122,8 +122,7 @@
   width: 75%;
 }
 .roadElementsGrid hr {
-  background-color: var(--light-grey-color);
-  opacity: .5;
+  background-color: var(--body-grey-color); 
 }
 .arrow {
   display: grid;

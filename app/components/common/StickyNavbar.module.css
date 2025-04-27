@@ -2,10 +2,19 @@
   width: 100%;
   height: auto;
   position: relative;
-  z-index: 10000; /* Lower than the book modal z-index (10001) */
+  z-index: 10000;
+  /* Lower than the book modal z-index (10001) */
   border-bottom: 1px solid rgba(62, 62, 62, 0.242);
   /* margin-top: 5rem; */
 }
+
+.navDropdown {
+  width: 10px;
+  height: 10px;
+  margin-left: 6px;
+  transition: 200ms ease-in-out;
+}
+
 .navbar {
   /* width: 100%; */
   position: relative;
@@ -18,6 +27,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media (hover:hover) {
+   a:hover .navDropdown {
+    transform: rotate(180deg);
+  }
+}
+
 .logo,
 .navItems,
 .contact {
@@ -25,6 +41,7 @@
   /* padding-top: 1rem; */
   font-size: var(--fonts--desktop--navigation);
 }
+
 .logo a {
   display: flex;
   gap: 10px;
@@ -68,6 +85,7 @@
 .navItems li a.active {
   color: blue;
 }
+
 .contact:hover {
   color: #ff5100;
 }
@@ -115,6 +133,7 @@
   visibility: hidden;
   opacity: 0;
 }
+
 li:hover .submenuSector,
 li:hover .submenuLocation {
   display: grid;
@@ -122,19 +141,23 @@ li:hover .submenuLocation {
   visibility: visible;
   /* transform: translateY(0%); */
 }
+
 .submenuSector li a:hover,
 .submenuSector li a,
 .submenuLocation li a,
 .submenuLocation li a:hover {
   color: white;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .onDesktop {
     display: none;
   }
+
   .onMobile {
     display: block;
   }
+
   .navbar {
     padding: 0 1rem;
     height: 3rem;
@@ -174,6 +197,7 @@ li:hover .submenuLocation {
   .mobileNav {
     width: 100%;
   }
+
   .mobileNavContent {
     padding: 0 1rem;
     padding-block: 16px;
@@ -196,15 +220,18 @@ li:hover .submenuLocation {
     background-color: var(--orange-color);
     color: white;
     transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Lower than the book modal z-index (10001) */
+    z-index: 1000;
+    /* Lower than the book modal z-index (10001) */
   }
 
   .mobileInnerMenu .logo a {
     color: white;
   }
+
   .mobileInnerMenu .mobileNavContent {
     border-bottom: 1px solid white;
   }
+
   .mobileLinks {
     height: calc(100% - 3rem);
     padding: 32px 16px;
@@ -212,18 +239,22 @@ li:hover .submenuLocation {
     flex-direction: column;
     justify-content: space-between;
   }
+
   .mobileLinks li {
     margin-bottom: 2rem;
   }
+
   .mobileLinks li,
   .mobileContact {
     display: block;
     font-size: var(--fonts--mobile--sub-heading2);
   }
+
   .mobileLinks li a,
   .mobileContact a {
     color: white;
   }
+
   .mobileInnerMenu button {
     border: none;
     background: transparent;
@@ -256,13 +287,16 @@ li:hover .submenuLocation {
     transition: opacity 0.5s ease;
   }
 }
+
 @media screen and (max-width: 480px) {
   .onDesktop {
     display: none;
   }
+
   .onMobile {
     display: block;
   }
+
   .navbar {
     padding: 0 1rem;
     height: 3rem;
@@ -302,6 +336,7 @@ li:hover .submenuLocation {
   .mobileNav {
     width: 100%;
   }
+
   .mobileNavContent {
     padding: 0 1rem;
     padding-block: 16px;
@@ -325,13 +360,15 @@ li:hover .submenuLocation {
     background-color: var(--orange-color);
     color: white;
     transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Lower than the book modal z-index (10001) */
+    z-index: 1000;
+    /* Lower than the book modal z-index (10001) */
     overflow-x: auto;
   }
 
   .mobileInnerMenu .logo a {
     color: white;
   }
+
   .mobileInnerMenu .mobileNavContent {
     position: sticky;
     top: 0;
@@ -339,6 +376,7 @@ li:hover .submenuLocation {
     background-color: var(--orange-color);
     z-index: 2;
   }
+
   .mobileLinks {
     height: calc(100% - 8rem);
     padding: 32px 16px;
@@ -346,18 +384,22 @@ li:hover .submenuLocation {
     flex-direction: column;
     justify-content: space-between;
   }
+
   .mobileLinks li {
     margin-bottom: 2rem;
   }
+
   .mobileLinks li,
   .mobileContact {
     display: block;
     font-size: var(--fonts--mobile--sub-heading2);
   }
+
   .mobileLinks li a,
   .mobileContact a {
     color: white;
   }
+
   .mobileInnerMenu button {
     border: none;
     background: transparent;
@@ -424,7 +466,8 @@ li:hover .submenuLocation {
     position: fixed;
     left: 0;
     right: 0;
-    top: 72px; /* Match the height of the navbar */
+    top: 72px;
+    /* Match the height of the navbar */
     width: 100%;
     /* max-width: var(--w-max); */
     margin-bottom: 80px;
@@ -436,7 +479,8 @@ li:hover .submenuLocation {
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease-in-out;
-    z-index: 998; /* Lower than the book modal z-index (10001) and just below the navbar */
+    z-index: 998;
+    /* Lower than the book modal z-index (10001) and just below the navbar */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }

@@ -18,23 +18,29 @@ main {
   will-change: transform;
   transform: translate3d(0, 0, 0) skewY(0);
 }
+
 [hidden] {
   display: none !important;
 }
+
 *:focus {
   outline: none;
 }
+
 .using-keyboard *:focus-visible {
   outline: auto;
   outline-offset: 4px;
 }
+
 .using-keyboard button:focus-visible,
 .using-keyboard a:focus-visible {
   outline: 1px solid var(--black-s);
 }
+
 .using-touch *:focus-visible {
   outline: none;
 }
+
 .disable-hover * {
   pointer-events: none;
 }
@@ -54,6 +60,7 @@ body {
 
 .section-top-spacing {
   margin-top: var(--space-4xl);
+
   @include media("<md") {
     margin-top: var(--space-3xl);
   }
@@ -61,6 +68,7 @@ body {
 
 body.--case-study-modal main {
   position: relative;
+
   &::before {
     content: "";
     position: fixed;
@@ -124,18 +132,25 @@ body[data-scroll-locked] {
 }
 
 
+body.-overlay-filter {
+  position: relative;
+}
+
+
 
 .ui-section {
   position: relative;
   background-color: var(--bg-color);
+
   &__wrapper {
     width: 100%;
     max-width: var(--w-max);
     margin: 0 auto;
     display: grid;
     gap: var(--space-s);
+
     @include media("<md") {
       max-width: 100%;
     }
   }
-} 
+}

@@ -41,6 +41,7 @@
 
 .sustainTitles span {
   height: fit-content;
+  display: inline-block;
 }
 
 .sustainSubtitle {

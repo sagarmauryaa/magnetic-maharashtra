@@ -275,7 +275,7 @@ const Envelop = () => {
             zIndex: 1111,
             ease: "power2.in",
           },
-          "<0.45"
+          "<0.25"
         );
     });
     mm.add("(min-width: 768px) and (max-width: 997px)", () => {

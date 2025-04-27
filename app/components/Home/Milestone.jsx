@@ -137,7 +137,7 @@ function Milestones() {
                       height={50}
                     />
                   </div>
-                  <div className={styles.boxTitle} observer-animation="title">{data.title}</div>
+                  <div className={styles.boxTitle} observer-animation="fadeInUpPara">{data.title}</div>
                   <div className={styles.boxBody} observer-animation="fadeInUpPara">
                     {data.content}
                   </div>

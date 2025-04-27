@@ -21,13 +21,13 @@ const AutoplayVideo = ({
 
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if ( entry.intersectionRatio > 0.1) {
+                if (entry.intersectionRatio > 0.01) { // Changed from 0.1 to 0.01 (1%)
                     video.play().catch((error) => console.warn("Auto-play blocked:", error));
                 } else {
                     video.pause();
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.01 } // Changed from 0.5 to 0.01 to detect 1% visibility
         );
 
         observer.observe(video);

@@ -37,7 +37,7 @@ const ProofofProgress = () => {
             scale: 1,
             transformOrigin: "center center",
             ease: "elastic.out(0.75, 0.5)",
-            duration: 1.5,
+            duration: .9,
           }
         );
 
@@ -48,7 +48,7 @@ const ProofofProgress = () => {
             scale: 1,
             transformOrigin: "center center",
             ease: "elastic.out(0.5, 0.5)",
-            duration: 1.5,
+            duration: .9,
           },
           "-=0.8"
         ).fromTo(
@@ -58,7 +58,7 @@ const ProofofProgress = () => {
             scale: 1,
             transformOrigin: "center center",
             ease: "elastic.out(0.5, 0.5)",
-            duration: 1.5,
+            duration: .9,
           },
           "<0.4"
         );

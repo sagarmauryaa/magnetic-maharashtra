@@ -8,4 +8,28 @@
     pointer-events: none;
     z-index: 40;
     opacity: 1;
+    z-index: 9999999999;
+}
+
+body {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: fixed;
+        max-width: 100%;
+        width: var(--w-viewport);
+        height: 100%;
+        inset: 0;
+        top: 0;
+        z-index: 9;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: 100ms ease-in;
+        pointer-events: none;
+    }
+
+    &.-overlay-filter::before {
+        opacity: 1;
+    }
 }

@@ -321,6 +321,7 @@ const StickyNavbar = () => {
     }
     // Set active menu immediately
     setActiveMenu(menu.label);
+    document.querySelector('body').classList.add('-overlay-filter');
   };
 
   const handleMenuLeave = () => {
@@ -331,6 +332,8 @@ const StickyNavbar = () => {
     // Set new timeout for closing with a longer delay
     const timeout = setTimeout(() => {
       setActiveMenu(null);
+      document.querySelector('body').classList.remove('-overlay-filter');
+
     }, 500); // Increased delay to 500ms for smoother transition
     setMenuCloseTimeoutRef(timeout);
   };
@@ -415,6 +418,10 @@ const StickyNavbar = () => {
                 onClick={handleLinkClick}
               >
                 {menu.label}
+                {menu.subMenu && <svg className={styles.navDropdown} width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.1111 10.5L20 0.5H0L10.1111 10.5Z" fill="currentColor" />
+                </svg>
+                }
               </a>
 
               {menu.subMenu && (
