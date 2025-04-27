@@ -2,7 +2,9 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import './index.scss';
+import { usePathname } from "next/navigation";
 const AnimationOverlay = () => {
+    const pathname = usePathname();
     useGSAP(() => {
         gsap.fromTo('.c-overlay', 
             {
@@ -14,7 +16,7 @@ const AnimationOverlay = () => {
                 ease: 'power2.inOut'
             }
         )
-    })
+    },[pathname])
 
     return (
         <div className='c-overlay'></div>
