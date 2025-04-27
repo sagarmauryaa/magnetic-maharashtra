@@ -1300,17 +1300,19 @@ const Locations = () => {
 
         {filteredData?.map((data) => (
           <div
-            ref={heroDetailsRef}
+            // ref={heroDetailsRef}
             className={styles.locationsHeroDetails}
             key={data.id}
+            observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true"
           >
-            <h1>{data?.name || "Unnamed Location"}</h1>
-            <p>
+            <h1 observer-animation="title">{data?.name || "Unnamed Location"}</h1>
+            <p observer-animation="fadeInUpPara">
               {data?.heroSection?.description || "No description available"}
             </p>
             <div className={styles.contributionGrid}>
               {data.heroSection?.heroGridData?.map((gridItem) => (
                 <div
+                  observer-animation="fadeInUpPara"
                   className={styles.contributionGridItem}
                   key={gridItem.value}
                 >
