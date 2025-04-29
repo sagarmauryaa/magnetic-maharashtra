@@ -16,6 +16,7 @@ import Bollywood from "./components/Home/Bollywood";
 import Envelop from "./components/Home/Envelop"; 
 import HeroBanner from "@/components/home/HeroBanner"; 
 import EverythingSection from "./components/Home/EverythingSection";
+import Connect from "./components/Home/Connect";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Brilliance />
       <Statistics />
       <Sustainability /> 
+      {/* <Connect/> */}
       <EverythingSection />  
       <GlobalBusiness />
       <Milestones />

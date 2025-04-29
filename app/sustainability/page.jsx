@@ -51,105 +51,105 @@ const Sustainability = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     // Hero heading animation
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: `.${styles.sustainabilityHeroHeading}`,
-          start: "top 70%",
-          end: "bottom top",
-          markers: false,
-        },
-      })
-      .from(`.${styles.sustainabilityHeroHeading} h3`, {
-        y: 30,
-        opacity: 0,
-        duration: 0.65,
-        ease: "power3.out",
-      })
-      .from(
-        `.${styles.sustainabilityHeroHeading} p`,
-        {
-          y: 30,
-          opacity: 0,
-          duration: 0.65,
-          ease: "power3.out",
-        },
-        "<=0.4"
-      );
+    // gsap
+    //   .timeline({
+    //     scrollTrigger: {
+    //       trigger: `.${styles.sustainabilityHeroHeading}`,
+    //       start: "top 70%",
+    //       end: "bottom top",
+    //       markers: false,
+    //     },
+    //   })
+    //   .from(`.${styles.sustainabilityHeroHeading} h3`, {
+    //     y: 30,
+    //     opacity: 0,
+    //     duration: 0.65,
+    //     ease: "power3.out",
+    //   })
+    //   .from(
+    //     `.${styles.sustainabilityHeroHeading} p`,
+    //     {
+    //       y: 30,
+    //       opacity: 0,
+    //       duration: 0.65,
+    //       ease: "power3.out",
+    //     },
+    //     "<=0.4"
+    //   );
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: `#${styles.smartCities}`,
-          start: "top 75%",
-          end: "bottom top",
-        },
-      })
-      .from(`.${styles.sectionDetail} h5`, {
-        y: 30,
-        opacity: 0,
-        ease: "power4.out",
-        duration: 0.65,
-      })
-      .from(
-        `.${styles.sectionDetail} p`,
-        {
-          y: 30,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 0.65,
-        },
-        "<=0.5"
-      )
-      .from(
-        `.${styles.cityAccordionDivider}`,
-        {
-          scaleX: 0,
-          transformOrigin: "left center",
-          duration: 0.65,
-          stagger: 0.05,
-          ease: "power4.out",
-        },
-        "<=0.2"
-      )
-      .from(
-        `.${styles.cityAccordion} h4`,
-        {
-          y: 20,
-          opacity: 0,
-          duration: 0.65,
-          stagger: 0.05,
-          ease: "power4.out",
-        },
-        "<=0"
-      );
+    // gsap
+    //   .timeline({
+    //     scrollTrigger: {
+    //       trigger: `#${styles.smartCities}`,
+    //       start: "top 75%",
+    //       end: "bottom top",
+    //     },
+    //   })
+    //   .from(`.${styles.sectionDetail} h5`, {
+    //     y: 30,
+    //     opacity: 0,
+    //     ease: "power4.out",
+    //     duration: 0.65,
+    //   })
+    //   .from(
+    //     `.${styles.sectionDetail} p`,
+    //     {
+    //       y: 30,
+    //       opacity: 0,
+    //       ease: "power4.out",
+    //       duration: 0.65,
+    //     },
+    //     "<=0.5"
+    //   )
+    //   .from(
+    //     `.${styles.cityAccordionDivider}`,
+    //     {
+    //       scaleX: 0,
+    //       transformOrigin: "left center",
+    //       duration: 0.65,
+    //       stagger: 0.05,
+    //       ease: "power4.out",
+    //     },
+    //     "<=0.2"
+    //   )
+    //   .from(
+    //     `.${styles.cityAccordion} h4`,
+    //     {
+    //       y: 20,
+    //       opacity: 0,
+    //       duration: 0.65,
+    //       stagger: 0.05,
+    //       ease: "power4.out",
+    //     },
+    //     "<=0"
+    //   );
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: `#${styles.transport}`,
-          start: "top 80%",
-          end: "bottom top",
-          markers: false,
-        },
-      })
-      .from(`.${styles.transportDetail} p`, {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        ease: "power4.out",
-      })
-      .from(
-        ".transportImage",
-        {
-          y: 30,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-          ease: "power4.out",
-        },
-        "<=0.2"
-      );
+    // gsap
+    //   .timeline({
+    //     scrollTrigger: {
+    //       trigger: `#${styles.transport}`,
+    //       start: "top 80%",
+    //       end: "bottom top",
+    //       markers: false,
+    //     },
+    //   })
+    //   .from(`.${styles.transportDetail} p`, {
+    //     y: 30,
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "power4.out",
+    //   })
+    //   .from(
+    //     ".transportImage",
+    //     {
+    //       y: 30,
+    //       opacity: 0,
+    //       duration: 1,
+    //       stagger: 0.2,
+    //       ease: "power4.out",
+    //     },
+    //     "<=0.2"
+    //   );
 
     gsap
       .timeline({
@@ -343,12 +343,12 @@ const Sustainability = () => {
   return (
     <main>
       <section id={styles.sustainabilityHeroSection}>
-        <div className={styles.sustainabilityHeroHeading}>
-          <h3>
+        <div className={styles.sustainabilityHeroHeading} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
+          <h3 observer-animation="title">
             Creating a<br />
             better future.
           </h3>
-          <p>
+          <p observer-animation="title">
             Maharashtra is at the forefront of pioneering a sustainable future.
             Through transformative initiatives like Smart Cities, Eco-Industrial
             Zones, and Green Projects, we are shaping our state into a cleaner
@@ -358,15 +358,15 @@ const Sustainability = () => {
           </p>
         </div>
       </section>
-      <div className={styles.sectionDividerSus}>
+      {/* <div className={styles.sectionDividerSus}>
         <div className={styles.heroDivide}></div>
-      </div>
+      </div> */}
 
       {/* Smart Cities */}
-      <section id={styles.smartCities}>
+      <section id={styles.smartCities} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
         <div className={styles.sectionDetail}>
-          <h5>Smart Cities</h5>
-          <p>
+          <h5 observer-animation="title">Smart Cities</h5>
+          <p observer-animation="fadeInUpPara">
             Maharashtra is leading the way in creating a greener future. Through
             various projects like Smart Cities, Eco-Industrial Zones, and Green
             Projects, we&apos;re making our state cleaner and more sustainable.
@@ -374,43 +374,67 @@ const Sustainability = () => {
           </p>
         </div>
         <div className={styles.cityAccordion}>
-          <h4>PUNE</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>SOLAPUR</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>KALYAN-DOMBIVALI</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>NAGPUR</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>NASHIK</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>THANE</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>CHHATRAPATI SAMBHAJI NAGAR</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>NAVI MUMBAI</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>AMRAVATI</h4>
-          <div className={styles.cityAccordionDivider}></div>
-          <h4>DHULE</h4>
-          <div className={styles.cityAccordionDivider}></div>
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            PUNE</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            SOLAPUR</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            KALYAN-DOMBIVALI</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            NAGPUR</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            NASHIK</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            THANE</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            CHHATRAPATI SAMBHAJI NAGAR</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            NAVI MUMBAI</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            AMRAVATI</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
+          <h4 observer-animation="fadeInUpPara">
+            <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+            DHULE</h4>
+          {/* <div className={styles.cityAccordionDivider}></div> */}
         </div>
       </section>
 
       {/* Transport Section */}
-      <section id={styles.transport}>
+      <section id={styles.transport} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
         <div className={styles.transportDetail}>
-          <p>In these cities, we&apos;re focusing on:</p>
+          <p observer-animation="fadeInUpPara">In these cities, we&apos;re focusing on:</p>
         </div>
-        <div className={styles.transportImageContainer}>
-          <div className={`${styles.largeImage} transportImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/transport.webp"
-              alt="transport"
-            />
-            <div className={styles.sustainImageContent}>
-              {" "}
+        <div className={styles.transportImageContainer} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
+          <div className={`${styles.largeImage} transportImage anim-imageContainer`}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/transport.webp"
+                  alt="transport"
+                  className="anim-image"
+                />
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Better transport</h5>
               <p>
                 Introducing electric buses and improving public transport to
@@ -418,13 +442,19 @@ const Sustainability = () => {
               </p>
             </div>
           </div>
-          <div className={`${styles.smallImage} transportImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/energy efficiency.webp"
-              alt="energy-efficiency"
-            />
-            <div className={styles.sustainImageContent}>
+          <div className={`${styles.smallImage} transportImage `}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/energy efficiency.webp"
+                  alt="energy-efficiency"
+                  className="anim-image"
+
+                />
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               {" "}
               <h5>Energy efficiency</h5>
               <p>
@@ -434,12 +464,18 @@ const Sustainability = () => {
             </div>
           </div>
           <div className={`${styles.largeImage} transportImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/water and waste.webp"
-              alt="water&waste"
-            />
-            <div className={styles.sustainImageContent}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/water and waste.webp"
+                  alt="water&waste"
+                  className="anim-image"
+
+                />
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>
                 Water and waste
                 <br />
@@ -456,10 +492,10 @@ const Sustainability = () => {
       <div className={styles.sectionDividerSus}></div>
 
       {/* Eco Industrial */}
-      <section id={styles.ecoIndustrial}>
+      <section id={styles.ecoIndustrial} observer-animation="cssClass" observer-animation-classes="animateImagesIn" observer-animation-repeat="true">
         <div className={styles.industrialHeader}>
-          <h5>Eco-Industrial Zones</h5>
-          <p>
+          <h5 observer-animation="title">Eco-Industrial Zones</h5>
+          <p observer-animation="fadeInUpPara">
             We&apos;re developing industrial areas that care for the environment
             while supporting businesses. Some of
             <br />
@@ -468,12 +504,16 @@ const Sustainability = () => {
         </div>
         <div className={styles.imageContainer}>
           <div className={`${styles.smallImage} ecoIndustrialImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/butiburi.webp"
-              alt="butiburi"
-            />
-            <div className={styles.sustainImageContent}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/butiburi.webp"
+                  alt="butiburi"
+                />
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               {" "}
               <h5>Butibori industrial area near Nagpur</h5>
               <p>
@@ -483,12 +523,17 @@ const Sustainability = () => {
             </div>
           </div>
           <div className={`${styles.largeImage} ecoIndustrialImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/Ranjangaon.webp"
-              alt="ranjangaon"
-            />
-            <div className={styles.sustainImageContent}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/Ranjangaon.webp"
+                  alt="ranjangaon"
+                />
+
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Ranjangaon industrial area near Pune</h5>
               <p>
                 Encouraging industries to adopt renewable energy and green
@@ -497,12 +542,17 @@ const Sustainability = () => {
             </div>
           </div>
           <div className={`${styles.smallImage} ecoIndustrialImage`}>
-            <img
-              loading="lazy"
-              src="/images/SustainabilityPage/tarapur.webp"
-              alt="tarapur"
-            />
-            <div className={styles.sustainImageContent}>
+            <div className={`${styles.imageWrapper} anim-imageContainer`}>
+              <div className={`anim-imageWrapper`}>
+                <img
+                  loading="lazy"
+                  src="/images/SustainabilityPage/tarapur.webp"
+                  alt="tarapur"
+                />
+
+              </div>
+            </div>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Tarapur industrial estate in Palghar district</h5>
               <p>
                 Implementing pollution control measures and proper waste
@@ -535,7 +585,7 @@ const Sustainability = () => {
               src="/images/SustainabilityPage/bhimashankar.webp"
               alt="bhimashankar"
             />
-            <div className={styles.sustainImageContent}>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Bhimashankar Wind Farm (Pune District)</h5>
               <p>
                 Generates clean energy from wind, reducing our reliance on
@@ -549,7 +599,7 @@ const Sustainability = () => {
               src="/images/SustainabilityPage/solar power.webp"
               alt="solar-power"
             />
-            <div className={styles.sustainImageContent}>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Solar power plants in Ahmednagar and Beed districts</h5>
               <p>
                 Harnessing the power of the sun to provide electricity to
@@ -563,7 +613,7 @@ const Sustainability = () => {
               src="/images/SustainabilityPage/mangrove.webp"
               alt="mangrove"
             />
-            <div className={styles.sustainImageContent}>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Mangrove Conservation in Mumbai and Coastal areas</h5>
               <p>
                 Protecting and restoring mangrove forests, which are vital for
@@ -577,7 +627,7 @@ const Sustainability = () => {
               src="/images/SustainabilityPage/metro.webp"
               alt="mumbai-metro"
             />
-            <div className={styles.sustainImageContent}>
+            <div className={styles.sustainImageContent} observer-animation="fadeInUpPara">
               <h5>Mumbai Metro Project</h5>
               <p>
                 Offering a clean and efficient public transport option to reduce
