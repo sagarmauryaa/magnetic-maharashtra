@@ -58,7 +58,7 @@ function Milestones() {
         gsap.to(mileClipPathRef.current, {
           clipPath: "inset(0 0 0  100% )",
           ease: "ease.in",
-          duration: 2,
+          duration: 1.5,
           scrollTrigger: {
             trigger: mileClipPathRef.current,
             start: "top 70%",
@@ -67,7 +67,7 @@ function Milestones() {
         });
         gsap.from(`.${styles.milestoneElements} .${styles.item}`, {
           opacity: 0,
-          stagger: 0.3,
+          stagger: 0.2,
           scrollTrigger: {
             trigger: `.${styles.mileClipPath}`,
             start: "top 70%",

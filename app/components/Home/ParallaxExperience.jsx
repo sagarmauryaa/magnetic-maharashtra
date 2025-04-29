@@ -34,7 +34,7 @@ const ParallaxExperience = () => {
       gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
         y: "-100%",
-        color:"#d1d1d1",
+        color:"#fff",
       });
 
       gsap
@@ -69,7 +69,7 @@ const ParallaxExperience = () => {
       gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
         y: "-120%",
-        color: "#d1d1d1",
+        color: "#fff",
 
       });
 
@@ -109,7 +109,7 @@ const ParallaxExperience = () => {
       gsap.set(mountainBackRef.current, { yPercent: 10 });
       gsap.set(parallaxTextRef.current, {
         y: "-150%",
-        color: "#d1d1d1",
+        color: "#fff",
       });
 
       gsap

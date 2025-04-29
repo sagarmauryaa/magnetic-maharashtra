@@ -59,6 +59,7 @@
   line-height: 115%;
   letter-spacing: -2%;
   width: 90%;
+  height: 110px;
 }
 
 .box:nth-last-child(1) .boxTitle {
@@ -235,6 +236,7 @@ svg.milestonePath {
   }
 
   .boxTitle {
+    height: fit-content;
     font-size: var(--fonts--mobile--sub-heading-capital);
   }
 
