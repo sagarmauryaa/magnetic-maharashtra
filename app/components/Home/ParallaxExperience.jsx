@@ -43,7 +43,7 @@ const ParallaxExperience = () => {
           scrollTrigger: {
             trigger: parallaxRef.current,
             start: "30% 60%",
-            end: "bottom center+=10%",
+            end: "bottom center-=20%",
             markers: false,
             scrub: 0.5,
           },
@@ -68,7 +68,7 @@ const ParallaxExperience = () => {
       });
       gsap.set(mountainBackRef.current, { yPercent: 0 });
       gsap.set(parallaxTextRef.current, {
-        y: "-10%",
+        y: "-120%",
         color: "#d1d1d1",
 
       });
@@ -78,8 +78,8 @@ const ParallaxExperience = () => {
           defaults: { duration: 1, ease: "none" },
           scrollTrigger: {
             trigger: parallaxRef.current,
-            start: "30% 20%",
-            end: "bottom center-=50px",
+            start: "10% 10%",
+            end: "bottom bottom",
             markers: false,
             scrub: 0.1,
           },
@@ -301,7 +301,7 @@ const ParallaxExperience = () => {
           width={100}
           height={20}
           className={styles.paperCutImage}
-          src="/images/paperCut.png"
+          src="/images/paperCut.webp"
           alt="papercut"
         />
       </div>

@@ -854,7 +854,7 @@ main.heroVideoContainer {
   width: 100%;
   /* max-width: var(--w-max); */
   margin-inline: auto;
-  height: 300vh;
+  height: 250vh;
   overflow: hidden;
 }
 
