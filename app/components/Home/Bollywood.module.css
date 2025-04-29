@@ -265,7 +265,7 @@
 
   .imageMobileConatiner {
     white-space: nowrap;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     -webkit-overflow-scrolling: touch;
     height: fit-content;
   }
@@ -293,7 +293,13 @@
     height: 112px;
   }
 
+  .imageMobileContainer {
+    overflow: visible;
+  }
   .innerMobileImages {
+    scroll-snap-type: x mandatory;
+    width: calc(100% + 40px);
+    margin-left: -20px;
     display: inline-flex;
     gap: 1rem;
   }

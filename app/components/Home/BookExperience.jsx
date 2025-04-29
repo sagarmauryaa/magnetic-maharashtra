@@ -53,7 +53,9 @@ const BookExperience = () => {
           src="/images/History_Book.png"
           alt="History"
         />
+      <p className={styles.note}>For better experience view this section on web version.</p>
       </div>
+
 
       {active && isClient && (
         <div

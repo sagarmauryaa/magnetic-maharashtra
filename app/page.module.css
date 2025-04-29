@@ -7,6 +7,19 @@
   margin-top: 60px;
 }
 
+.note {
+  padding-inline: var(--space-16);
+  text-align: center;
+  color: var(--body-grey-color);
+  font-size: 10px;
+}
+
+@media (min-width:768px) {
+  .note {
+    display: none;
+  }
+}
+
 .header {
   width: 100%;
   height: auto;
@@ -1328,7 +1341,7 @@ main.heroVideoContainer {
   }
 
   #FlapSvg {
-    left: 30.5%; 
+    left: 30.5%;
   }
 
   .everythingTextContent {
