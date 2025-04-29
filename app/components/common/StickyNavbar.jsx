@@ -67,7 +67,8 @@ const StickyNavbar = () => {
   const menuRefs = useRef({});
   const [menuPositions, setMenuPositions] = useState({});
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -102,9 +103,11 @@ const StickyNavbar = () => {
     // If we're navigating, don't change visibility
     if (isNavigating) return;
 
+
     const currentScrollY = window.scrollY;
     const currentPath = window.location.pathname;
     const isHomePage = currentPath === "/";
+    setIsSticky(currentScrollY > 10);
 
     // Update isAtTop state
     setIsAtTop(currentScrollY === 0);
@@ -128,17 +131,24 @@ const StickyNavbar = () => {
 
     // Handle navbar visibility logic (keep this part)
     if (currentScrollY === 0) {
+      // Show header when at the top
       setIsVisible(true);
     } else if (isScrollingDown) {
-      if (currentScrollY > 20 && currentScrollY < window.innerHeight) {
-        setIsVisible(true);
-      } else if (currentScrollY >= window.innerHeight) {
-        setIsVisible(false);
-      }
+      // Hide header when scrolling down past viewport height
+      setIsVisible(false);
     } else if (isScrollingUp) {
+      // Show header when scrolling up
       setIsVisible(true);
     }
+    let isScrolling;
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      console.log('Scrolling has stopped');
+      // You can trigger any logic here   
+        setIsVisible(true);
+      clearTimeout(isScrolling);
 
+    }, 1500);
     // Update last scroll position
     setLastScrollY(currentScrollY);
 
@@ -181,7 +191,7 @@ const StickyNavbar = () => {
       //   setIsVisible(true);
       // }
     }, 150); // Reduced from 100ms to 150ms for consistency with scroll handler
-  };
+  }; 
 
   useEffect(() => {
     // Initial setup
@@ -372,6 +382,7 @@ const StickyNavbar = () => {
         // padding: "10px",
         transition: "transform 0.3s ease-in-out",
         transform: isVisible ? "translateY(0)" : "translateY(-100%)",
+        borderColor: isSticky ? "rgba(62, 62, 62, 0.242)" : "transparent",
         zIndex: 10000,
         willChange: "transform",
         isolation: "isolate",

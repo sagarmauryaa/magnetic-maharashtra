@@ -45,8 +45,7 @@ const BookExperience = () => {
         className={styles.book}
         onClick={() => setActive(true)}
         style={{
-          cursor: "pointer",
-          visibility: active ? "hidden" : "visible",
+          cursor: "pointer", 
         }}
       >
         <img

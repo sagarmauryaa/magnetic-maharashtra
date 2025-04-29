@@ -4,7 +4,7 @@
   position: relative;
   z-index: 10000;
   /* Lower than the book modal z-index (10001) */
-  border-bottom: 1px solid rgba(62, 62, 62, 0.242);
+  border-bottom: 1px solid transparent;
   /* margin-top: 5rem; */
 }
 
