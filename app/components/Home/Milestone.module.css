@@ -106,8 +106,7 @@
 
 .elements .box {
   width: 380px;
-  height: 400px;
-  /* height: auto; */
+  height: 300px; 
 }
 
 .revolution {
@@ -248,6 +247,7 @@ svg.milestonePath {
   .boxBody {
     font-size: var(--fonts--mobile--body2);
     width: 70vw;
+    height: 54px;
   }
 
   .elements .box {
@@ -260,7 +260,8 @@ svg.milestonePath {
 
   .box,
   .boxRev {
-    gap: 5.375rem;
+    gap: 8px;
+    height: 300px !important; 
   }
 
   .box:nth-last-child(1) .boxTitle {

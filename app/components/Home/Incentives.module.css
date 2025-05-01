@@ -431,8 +431,8 @@
 
   .tax {
     position: absolute;
-    right: -5%;
-    bottom: 4%;
+    right: clamp(-40px, -2%, -0%);;
+    bottom: 10%;
     transform: scale(0.65);
   }
 }

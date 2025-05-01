@@ -1677,7 +1677,7 @@ main.heroVideoContainer {
       "area7 area8"
       "area9 area10"
       "area11 .";
-    margin-top: 2.5rem;
+    margin-top: var(--space-20);
   }
 
   .playgroundGrid p {
