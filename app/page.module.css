@@ -10,8 +10,12 @@
 .note {
   padding-inline: var(--space-16);
   text-align: center;
-  color: var(--body-grey-color);
+  color: #fff;
   font-size: 10px;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  left: 0;
 }
 
 @media (min-width:768px) {
@@ -792,6 +796,12 @@ main.heroVideoContainer {
   will-change: transform;
 }
 
+.bookModalContent canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+}
+
 .closeButtonContainer {
   position: absolute;
   top: 20px;
@@ -1550,6 +1560,10 @@ main.heroVideoContainer {
 @media screen and (max-width: 480px) {
   .playgroundGridItem .playgroundPercent {
     opacity: 1;
+  }
+
+  .book {
+    padding-top: 90px;
   }
 
   .landOfWonders {
