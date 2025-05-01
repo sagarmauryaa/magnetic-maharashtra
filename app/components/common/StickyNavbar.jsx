@@ -9,7 +9,7 @@ import FlyoutLink from "./FlyoutLink";
 // import { AppContext } from "../../App";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { disableScroll, enableScroll } from "@/helper/utils/scroll";
 // const menuItems = {
 //   Business: "Business",
@@ -67,7 +67,7 @@ const StickyNavbar = () => {
   const menuRefs = useRef({});
   const [menuPositions, setMenuPositions] = useState({});
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isSticky, setIsSticky] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
@@ -79,7 +79,7 @@ const StickyNavbar = () => {
   const pauseTimeoutRef = useRef(null);
   const [menuCloseTimeoutRef, setMenuCloseTimeoutRef] = useState(null);
   const [isNavigating, setIsNavigating] = useState(false);
-
+  const pathname = usePathname();
   // const { setIsSectorInsightsSticky } = useContext(AppContext);
 
   // Use a small threshold to prevent minor scroll fluctuations from triggering visibility changes
@@ -145,7 +145,7 @@ const StickyNavbar = () => {
     isScrolling = setTimeout(() => {
       console.log('Scrolling has stopped');
       // You can trigger any logic here   
-        setIsVisible(true);
+      setIsVisible(true);
       clearTimeout(isScrolling);
 
     }, 1500);
@@ -191,7 +191,7 @@ const StickyNavbar = () => {
       //   setIsVisible(true);
       // }
     }, 150); // Reduced from 100ms to 150ms for consistency with scroll handler
-  }; 
+  };
 
   useEffect(() => {
     // Initial setup
@@ -323,6 +323,10 @@ const StickyNavbar = () => {
     }
   };
 
+  useEffect(() => {
+    setIsVisible(true);
+
+  }, [pathname])
   const handleMenuEnter = (menu) => {
     // Clear any existing timeout immediately
     if (menuCloseTimeoutRef) {

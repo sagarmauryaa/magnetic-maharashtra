@@ -148,7 +148,8 @@
   display: grid;
   place-content: center;
 }
-
+@media screen and (min-width: 768px) {
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .imgContent {
     flex-direction: column;
@@ -172,11 +173,6 @@
 
   .roadElementsGrid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (min-width: 768px) {
-  .roadButton {
-    display: none;
   }
 }
 @media screen and (max-width: 768px) {
