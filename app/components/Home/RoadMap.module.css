@@ -2,27 +2,32 @@
   border: 1px solid black;
   border-right: none;
 }
+
 .roadMap {
   margin: 5rem auto;
   position: relative;
   max-width: var(--w-max);
   padding: 0 2.5rem;
 }
+
 .imgBg {
   position: relative;
 }
+
 .imgBg img {
   width: 100%;
   height: 90vh;
   object-fit: cover;
   /* background-position: top; */
 }
+
 .imgContent {
   display: flex;
   position: absolute;
   color: var(--white-color);
   bottom: 6%;
 }
+
 .imgContent .title {
   width: 49%;
   font-size: var(--fonts--desktop--heading2);
@@ -30,6 +35,7 @@
   line-height: calc(0.9 * var(--fonts--desktop--heading2));
   margin-left: 22.5%;
 }
+
 .imgContent .subtitle {
   margin-top: var(--space-16);
   font-size: var(--fonts--desktop--sub-heading2);
@@ -43,20 +49,24 @@
   font-size: var(--fonts--desktop--body1);
   color: white;
 }
+
 .roadElements {
   display: flex;
   flex-direction: column;
 }
+
 .elementTitle {
   margin-top: 3.5rem;
   font-size: var(--fonts--desktop--sub-heading1);
   color: var(--orange-color);
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
+
 .elementTitle svg path {
   stroke: var(--orange-color) !important;
 }
+
 .roadElements button {
   display: flex;
   gap: 0.375rem;
@@ -80,6 +90,7 @@
   text-decoration: none;
   /* color: var(--orange-color); */
 }
+
 .roadElementsGrid {
   margin-top: 3rem;
   display: grid;
@@ -100,47 +111,60 @@
   color: var(--white-color);
   -webkit-text-stroke: 1px var(--orange-color);
 }
+
 .item {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
+
 .roadElementContainer {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
 .roadElementsGrid .title {
   font-size: var(--fonts--desktop--sub-heading3);
   line-height: var(--line-height--115);
   width: 100%;
 }
+
 .roadElementsGrid .subtitle {
   font-size: var(--fonts--desktop--body2);
   line-height: var(--line-height--115);
   color: var(--body-grey-color);
   width: 75%;
 }
+
 .roadElementsGrid hr {
-  background-color: var(--body-grey-color); 
+  border: 0;
+  border-top: 1px solid #d4d4d4;
+  /* background-color: var(--body-grey-color);  */
+  /* outline: none; */
 }
+
 .arrow {
   display: grid;
   place-content: center;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .imgContent {
     flex-direction: column;
     padding-inline: 40px;
     bottom: 40px;
   }
+
   .imgContent .title {
     margin-left: 0;
     width: 100%;
   }
+
   .imgContent .subtitle {
     margin-top: 16px;
   }
+
   .imgContent p {
     margin-top: 40px;
     width: 100%;
@@ -150,19 +174,23 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media screen and (max-width: 480px) {
   .roadMap {
     padding-inline: 0;
     margin-block: 60px;
     box-sizing: border-box;
   }
+
   .roadMapContainer {
     padding: 0 1rem;
   }
+
   .imgContent {
     flex-direction: column;
     bottom: 1%;
   }
+
   .imgContent .title {
     width: 90%;
     font-size: 40px;
@@ -192,19 +220,24 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .elementTitle div svg path{
+
+  .elementTitle div svg path {
     stroke-width: 3 !important;
   }
-  .elementTitle div svg{
+
+  .elementTitle div svg {
     width: 26px;
     height: 16px;
   }
+
   .elementTitle div img {
     width: 10%;
   }
-  .elementTitle a{
+
+  .elementTitle a {
     margin-top: 22px;
   }
+
   .roadElements button {
     /* width: 128px; */
     margin-top: 2rem;
@@ -213,6 +246,7 @@
     font-size: 16px;
     padding: 0.781rem 1rem;
   }
+
   .imgBg img {
     /* object-position: 35%; */
     height: auto;
@@ -225,9 +259,11 @@
     gap: 1rem;
     grid-row-gap: 48px;
   }
+
   .roadElementContainer {
     gap: 4px;
   }
+
   .number {
     font-size: 3rem;
     line-height: var(--line-height--100);
@@ -245,7 +281,8 @@
     font-size: var(--fonts--mobile--body2);
     width: 100%;
   }
-  .roadElementsGrid img{
+
+  .roadElementsGrid img {
     width: 82px;
     height: 60px;
   }

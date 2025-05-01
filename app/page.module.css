@@ -871,6 +871,13 @@ main.heroVideoContainer {
   overflow: hidden;
 }
 
+
+@media only screen and (min-width:1600px) {
+  .parallax {
+    height: 220vh;
+  }
+}
+
 /* .parallax img {
   position: absolute;
   inset: 0;
@@ -918,6 +925,7 @@ main.heroVideoContainer {
   height: 100%;
   object-fit: cover;
   will-change: transform;
+  /* object-position: center; */
 }
 
 #mountain1 {

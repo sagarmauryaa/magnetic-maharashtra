@@ -29,7 +29,7 @@ export default function Home() {
       <Statistics />
       <Sustainability /> 
       {/* <Connect/> */}
-      <EverythingSection />  
+      {/* <EverythingSection />   */}
       <GlobalBusiness />
       <Milestones />
       <RoadMap />

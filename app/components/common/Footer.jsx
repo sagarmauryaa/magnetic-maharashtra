@@ -5,6 +5,7 @@ import Flag from "./Flag";
 import styles from "./Footer.module.css";
 import FooterAccordion from "./FooterAccordion";
 import UseScreenSize from "./UseScreenSize";
+import Image from "next/image";
 
 const explore = [
   { label: "Incentives", url: "/incentives" },
@@ -78,12 +79,28 @@ function Footer() {
         <Flag />
       </div>
       <div className={styles.footerLinks}>
-        <div className={styles.footerLogo}>
+        {/* <div className={styles.footerLogo}>
           <img src="/images/Footer/Logo.svg" alt="Magnetic Maharashtra Logo" />
           <div>
             Magnetic <br />
             Maharashtra
           </div>
+        </div> */}
+        <div className={styles.logo}>
+          <Link href="/" >
+            <div>
+              <Image
+                src="/images/StickyNavbar/Logo.svg"
+                alt=""
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className={styles.logoText}>
+              Magnetic <br />
+              Maharashtra
+            </div>
+          </Link>
         </div>
         <div className={styles.footerExplore}>
           <div>Explore</div>

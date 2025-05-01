@@ -7,6 +7,22 @@
   overflow: hidden;
 }
 
+.logo a {
+  display: flex;
+  gap: 10px;
+  color: var(--orange-color);
+  align-items: center;
+  /* cursor: pointer; */
+  display: inline-block;
+  /* padding-top: 1rem; */
+  font-size: var(--fonts--desktop--navigation);
+}
+
+.logoText {
+  font-size: 1rem;
+  font-family: "Neue Montreal", sans-serif;
+}
+
 .footerLinks {
   max-width: var(--w-max);
   padding: 2.5rem;
@@ -128,18 +144,38 @@
     z-index: 1;
     /* margin-top: 250px; */
   }
+.logo img {
+  width: 2.5rem;
+  height: auto;
+}
 
+.logo {
+  font-size: var(--fonts--mobile--navigation);
+  color: inherit;
+  line-height: var(--line-height--100);
+}
+
+/* Styles for when at top of page */
+.logoAtTop img {
+  width: 2.5rem;
+  height: auto;
+}
+
+.logoAtTop {
+  font-size: var(--fonts--mobile--navigation);
+}
   .footerLogo {
     margin-top: 40px;
   }
 
-  .footerLogo   { 
+  .footerLogo {
     display: flex;
     align-items: center;
     gap: 14px;
     flex-direction: row;
   }
-  .footerLogo div{
+
+  .footerLogo div {
     padding: 0;
   }
 
@@ -157,14 +193,17 @@
     gap: 30px;
     font-size: var(--fonts--mobile--body2);
   }
-    .footerSocials a{
-      font-weight: 400;
-    }
+
+  .footerSocials a {
+    font-weight: 400;
+  }
+
   .footerSocials img {
     width: 20px;
     height: 20px;
   }
-  .footerRight{
+
+  .footerRight {
     gap: 24px;
   }
 
