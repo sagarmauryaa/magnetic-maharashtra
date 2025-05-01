@@ -12,7 +12,6 @@
   margin: 0 auto;
   margin-top: 5rem;
   position: relative;
-  padding: 0 2.5rem;
 }
 
 .bollywoodSubtitle {
@@ -154,6 +153,12 @@
 
 .bollywoodImages>.image {
   grid-row: span 2;
+}
+
+@media (max-width: 1600px) {
+  .bollywood {
+    padding: 0 2.5rem;
+  }
 }
 
 @media (min-width: 1279px) and (max-width: 1439px) {
