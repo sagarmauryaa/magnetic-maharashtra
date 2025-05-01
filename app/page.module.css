@@ -957,7 +957,7 @@ main.heroVideoContainer {
 .landOfWonders {
   position: absolute;
   width: 100%;
-  bottom: 15%;
+  bottom: 13%;
   left: 0%;
   z-index: 9999;
   /* Original value */
@@ -1554,7 +1554,7 @@ main.heroVideoContainer {
   .landOfWonders {
     font-size: 60px;
     left: -5%;
-    bottom: 20%;
+    bottom: 15%;
   }
 
   .cursor {

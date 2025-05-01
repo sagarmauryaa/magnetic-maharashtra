@@ -117,10 +117,11 @@ const ParallaxExperience = () => {
           defaults: { duration: 1, ease: "none" },
           scrollTrigger: {
             trigger: parallaxRef.current,
-            start: "30% 20%",
-            end: "bottom center-=50px",
+            start: "0% 20%",
+            end: "40%",
             markers: false,
             scrub: 0.1,
+            // markers: true,
           },
         })
         .to(mountainFrontRef.current, {
@@ -133,7 +134,7 @@ const ParallaxExperience = () => {
           {
             color: "#fff",
 
-            y: "250%",
+            y: "280%",
             force3D: true,
           },
           "<"
