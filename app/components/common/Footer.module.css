@@ -45,9 +45,11 @@
   line-height: 115%;
   padding-bottom: 30px;
 }
-
+.footerLogo img{
+  width: 60px;
+}
 .footerLogo div {
-  font-size: var(--fonts--desktop--body1);
+  font-size: var(--fonts--desktop--body2);
   line-height: 115%;
   color: var(--orange-color);
   padding-top: 12px;
