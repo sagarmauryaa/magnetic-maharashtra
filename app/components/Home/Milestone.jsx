@@ -95,7 +95,7 @@ function Milestones() {
     },
     {
       "icon": "/images/Milestones/business.svg",
-      "title": "Ease of Doing Business",
+      "title": "Ease of Doing<br/> Business",
       "content": "Creating a seamless, business-friendly environment with simplified regulations and transparent governance."
     },
     {
