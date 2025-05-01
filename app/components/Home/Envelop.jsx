@@ -271,11 +271,16 @@ const Envelop = () => {
           {
             top: "36%",
             rotateX: "180deg",
-            rotate: "-9.5deg",
-            zIndex: 1111,
+            rotate: "-9.5deg", 
             ease: "power2.in",
+            onUpdate: function () {
+              const progress = this.progress();
+              if (progress >= 0.5 ) {
+                flapOpenRef.current.style.zIndex = 1111; 
+              }
+            },
           },
-          "<0.25"
+          "<0.45"
         );
     });
     mm.add("(min-width: 768px) and (max-width: 997px)", () => {
@@ -413,9 +418,14 @@ const Envelop = () => {
           flapOpenRef.current,
           {
             // top: "37%",
-            rotateX: "180deg",
-            zIndex: 1111,
+            rotateX: "180deg", 
             ease: "power2.in",
+            onUpdate: function () {
+              const progress = this.progress();
+              if (progress >= 0.5) {
+                flapOpenRef.current.style.zIndex = 1111;
+              }
+            },
           },
           "<0.45"
         );
@@ -555,9 +565,14 @@ const Envelop = () => {
           {
             top: "36%",
             rotateX: "180deg",
-            rotate: "-9.5deg",
-            zIndex: 1111,
+            rotate: "-9.5deg", 
             ease: "power2.in",
+            onUpdate: function () {
+              const progress = this.progress();
+              if (progress >= 0.5) {
+                flapOpenRef.current.style.zIndex = 1111;
+              }
+            },
           },
           "<0.45"
         );
@@ -698,9 +713,14 @@ const Envelop = () => {
           {
             top: "37%",
             rotateX: "180deg",
-            rotate: "-9.5deg",
-            zIndex: 1111,
+            rotate: "-9.5deg", 
             ease: "power2.in",
+            onUpdate: function () {
+              const progress = this.progress();
+              if (progress >= 0.5) {
+                flapOpenRef.current.style.zIndex = 1111;
+              }
+            },
           },
           "<0.45"
         );
