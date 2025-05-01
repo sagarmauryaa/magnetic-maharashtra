@@ -302,6 +302,7 @@ function RoadMap() {
               </div>
             </div>
           </div>
+          <Button text={'Know more'} tag="a" href="https://maitri.mahaonline.gov.in/Home/Home" target="_blank" className={styles.roadButton}/>
         </div>
       </div>
     </section>

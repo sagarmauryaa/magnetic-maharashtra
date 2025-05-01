@@ -225,6 +225,7 @@ main.heroVideoContainer {
   transition: height 0.3s ease;
 }
 
+
 /* Responsive styles for sticky sector-insights */
 
 @media screen and (max-width: 768px) {
@@ -263,7 +264,7 @@ main.heroVideoContainer {
     ". . area6 ."
     "area7 . area8 area9"
     ". area10 . area11";
-  margin-top: var(--space-40);
+  margin-top: var(--space-20);
 }
 
 .playgroundGrid p {
