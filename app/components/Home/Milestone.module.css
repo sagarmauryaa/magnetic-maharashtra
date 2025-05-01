@@ -50,16 +50,19 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 12px;
   background-color: var(--white-color);
+}
+
+.icon {
+  margin-bottom: auto;
 }
 
 .boxTitle {
   font-size: var(--fonts--desktop--sub-heading2);
   line-height: 115%;
   letter-spacing: -2%;
-  width: 90%;
-  height: 110px;
+  width: 90%; 
 }
 
 .box:nth-last-child(1) .boxTitle {
@@ -68,7 +71,9 @@
   letter-spacing: -2%;
   width: 75%;
 }
-
+.boxBody{
+  height: 74px;
+}
 .boxBody,
 .itemBody {
   font-size: var(--fonts--desktop--body2);
@@ -101,8 +106,8 @@
 
 .elements .box {
   width: 380px;
-  /* height: 400px; */
-  height: auto;
+  height: 400px;
+  /* height: auto; */
 }
 
 .revolution {

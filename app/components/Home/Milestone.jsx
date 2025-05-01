@@ -85,7 +85,7 @@ function Milestones() {
   const mileStoneData = [
     {
       "icon": "/images/Milestones/buildings.svg",
-      "title": "Industrial Revolution 4.0",
+      "title": "Industrial<br/> Revolution 4.0",
       "content": "Pioneering smart manufacturing and cutting-edge technologies to position Maharashtra as a global leader."
     },
     {
@@ -137,7 +137,7 @@ function Milestones() {
                       height={50}
                     />
                   </div>
-                  <div className={styles.boxTitle} observer-animation="fadeInUpPara">{data.title}</div>
+                  <div className={styles.boxTitle} observer-animation="fadeInUpPara" dangerouslySetInnerHTML={{ __html: data.title }}/>
                   <div className={styles.boxBody} observer-animation="fadeInUpPara">
                     {data.content}
                   </div>
