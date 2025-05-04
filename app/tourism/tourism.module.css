@@ -169,16 +169,19 @@
 .tourismTitleContainer h5:hover {
   cursor: pointer;
 }
-.tourismTitleContainer h5 span{
+
+.tourismTitleContainer h5 span {
   background-color: var(--body-grey-color);
 }
-.tourismTitleContainer h5{
+
+.tourismTitleContainer h5 {
   position: relative;
   padding-block: var(--space-16);
 }
+
 .tourismTitleContainer h5.clicked {
   color: #000;
-  position: relative; 
+  position: relative;
 }
 
 .supporingText p {
@@ -282,7 +285,6 @@
   width: 100%;
   height: 100%;
   max-width: var(--w-max);
-  padding-inline: 40px;
   padding-block: 80px;
   display: flex;
   justify-content: flex-start;
@@ -291,6 +293,8 @@
   margin: auto;
   box-sizing: border-box;
 }
+
+
 
 .exploreContainer {
   width: 100%;
@@ -326,13 +330,14 @@
 }
 
 .exploreTabContainer {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 3.75rem;
-  /* border-bottom: 1.5px solid var(--light-grey-color); */
+  border-bottom: 1.5px solid var(--light-grey-color);
 }
 
 .exploreDataContainer {
@@ -720,9 +725,10 @@
 }
 
 .adventureDivider {
-  background-color: black;
+  /* background-color: black; */
   width: 100%;
-  height: 1px;
+  border-top: 1px solid;
+  /* height: 1px; */
   margin: 40px 0;
   box-sizing: border-box;
 }
@@ -767,6 +773,17 @@
 
 .tourismExperienceContainerMobile {
   display: none;
+}
+
+@media screen and (max-width: 1600px) {
+
+  #exploreByInterest .exploreTabContainer,
+  #exploreByInterest .exploreContainer,
+  #exploreByInterest .exploreDataContainer {
+    position: relative;
+    padding-inline: 40px;
+    width: calc(100% - 80px);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
