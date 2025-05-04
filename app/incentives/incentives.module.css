@@ -43,10 +43,13 @@
   line-height: 90%;
   letter-spacing: -2.4px;
 }
+.textBlock span{
+  line-height: 1;
+}
 .textBlock {
+  height: fit-content;
   /* flex: 2; */
-  width: 19%;
-  display: block;
+  width: 19%; 
   color: black;
   font-size: 2rem;
   font-weight: 500;
@@ -94,6 +97,7 @@
   max-width: var(--w-max);
 }
 .steps {
+  padding-bottom: var(--space-40);
   /* padding-inline: 2.5rem; */
   max-width: var(--w-max);
   margin-inline: auto;
@@ -118,7 +122,6 @@
 .stepsContent {
   width: 100%;
   display: flex;
-  margin-inline: 40px;
   justify-content: space-between;
   /* border-top: 1px solid #d1d1d2; */
   padding-top: 1.75rem;
@@ -207,6 +210,11 @@
   margin-left: 2.5rem;
   margin-right: 2.5rem;
   padding: auto;
+} 
+@media screen and (max-width: 1600px) {
+  .stepsContent{
+    margin-inline: 40px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .flexContainer {
@@ -244,9 +252,7 @@
     flex-direction: column;
     gap: 12px;
     margin-top: 32px;
-    .textBlock br {
-      display: none;
-    }
+   
   }
 
   .incentivesHero .heroHeading {

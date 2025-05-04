@@ -23,7 +23,7 @@ function Incentives() {
         <div className={styles.flexContainer}>
           <div className={styles.heroHeading} observer-animation="title">Incentives</div>
           <div className={styles.textBlock} observer-animation="title">
-            Unleashing <br /> Potential,
+            Unleashing Potential,
             <br /> Empowering Dreams
           </div>
         </div>
@@ -221,7 +221,6 @@ function Incentives() {
               </div>
             </div>
           </div>
-          <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         </div>
       </section>
 

@@ -150,9 +150,17 @@ const CardAccordion = () => {
   const toggleAccordion = (index) => {
     if (typeof window === "undefined") return;
     setActiveIndex(activeIndex === index ? null : index);
-
-    if (activeIndex === index) {
-      cardRef.current[index]?.scrollTo(0, 0);
+    const topOffset = 140;
+    if (activeIndex !== index) {
+      const element = cardRef.current[index];
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.scrollTo({
+          top: rect.top + scrollTop - topOffset,
+          behavior: 'smooth',
+        }); 
+      }
     }
 
     // if (activeIndex !== index && index !== null) {
