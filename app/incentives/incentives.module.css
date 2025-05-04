@@ -271,6 +271,9 @@
     width: 100%;
     box-sizing: border-box;
   }
+  .incentivesHeroImage {
+    aspect-ratio: 360/560;
+  }
 
   .incentivesHero img {
     width: 100%;
