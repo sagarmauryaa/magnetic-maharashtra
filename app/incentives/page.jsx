@@ -26,8 +26,7 @@ function Incentives() {
             Unleashing Potential,
             <br /> Empowering Dreams
           </div>
-        </div>
-        <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        </div> 
       </section>
       <CardAccordion />
       {/* How to Apply */}

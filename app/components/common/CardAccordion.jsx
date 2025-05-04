@@ -159,7 +159,7 @@ const CardAccordion = () => {
         window.scrollTo({
           top: rect.top + scrollTop - topOffset,
           behavior: 'smooth',
-        }); 
+        });
       }
     }
 
@@ -232,6 +232,10 @@ const CardAccordion = () => {
                   ))}
                 </div>
               </div>
+              {
+                index == 0 &&
+                <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+              }
               <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             </div>
           </>

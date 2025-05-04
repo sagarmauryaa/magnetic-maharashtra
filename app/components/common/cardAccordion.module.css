@@ -169,16 +169,17 @@
     padding-top: 9px;
     padding-inline: 0;
   }
-
   .accordionHeader {
     padding: 15px;
   }
-
+.accordionItem:first-child {
+  padding-top: 60px;
+}
   .accordionHeader h2 {
     font-size: var(--fonts--mobile--sub-heading-capital);
   }
   .accordionHeader img {
-    width: 3%;
+    width: 12px;
   }
 
   .accordionContent {
