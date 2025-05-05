@@ -688,7 +688,7 @@ function Tourism() {
       </section> 
       <section id={styles.exploreByInterest} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
         <div className={styles.exploreContainer}>
-          <h2 className={styles.exploreHead} observer-animation="title">
+          <h2 className={styles.exploreHead} observer-animation="fadeInUpPara">
             Explore by <br />
             Interest
           </h2>
