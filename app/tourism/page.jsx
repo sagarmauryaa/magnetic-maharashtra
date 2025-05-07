@@ -15,15 +15,15 @@ const seasonDetails = {
 const experienceTourism = [
   {
     name: "Chronicles",
-    img: "/images/TourismPage/Chronicles-mobile.webp",
+    img: "/images/TourismPage/Chronicles.webp",
   },
   {
     name: "Heritage",
-    img: "/images/TourismPage/forts-mobile.webp",
+    img: "/images/TourismPage/forts.webp",
   },
   {
     name: "Festivals",
-    img: "/images/TourismPage/Festivals-mobile.webp",
+    img: "/images/TourismPage/Festivals.webp",
   },
   {
     name: "Forts",
@@ -32,35 +32,35 @@ const experienceTourism = [
 
   {
     name: "Art",
-    img: "/images/TourismPage/Art-mobile.webp",
+    img: "/images/TourismPage/Art.webp",
   },
   {
     name: "Folk Dance",
-    img: "/images/TourismPage/folk-mobile.webp",
+    img: "/images/TourismPage/folk_dance.webp",
   },
   {
     name: "Food",
-    img: "/images/TourismPage/food-mobile.webp",
+    img: "/images/TourismPage/Food.webp",
   },
   {
     name: "Beaches",
-    img: "/images/TourismPage/Beaches-mobile.webp",
+    img: "/images/TourismPage/Beaches.webp",
   },
   {
     name: "Landscapes",
-    img: "/images/TourismPage/Landscapes-mobile.webp",
+    img: "/images/TourismPage/Landscapes.webp",
   },
   {
     name: "Hill Stations",
-    img: "/images/TourismPage/Hill-Stations-mobile.webp",
+    img: "/images/TourismPage/hill_stations.webp",
   },
   {
     name: "Wildlife",
-    img: "/images/TourismPage/Wildlife-mobile.webp",
+    img: "/images/TourismPage/Wildlife.webp",
   },
   {
     name: "Sports",
-    img: "/images/TourismPage/Sports-mobile.webp",
+    img: "/images/TourismPage/Sports.webp",
   },
 ];
 
@@ -361,16 +361,19 @@ function Tourism() {
     <main>
       <section id={styles.tourismHeroSection} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
         <div className={styles.tourismHeroSectionImg + ' anim-imageWrapper'}>
-
-          <Image
-            src="/images/TourismPage/Hero-image.png"
-            alt="Hero Image"
-            width={100}
-            height={100}
-            className="anim-image"
-            quality={100}
-            unoptimized={true}
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcset="/images/TourismPage/mobile-Hero-image.webp" />
+            <source media="(min-width: 767px)" srcset="/images/TourismPage/Hero-image.png" />
+            <Image
+              src="/images/TourismPage/Hero-image.png"
+              alt="Hero Image"
+              width={100}
+              height={100}
+              className="anim-image"
+              quality={100}
+              unoptimized={true}
+            />
+          </picture>
         </div>
         <div className={styles.tFlexContainer}>
           <div className={styles.heroHeading} observer-animation="title">Experience</div>
@@ -380,7 +383,7 @@ function Tourism() {
           </div>
         </div>
         <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
-      </section> 
+      </section>
       <section id={styles.tourismExperiences} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
         <span className="anim-line -bottom" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
         <div className={styles.tContentContainer}>
@@ -674,8 +677,8 @@ function Tourism() {
                     src={item.img}
                     alt={item.name}
                     loading="lazy"
-                    width={100}
-                    height={100}
+                    width={624}
+                    height={468}
                     quality={100}
                     unoptimized={true}
                   />
@@ -685,8 +688,9 @@ function Tourism() {
             })}
           </div>
         </div>
-      </section> 
+      </section>
       <section id={styles.exploreByInterest} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
+        {/* <div className={styles.exploreWrapper}> */}
         <div className={styles.exploreContainer}>
           <h2 className={styles.exploreHead} observer-animation="fadeInUpPara">
             Explore by <br />
@@ -1096,534 +1100,544 @@ function Tourism() {
             ) : null}
           </div>
         </div>
+        {/* </div> */}
       </section>
-      <div className={styles.divider}></div>
 
       <section id={styles.seasons}>
-        <div className={styles.headingContainer}>
-          <h3>Plan your visit</h3>
+        <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+        <div className={styles.seasonsWrapper}>
+          <div className={styles.headingContainer + ' ' + styles.seasonsWrapperMxWidth}>
+            <h3>Plan your visit</h3>
+          </div>
+          <div className={styles.seasonsTabContainer}>
+            <div className={styles.seasonsTab + ' ' + styles.seasonsWrapperMxWidth}>
+              <div className={styles.seasonContainer}>
+                <span className="anim-line -bottom is-below-768" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+                <div
+                  ref={summerTabRef}
+                  className={styles.season1}
+                  role="button"
+                  onClick={() => handleSeasonTabChange("season1")}
+                >
+                  Summer
+                </div>
+                <div
+                  ref={monsoonTabRef}
+                  className={styles.season2}
+                  role="button"
+                  onClick={() => handleSeasonTabChange("season2")}
+                >
+                  Monsoon
+                </div>
+                <div
+                  ref={winterTabRef}
+                  className={styles.season3}
+                  role="button"
+                  onClick={() => handleSeasonTabChange("season3")}
+                >
+                  Winter
+                </div>
+              </div>
+              <div className={styles.seasonDetails}>
+                <div ref={seasonTimeRef} className={styles.seasonD}>
+                  (March to June)
+                </div>
+              </div>
+            </div>
+            <span className="anim-line -bottom is-above-767" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
+          </div>
+          {/* Summer */}
+          {seasonActiveTab === "season1" ? (
+            <div className={styles.summerContainer + ' ' + styles.seasonsWrapperMxWidth}>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Places to Visit</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/hill_stations.webp"
+                      alt="hill_stations"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Hill stations</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/seaside_escapades.webp"
+                      alt="Seaside-Escapades"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Seaside Escapades</h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Activities</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/trekking_in_the_sahyadris.webp"
+                      alt="Trekking-regions"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Trekking in cooler hill regions</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/paragliding_in_kamshet.webp"
+                      alt="Paragliding in Kamshet"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Paragliding in Kamshet</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/mango_picking_tours_in_the_kokan_region.webp"
+                      alt="mango-picking"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Mango picking tours in the
+                      <br /> Kokan region
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Food</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/seasonal_mango_dishes_like_aamras_mango_shrikhand_.webp"
+                      alt="mango"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Seasonal mango dishes like
+                      <br /> Aamras, Mango Shrikhand
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/lighter_meals_like_kairi_panhe_raw_mango_drink_sol_kadhi_.webp"
+                      alt="Seaside-Escapades"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Lighter meals like (raw mango <br />
+                      drink), Sol Kadhi
+                    </h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Festivals</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/gudi_padwa_marathi_new_year_.webp"
+                      alt="Gudipadwa"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Gudi Padwa (Marathi New Year)</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/holi_the_festival_of_colours_.webp"
+                      alt="Holi"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Holi - The festival of colours</h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+
+          {/* Monsoon */}
+          {seasonActiveTab === "season2" ? (
+            <div className={styles.monsoonContainer + ' ' + styles.seasonsWrapperMxWidth}>
+              <div className={styles.adventureDivider}></div>
+
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Places to Visit</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/hill_station-Monsoon.webp"
+                      alt="sahyadri"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Sahyadri Ranges for lush green, <br />
+                      treks
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/Waterfalls.webp"
+                      alt="Waterfalls "
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Waterfalls </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/kolad.webp"
+                      alt="river-rafting "
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Kolad for river rafting </h5>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Activities</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/trekking to forts.webp"
+                      alt="Trekking-to-forts"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Trekking to forts</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/waterfall rapelling.webp"
+                      alt="Waterfall-rappelling"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Waterfall rappelling</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/photography tours.webp"
+                      alt="Photography-tours"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Photography tours</h5>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Food</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/local snack.webp"
+                      alt="Vadapav"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Hot and spicy local snacks like <br />
+                      Bhajiyas, Vada Pav
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/warm soup.webp"
+                      alt="warm-soup"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Warm soups and stews</h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Festivals</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/nagpanchami.webp"
+                      alt="nagpanchami"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Nag Panchami with traditional <br />
+                      rituals
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/ganesh chaturthi.webp"
+                      alt="Ganesh-Chaturthi"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Ganesh Chaturthi</h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+
+          {/* Winter */}
+          {seasonActiveTab === "season3" ? (
+            <div className={styles.winterContainer + ' ' + styles.seasonsWrapperMxWidth}>
+              <div className={styles.adventureDivider}></div>
+
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Places to Visit</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/Aurangabad.webp"
+                      alt="Chhatrapati Sambhaji Nagar"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+
+                    <h5>
+                      Chhatrapati Sambhaji Nagar for
+                      <br />
+                      the Ajanta and Ellora caves
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/Nashik.webp"
+                      alt="Nashik"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Nashik for vineyard tours</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/Wildlife.webp"
+                      alt="Wildlife-sanctuaries"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Wildlife sanctuaries</h5>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Activities</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/Bird watch.webp"
+                      alt="Bhigwan"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Bird watching in Bhigwan</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/heritage walks.webp"
+                      alt="Heritage-walks"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Heritage walks in Pune and
+                      <br /> Mumbai
+                    </h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Food</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/saoji chicken.webp"
+                      alt="saoji-chicken"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Rich dishes like Saoji Chicken,
+                      <br /> Bhakri and Puran Poli
+                    </h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/seasonal gravy.webp"
+                      alt="spicy-gravy"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>
+                      Seasonal vegetables in spicy
+                      <br /> gravies
+                    </h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+              <div className={styles.adventureDivider}></div>
+              <div className={styles.seasonsInnerSummer}>
+                <div className={styles.seasonsTitle}>
+                  <h3>Festivals</h3>
+                </div>
+                <div className={styles.seasonsGrid}>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/diwali.webp"
+                      alt="diwali"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Diwali</h5>
+                  </div>
+                  <div className={styles.seasonsItem}>
+                    <Image
+                      src="/images/TourismPage/makarsankranti.webp"
+                      alt="Makarsankranti"
+                      loading="lazy"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      unoptimized
+                    />
+                    <h5>Makar Sankranti</h5>
+                  </div>
+                  <div className={styles.emptyDiv}></div>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
-        <div className={styles.seasonsTab}>
-          <div className={styles.seasonContainer}>
-            <div
-              ref={summerTabRef}
-              className={styles.season1}
-              role="button"
-              onClick={() => handleSeasonTabChange("season1")}
-            >
-              Summer
-            </div>
-            <div
-              ref={monsoonTabRef}
-              className={styles.season2}
-              role="button"
-              onClick={() => handleSeasonTabChange("season2")}
-            >
-              Monsoon
-            </div>
-            <div
-              ref={winterTabRef}
-              className={styles.season3}
-              role="button"
-              onClick={() => handleSeasonTabChange("season3")}
-            >
-              Winter
-            </div>
-          </div>
-          <div className={styles.seasonDetails}>
-            <div ref={seasonTimeRef} className={styles.seasonD}>
-              (March to June)
-            </div>
-          </div>
-        </div>
-        <div className={styles.seasonsTabDivider}></div>
-        {/* Summer */}
-        {seasonActiveTab === "season1" ? (
-          <div className={styles.summerContainer}>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Places to Visit</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/hill_stations.webp"
-                    alt="hill_stations"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Hill stations</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/seaside_escapades.webp"
-                    alt="Seaside-Escapades"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Seaside Escapades</h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Activities</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/trekking_in_the_sahyadris.webp"
-                    alt="Trekking-regions"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Trekking in cooler hill regions</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/paragliding_in_kamshet.webp"
-                    alt="Paragliding in Kamshet"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Paragliding in Kamshet</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/mango_picking_tours_in_the_kokan_region.webp"
-                    alt="mango-picking"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Mango picking tours in the
-                    <br /> Kokan region
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Food</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/seasonal_mango_dishes_like_aamras_mango_shrikhand_.webp"
-                    alt="mango"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Seasonal mango dishes like
-                    <br /> Aamras, Mango Shrikhand
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/lighter_meals_like_kairi_panhe_raw_mango_drink_sol_kadhi_.webp"
-                    alt="Seaside-Escapades"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Lighter meals like (raw mango <br />
-                    drink), Sol Kadhi
-                  </h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Festivals</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/gudi_padwa_marathi_new_year_.webp"
-                    alt="Gudipadwa"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Gudi Padwa (Marathi New Year)</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/holi_the_festival_of_colours_.webp"
-                    alt="Holi"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Holi - The festival of colours</h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-          </div>
-        ) : null}
-
-        {/* Monsoon */}
-        {seasonActiveTab === "season2" ? (
-          <div className={styles.monsoonContainer}>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Places to Visit</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/hill_station-Monsoon.webp"
-                    alt="sahyadri"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Sahyadri Ranges for lush green, <br />
-                    treks
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/Waterfalls.webp"
-                    alt="Waterfalls "
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Waterfalls </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/kolad.webp"
-                    alt="river-rafting "
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Kolad for river rafting </h5>
-                </div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Activities</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/trekking to forts.webp"
-                    alt="Trekking-to-forts"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Trekking to forts</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/waterfall rapelling.webp"
-                    alt="Waterfall-rappelling"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Waterfall rappelling</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/photography tours.webp"
-                    alt="Photography-tours"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Photography tours</h5>
-                </div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Food</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/local snack.webp"
-                    alt="Vadapav"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Hot and spicy local snacks like <br />
-                    Bhajiyas, Vada Pav
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/warm soup.webp"
-                    alt="warm-soup"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Warm soups and stews</h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Festivals</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/nagpanchami.webp"
-                    alt="nagpanchami"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Nag Panchami with traditional <br />
-                    rituals
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/ganesh chaturthi.webp"
-                    alt="Ganesh-Chaturthi"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Ganesh Chaturthi</h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-          </div>
-        ) : null}
-
-        {/* Winter */}
-        {seasonActiveTab === "season3" ? (
-          <div className={styles.winterContainer}>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Places to Visit</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/Aurangabad.webp"
-                    alt="Chhatrapati Sambhaji Nagar"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-
-                  <h5>
-                    Chhatrapati Sambhaji Nagar for
-                    <br />
-                    the Ajanta and Ellora caves
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/Nashik.webp"
-                    alt="Nashik"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Nashik for vineyard tours</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/Wildlife.webp"
-                    alt="Wildlife-sanctuaries"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Wildlife sanctuaries</h5>
-                </div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Activities</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/Bird watch.webp"
-                    alt="Bhigwan"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Bird watching in Bhigwan</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/heritage walks.webp"
-                    alt="Heritage-walks"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Heritage walks in Pune and
-                    <br /> Mumbai
-                  </h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Food</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/saoji chicken.webp"
-                    alt="saoji-chicken"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Rich dishes like Saoji Chicken,
-                    <br /> Bhakri and Puran Poli
-                  </h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/seasonal gravy.webp"
-                    alt="spicy-gravy"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>
-                    Seasonal vegetables in spicy
-                    <br /> gravies
-                  </h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-            <div className={styles.adventureDivider}></div>
-            <div className={styles.seasonsInnerSummer}>
-              <div className={styles.seasonsTitle}>
-                <h3>Festivals</h3>
-              </div>
-              <div className={styles.seasonsGrid}>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/diwali.webp"
-                    alt="diwali"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Diwali</h5>
-                </div>
-                <div className={styles.seasonsItem}>
-                  <Image
-                    src="/images/TourismPage/makarsankranti.webp"
-                    alt="Makarsankranti"
-                    loading="lazy"
-                    width={100}
-                    height={100}
-                    quality={100}
-                    unoptimized
-                  />
-                  <h5>Makar Sankranti</h5>
-                </div>
-                <div className={styles.emptyDiv}></div>
-              </div>
-            </div>
-          </div>
-        ) : null}
       </section>
 
       <div className={`${styles.divider} ${styles.last}`}></div>

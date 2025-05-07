@@ -89,19 +89,20 @@
   position: relative;
   width: 100%;
   height: fit-content;
-  max-width: var(--w-max);
   padding-block: 80px;
   /* padding-inline: 2.5rem; */
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
-  margin: auto;
   box-sizing: border-box;
 }
 
 .tContentContainer {
   width: 100%;
   height: 100%;
+  max-width: var(--w-max);
+  margin-inline: auto;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
@@ -336,8 +337,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 3.75rem;
-  border-bottom: 1.5px solid var(--light-grey-color);
+  gap: 3.75rem; 
 }
 
 .exploreDataContainer {
@@ -519,14 +519,20 @@
 }
 
 #seasons {
-  width: 100%;
+  position: relative;
   height: 100%;
-  max-width: var(--w-max);
   padding-block: 80px;
   /* padding-inline: 40px; */
-  margin: auto;
   box-sizing: border-box;
 }
+
+.seasonsWrapperMxWidth {
+  max-width: var(--w-max);
+  width: 100%;
+  margin-inline: auto;
+}
+
+.seasonsWrapper {}
 
 .headingContainer {
   width: 100%;
@@ -541,6 +547,7 @@
 }
 
 .seasonContainer {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -624,7 +631,14 @@
   text-transform: uppercase;
   padding: 16px;
 }
-
+.seasonsTabContainer span{
+  background-color: #d1d1d2;
+  z-index: 0;
+}
+.seasonsTabContainer{
+  position: relative;
+  margin-bottom: 40px;
+}
 .seasonsTab {
   width: 100%;
   height: 100%;
@@ -720,7 +734,6 @@
 }
 
 .seasonsTabDivider {
-  margin-bottom: 40px;
   width: 100% !important;
   height: 0.75px;
   background-color: #d1d1d2;
@@ -780,6 +793,7 @@
 @media screen and (max-width: 1600px) {
 
   #seasons,
+  #exploreByInterest,
   #tourismExperiences,
   #tourismHeroSection {
     padding-inline: 40px;
@@ -1020,8 +1034,8 @@
   }
 
   .seasonContainer {
-    gap: 1rem;
-    border-bottom: 1px solid var(--light-grey-color);
+    position: relative;
+    gap: 1rem; 
     padding-inline: 1rem;
   }
 
