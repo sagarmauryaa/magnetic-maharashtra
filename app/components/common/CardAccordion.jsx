@@ -20,20 +20,20 @@ const CardAccordion = () => {
             "Get rebates on state taxes to reduce your operational costs and enhance profitability.",
         },
         {
-          image: "/images/IncentivesPage/capital_investment_subsidies_.webp",
+        image: "/images/IncentivesPage/shutterstock_2311093813.webp",
           title: "Capital Investment Subsidies",
           description:
             "Receive financial backings for your initial capital expenditure to lower entry barriers.",
         },
         {
-          image: "/images/IncentivesPage/co_working_spaces_.webp",
+          image: "/images/IncentivesPage/interest_rate_subsidy.webp",
           title: "Interest Rate Subsidy",
           description:
             "Reduce your borrowing costs with subsidized interest rates on business loans.",
         },
         {
           image:
-            "/images/IncentivesPage/logistics_and_supply_chain_support.webp",
+            "/images/IncentivesPage/export_promotion_subsidy.webp",
           title: "Export Promotion Subsidy",
           description:
             "Financial support for businesses that are entering international markets, helping to cover marketing and export-related expenses.  ",

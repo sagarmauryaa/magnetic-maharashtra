@@ -49,7 +49,8 @@
 }
 
 .accordionContent.show {
-  max-height: fit-content; /* Adjust based on content height */
+  max-height: fit-content;
+  /* Adjust based on content height */
   opacity: 1;
   height: auto;
   transform-origin: bottom;
@@ -114,25 +115,31 @@
   background: var(--black-color);
   position: relative;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .cardsContainer {
     grid-template-columns: 1fr;
   }
+
   .stepsContainer {
     gap: 1rem;
     justify-content: flex-start;
   }
+
   .subheading h3 {
     font-size: 32px;
   }
+
   .right .subheading {
     width: 90%;
     padding-inline: 20px;
   }
+
   .stepsContainer .right,
   .stepsContainer .paragraph {
     width: 100%;
   }
+
   .stepsContainer .subheading h3 {
     font-size: 32px;
   }
@@ -144,16 +151,20 @@
   .accordionContent {
     /* padding-inline: 1rem; */
   }
+
   .card {
     /* padding-inline: 24px; */
   }
+
   .cardContent {
     padding-top: 20px;
   }
+
   .cardContent h3 {
     margin-bottom: 12px;
   }
 }
+
 @media (max-width: 480px) {
   .accordionContainer {
     margin: 0 auto;
@@ -169,30 +180,37 @@
     padding-top: 9px;
     padding-inline: 0;
   }
+
   .accordionHeader {
     padding: 15px;
   }
-.accordionItem:first-child {
-  padding-top: 60px;
-}
+
+  .accordionItem:first-child {
+    padding-top: 60px;
+  }
+
   .accordionHeader h2 {
     font-size: var(--fonts--mobile--sub-heading-capital);
   }
+
   .accordionHeader img {
-    width: 12px;
+    width: 16px;
   }
 
   .accordionContent {
     padding-inline: 1rem;
   }
+
   .cardContent {
     padding-top: 20px;
   }
+
   .cardContent h3 {
     margin-bottom: 4px;
     font-size: var(--fonts--mobile--sub-heading4);
     letter-spacing: 0;
   }
+
   .cardContent p {
     font-size: var(--fonts--mobile--body2);
   }
