@@ -106,96 +106,96 @@ const SectorsClient = ({ filteredData }) => {
   useGSAP(() => {
     if (sector != "" && filteredData.length > 0) {
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: `.${styles.sectorAtAGlance}`,
-            start: "top center",
-            end: "bottom center+=400px",
-          },
-        })
-        .from(`.${styles.sectionHead}`, {
-          yPercent: 30,
-          opacity: 0,
-          duration: 0.65,
-          ease: "expo.out",
-        })
-        .to(
-          `.${styles.sectorsGridItem}`,
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.35,
-            ease: "expo.out",
-            stagger: 0.2,
-          },
-          "<"
-        );
+      // gsap
+      //   .timeline({
+      //     scrollTrigger: {
+      //       trigger: `.${styles.sectorAtAGlance}`,
+      //       start: "top center",
+      //       end: "bottom center+=400px",
+      //     },
+      //   })
+      //   .from(`.${styles.sectionHead}`, {
+      //     yPercent: 30,
+      //     opacity: 0,
+      //     duration: 0.65,
+      //     ease: "expo.out",
+      //   })
+      //   .to(
+      //     `.${styles.sectorsGridItem}`,
+      //     {
+      //       y: 0,
+      //       opacity: 1,
+      //       duration: 0.35,
+      //       ease: "expo.out",
+      //       stagger: 0.2,
+      //     },
+      //     "<"
+      //   );
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: `.${styles.sectorsIncentives}`,
-            start: "top center",
-            end: "bottom center",
-          },
-        })
-        .from(
-          `.${styles.sectorsIncentivesHeadingContainer} h2`,
-          {
-            yPercent: 30,
-            opacity: 0,
-            duration: 0.65,
-            ease: "expo.out",
-          },
-          "<0.2"
-        )
-        .from(
-          `.${styles.sectorsIncentivesHeadingContainer} p`,
-          {
-            yPercent: 30,
-            opacity: 0,
-            duration: 0.65,
-            ease: "expo.out",
-          },
-          "<0.2"
-        )
-        .from(`.${styles.gridItem}`, {
-          yPercent: 30,
-          opacity: 0,
-          duration: 0.65,
-          ease: "expo.out",
-          stagger: 0.2,
-        });
+      // gsap
+      //   .timeline({
+      //     scrollTrigger: {
+      //       trigger: `.${styles.sectorsIncentives}`,
+      //       start: "top center",
+      //       end: "bottom center",
+      //     },
+      //   })
+      //   .from(
+      //     `.${styles.sectorsIncentivesHeadingContainer} h2`,
+      //     {
+      //       yPercent: 30,
+      //       opacity: 0,
+      //       duration: 0.65,
+      //       ease: "expo.out",
+      //     },
+      //     "<0.2"
+      //   )
+      //   .from(
+      //     `.${styles.sectorsIncentivesHeadingContainer} p`,
+      //     {
+      //       yPercent: 30,
+      //       opacity: 0,
+      //       duration: 0.65,
+      //       ease: "expo.out",
+      //     },
+      //     "<0.2"
+      //   )
+      //   .from(`.${styles.gridItem}`, {
+      //     yPercent: 30,
+      //     opacity: 0,
+      //     duration: 0.65,
+      //     ease: "expo.out",
+      //     stagger: 0.2,
+      //   });
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: `.${styles.initiativesOpportunities}`,
-            start: "top center",
-            end: "bottom center",
-          },
-        })
+      // gsap
+      //   .timeline({
+      //     scrollTrigger: {
+      //       trigger: `.${styles.initiativesOpportunities}`,
+      //       start: "top center",
+      //       end: "bottom center",
+      //     },
+      //   })
 
-        .from(
-          `.${styles.initiativesOpportunities} .${styles.sectionDividerInner}`,
-          {
-            width: "0%",
-            duration: 1,
-            ease: "power2.inOut",
-          }
-        )
-        .from(
-          `.${styles.initiativesOpportunities} .${styles.opportunitiesContainer}`,
-          {
-            yPercent: 30,
-            opacity: 0,
-            duration: 1,
-            ease: "expo.out",
-            stagger: 0.4,
-          },
-          "<"
-        );
+      //   .from(
+      //     `.${styles.initiativesOpportunities} .${styles.sectionDividerInner}`,
+      //     {
+      //       width: "0%",
+      //       duration: 1,
+      //       ease: "power2.inOut",
+      //     }
+      //   )
+      //   .from(
+      //     `.${styles.initiativesOpportunities} .${styles.opportunitiesContainer}`,
+      //     {
+      //       yPercent: 30,
+      //       opacity: 0,
+      //       duration: 1,
+      //       ease: "expo.out",
+      //       stagger: 0.4,
+      //     },
+      //     "<"
+      //   );
 
       gsap
         .timeline({
@@ -433,6 +433,7 @@ const SectorsClient = ({ filteredData }) => {
                 style={{ gridArea: `${cardData.gridArea}` }}
                 className={styles.sectorsGridItem}
                 key={cardData.title}
+                observer-animation="fadeInUpPara"
               >
                 <h3>
                   {cardData.title}
