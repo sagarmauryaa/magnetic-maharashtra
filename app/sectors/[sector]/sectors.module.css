@@ -1,30 +1,39 @@
 .heroSection {
   width: 100%;
   height: auto;
-  max-width: var(--w-max);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.heroSectionContainer {
+  padding-top: 72px;
+  padding-bottom: 80px;
   display: flex;
-  margin-inline: auto;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  position: relative;
-  margin-top: 72px;
-  padding-inline: 40px;
-  margin-bottom: 80px;
-  box-sizing: border-box;
+  max-width: var(--w-max);
+  margin-inline: auto;
 }
+
 .heroSection div {
   width: 100%;
 }
+
 #heroImage {
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  height: 520px;
+  aspect-ratio: 1200/560;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #heroImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -37,6 +46,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .heroHeading {
   font-size: 120px;
 
@@ -44,6 +54,7 @@
   letter-spacing: -2.4px;
   color: black;
 }
+
 .heroSubheading {
   font-size: 30px;
 
@@ -52,7 +63,12 @@
   color: #2b2f34;
   width: 277px;
 }
+
 .sectorAtAGlance {
+  position: relative;
+}
+
+.sectorAtAGlanceContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -61,15 +77,16 @@
   flex-direction: column;
   max-width: var(--w-max);
   margin-inline: auto;
-  padding-inline: 40px;
   padding-block: 80px;
   gap: 32px;
   position: relative;
   box-sizing: border-box;
 }
+
 .sectorAtAGlance #sectionHead h2 {
   margin-bottom: 0;
 }
+
 #sectionHead h2 {
   font-size: 50px;
 
@@ -94,9 +111,11 @@
     "gridItem3 gridItem4 . gridItem5";
   gap: 30px;
 }
+
 #gridContainer .sectorsGridItem h3 sup {
   font-size: 32px;
 }
+
 .sectorAtAGlance .sectorsGridItem {
   display: flex;
   flex-direction: column;
@@ -104,11 +123,9 @@
   align-items: start;
   border-radius: 0.125rem;
   border: 1px solid hsla(19, 100%, 50%, 0.4);
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(255, 255, 255, 0.4) 0%,
-      rgba(255, 255, 255, 0.4) 100%
-    ),
+      rgba(255, 255, 255, 0.4) 100%),
     rgba(255, 81, 0, 0.02);
   padding: 20px;
   opacity: 0;
@@ -161,6 +178,7 @@
   letter-spacing: -1px;
   font-weight: normal;
 }
+
 .sectorsGridItem {
   transition: opacity 0.5s, transform 0.8s;
 }
@@ -170,6 +188,7 @@
   color: black;
   line-height: 115%;
 }
+
 .divider {
   background-color: black;
   width: 100%;
@@ -177,6 +196,7 @@
   /* margin-top: 80px;
   margin-bottom: 80px; */
 }
+
 .sectorsIncentives {
   width: 100%;
   max-width: var(--w-max);
@@ -184,7 +204,6 @@
   justify-content: flex-start;
   align-items: start;
   flex-direction: column;
-  padding-inline: 40px;
   margin-inline: auto;
   padding-block: 5rem;
   box-sizing: border-box;
@@ -204,6 +223,7 @@
   padding-bottom: 40px;
   align-items: flex-end;
 }
+
 #sectorsIncentivesHeadingContainer {
   width: 100%;
   display: flex;
@@ -212,6 +232,7 @@
   padding: 40px;
   box-sizing: border-box;
 }
+
 .sectorsIncentivesHead {
   font-size: 80px;
 
@@ -219,6 +240,7 @@
   letter-spacing: -2.4px;
   color: white;
 }
+
 .sectorsIncentivesSubheading {
   font-size: 24px;
 
@@ -227,6 +249,7 @@
   color: white;
   width: 17.313rem;
 }
+
 .innerContainer {
   display: flex;
   justify-content: start;
@@ -236,6 +259,7 @@
   width: max-content;
   padding-right: 40px;
 }
+
 .tabDataContainer {
   width: 100%;
   height: 16.25rem;
@@ -245,6 +269,7 @@
   /* align-items: flex-end;
   padding-right: 40px; */
 }
+
 .Tab1 {
   display: grid;
   flex-direction: row;
@@ -253,6 +278,7 @@
   gap: 30px;
   /* visibility: hidden; */
 }
+
 .Tab2 {
   display: grid;
   flex-direction: row;
@@ -266,20 +292,24 @@
 .Tab2.visible {
   display: grid;
 }
+
 .tab1.selected,
 .tab2.selected {
   border-bottom: 2px solid white;
 }
+
 .tabContainer {
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: start;
 }
+
 .emptyDiv {
   width: 17.25rem;
   height: 100%;
 }
+
 .tab1,
 .tab2 {
   cursor: pointer;
@@ -292,6 +322,7 @@
   outline: none;
   padding-bottom: 8px;
 }
+
 .sectorsIncentives .gridItem {
   display: flex;
   /* justify-content: space-between; */
@@ -315,15 +346,18 @@
   line-height: 115%;
   color: #2b2f34;
 }
+
 .Tab1 .gridItemEmpty {
   background-color: transparent;
   border: none;
 }
+
 @keyframes slideUp {
   from {
     transform: translateY(50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -334,7 +368,12 @@
 .Tab2.slideUp {
   animation: slideUp 0.5s ease-out forwards;
 }
+
 .initiativesOpportunities {
+  position: relative;
+}
+
+.initiativesOpportunitiesContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -342,11 +381,14 @@
   align-items: flex-start;
   flex-direction: column;
   max-width: var(--w-max);
-  padding-inline: 40px;
   padding-block: 80px;
   padding-bottom: 56px;
   margin-inline: auto;
   box-sizing: border-box;
+}
+
+.opportunitiesContainer {
+  position: relative;
 }
 
 .initiativesOpportunities .sectionDividerInner {
@@ -428,11 +470,11 @@
   align-items: flex-start;
   flex-direction: column;
   max-width: var(--w-max);
-  padding-inline: 40px;
   padding-block: 80px;
   margin-inline: auto;
   box-sizing: border-box;
 }
+
 .innovationHeader {
   width: 100%;
   height: 100%;
@@ -441,10 +483,12 @@
   align-items: flex-end;
   gap: 30px;
 }
+
 .innovationHeading {
   width: 50%;
   height: 100%;
 }
+
 .innovationHeading h2 {
   background: linear-gradient(84deg, #ff7128 4.4%, #7e01a2 94.51%);
   background-clip: text;
@@ -457,10 +501,12 @@
   letter-spacing: -1.6px;
   transform: translateY(0%);
 }
+
 .innovationSubheading {
   width: 50%;
   height: 100%;
 }
+
 .innovationSubheading h3 {
   width: 20rem;
   color: #2b2f34;
@@ -490,6 +536,7 @@
   height: 34.5rem;
   position: relative;
 }
+
 .innovationImageContainer .imageBox img {
   position: absolute;
   top: 0;
@@ -501,10 +548,12 @@
   object-fit: cover;
   aspect-ratio: 4/3;
 }
+
 .imageBox img.visible {
   opacity: 1;
   transform: scale(1);
 }
+
 .innovationTitleContainer h3 {
   cursor: pointer;
   font-size: 24px;
@@ -517,6 +566,7 @@
 .innovationTitleContainer h3.clicked {
   color: #ff5100;
 }
+
 .supportingText p {
   font-size: 20px;
 
@@ -543,6 +593,7 @@
   margin-top: 0;
   margin-bottom: 24px;
 }
+
 .innovationDivider {
   background-color: #999999;
   width: 100%;
@@ -550,10 +601,12 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
 .innovationTitleContainer {
   margin-top: 0;
   width: 50%;
 }
+
 .innovationTitleContainer h3 {
   color: #2b2f34;
 
@@ -572,24 +625,30 @@
   flex-direction: column;
   gap: 24px;
 }
+
 .innovationImageContainer img {
   position: absolute;
   width: 36.563;
   height: 27.375;
   bottom: 0;
 }
+
 .growthDrivers {
-  width: 100%;
+  position: relative;
   height: 100%;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+.growthDriversContainer {
+  max-width: var(--w-max);
+  width: 100%;
+  margin-inline: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
-  max-width: var(--w-max);
-  padding: 80px 40px;
   gap: 32px;
-  margin-inline: auto;
-  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .gridDriver {
@@ -611,20 +670,24 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
   /* transform: translateY(100%); */
 }
+
 #sectionHead h2 {
   opacity: 1;
   transition: opacity 0.5s ease, transform 0.5s ease;
   /* transform: translateY(100%); */
 }
+
 .driverTitle {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
 .driverTitle p {
   font-size: 24px;
   color: var(--light-grey-color);
 }
+
 .driverHead {
   width: 10ch;
 
@@ -633,11 +696,13 @@
   line-height: 115%;
   letter-spacing: -0.48px;
 }
+
 .driverText {
   font-size: 16px;
 
   line-height: 115%;
 }
+
 .gridBox {
   background-color: #efefef;
   border-radius: 2px;
@@ -647,6 +712,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 #sectionHead h2.active {
   opacity: 1;
   transform: translateY(0);
@@ -656,6 +722,7 @@
   opacity: 1;
   transform: translateY(0);
 }
+
 .smartManufacturing {
   width: 100%;
   height: 100%;
@@ -663,14 +730,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  max-width: var(--w-max);
-  padding: 80px 40px;
-  margin-inline: auto;
   box-sizing: border-box;
+  position: relative;
 }
 
 .manufacturingContainer {
   width: 100%;
+  max-width: var(--w-max);
+  padding: 80px 40px;
+  margin-inline: auto;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -685,12 +753,14 @@
   height: 32.5rem;
   overflow: hidden;
 }
+
 .manufacturingImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 1s ease-out;
 }
+
 .manufacturingContent {
   width: 100%;
   height: 100%;
@@ -698,6 +768,7 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
+
 .manufacturingSpacer {
   width: -webkit-fill-available;
   height: 100%;
@@ -722,11 +793,13 @@
   align-content: flex-start;
   flex-direction: column;
 }
+
 .manufacturingHeader {
   width: 100%;
   height: 100%;
   margin-bottom: 24px;
 }
+
 .manufacturingHeader h2 {
   font-size: 50px;
 
@@ -740,6 +813,7 @@
   opacity: 0;
   animation: slideUp 0.8s ease-in-out forwards;
 }
+
 .manufacturingHeader p {
   font-size: 20px;
 
@@ -750,6 +824,7 @@
   opacity: 0;
   animation: slideUp 0.8s ease-in-out forwards;
 }
+
 .manufacturingGrid {
   width: 100%;
   display: grid;
@@ -759,10 +834,12 @@
   row-gap: 56px;
   column-gap: 30px;
 }
+
 .manufacturingEmpty {
   background-color: transparent;
   border: none;
 }
+
 .manufacturingText {
   width: 100%;
   height: fit-content;
@@ -770,18 +847,21 @@
   transform: translateY(30px);
   animation: staggeredSlideUp 0.8s ease-in-out forwards;
 }
+
 .driverText {
   width: 75%;
   font-size: 16px;
   line-height: 115%;
   color: #2b2f34;
 }
+
 .driverText span {
   background: linear-gradient(154deg, #2599ff -22.5%, #02be7c 124.73%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .manufacturingDivider {
   background-color: black;
   width: 100%;
@@ -792,14 +872,17 @@
   transform: translateY(30px);
   animation: staggeredSlideUp 0.8s ease-in-out forwards;
 }
+
 .gridItemEmptyMobile {
   display: none;
 }
+
 @keyframes staggeredSlideUp {
   from {
     transform: translateY(30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -809,6 +892,7 @@
 .manufacturingHeader h2 {
   animation-delay: 0.2s;
 }
+
 .manufacturingHeader p {
   animation-delay: 0.4s;
 }
@@ -816,12 +900,15 @@
 .manufacturingGrid .manufacturingText:nth-child(1) {
   animation-delay: 0.6s;
 }
+
 .manufacturingGrid .manufacturingText:nth-child(2) {
   animation-delay: 0.8s;
 }
+
 .manufacturingGrid .manufacturingText:nth-child(3) {
   animation-delay: 1s;
 }
+
 .manufacturingGrid .manufacturingText:nth-child(4) {
   animation-delay: 1.2s;
 }
@@ -838,6 +925,7 @@
   margin-inline: auto;
   box-sizing: border-box;
 }
+
 .sustainabilityHeader {
   width: 100%;
   height: 100%;
@@ -850,10 +938,12 @@
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 40px;
 }
+
 .sustainabilityHeading {
   /* width: 75%; */
   height: 100%;
 }
+
 .sustainabilityHeading h2 {
   font-size: 50px;
 
@@ -864,6 +954,7 @@
   /* transform: translateY(50px); */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .sustainabilityHeading span {
   font-size: 50px;
 
@@ -874,9 +965,11 @@
   /* transform: translateY(50px); */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .sustainabilitySubheading {
   grid-column: 4;
 }
+
 .sustainabilitySubheading h3 {
   font-size: 20px;
 
@@ -906,11 +999,13 @@
   transition: all 0.5s ease-in-out;
   transform: translateX(0);
 }
+
 .sustainabilityItem:nth-child(1),
 .sustainabilityItem:nth-child(2),
 .sustainabilityItem:nth-child(3) {
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+
 .sustainabilityItem:nth-child(1) {
   border-top: 1px;
   border-bottom: 1px;
@@ -948,6 +1043,7 @@
   /* transform: translateX(-100px); */
   z-index: 1;
 }
+
 .sustainabilityItem h3 {
   font-size: 80px;
 
@@ -956,6 +1052,7 @@
   line-height: 100%;
   letter-spacing: -1px;
 }
+
 .sustainabilityItem h3 sup {
   font-size: 50px;
   /* color: blue; */
@@ -966,26 +1063,9 @@
   color: #2b2f34;
   line-height: 115%;
 }
-.learnMore {
-  width: 25%;
-  display: flex;
-  height: 50px;
-  padding: 12px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 2px;
-  border: 1px solid var(--Body-Grey, #999);
-  background: var(--White, #fff);
-  color: #ff5100;
-  margin-top: 48px;
-  font-size: 16px;
-  line-height: 115%;
-}
 
-.learnMore:hover {
-  background-color: var(--orange-color);
-  color: var(--white-color);
+.learnMore {
+  margin-top: 48px;
 }
 
 .branding {
@@ -1004,12 +1084,14 @@
   width: 50%;
   height: 100%;
 }
+
 .brandingHeading h2 {
   width: 80%;
   font-size: 50px;
   line-height: 100%;
   letter-spacing: -1px;
 }
+
 .brandingHeading span {
   background: linear-gradient(83deg, #ff7128 12.05%, #7e01a2 88.85%);
   background-clip: text;
@@ -1047,11 +1129,13 @@
   gap: 40px;
   flex-direction: column;
 }
+
 .brandingDivider {
   background-color: black;
   width: 100%;
   height: 1px;
 }
+
 .lastSection {
   width: 100%;
   /* height: 40vh; */
@@ -1097,6 +1181,7 @@
   line-height: 100%;
   letter-spacing: -1px;
 }
+
 .contactUs {
   width: fit-content;
   height: 1.125rem;
@@ -1113,24 +1198,39 @@
   font-size: 16px;
   line-height: 115%;
 }
+
 .mobileInnovationContainer {
   display: none;
 }
+
+@media screen and (max-width: 1600px) {
+
+  .sectorAtAGlance,
+  .initiativesOpportunities,
+  .innovationSection,
+  .heroSection {
+    padding-inline: var(--container-padding);
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   #heroText {
     flex-direction: column;
     gap: 20px;
   }
+
   .glanceGradientGlow {
     bottom: 40%;
     right: 61%;
   }
+
   .matters-grid {
     overflow-x: scroll;
     grid-template-columns: repeat(4, 300px);
     grid-auto-rows: 300px;
     scrollbar-color: transparent transparent;
   }
+
   #gridContainer {
     grid-template-columns: repeat(2, 1fr);
     /* gap: 1rem; */
@@ -1142,14 +1242,17 @@
       "griditem4 . "
       ". griditem5";
   }
+
   #sectorsIncentivesHeadingContainer {
     flex-direction: column;
     gap: 20px;
   }
+
   .gridItemEmpty,
   .emptyDiv {
     display: none;
   }
+
   .tabContainer {
     margin-left: 24px;
   }
@@ -1166,12 +1269,14 @@
     gap: 30px;
     width: 67%;
   }
+
   .contentHead {
     width: 34%;
   }
 
   .innovationHeader {
     flex-direction: column;
+
     .innovationHeading,
     .innovationSubheading {
       width: 100%;
@@ -1186,12 +1291,15 @@
   .sustainabilityItem {
     gap: 90px;
   }
+
   #sustainabilityGrid {
     grid-auto-rows: auto;
   }
+
   .branding-emptyItem {
     display: none;
   }
+
   /* section.sectors {
     display: flex;
     flex-direction: column;
@@ -1200,6 +1308,7 @@
   .innovationContainer {
     display: none;
   }
+
   .mobileInnovationContainer {
     display: block;
     margin-top: 40px;
@@ -1231,6 +1340,7 @@
   .innoTab.active {
     color: var(--orange-color);
   }
+
   .innoTab.active::before {
     content: "";
     display: block;
@@ -1240,34 +1350,47 @@
     background: var(--orange-color);
     bottom: -105%;
   }
+
   .content img {
     width: 100%;
     margin-block: 20px;
   }
+
   .content {
     display: none;
   }
+
   .activeContent {
     display: block;
   }
 }
+
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   #gridContainer {
     grid-auto-rows: 17rem;
   }
+
   .gridDriver {
     grid-template-rows: 24rem;
   }
 }
+
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   #gridContainer {
     grid-auto-rows: 20rem;
   }
+
   .gridDriver {
     grid-template-rows: 26rem;
   }
 }
+
 @media screen and (max-width: 480px) {
+
+  #heroImage {
+    aspect-ratio: 360/600;
+  }
+
   /* .divider {
     margin-top: 60px;
     margin-bottom: 40px;
@@ -1277,30 +1400,37 @@
     width: 10px;
   }
 
-  .heroSection {
+  .heroSectionContainer {
     padding-inline: 0;
-    margin-top: 48px;
+    margin-top: 0;
     margin-bottom: 60px;
     gap: 32px;
   }
+
   #heroText {
-    padding-inline: 1rem;
     flex-direction: column;
     gap: 8px;
   }
+
   .heroHeading {
     font-size: 48px;
     line-height: var(--line-height--100);
   }
+
   .heroSubheading {
     font-size: var(--fonts--mobile--sub-heading-capital);
   }
 
+  .sectorAtAGlanceContainer {
+    padding-block: 0;
+  }
+
   .sectorAtAGlance {
     padding-inline: 1rem;
-    padding-block: 3.75rem;
+    padding-block: 3rem;
     position: relative;
   }
+
   .sectorsIncentives .gridItem {
     gap: 54px;
   }
@@ -1310,6 +1440,7 @@
     line-height: var(--line-height--115);
     margin-bottom: 24px;
   }
+
   .glanceGradientGlow {
     bottom: 42%;
     right: 60%;
@@ -1330,9 +1461,11 @@
       "gridItem4 . "
       ". gridItem5";
   }
+
   .sectorAtAGlance .sectorsGridItem {
     padding: 1rem;
   }
+
   .sectorAtAGlance .sectorsGridItem h3 {
     font-size: var(--fonts--mobile--sub-heading-capital);
     font-weight: 500;
@@ -1352,15 +1485,18 @@
   .fuelingInvestment {
     padding: 3.75rem 1rem;
   }
+
   #heading-container {
     flex-direction: column;
     gap: 1rem;
     padding: 24px 1rem;
     box-sizing: border-box;
   }
+
   .sectionHead {
     font-size: var(--fonts--mobile--sub-heading2);
   }
+
   .sectionSubheading {
     font-size: var(--fonts--mobile--sub-heading4);
   }
@@ -1376,13 +1512,16 @@
     font-size: var(--fonts--mobile--body1);
     padding-bottom: 8px;
   }
+
   .emptyDiv,
   .gridItemEmpty {
     display: none;
   }
+
   .tabContainer {
     margin-top: 100px;
   }
+
   .tabDataContainer {
     padding-left: 1rem;
     overflow: scroll;
@@ -1394,67 +1533,83 @@
     height: max-content;
     margin-bottom: 24px;
   }
+
   .Tab1,
   .Tab2 {
     gap: 1rem;
     grid-template-rows: 15.125rem;
     grid-template-columns: repeat(4, 15.125rem);
   }
+
   .gridHead {
     font-size: var(--fonts--mobile--sub-heading4);
     font-weight: 500;
     letter-spacing: 0;
   }
+
   .gridText {
     font-size: var(--fonts--mobile--body2);
     letter-spacing: 0;
   }
+
   .growthDrivers {
     padding: 3.75rem 1rem;
     gap: 1rem;
   }
+
   .gridDriver {
     display: flex;
     flex-direction: column;
   }
+
   .gridBox {
     padding: 20px;
     gap: 300px;
   }
+
   .driverTitle p {
     font-size: 18px;
   }
+
   .driverHead {
     font-size: var(--fonts--mobile--sub-heading-capital);
     line-height: var(--line-height--100);
     font-weight: 500;
   }
+
   .driverText {
     font-size: var(--fonts--mobile--body2);
     width: 100%;
   }
+
   .smartManufacturing {
     padding: 60px 1rem;
   }
+
   .manufacturingContainer {
     gap: 0;
   }
+
   .manufacturingImage {
     height: 15.375rem;
     margin-bottom: 24px;
   }
+
   .manufacturingHeader h2 {
     font-size: var(--fonts--mobile--sub-heading2);
   }
+
   .manufacturingHeader p {
     font-size: var(--fonts--mobile--body2);
     margin-top: 12px;
   }
+
   .manufacturingGradientGlow {
     left: 12rem;
     width: 150px;
     height: 150px;
   }
+
   .manufacturingGrid {
     display: flex;
     flex-direction: column;
@@ -1462,56 +1617,69 @@
     row-gap: 0;
     column-gap: 0;
   }
+
   .manufacturingContent {
     display: block;
   }
+
   .manufacturingText .driverText {
     font-size: var(--fonts--mobile--sub-heading4);
     font-weight: 500;
   }
+
   .manufacturingDivider {
     margin-top: 20px;
   }
+
   .sectorsContentContainer {
     margin-block: 48px;
   }
+
   .sectorsContentContainer,
   .sectorsImageContent {
     flex-direction: column;
   }
+
   .sectorsImageContent {
     width: 100%;
     gap: 20px;
   }
+
   .contentHead {
     width: 100%;
   }
+
   .contentHead h3 {
     font-size: var(--fonts--mobile--sub-heading-capital);
     margin-bottom: 20px;
   }
+
   .bodyText {
     font-size: var(--fonts--mobile--body1);
   }
+
   .learnMore {
     width: 100%;
-    font-weight: 500;
     margin-top: 36px;
   }
+
   .sustainability {
     padding: 60px 0rem;
   }
+
   .sustainabilityHeading h2,
   .sustainabilityHeading span {
     font-size: var(--fonts--mobile--sub-heading2);
     font-weight: 500;
   }
+
   .sustainabilityHeader {
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding-inline: 1rem;
   }
+
   #sustainabilityGrid {
     grid-template-columns: repeat(3, 15.125rem);
     grid-auto-rows: 15.125rem;
@@ -1519,60 +1687,75 @@
     scrollbar-color: transparent transparent;
     padding-inline: 1rem;
   }
+
   .sustainabilityItem {
     padding: 20px;
   }
+
   .sustainabilityItem h3 {
     font-size: 48px;
     font-weight: 500;
   }
+
   .sustainabilityItem h3 sup {
     font-size: 16px;
   }
+
   .sustainabilityItem p {
     font-size: var(--fonts--mobile--sub-heading4);
     font-weight: 500;
     line-height: var(--line-height--100);
   }
+
   .sustainabilityHeader {
     margin-bottom: 20px;
   }
+
   .sustainabilitySubheading h3 {
     font-size: 16px;
   }
+
   .branding {
     padding: 60px 1rem;
     flex-direction: column;
     box-sizing: border-box;
   }
+
   .brandingHeading {
     width: 100%;
   }
+
   .brandingHeading h2,
   .brandingHeading span {
     font-size: var(--fonts--mobile--sub-heading2);
     line-height: var(--line-height--115);
   }
+
   .brandingGrid {
     gap: 1rem;
     margin-top: 40px;
     grid-template-columns: repeat(2, 9.688rem);
     grid-auto-rows: 10.563rem;
   }
+
   .brandingText {
     gap: 2rem;
   }
+
   .brandingText img {
     width: 44px;
     height: auto;
     min-height: 44px;
   }
+
   .brandingText {
     font-size: var(--fonts--mobile--sub-heading4);
   }
+
   .textWrapper {
     gap: 32px;
   }
+
   .contactUs h2 {
     font-size: var(--fonts--mobile--sub-heading2);
     line-height: var(--line-height--115);
@@ -1580,10 +1763,12 @@
     width: 80%;
     margin-inline: auto;
   }
+
   .contactUs {
     margin-top: 20px;
     font-size: var(--fonts--mobile--body2);
   }
+
   .lastSection {
     padding-inline: 1rem;
     min-height: 400px;
@@ -1604,29 +1789,35 @@
     right: 14%;
     filter: blur(53px);
   }
+
   .futureGradientGlow1 {
     width: 150px;
     height: 150px;
     top: 40%;
     right: 26%;
   }
-  .initiativesOpportunities {
-    padding-inline: 1rem;
+
+  .initiativesOpportunitiesContainer {
     padding-bottom: 0;
     padding-top: 60px;
   }
+
   .initiativesOpportunities .sectorsContentContainer {
     flex-direction: column;
   }
+
   .sectorsImageContent img {
     width: 100%;
   }
+
   .initiativesOpportunities .sectorsContentContainer {
     margin-block: 48px;
   }
+
   .innovationSection {
     padding: 60px 0rem;
   }
+
   .innovationHeader {
     flex-direction: column;
     justify-content: flex-start;
@@ -1635,13 +1826,16 @@
     padding-inline: 1rem;
     box-sizing: border-box;
   }
+
   .innovationHeading,
   .innovationSubheading {
     width: 100%;
   }
+
   .innovationHeading h2 {
     font-size: 48px;
   }
+
   .innovationSubheading h3 {
     font-size: var(--fonts--mobile--sub-heading4);
     font-weight: 500;
@@ -1650,10 +1844,12 @@
   .innovationContainer {
     display: none;
   }
+
   .mobileInnovationContainer {
     display: block;
     margin-top: 40px;
   }
+
   /* .mobile-innovationContainer .content.activeContent p:first-child {
     padding-bottom: 1rem;
   } */
@@ -1690,6 +1886,7 @@
   .innoTab.active {
     color: var(--orange-color);
   }
+
   .innoTab.active::before {
     content: "";
     display: block;
@@ -1699,14 +1896,17 @@
     background: var(--orange-color);
     bottom: -100%;
   }
+
   .content img {
     width: 100%;
     height: 220px;
     margin-block: 20px;
   }
+
   .content {
     display: none;
   }
+
   .activeContent {
     display: block;
   }
@@ -1716,24 +1916,29 @@
     width: 100%;
     padding: 60px 16px;
   }
+
   .sectorsIncentivesContentWrapper {
     padding-bottom: 0;
     align-items: flex-start;
   }
+
   .sectorsIncentivesContentWrapper #sectorsIncentivesHeadingContainer {
     padding-inline: 1rem;
     padding-top: 24px;
     flex-direction: column;
     gap: 12px;
   }
+
   h2.sectorsIncentivesHead {
     font-size: var(--fonts--desktop--sub-heading-capital);
     letter-spacing: 0;
   }
+
   p.sectorsIncentivesSubheading {
     font-size: var(--fonts--mobile--sub-heading4);
     letter-spacing: 0;
   }
+
   .branding .brandingHeading {
     width: 100%;
   }
@@ -1753,14 +1958,17 @@
   #gridContainer {
     grid-auto-rows: 10.5rem;
   }
+
   .gridBox {
     gap: 200px;
   }
 }
+
 @media screen and (max-width: 360px) {
   #gridContainer {
     grid-auto-rows: 10.5rem;
   }
+
   .gridBox {
     gap: 200px;
   }
