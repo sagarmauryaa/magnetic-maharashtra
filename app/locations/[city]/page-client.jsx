@@ -13,9 +13,10 @@ import OrangeCity from "@/app/components/Locations/OrangeCity";
 import WineEstate from "@/app/components/Locations/WineEstate";
 import Education from "@/app/components/Locations/Education";
 import Image from "next/image";
+import Link from "next/link";
 
-const LocationsClient = ({ filteredData }) => {
-  // const [filteredData, setFilteredData] = useState([]);
+const LocationsClient = ({ filterData }) => {
+  const [filteredData, setFilteredData] = useState(filterData);
   const [location, setLocation] = useState("");
   const [toggleState, setToggleState] = useState(1);
 
@@ -97,269 +98,14 @@ const LocationsClient = ({ filteredData }) => {
 
   const route = useParams();
   const pathName = route.city;
-
-
-  const loadData = () => {
-    let selectedLocation = "";
-
-    if (!pathName) return;
-
-    console.log(pathName);
-
-    selectedLocation = locationData.find((item) => item.pathName === pathName);
-
-    setLocation(filteredData.id);
-  };
-
+ 
   useEffect(() => {
     if (filteredData) {
-      loadData();
-
+      setLocation(filteredData[0].id);
       updateLocationColors(location);
     }
-  }, [filteredData]);
-
-
-
-  // useEffect(() => {
-  //   if (isActive == false) {
-  //     const elementsToHide = [
-  //       heroDetailsRef.current,
-  //       secondSectionRef.current,
-  //       whyMumbaiRef.current,
-  //       qualityLifeRef.current,
-  //       placesRef.current,
-  //       brandingRef.current,
-  //     ];
-
-  //     // Hide all refs
-  //     elementsToHide.forEach((element) => {
-  //       gsap.set(element, { display: "none" });
-  //     });
-
-  //     // Hide divider separately since it's a class selector
-  //     gsap.set(".divider", { display: "none" });
-  //   }
-  // }); // Added empty dependency array
-
-  // useGSAP(() => {
-  //   // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   console.log(location);
-  //   if (location != "") {
-  //     gsap.to(whyMumbaiContainerRef?.current, {
-  //       x: () =>
-  //         -(
-  //           whyMumbaiContainerRef?.current?.scrollWidth -
-  //           window.innerWidth +
-  //           100
-  //         ),
-  //       ease: "power1.inOut",
-  //       scrollTrigger: {
-  //         trigger: whyMumbaiRef?.current,
-  //         start: "top top",
-  //         end: "bottom+=1100px top",
-  //         scrub: 0.6,
-  //         anticipatePin: 1,
-  //         pin: true,
-  //         // markers: true,
-  //       },
-  //     });
-
-  //     gsap.to(qualityLifeContainerRef?.current, {
-  //       x: () =>
-  //         -(
-  //           qualityLifeContainerRef?.current?.scrollWidth -
-  //           window.innerWidth +
-  //           100
-  //         ),
-  //       ease: "power1.inOut",
-  //       scrollTrigger: {
-  //         trigger: qualityLifeRef?.current,
-  //         start: "top top",
-  //         end: "bottom+=1100px top",
-  //         scrub: 0.6,
-  //         anticipatePin: 1,
-  //         pin: true,
-  //         // markers: true,
-  //       },
-  //     });
-  //   }
-  // }, [filteredData]);
-
-  // useGSAP(() => {
-  //   const mm = gsap.matchMedia();
-
-  //   mm.add("(min-width:768px)", () => {
-  //     const animation = lottie.loadAnimation({
-  //       container: globeRef.current,
-  //       renderer: "svg",
-  //       animationData: mapAnimation,
-  //       loop: false,
-  //       autoplay: false,
-  //     });
-
-  //     ScrollTrigger.create({
-  //       trigger: ".locations-hero",
-  //       start: "top top",
-  //       end: "+=2000px",
-  //       scrub: 0.2,
-  //       once: false,
-  //       markers: false,
-  //       pin: true,
-  //       invalidateOnRefresh: true,
-  //       refreshPriority: 5,
-  //       anticipatePin: 5,
-  //       preventOverlaps: true,
-  //       fastScrollEnd: true,
-  //       onEnterBack: (self) => {
-  //         self.disable();
-  //       },
-  //       onUpdate: (self) => {
-  //         const progress = self.progress;
-  //         animation.goToAndStop(animation.totalFrames * progress, true);
-
-  //         const handleTimelineComplete = () => {
-  //           setIsActive(!isActive);
-  //           const elementsToShow = [
-  //             heroDetailsRef.current,
-  //             secondSectionRef.current,
-  //             whyMumbaiRef.current,
-  //             qualityLifeRef.current,
-  //             placesRef.current,
-  //             brandingRef.current,
-  //           ];
-
-  //           // Hide all refs
-  //           elementsToShow.forEach((element) => {
-  //             // gsap.set(element, { display: "block" });
-  //             if (
-  //               element.className == "branding" ||
-  //               element.className == "quality-of-life"
-  //             ) {
-  //               // console.log(element.className);
-  //               gsap.set(element, { display: "flex" });
-  //             } else {
-  //               gsap.set(element, { display: "block" });
-  //               // console.log(element.className);
-  //             }
-  //           });
-
-  //           // Hide divider separately since it's a class selector
-  //           gsap.set(".divider", { display: "block" });
-  //         };
-
-  //         // const handleTimelineReverse = () => {
-  //         //   setIsActive(!isActive);
-  //         //   const elementsToHide = [
-  //         //     heroDetailsRef.current,
-  //         //     secondSectionRef.current,
-  //         //     whyMumbaiRef.current,
-  //         //     qualityLifeRef.current,
-  //         //     placesRef.current,
-  //         //     brandingRef.current,
-  //         //   ];
-
-  //         //   // Hide all refs
-  //         //   elementsToHide.forEach((element) => {
-  //         //     gsap.set(element, { display: "none" });
-  //         //   });
-
-  //         //   // Hide divider separately since it's a class selector
-  //         //   gsap.set(".divider", { display: "none" });
-  //         // };
-
-  //         if (progress > 0.9) {
-  //           gsap
-  //             .timeline({
-  //               onComplete: handleTimelineComplete,
-  //             })
-  //             .to(globeRef.current, { opacity: 0.1 })
-  //             .to(".locations-hero #MaharashtraMapSvg", {
-  //               opacity: 1,
-  //             });
-  //         } else {
-  //           gsap
-  //             .timeline({})
-  //             .to(globeRef.current, { opacity: 1 })
-  //             .to(".locations-hero #MaharashtraMapSvg", { opacity: 0 });
-  //         }
-  //       },
-  //     });
-  //   });
-  //   mm.add("(max-width:480px)", () => {
-  //     const animation = lottie.loadAnimation({
-  //       container: globeRef.current,
-  //       animationData: mapAnimationMobile,
-  //       renderer: "svg",
-  //       loop: false,
-  //       autoplay: false,
-  //     });
-
-  //     ScrollTrigger.create({
-  //       trigger: ".locations-hero",
-  //       start: "top top",
-  //       end: "+=800px",
-  //       scrub: 0.2,
-  //       once: false,
-  //       markers: false,
-  //       pin: true,
-  //       invalidateOnRefresh: true,
-  //       refreshPriority: 5,
-  //       anticipatePin: 5,
-  //       onEnterBack: () => {
-  //         ScrollTrigger.disable();
-  //       },
-  //       onUpdate: (self) => {
-  //         const progress = self.progress;
-  //         animation.goToAndStop(animation.totalFrames * progress, true);
-
-  //         if (progress > 0.9) {
-  //           gsap
-  //             .timeline({
-  //               onComplete: () => {
-  //                 setIsActive(!isActive);
-  //                 const elementsToShow = [
-  //                   heroDetailsRef.current,
-  //                   secondSectionRef.current,
-  //                   whyMumbaiRef.current,
-  //                   qualityLifeRef.current,
-  //                   placesRef.current,
-  //                   brandingRef.current,
-  //                 ];
-
-  //                 // Hide all refs
-  //                 elementsToShow.forEach((element) => {
-  //                   // gsap.set(element, { display: "block" });
-  //                   if (
-  //                     element.className == "branding" ||
-  //                     element.className == "quality-of-life"
-  //                   ) {
-  //                     console.log(element.className);
-  //                     gsap.set(element, { display: "flex" });
-  //                   } else {
-  //                     gsap.set(element, { display: "block" });
-  //                     // console.log(element.className);
-  //                   }
-  //                 });
-
-  //                 // Hide divider separately since it's a class selector
-  //                 gsap.set(".divider", { display: "block" });
-  //               },
-  //             })
-  //             .to(globeRef.current, { opacity: 0.1 })
-  //             .to(".locations-hero #MaharashtraMapSvg", {
-  //               opacity: 1,
-  //             });
-  //         } else {
-  //           gsap
-  //             .timeline()
-  //             .to(globeRef.current, { opacity: 1 })
-  //             .to(".locations-hero #MaharashtraMapSvg", { opacity: 0 });
-  //         }
-  //       },
-  //     });
-  //   });
-  // });
+  }, [filteredData]);  
+  
 
   useGSAP(() => {
     if (pathName != "" || filteredData.length > 0) {
@@ -555,29 +301,7 @@ const LocationsClient = ({ filteredData }) => {
           },
           "<"
         );
-
-      // places
-      // gsap
-      //   .timeline({
-      //     scrollTrigger: {
-      //       trigger: `#${styles.placesOfInterest}`,
-      //       start: "top center",
-      //       end: "center bottom",
-      //     },
-      //   })
-      //   .from(`#${styles.placesOfInterest} .${styles.sectionHead}`, {
-      //     yPercent: 30,
-      //     opacity: 0,
-      //     duration: 0.65,
-      //     ease: "expo.out",
-      //   })
-      //   .from(`#${styles.placesOfInterestContainer}`, {
-      //     yPercent: 30,
-      //     opacity: 0,
-      //     duration: 0.65,
-      //     ease: "expo.out",
-      //   });
-
+  
       // Dividers
       const dividers = gsap.utils.toArray(`.${styles.divider}`);
 
@@ -636,76 +360,83 @@ const LocationsClient = ({ filteredData }) => {
         {" "}
         <div className={styles.locationTab}>
           <div className={styles.exploreTabContainer}>
-            <div
+            <Link
               className={
-                toggleState === 1
+                location === 'mumbai'
                   ? `${styles.tab1} ${styles.active}`
                   : styles.tab1
               }
               role="button"
-              onClick={() => {
-                toggleTab(1);
-                handleLocation("mumbai");
-              }}
+              href={'/locations/mumbai'}
+              // onClick={() => {
+              //   toggleTab(1);
+              //   handleLocation("mumbai");
+              // }}
             >
               Mumbai
-            </div>
-            <div
+            </Link>
+            <Link
               className={
-                toggleState === 2
+                location === 'pune'
                   ? `${styles.tab2} ${styles.active}`
                   : styles.tab2
               }
               role="button"
-              onClick={() => {
-                toggleTab(2);
-                handleLocation("pune");
-              }}
+              // onClick={() => {
+              //   toggleTab(2);
+              //   handleLocation("pune");
+              // }}
+              href={'/locations/pune'}
+
             >
               Pune
-            </div>
-            <div
+            </Link>
+            <Link
               className={
-                toggleState === 3
+                location === 'nashik'
                   ? `${styles.tab3} ${styles.active}`
                   : styles.tab3
               }
               role="button"
-              onClick={() => {
-                toggleTab(3);
-                handleLocation("nashik");
-              }}
+              href={'/locations/nashik'}
+
             >
               Nashik
-            </div>
-            <div
+            </Link>
+            <Link
               className={
-                toggleState === 4
+                location === 'chhatrapatisambhajinagar'
+
                   ? `${styles.tab4} ${styles.active}`
                   : styles.tab4
               }
               role="button"
-              onClick={() => {
-                toggleTab(4);
-                handleLocation("chhatrapatisambhajinagar");
-              }}
+              // onClick={() => {
+              //   toggleTab(4);
+              //   handleLocation("chhatrapatisambhajinagar");
+              // }}
+              href={'/locations/chhatrapatisambhajinagar'}
+
             >
               Chhatrapati Sambhaji Nagar
-            </div>
-            <div
+            </Link>
+            <Link
               className={
-                toggleState === 5
+                location === 'nagpur'
+
                   ? `${styles.tab5} ${styles.active}`
                   : styles.tab5
               }
               role="button"
-              onClick={() => {
-                toggleTab(5);
-                handleLocation("nagpur");
-              }}
+              // onClick={() => {
+              //   toggleTab(5);
+              //   handleLocation("nagpur");
+              // }}
+              href={'/locations/nagpur'}
+
             >
               Nagpur
-            </div>
+            </Link>
           </div>
         </div>
         <div className={styles.locationsTabDivider}></div>
@@ -1365,7 +1096,7 @@ const LocationsClient = ({ filteredData }) => {
             </div>
           </section>
           <div className={styles.divider}></div>
-          <section ref={whyMumbaiRef} id={styles.whyMumbai}>
+          <section ref={whyMumbaiRef} id={styles.whyMumbai} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
             <div className={styles.sectionHead}>
               <h2 observer-animation="fadeInUpPara">Why {data.name}</h2>
             </div>

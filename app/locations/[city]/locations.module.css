@@ -16,7 +16,8 @@
 
 .locationsHero {
   width: 100%;
-  height: 120vh;
+  /* min-height: 100dvh; */
+  /* height: 120vh; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -47,12 +48,13 @@
 }
 
 .locationsHero #MaharashtraMapSvg {
-  position: absolute;
+  margin-inline: auto;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
-  z-index: 2;
+  z-index: 2; */
 }
 
 .locationsHeroDetails {
@@ -267,7 +269,7 @@
   flex-direction: column;
   max-width: var(--w-max);
   margin: 0 auto;
-  padding: 80px 40px;
+  padding-block: 80px;
   gap: 40px;
   position: relative;
   box-sizing: border-box;
@@ -359,13 +361,13 @@
   max-width: var(--w-max);
   overflow: hidden;
   margin: 0 auto;
-  padding: 80px 0px;
+  padding-block: 80px;
   /* gap: 40px; */
 }
 
 #whyMumbai .sectionHead {
   margin-block-end: 24px;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
 }
 
 .sectionHead {
@@ -404,7 +406,7 @@
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   cursor: url("/images/Locations/CTA.svg"), auto;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
   box-sizing: border-box;
 }
 
@@ -413,6 +415,8 @@
   flex-direction: row;
   grid-template-columns: repeat(6, 22.625rem);
   grid-auto-rows: auto;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
 }
 
 #whyMumbaiContainer .gridItem {
@@ -422,6 +426,7 @@
   align-items: start;
   gap: 90px;
   border: 1px solid var(--mid-grey-color);
+  margin-bottom: 1px;
   border-right: none;
   padding: 20px;
   /* background-color: linear-gradient(
@@ -489,7 +494,7 @@
   justify-content: flex-start;
   align-content: space-between;
   flex-direction: row;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
   box-sizing: border-box;
 }
 
@@ -529,7 +534,7 @@
   width: 100%;
   /* margin-right: 16px; */
   cursor: url("/images/Locations/CTA.svg"), auto;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
   box-sizing: border-box;
 }
 
@@ -807,7 +812,12 @@
 }
 
 @media (max-width:1600px) {
+
+  #qualityOfLife>*,
+  #industrialCluster,
+  #whyMumbai,
   #seaLink,
+  #placesOfInterest,
   .placesOfInterest,
   .branding {
     padding-inline: var(--container-padding);
@@ -865,6 +875,8 @@
 @media screen and (max-width: 480px) {
   .MaharashtraMapImage {
     display: block;
+    height: fit-content;
+    margin-bottom: 20px;
     aspect-ratio: 4/3;
   }
 
@@ -873,13 +885,20 @@
   }
 
   .locationsHero {
-    height: 75vh;
+    /* height: 75vh; */
     padding-top: 0px;
+    padding-bottom: 40px;
+    margin-bottom: 0 !important;
   }
 
   #MaharashtraMapSvg {
-    width: 70%;
+    width: 100%;
+    height: fit-content;
+    aspect-ratio: 4/3;
+    flex-shrink: 0;
+    margin-bottom: 20px;
   }
+
 
   .locationTab {
     display: block;
@@ -965,8 +984,10 @@
   }
 
   .locationsHeroDetails h1 {
+    display: block;
+    box-sizing: border-box;
     line-height: 90%;
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
     margin-bottom: 4px;
   }
 
@@ -1080,7 +1101,7 @@
   }
 
   .sectionHead h2 {
-    font-size: var(--fonts--mobile--sub-heading2);
+    font-size: var(--fonts--mobile--sub-heading1);
   }
 
   #whyMumbai .sectionHead {
@@ -1112,7 +1133,14 @@
   }
 
   .whyMumbaiScroll {
+    height: fit-content;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  .whyMumbaiScroll #whyMumbaiContainer {
     padding-inline: 1rem;
+    scroll-padding-inline: 1rem;
   }
 
   #qualityOfLife {
@@ -1199,6 +1227,7 @@
 
   .placesContentContainer,
   .placesImageContent {
+    display: flex;
     flex-direction: column;
     width: 100%;
   }
@@ -1225,9 +1254,11 @@
   }
 
   .branding {
-    padding-inline: 1rem;
-    flex-direction: column;
     padding-block: 60px;
+  }
+
+  .brandingContainer { 
+    flex-direction: column;
     gap: 24px;
   }
 
@@ -1278,9 +1309,9 @@
   }
 
   .locationsHero #MaharashtraMapSvg {
-    top: 0%;
+    /* top: 0%;
     left: 15%;
-    transform: scale(1.1);
+    transform: scale(1.1); */
   }
 }
 

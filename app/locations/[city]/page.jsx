@@ -11,7 +11,7 @@ const page = async ({ params }) => {
   console.log(data);
   
   return (
-    <LocationsClient filteredData={data} />
+    <LocationsClient filterData={data} />
   )
 }
 
