@@ -14,7 +14,7 @@ import WineEstate from "@/app/components/Locations/WineEstate";
 import Education from "@/app/components/Locations/Education";
 import Image from "next/image";
 
-const LocationsClient = ({filteredData}) => {
+const LocationsClient = ({ filteredData }) => {
   // const [filteredData, setFilteredData] = useState([]);
   const [location, setLocation] = useState("");
   const [toggleState, setToggleState] = useState(1);
@@ -98,7 +98,7 @@ const LocationsClient = ({filteredData}) => {
   const route = useParams();
   const pathName = route.city;
 
- 
+
   const loadData = () => {
     let selectedLocation = "";
 
@@ -117,9 +117,9 @@ const LocationsClient = ({filteredData}) => {
 
       updateLocationColors(location);
     }
-  }, [filteredData]); 
-  
- 
+  }, [filteredData]);
+
+
 
   // useEffect(() => {
   //   if (isActive == false) {
@@ -1321,7 +1321,7 @@ const LocationsClient = ({filteredData}) => {
       </section>
 
       {filteredData.map((data) => (
-        <main ref={secondSectionRef} key={data.id} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass"> 
+        <main ref={secondSectionRef} key={data.id} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
           <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
           <section id={styles.seaLink}>
             <div className={styles.sectionImage + ' anim-imageWrapper'}>
@@ -1343,7 +1343,7 @@ const LocationsClient = ({filteredData}) => {
                 {data?.secondSection?.description.partThree}
               </h3>
             </div>
-          </section> 
+          </section>
           <section id={styles.industrialCluster} observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
             <span className="anim-line -top" observer-animation="cssClass" observer-animation-classes="animateSingleLineIn" transform-origin="top left"></span>
             <div className={styles.industrialGradientGlow}></div>
@@ -1386,8 +1386,8 @@ const LocationsClient = ({filteredData}) => {
               onMouseUp={handleMouseUp}
               onMouseMove={(e) => handleMouseMove(e, itemsRef)}
             >
-              <div  id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara">
-              {/* <div ref={whyMumbaiContainerRef} id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara"> */}
+              <div id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara">
+                {/* <div ref={whyMumbaiContainerRef} id={styles.whyMumbaiContainer} observer-animation="fadeInUpPara"> */}
                 {data.fourthSection?.cardsData.map((cardData) => (
                   <div className={styles.gridItem} key={cardData.title}>
                     <img src={cardData.icon} alt={cardData.title} />
@@ -1486,22 +1486,24 @@ const LocationsClient = ({filteredData}) => {
           {data.name == "Nagpur" && <OrangeCity />}
 
           <section ref={brandingRef} className={styles.branding}>
-            <div className={styles.brandingHeading}>
-              <h2>
-                Trusted by
-                <span> Brands</span>
-              </h2>
-            </div>
-            <div className={styles.brandingGrid}>
-              {data.eightSection?.brandsData.map((brandData) => (
-                <div className={styles.brandingText} key={brandData.title}>
-                  <img src={brandData.icon} alt={brandData.title} />
-                  <div className={styles.textWrapper}>
-                    <p className={styles.brandingText}>{brandData.title}</p>
-                    <div className={styles.brandingDivider}></div>
+            <div className={styles.brandingContainer}>
+              <div className={styles.brandingHeading}>
+                <h2>
+                  Trusted by
+                  <span> Brands</span>
+                </h2>
+              </div>
+              <div className={styles.brandingGrid}>
+                {data.eightSection?.brandsData.map((brandData) => (
+                  <div className={styles.brandingText} key={brandData.title}>
+                    <img src={brandData.icon} alt={brandData.title} />
+                    <div className={styles.textWrapper}>
+                      <p className={styles.brandingText}>{brandData.title}</p>
+                      <div className={styles.brandingDivider}></div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </section>
         </main>

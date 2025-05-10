@@ -210,7 +210,7 @@
   height: 100%;
   max-width: var(--w-max);
   display: flex;
-  padding: 80px 40px;
+  padding-block: 80px;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
@@ -220,7 +220,7 @@
 
 #seaLink .sectionImage {
   position: relative;
-  width: 100%; 
+  width: 100%;
   object-fit: cover;
   aspect-ratio: 16/9;
 }
@@ -600,7 +600,7 @@
   align-items: flex-start;
   flex-direction: column;
   max-width: var(--w-max);
-  padding: 80px 40px;
+  padding-block: 80px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -694,18 +694,24 @@
 /* <!-- ----section/7---- --> */
 
 .branding {
-  width: 100%;
+  position: relative;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  max-width: var(--w-max);
-  padding: 40px;
+  /* padding: 40px; */
   /* margin-bottom: 40px; */
   padding-block: 80px;
   border-bottom: 1px solid black;
   box-sizing: border-box;
+}
+
+.brandingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  max-width: var(--w-max);
+  margin-inline: auto;
+
 }
 
 .brandingHeading {
@@ -798,6 +804,14 @@
   background-color: black;
   width: 100%;
   height: 0.75px;
+}
+
+@media (max-width:1600px) {
+  #seaLink,
+  .placesOfInterest,
+  .branding {
+    padding-inline: var(--container-padding);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
