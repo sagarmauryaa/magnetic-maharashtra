@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 import SectorsClient from './page-client';
 import sectorsData from './sectorsData';
 
