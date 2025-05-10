@@ -5,7 +5,7 @@
 }
 .flavors {
   width: 100%;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
   max-width: var(--w-max);
   margin: 0 auto;
   box-sizing: border-box;
@@ -54,12 +54,13 @@
   line-height: var(--line-height--115);
 }
 .flavorButton {
-  height: 48px;
+  cursor: pointer;
+  /* height: 48px;
   border-radius: 2px;
   border: 2px solid #d1d1d2;
   color: var(--orange-color);
   font-size: 16px;
-  background-color: white;
+  background-color: white; */
   grid-column: 3 / 5;
   margin-top: 14px;
 }
@@ -72,6 +73,11 @@
 
   .flavorGridItem img {
     width: 100%;
+  }
+}
+@media (max-width:1600px) {
+  .flavors{
+    padding-inline: var(--container-padding);
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {

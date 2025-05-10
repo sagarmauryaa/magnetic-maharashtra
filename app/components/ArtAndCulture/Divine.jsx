@@ -1,74 +1,11 @@
 "use client";
 
 import React from "react";
-import styles from "../ArtAndCulture/Divine.module.css";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap/all";
+import styles from "../ArtAndCulture/Divine.module.css"; 
 
-function Divine() {
-  useGSAP(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: `.${styles.divineContainer}`,
-          start: "top center",
-          end: "bottom center",
-        },
-      })
-      .from(`.${styles.imageContentBodyTitle}`, {
-        yPercent: 50,
-        opacity: 0,
-        duration: 0.65,
-        ease: "expo.Out",
-      })
-      .from(
-        `.${styles.imageContentBodyBody}`,
-        {
-          yPercent: 50,
-          opacity: 0,
-          duration: 0.65,
-          ease: "expo.Out",
-        },
-        "<0.2"
-      )
-      .from(
-        `.${styles.divineBox}`,
-        {
-          opacity: 0,
-          yPercent: 50,
-          stagger: 0.2,
-        },
-        "<0.2"
-      );
-
-    // gsap
-    //   .timeline({
-    //     scrollTrigger: {
-    //       trigger: ".cultureSignificance",
-    //       start: "top center",
-    //       end: "bottom center",
-    //     },
-    //   })
-    //   .from(".cultureSignificance hr", {
-    //     width: 0,
-    //     duration: 0.65,
-    //     ease: "expo.Out",
-    //   })
-    //   .from(".cultureSignificance #cultureSignificanceTitle", {
-    //     yPercent: 50,
-    //     opacity: 0,
-    //     duration: 0.65,
-    //     ease: "expo.Out",
-    //   })
-    //   .from(".cultureSignificance #cultureSignificanceBody", {
-    //     yPercent: 50,
-    //     opacity: 0,
-    //     duration: 0.65,
-    //     ease: "expo.Out",
-    //   });
-  });
+function Divine() { 
   return (
-    <div className={styles.divineContainer}>
+    <div className={styles.divineContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass">
       <div className={styles.divine}>
         <div className={styles.artImageContent}>
           <picture loading="lazy" className={styles.divineImage}>
@@ -84,16 +21,16 @@ function Divine() {
           </picture>
           <div>
             <div className={styles.imageContentBody}>
-              <div className={styles.imageContentBodyTitle}>
+              <div className={styles.imageContentBodyTitle} observer-animation="fadeInUpPara">
                 A journey to the divine
               </div>
-              <div className={styles.imageContentBodyBody}>
+              <div className={styles.imageContentBodyBody} observer-animation="fadeInUpPara">
                 Maharashtra’s spiritual landmarks attract millions, offering
                 peace and enlightenment.
               </div>
             </div>
           </div>
-          <div className={styles.boxContainer}>
+          <div className={styles.boxContainer} observer-animation="fadeInUpPara">
             <div className={styles.divineBox}>
               <div className={styles.title}>Shirdi Sai Baba Temple</div>
               <div className={styles.body}>
@@ -120,8 +57,8 @@ function Divine() {
         <div className={styles.cultureSignificance}>
           <hr />
           <div>
-            <div>#Cultural Significance</div>
-            <div>
+            <div observer-animation="fadeInUpPara">#Cultural Significance</div>
+            <div observer-animation="fadeInUpPara">
               Maharashtra’s pilgrimage sites are more than places of worship –
               they are cultural hubs where rituals, music, and community
               celebrations preserve vibrant heritage and timeless traditions.

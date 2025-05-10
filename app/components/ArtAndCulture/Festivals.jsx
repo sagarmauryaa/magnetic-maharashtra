@@ -31,16 +31,16 @@ function Festivals() {
       });
   });
   return (
-    <section className={styles.festivalsContainer}>
+    <section className={styles.festivalsContainer} observer-animation-repeat="true" observer-animation-classes="animateAllLinesIn, animateImagesIn" observer-animation="cssClass" >
       <div className={styles.festivals}>
-        <h1 className={styles.heading}>
+        <h1 className={styles.heading} observer-animation="title">
           <span>Festivals and Celebrations</span>
           <br />
           in Maharashtra
         </h1>
 
-        <div className={styles.festivalContainer}>
-          <div className={styles.festivalImage}>
+        <div className={styles.festivalContainer} >
+          <div className={styles.festivalImage} observer-animation="fadeInUpPara">
             <picture>
               <source
                 srcSet="/images/Art&Culture_page/gudiPadwaMobile.webp"
@@ -59,7 +59,7 @@ function Festivals() {
           </div>
         </div>
         <div className={styles.festivalContainer}>
-          <div className={styles.festivalImage}>
+          <div className={styles.festivalImage} observer-animation="fadeInUpPara">
             <picture>
               <source
                 srcSet="/images/Art&Culture_page/AshadhiEkadashi_mobile.webp"
@@ -77,7 +77,7 @@ function Festivals() {
           </div>
         </div>
         <div className={styles.festivalContainer}>
-          <div className={styles.festivalImage}>
+          <div className={styles.festivalImage} observer-animation="fadeInUpPara">
             <picture>
               <source
                 srcSet="/images/Art&Culture_page/nag.webp"

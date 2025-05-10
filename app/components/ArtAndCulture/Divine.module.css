@@ -6,7 +6,7 @@
 }
 .divine {
   width: 100%;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
   max-width: var(--w-max);
   margin: 0 auto;
   box-sizing: border-box;
@@ -118,6 +118,11 @@
   line-height: var(--line-height--115);
   width: 25%;
   color: #2b2f34;
+}
+@media (max-width:1600px) {
+  .divine {
+    padding-inline: var(--container-padding);
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .imageContentBody div:first-child {

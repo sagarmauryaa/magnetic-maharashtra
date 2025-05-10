@@ -3,6 +3,7 @@
   padding: 5rem 0;
   border-bottom: 1px solid black;
 }
+
 .rhythm {
   width: 100%;
   /* padding: 0 2.5rem; */
@@ -16,8 +17,9 @@
   font-size: 102px;
   line-height: var(--line-height--90);
   will-change: transform;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
 }
+
 .rhythmHeading span {
   background: linear-gradient(to left, #7e01a2, #ff7128);
   -webkit-background-clip: text;
@@ -34,18 +36,21 @@
   grid-column: 2/2;
   color: var(--dark-grey-color);
 }
+
 .rhythmScroll {
   white-space: nowrap;
   overflow-x: scroll;
   scrollbar-width: none;
-  padding: 0 2.5rem;
+  /* padding: 0 2.5rem; */
 }
+
 .scrollImageContainer,
 .rhythmPara {
   display: grid;
   grid-template-columns: 36.563rem 17.375rem 17.375rem 36.563rem 17.375rem 17.375rem;
   gap: 30px;
 }
+
 .scrollImageContainer div {
   display: flex;
   flex-direction: column;
@@ -64,6 +69,7 @@
   flex-direction: column;
   gap: 8px;
 }
+
 .rhythmTitle {
   font-size: var(--fonts--desktop--sub-heading3);
   line-height: var(--line-height--115);
@@ -71,6 +77,7 @@
   line-height: 90%;
   margin-top: 16px;
 }
+
 .rhythmBody {
   font-size: var(--fonts--desktop--body2);
   line-height: var(--line-height--115);
@@ -79,6 +86,7 @@
   white-space: normal;
   letter-spacing: 0;
 }
+
 .rhythmMobileImageContainer {
   display: none;
 }
@@ -108,6 +116,13 @@
   color: transparent;
 }
 
+@media (max-width:1600px) {
+.rhythmHeading ,
+  .rhythmScroll {
+    padding-inline: var(--container-padding);
+  }
+}
+
 .cultureSignificance div div:last-child {
   font-size: var(--fonts--desktop--body2);
   line-height: var(--line-height--115);
@@ -119,15 +134,18 @@
   .rhythmContainer {
     padding: 3.75rem 0;
   }
+
   .rhythmHeading {
     font-size: var(--fonts--mobile--sub-heading1);
     line-height: var(--line-height--100);
     width: 82%;
     padding: 0;
   }
+
   .rhythmPara {
     display: flex;
   }
+
   .rhythmPara p {
     margin-left: 0;
     width: 100%;
@@ -137,26 +155,33 @@
     padding-bottom: 40px;
     font-size: var(--fonts--mobile--body2);
   }
+
   .rhythm {
     padding: 0 1rem;
   }
+
   .rhythmScroll {
     overflow-x: hidden;
     display: none;
   }
+
   .scrollImageContainer {
     flex-direction: column;
   }
+
   .scrollImageContainer div img {
     width: 100%;
   }
+
   .rhythmMobileImageContainer {
     display: block;
   }
+
   .rhythmMobileImageContainer img {
     width: 100%;
     margin-block: 30px;
   }
+
   .rhythmBody {
     /* margin-top: 12px; */
     color: #999999;
@@ -166,17 +191,21 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
   }
+
   .rhythmWrapper {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
+
   .rhythmInnerTitle {
     font-size: var(--fonts--mobile--sub-heading4);
   }
+
   .rhythmTitle {
     margin-top: 0;
   }
+
   .rhythmMobileImageContainer .rhythmTitle {
     width: 100%;
   }
